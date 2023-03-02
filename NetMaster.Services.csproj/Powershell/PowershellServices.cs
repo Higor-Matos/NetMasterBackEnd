@@ -1,4 +1,5 @@
-﻿using NetMaster.Repository.Local.Powershell;
+﻿using NetMaster.Domain.Results;
+using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Services.Powershell
 {
@@ -8,9 +9,17 @@ namespace NetMaster.Services.Powershell
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly RestartPcRepository restartPcConectorRep = new();
 
-        public async Task<string> ShutdownPcComand(string ip)
+        public async Task<ResultServiceModel> ShutdownPcComand(string ip)
         {
-            return await shutdownPcConectorRep.ShutdownPc(ip);
+            string? resultRep = await shutdownPcConectorRep.ShutdownPc(ip);
+            if (resultRep != null)
+            {
+                return new ResultServiceModel(success: new SuccessResult(resultRep));
+            }
+            else
+            {
+                return new ResultServiceModel(error: new ErrorResult("Ocorreu um erro"));
+            }
         }
 
         public async Task<string> RestartPcComand(string ip)

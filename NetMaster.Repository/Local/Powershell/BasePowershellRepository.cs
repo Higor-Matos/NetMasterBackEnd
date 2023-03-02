@@ -1,67 +1,75 @@
-﻿using System.Management.Automation.Runspaces;
-using System.Management.Automation;
+﻿using System.Management.Automation;
+using System.Management.Automation.Runspaces;
 using System.Security;
-using System.Text;
-using System.Configuration;
-using Microsoft.Extensions.Configuration;
 
 namespace NetMaster.Repository.Local.Powershell
 {
     public class BasePowershellRepository
     {
-        private readonly SecureString passwordAdminRemoteComputerSecureString = new();
+        private readonly SecureString secureString = new();
 
-        private readonly WSManConnectionInfo connectionInfoRemoteComputerPowershell = new();
+        private readonly static string username = @"192.168.100.10\Higor";
+        private readonly static string password = "2210";
 
-        protected async Task<string> RunCommand(string comandPowershell, string remoteComputerName, string? comandParameterPowershell = null)
+        public BasePowershellRepository()
         {
+            SetSecuryString();
+        }
+
+        protected async Task<string?> RunCommand(
+            string remoteComputerName,
+            string comandPowershell,
+            string? comandParameterPowershell = null
+        )
+        {
+            PSCredential credential = new(username, secureString);
+            WSManConnectionInfo wsManConnectionInfo = new()
+            {
+                ComputerName = remoteComputerName,
+                Credential = credential
+            };
+
+            return await RunCommandInSpace(wsManConnectionInfo, comandPowershell, comandParameterPowershell);
+        }
+
+        private void SetSecuryString()
+        {
+            foreach (char letter in password)
+            {
+                secureString.AppendChar(letter);
+            }
+        }
+
+        private async Task<string?> RunCommandInSpace(
+            WSManConnectionInfo wsManConnectionInfo,
+            string command,
+            string? parameters
+        )
+        {
+            Runspace runSpace = RunspaceFactory.CreateRunspace(wsManConnectionInfo);
             try
             {
-                string userNameAdminRemoteComputer = @"192.168.100.10\Higor";
-                string passwordAdminRemoteComputer = "2210";
+                using PowerShell powerShell = PowerShell.Create();
 
-                foreach (Char c in passwordAdminRemoteComputer)
-                {
-                    passwordAdminRemoteComputerSecureString.AppendChar(c);
-                }
+                runSpace.Open();
+                powerShell.Runspace = runSpace;
+                powerShell.AddCommand(command)
+                    .AddParameter($"\n {parameters ?? string.Empty}");
 
-                PSCredential credentialsAdmimRemoteComputer = new(userNameAdminRemoteComputer, passwordAdminRemoteComputerSecureString);
+                var commandResult = await powerShell.InvokeAsync();
+                var returnResult = commandResult.Select(c => $"{c}{Environment.NewLine}").ToString();
 
-                connectionInfoRemoteComputerPowershell.ComputerName = remoteComputerName;
-
-                connectionInfoRemoteComputerPowershell.Credential = credentialsAdmimRemoteComputer;
-
-                Runspace runspaceRemoteComputerPowershell = RunspaceFactory.CreateRunspace(connectionInfoRemoteComputerPowershell);
-
-                runspaceRemoteComputerPowershell.Open();
-
-                string returnResultComandRemotePowershell;
-
-                using (PowerShell codeToRunInPowerShellRemote = PowerShell.Create())
-                {
-                    codeToRunInPowerShellRemote.Runspace = runspaceRemoteComputerPowershell;
-
-                    codeToRunInPowerShellRemote.AddCommand(comandPowershell).AddParameter(comandParameterPowershell + "\n");
-              
-                    var resultComandRemotePowershell = await codeToRunInPowerShellRemote.InvokeAsync();
-
-                    StringBuilder commandOutputPowerShellRemote = new();
-
-                    foreach (var x in resultComandRemotePowershell)
-                    {
-                        commandOutputPowerShellRemote.AppendLine(x.ToString());
-                    }
-                    returnResultComandRemotePowershell = commandOutputPowerShellRemote.ToString();
-                }
-
-                runspaceRemoteComputerPowershell.Close();
-
-                return returnResultComandRemotePowershell;
+                return returnResult;
             }
             catch (Exception)
             {
-                return "";
+                return null;
+            }
+            finally
+            {
+                runSpace.Close();
             }
         }
+
     }
 }

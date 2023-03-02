@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NetMaster.Domain.Extensions;
 using NetMaster.Services.Powershell;
 
 namespace NetMaster.Controllers
@@ -12,15 +13,8 @@ namespace NetMaster.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(string ip)
         {
-            string result = await powershellservices.ShutdownPcComand(ip);
-            if (result == "")
-            {
-                return Ok();
-            }
-            else
-            {
-                return BadRequest();
-            }
+            var result = await powershellservices.ShutdownPcComand(ip);
+            return this.ToResult(result);
         }
 
     }
