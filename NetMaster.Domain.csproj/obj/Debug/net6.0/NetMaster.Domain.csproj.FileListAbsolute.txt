@@ -1,0 +1,12 @@
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\bin\Debug\net6.0\NetMaster.Domain.deps.json
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\bin\Debug\net6.0\NetMaster.Domain.dll
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\bin\Debug\net6.0\NetMaster.Domain.pdb
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.csproj.AssemblyReference.cache
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.AssemblyInfoInputs.cache
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.AssemblyInfo.cs
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.dll
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\refint\NetMaster.Domain.dll
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\NetMaster.Domain.pdb
+C:\Users\hdmni\source\repos\NetMaster.Domain.csproj\obj\Debug\net6.0\ref\NetMaster.Domain.dll
