@@ -17,8 +17,8 @@ namespace NetMaster.Repository.Local.Powershell
         }
 
         protected async Task<string?> RunCommand(
-            string remoteComputerName,
             string comandPowershell,
+            string remoteComputerName,
             string? comandParameterPowershell = null
         )
         {
@@ -54,10 +54,11 @@ namespace NetMaster.Repository.Local.Powershell
                 runSpace.Open();
                 powerShell.Runspace = runSpace;
                 powerShell.AddCommand(command)
-                    .AddParameter($"\n {parameters ?? string.Empty}");
+                    .AddParameter($"{parameters ?? string.Empty} \n");
 
                 var commandResult = await powerShell.InvokeAsync();
-                var returnResult = commandResult.Select(c => $"{c}{Environment.NewLine}").ToString();
+                var returnResult = string.Join(Environment.NewLine, commandResult);
+
 
                 return returnResult;
             }

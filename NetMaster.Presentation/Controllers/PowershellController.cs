@@ -13,7 +13,7 @@ namespace NetMaster.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(string ip)
         {
-            var result = await powershellservices.ShutdownPcComand(ip);
+            var result = await powershellservices.VerifyChocolateyComand(ip);
             return this.ToResult(result);
         }
 
