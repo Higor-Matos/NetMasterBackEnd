@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Results;
+﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Services.Powershell
@@ -9,29 +10,35 @@ namespace NetMaster.Services.Powershell
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly RestartPcRepository restartPcConectorRep = new();
 
-        public async Task<ResultServiceModel> ShutdownPcComand(string ip)
+        public async Task<ServiceResultModel> ShutdownPcComand(string ip)
         {
-            string? resultRep = await shutdownPcConectorRep.ShutdownPc(ip);
-            if (resultRep != null)
+            RepositoryResultModel resultRep = await shutdownPcConectorRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+        }
+
+        public async Task<ServiceResultModel> RestartPcComand(string ip)
+        {
+            RepositoryResultModel resultRep = await restartPcConectorRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+        }
+
+        public async Task<ServiceResultModel> VerifyChocolateyComand(string ip)
+        {
+            RepositoryResultModel resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+        }
+
+        private ServiceResultModel RunCommand(RepositoryResultModel result)
+        {
+            if (result.SuccessResult != null)
             {
-                return new ResultServiceModel(success: new SuccessResult(resultRep));
+                return new ServiceResultModel(success: new SuccessServiceResult(result.SuccessResult.Result));
             }
             else
             {
-                return new ResultServiceModel(error: new ErrorResult("Ocorreu um erro"));
+                string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
+                return new ServiceResultModel(error: new ErrorServiceResult(msgError));
             }
         }
-
-        public async Task<string> RestartPcComand(string ip)
-        {
-            return await restartPcConectorRep.RestartPc(ip);
-        }
-
-        public async Task<string> VerifyChocolateyComand(string ip)
-        {
-            return await verifyChocolateyRep.VerifyChocolateyInstalled(ip);
-        }
-
     }
-
 }
