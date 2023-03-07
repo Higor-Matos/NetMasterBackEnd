@@ -23,7 +23,9 @@ namespace NetMaster.Repository.Local.Powershell
 
         protected async Task<RepositoryResultModel> RunCommand(
             RepositoryPowerShellParamModel param,
+
             string comandPowershell,
+            string remoteComputerName,
             string? comandParameterPowershell = null
         )
         {
@@ -58,10 +60,12 @@ namespace NetMaster.Repository.Local.Powershell
 
                 runSpace.Open();
                 powerShell.Runspace = runSpace;
+
                 powerShell.AddCommand(command).AddParameter($"\n {parameters ?? string.Empty}");
 
                 var commandResult = await powerShell.InvokeAsync();
                 var returnResult = string.Join(Environment.NewLine, commandResult.Select(c => c.ToString()).ToArray());
+
 
                 return new RepositoryResultModel(success: new SuccessRepositoryResult(returnResult));
             }

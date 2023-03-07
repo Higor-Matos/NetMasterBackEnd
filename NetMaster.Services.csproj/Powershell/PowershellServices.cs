@@ -7,8 +7,8 @@ namespace NetMaster.Services.Powershell
     public class PowershellServices
     {
         private readonly ShutdownPcRepository shutdownPcConectorRep = new();
-        private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly RestartPcRepository restartPcConectorRep = new();
+        private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
 
         public async Task<ServiceResultModel> ShutdownPcComand(string ip)
         {
@@ -26,6 +26,7 @@ namespace NetMaster.Services.Powershell
         {
             RepositoryResultModel resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(resultRep);
+
         }
 
         private ServiceResultModel RunCommand(RepositoryResultModel result)
