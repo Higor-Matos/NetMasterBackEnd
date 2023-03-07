@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NetMaster.Domain.csproj\NetMaster.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

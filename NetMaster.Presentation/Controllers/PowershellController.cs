@@ -11,7 +11,21 @@ namespace NetMaster.Controllers
         private readonly PowershellServices powershellservices = new();
 
         [HttpPost]
-        public async Task<IActionResult> Post(string ip)
+        public async Task<IActionResult> ShutdownPc(string ip)
+        {
+            var result = await powershellservices.VerifyChocolateyComand(ip);
+            return this.ToResult(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RestartPc(string ip)
+        {
+            var result = await powershellservices.RestartPcComand(ip);
+            return this.ToResult(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> VerifyChocolateyVersion(string ip)
         {
             var result = await powershellservices.VerifyChocolateyComand(ip);
             return this.ToResult(result);
