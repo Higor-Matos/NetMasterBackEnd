@@ -1,13 +1,16 @@
-﻿using System.Management.Automation;
+﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.Results;
+using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Security;
 
 namespace NetMaster.Repository.Local.Powershell
 {
-    public class BasePowershellRepository
+    public abstract class BasePowershellRepository
     {
         private readonly SecureString secureString = new();
 
+        // depois passar esses dados para o "appsettings.json"
         private readonly static string username = @"192.168.100.10\Higor";
         private readonly static string password = "2210";
 
@@ -16,16 +19,18 @@ namespace NetMaster.Repository.Local.Powershell
             SetSecuryString();
         }
 
-        protected async Task<string?> RunCommand(
+        public abstract Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param);
+
+        protected async Task<RepositoryResultModel> RunCommand(
+            RepositoryPowerShellParamModel param,
             string comandPowershell,
-            string remoteComputerName,
             string? comandParameterPowershell = null
         )
         {
             PSCredential credential = new(username, secureString);
             WSManConnectionInfo wsManConnectionInfo = new()
             {
-                ComputerName = remoteComputerName,
+                ComputerName = param.Ip,
                 Credential = credential
             };
 
@@ -40,7 +45,7 @@ namespace NetMaster.Repository.Local.Powershell
             }
         }
 
-        private async Task<string?> RunCommandInSpace(
+        private async Task<RepositoryResultModel> RunCommandInSpace(
             WSManConnectionInfo wsManConnectionInfo,
             string command,
             string? parameters
@@ -53,24 +58,23 @@ namespace NetMaster.Repository.Local.Powershell
 
                 runSpace.Open();
                 powerShell.Runspace = runSpace;
-                powerShell.AddCommand(command)
-                    .AddParameter($"{parameters ?? string.Empty} \n");
+
+                powerShell.AddCommand(command).AddParameter($"{parameters ?? string.Empty} \n");
 
                 var commandResult = await powerShell.InvokeAsync();
-                var returnResult = string.Join(Environment.NewLine, commandResult);
+                var returnResult = string.Join(Environment.NewLine, commandResult.Select(c => c.ToString()).ToArray());
 
 
-                return returnResult;
+                return new RepositoryResultModel(success: new SuccessRepositoryResult(returnResult));
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return null;
+                return new RepositoryResultModel(error: new ErrorRepositoryResult(e));
             }
             finally
             {
                 runSpace.Close();
             }
         }
-
     }
 }

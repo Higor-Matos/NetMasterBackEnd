@@ -1,17 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Results;
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Domain.Extensions
 {
     public static class ControllerExtensions
     {
-        public static IActionResult ToResult(
-            this ControllerBase controller,
-            ResultServiceModel value
-        )
+        public static IActionResult ToResult(this ControllerBase controller, ServiceResultModel value)
         {
-            IActionResult result = controller.StatusCode(StatusCodes.Status500InternalServerError);
             if (value.SuccessResult != null)
             {
                 return controller.Ok(value.SuccessResult.Result);
@@ -20,7 +16,10 @@ namespace NetMaster.Domain.Extensions
             {
                 return controller.BadRequest(value.ErrorResult.ErrorMessage);
             }
-            return result;
+            else
+            {
+                return controller.StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }
