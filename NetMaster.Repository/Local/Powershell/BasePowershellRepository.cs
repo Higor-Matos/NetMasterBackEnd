@@ -1,5 +1,6 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Local.Configuration;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Security;
@@ -9,11 +10,7 @@ namespace NetMaster.Repository.Local.Powershell
     public abstract class BasePowershellRepository
     {
         private readonly SecureString secureString = new();
-
-        // depois passar esses dados para o "appsettings.json"
-        private readonly static string username = @"192.168.100.10\Higor";
-        private readonly static string password = "2210";
-
+        private readonly ConfigurationRepository configRep = new();
         public BasePowershellRepository()
         {
             SetSecuryString();
@@ -27,6 +24,7 @@ namespace NetMaster.Repository.Local.Powershell
             string? comandParameterPowershell = null
         )
         {
+            string username = configRep.GetValue("Credentials:Username");
             PSCredential credential = new(username, secureString);
             WSManConnectionInfo wsManConnectionInfo = new()
             {
@@ -39,6 +37,7 @@ namespace NetMaster.Repository.Local.Powershell
 
         private void SetSecuryString()
         {
+            string password = configRep.GetValue("Credentials:Password");
             foreach (char letter in password)
             {
                 secureString.AppendChar(letter);
