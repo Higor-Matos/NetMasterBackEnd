@@ -31,5 +31,12 @@ namespace NetMaster.Controllers
             return this.ToResult(result);
         }
 
+        [HttpPost("installAdobeReader")]
+        public async Task<IActionResult> InstallChocolateyRepository(string ip)
+        {
+            var result = await powershellservices.InstallAdobeReaderComand(ip);
+            return this.ToResult(result);
+        }
+
     }
 }

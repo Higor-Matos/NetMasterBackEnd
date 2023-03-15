@@ -9,6 +9,7 @@ namespace NetMaster.Services.Powershell
         private readonly ShutdownPcRepository shutdownPcConectorRep = new();
         private readonly RestartPcRepository restartPcConectorRep = new();
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
+        private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
 
         public async Task<ServiceResultModel> ShutdownPcComand(string ip)
         {
@@ -29,7 +30,14 @@ namespace NetMaster.Services.Powershell
 
         }
 
-        private ServiceResultModel RunCommand(RepositoryResultModel result)
+        public async Task<ServiceResultModel> InstallAdobeReaderComand(string ip)
+        {
+            RepositoryResultModel resultRep = await installAdobeReaderRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+
+        }
+
+        private static ServiceResultModel RunCommand(RepositoryResultModel result)
         {
             if (result.SuccessResult != null)
             {

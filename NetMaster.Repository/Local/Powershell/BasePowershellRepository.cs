@@ -61,7 +61,7 @@ namespace NetMaster.Repository.Local.Powershell
                 powerShell.AddCommand(command).AddParameter($"{parameters ?? string.Empty} \n");
 
                 var commandResult = await powerShell.InvokeAsync();
-                var returnResult = string.Join(Environment.NewLine, commandResult.Select(c => c.ToString()).ToArray());
+                var returnResult = string.Join(Environment.NewLine, commandResult);
 
 
                 return new RepositoryResultModel(success: new SuccessRepositoryResult(returnResult));
