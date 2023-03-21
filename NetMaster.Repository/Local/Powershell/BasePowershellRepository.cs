@@ -1,56 +1,46 @@
-﻿using NetMaster.Domain.Models;
-using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Configuration;
+﻿using System;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
-using System.Security;
+using System.Threading.Tasks;
+using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Local.Powershell
 {
     public abstract class BasePowershellRepository
     {
-        private readonly SecureString secureString = new();
-        private readonly ConfigurationRepository configRep = new();
-        public BasePowershellRepository()
+        private readonly CredentialProviderRepository credentialProvider;
+
+        protected BasePowershellRepository()
         {
-            SetSecuryString();
+            this.credentialProvider = new CredentialProviderRepository();
         }
 
         public abstract Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param);
 
         protected async Task<RepositoryResultModel> RunCommand(
             RepositoryPowerShellParamModel param,
-            string comandPowershell,
-            string? comandParameterPowershell = null
+            string commandPowershell,
+            string? commandParameterPowershell = null
         )
         {
-            string username = configRep.GetValue("Credentials:Username");
-            PSCredential credential = new(username, secureString);
-            WSManConnectionInfo wsManConnectionInfo = new()
+            PSCredential credential = credentialProvider.GetCredential();
+            WSManConnectionInfo wsManConnectionInfo = new WSManConnectionInfo()
             {
                 ComputerName = param.Ip,
                 Credential = credential
             };
 
-            return await RunCommandInSpace(wsManConnectionInfo, comandPowershell, comandParameterPowershell);
+            return await RunCommandInSpace(wsManConnectionInfo, commandPowershell, commandParameterPowershell);
         }
 
-        private void SetSecuryString()
-        {
-            string password = configRep.GetValue("Credentials:Password");
-            foreach (char letter in password)
-            {
-                secureString.AppendChar(letter);
-            }
-        }
-
-        private async Task<RepositoryResultModel> RunCommandInSpace(
+        private static async Task<RepositoryResultModel> RunCommandInSpace(
             WSManConnectionInfo wsManConnectionInfo,
             string command,
             string? parameters
         )
         {
-            Runspace runSpace = RunspaceFactory.CreateRunspace(wsManConnectionInfo);
+            using Runspace runSpace = RunspaceFactory.CreateRunspace(wsManConnectionInfo);
             try
             {
                 using PowerShell powerShell = PowerShell.Create();
@@ -58,11 +48,15 @@ namespace NetMaster.Repository.Local.Powershell
                 runSpace.Open();
                 powerShell.Runspace = runSpace;
 
-                powerShell.AddCommand(command).AddParameter($"{parameters ?? string.Empty} \n");
+                powerShell.AddCommand(command);
+
+                if (!string.IsNullOrEmpty(parameters))
+                {
+                    powerShell.AddParameter(parameters);
+                }
 
                 var commandResult = await powerShell.InvokeAsync();
                 var returnResult = string.Join(Environment.NewLine, commandResult);
-
 
                 return new RepositoryResultModel(success: new SuccessRepositoryResult(returnResult));
             }
