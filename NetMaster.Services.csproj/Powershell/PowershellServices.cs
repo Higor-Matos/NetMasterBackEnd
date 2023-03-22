@@ -49,5 +49,10 @@ namespace NetMaster.Services.Powershell
                 return new ServiceResultModel(error: new ErrorServiceResult(msgError));
             }
         }
+
+        public Task ListNetworkComputerComand(string ip)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
