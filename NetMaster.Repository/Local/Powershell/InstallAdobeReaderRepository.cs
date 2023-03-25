@@ -5,8 +5,8 @@ namespace NetMaster.Repository.Local.Powershell
 {
     public class InstallAdobeReaderRepository : BasePowershellRepository
     {
-        private static readonly string command = "choco install adobereader";
-        private static readonly string args = "-y";
+        private static readonly string command = "choco install adobereader -y --force";
+        private static readonly string args = "";
 
         public override async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {

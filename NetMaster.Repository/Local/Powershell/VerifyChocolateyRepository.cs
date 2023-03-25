@@ -5,8 +5,8 @@ namespace NetMaster.Repository.Local.Powershell
 {
     public class VerifyChocolateyRepository : BasePowershellRepository
     {
-        private static readonly string command = "choco";
-        private static readonly string args = "-v";
+        private static readonly string command = "choco -v";
+        private static readonly string args = "";
 
         public override async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {

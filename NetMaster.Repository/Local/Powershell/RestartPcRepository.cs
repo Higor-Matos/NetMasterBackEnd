@@ -6,8 +6,8 @@ namespace NetMaster.Repository.Local.Powershell
 {
     public class RestartPcRepository : BasePowershellRepository
     {
-        private static readonly string command = "Restart-Computer";
-        private static readonly string args = "-Force";
+        private static readonly string command = "Restart-Computer -force";
+        private static readonly string args = "";
 
         public override async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {

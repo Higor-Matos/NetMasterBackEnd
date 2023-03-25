@@ -8,7 +8,7 @@ namespace NetMaster.Controllers
     [Route("[controller]")]
     public class PowershellController : ControllerBase
     {
-        private readonly PowershellServices powershellservices = new();
+        private readonly PowershellServices powershellServices = new PowershellServices();
 
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc(string ip)

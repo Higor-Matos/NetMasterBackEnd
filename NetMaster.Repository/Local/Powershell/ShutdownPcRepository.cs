@@ -5,8 +5,8 @@ namespace NetMaster.Repository.Local.Powershell
 {
     public class ShutdownPcRepository : BasePowershellRepository
     {
-        private static readonly string command = "Stop-Computer";
-        private static readonly string args = "-Force";
+        private static readonly string command = "Stop-Computer -force";
+        private static readonly string args = "";
 
         public override async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {
