@@ -5,7 +5,7 @@ using NetMaster.Services.Powershell;
 namespace NetMaster.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("powershell")]
     public class PowershellController : ControllerBase
     {
         private readonly PowershellServices powershellServices = new PowershellServices();
@@ -13,37 +13,36 @@ namespace NetMaster.Controllers
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc(string ip)
         {
-            var result = await powershellservices.ShutdownPcComand(ip);
+            var result = await powershellServices.ShutdownPcComand(ip);
             return this.ToResult(result);
         }
 
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc(string ip)
         {
-            var result = await powershellservices.RestartPcComand(ip);
+            var result = await powershellServices.RestartPcComand(ip);
             return this.ToResult(result);
         }
 
         [HttpPost("verifyChocolateyVersion")]
         public async Task<IActionResult> VerifyChocolateyVersion(string ip)
         {
-            var result = await powershellservices.VerifyChocolateyComand(ip);
+            var result = await powershellServices.VerifyChocolateyComand(ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installAdobeReader")]
         public async Task<IActionResult> InstallAdobeReader(string ip)
         {
-            var result = await powershellservices.InstallAdobeReaderComand(ip);
+            var result = await powershellServices.InstallAdobeReaderComand(ip);
             return this.ToResult(result);
         }
 
         [HttpPost("listComputersNetwork")]
         public IActionResult ListNetworkComputer(string ip)
         {
-            var jsonResult = powershellservices.ListNetworkComputerComand(ip);
+            var jsonResult = powershellServices.ListNetworkComputerComand(ip);
             return new JsonResult(jsonResult);
         }
-
     }
 }
