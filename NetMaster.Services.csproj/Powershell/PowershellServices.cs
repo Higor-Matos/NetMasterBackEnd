@@ -37,6 +37,15 @@ namespace NetMaster.Services.Powershell
 
         }
 
+        //Como não possuo um domínio, retorno de forma estática para o front-end mas deixo a estrutura pronta quando possuir.
+        public Task<ServiceResultModel> ListNetworkComputerComand(string ip)
+        {
+            var computers = new string[] { "Higor-PC", "Gustavo-PC", "Convidado-PC" };
+            var ips = new string[] { "192.168.0.3", "192.168.0.4", "192.168.0.10" };
+            var result = new { computers, ips };
+            return Task.FromResult(new ServiceResultModel(success: new SuccessServiceResult(result)));
+        }
+
         private static ServiceResultModel RunCommand(RepositoryResultModel result)
         {
             if (result.SuccessResult != null)

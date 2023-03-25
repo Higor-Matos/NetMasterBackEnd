@@ -1,9 +1,7 @@
-﻿using System;
+﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.Results;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
-using System.Threading.Tasks;
-using NetMaster.Domain.Models;
-using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Local.Powershell
 {
@@ -25,7 +23,7 @@ namespace NetMaster.Repository.Local.Powershell
         )
         {
             PSCredential credential = credentialProvider.GetCredential();
-            WSManConnectionInfo wsManConnectionInfo = new WSManConnectionInfo()
+            WSManConnectionInfo wsManConnectionInfo = new()
             {
                 ComputerName = param.Ip,
                 Credential = credential
@@ -52,7 +50,7 @@ namespace NetMaster.Repository.Local.Powershell
 
                 if (!string.IsNullOrEmpty(parameters))
                 {
-                    powerShell.AddParameter(parameters);
+                    powerShell.AddParameter(parameters + "\n");
                 }
 
                 var commandResult = await powerShell.InvokeAsync();
