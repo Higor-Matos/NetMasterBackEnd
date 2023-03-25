@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
 using NetMaster.Services.Powershell;
-using NetMaster.Services.Network;
 
 namespace NetMaster.Controllers
 {
@@ -10,7 +9,6 @@ namespace NetMaster.Controllers
     public class PowershellController : ControllerBase
     {
         private readonly PowershellServices powershellservices = new();
-        private readonly NetworkServices networkservices = new();
 
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc(string ip)
@@ -41,10 +39,10 @@ namespace NetMaster.Controllers
         }
 
         [HttpPost("listComputersNetwork")]
-        public async Task<IActionResult> ListNetworkComputer(string domain)
+        public IActionResult ListNetworkComputer(string ip)
         {
-            var result = await networkservices.ListNetworkComputerComand(domain);
-            return this.ToResult(result);
+            var jsonResult = powershellservices.ListNetworkComputerComand(ip);
+            return new JsonResult(jsonResult);
         }
 
     }
