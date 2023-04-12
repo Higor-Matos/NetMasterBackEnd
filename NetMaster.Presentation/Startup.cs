@@ -5,6 +5,8 @@ using NetMaster.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<StreamingServerConfigPresentation>(builder.Configuration.GetSection("StreamingServer"));
+
 builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen();
