@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.Linq;
 
@@ -9,45 +10,66 @@ namespace NetMaster.Controllers
     [Route("streaming")]
     public class StreamingServerController : ControllerBase
     {
-        private readonly StreamingServerConfigPresentation config;
-        private Process streamingServerProcess;
+        private readonly StreamingServerConfigPresentation _config;
+        private Process _streamingServerProcess;
+        private const string ProcessName = "ScreenStreamingServer";
 
-        public StreamingServerController(IOptions<StreamingServerConfigPresentation> config)
+        public StreamingServerController(IOptions<StreamingServerConfigPresentation> config, IHostApplicationLifetime appLifetime)
         {
-            this.config = config.Value;
+            _config = config.Value;
+            appLifetime.ApplicationStopping.Register(OnApplicationStopping);
         }
 
         [HttpPost("toggle")]
         public IActionResult ToggleStreamingServer()
         {
-            var processName = "ScreenStreamingServer";
-            var isRunning = Process.GetProcessesByName(processName).Any();
-
-            if (isRunning)
+            try
             {
-                var process = Process.GetProcessesByName(processName).FirstOrDefault();
-                process?.Kill();
-
-                return Ok("Streaming server stopped.");
+                if (IsServerRunning())
+                {
+                    StopStreamingServer();
+                    return Ok("Streaming server stopped.");
+                }
+                else
+                {
+                    StartStreamingServer();
+                    return Ok("Streaming server started.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var processStartInfo = new ProcessStartInfo()
-                {
-                    FileName = config.FileName,
-                    UseShellExecute = config.UseShellExecute,
-                    RedirectStandardOutput = config.RedirectStandardOutput,
-                    CreateNoWindow = config.CreateNoWindow
-                };
-
-                streamingServerProcess = new Process
-                {
-                    StartInfo = processStartInfo
-                };
-                streamingServerProcess.Start();
-
-                return Ok("Streaming server started.");
+                return StatusCode(500, $"An error occurred: {ex.Message}");
             }
+        }
+
+        private bool IsServerRunning()
+        {
+            return Process.GetProcessesByName(ProcessName).Any();
+        }
+
+        private void StartStreamingServer()
+        {
+            var processStartInfo = new ProcessStartInfo
+            {
+                FileName = _config.FileName,
+                UseShellExecute = _config.UseShellExecute,
+                RedirectStandardOutput = _config.RedirectStandardOutput,
+                CreateNoWindow = _config.CreateNoWindow
+            };
+
+            _streamingServerProcess = new Process { StartInfo = processStartInfo };
+            _streamingServerProcess.Start();
+        }
+
+        private void StopStreamingServer()
+        {
+            var process = Process.GetProcessesByName(ProcessName).FirstOrDefault();
+            process?.Kill();
+        }
+
+        private void OnApplicationStopping()
+        {
+            StopStreamingServer();
         }
     }
 }

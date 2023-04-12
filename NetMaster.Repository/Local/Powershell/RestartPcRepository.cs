@@ -1,5 +1,4 @@
-﻿
-using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Local.Powershell
@@ -9,9 +8,9 @@ namespace NetMaster.Repository.Local.Powershell
         private static readonly string command = "Restart-Computer -force";
         private static readonly string args = "";
 
-        public override async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            return await RunCommand(param, command, args);
+            return await base.ExecCommand(param, command, args);
         }
     }
 }

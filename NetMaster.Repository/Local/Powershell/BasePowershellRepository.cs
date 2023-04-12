@@ -13,13 +13,15 @@ public abstract class BasePowershellRepository
         this.credentialProvider = new CredentialProviderRepository();
     }
 
-    public abstract Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param);
+    public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param, string command, string? parameters = null)
+    {
+        return await RunCommand(param, command, parameters);
+    }
 
-    protected async Task<RepositoryResultModel> RunCommand(
+    private async Task<RepositoryResultModel> RunCommand(
         RepositoryPowerShellParamModel param,
         string commandPowershell,
-        string? commandParameterPowershell = null
-    )
+        string? commandParameterPowershell = null)
     {
         PSCredential credential = credentialProvider.GetCredential();
         WSManConnectionInfo wsManConnectionInfo = new()
@@ -34,8 +36,7 @@ public abstract class BasePowershellRepository
     private static async Task<RepositoryResultModel> RunCommandInSpace(
         WSManConnectionInfo wsManConnectionInfo,
         string command,
-        string? parameters
-    )
+        string? parameters)
     {
         using Runspace runSpace = RunspaceFactory.CreateRunspace(wsManConnectionInfo);
         try
