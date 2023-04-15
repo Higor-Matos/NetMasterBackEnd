@@ -3,7 +3,6 @@ using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
-using System.Threading.Tasks;
 
 public abstract class BasePowershellRepository
 {

@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
-using System.Linq;
 
 namespace NetMaster.Controllers
 {

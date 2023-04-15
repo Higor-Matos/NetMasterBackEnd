@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
-using System.Net;
 
 namespace NetMaster.Services.Powershell
 {

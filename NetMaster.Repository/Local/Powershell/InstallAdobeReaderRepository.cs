@@ -1,7 +1,5 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell;
-using System.Threading.Tasks;
 
 namespace NetMaster.Repository.Local.Powershell
 {
