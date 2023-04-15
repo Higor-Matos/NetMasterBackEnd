@@ -1,6 +1,6 @@
-﻿using System.Management.Automation;
+﻿using NetMaster.Repository.Local.Configuration;
+using System.Management.Automation;
 using System.Security;
-using NetMaster.Repository.Local.Configuration;
 
 namespace NetMaster.Repository.Local.Powershell
 {

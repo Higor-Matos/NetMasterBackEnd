@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
 using NetMaster.Presentation;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocumentation();
 
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
+
+// Use CORS policy
+app.UseCors("AllowAllOrigins");
 
 app.UseRouting();
 

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NetMaster.Domain.csproj\NetMaster.Domain.csproj" />
     <ProjectReference Include="..\NetMaster.Repository\NetMaster.Repository.csproj" />
   </ItemGroup>

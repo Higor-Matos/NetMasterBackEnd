@@ -1,6 +1,8 @@
-﻿using NetMaster.Domain.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
+using System.Net;
 
 namespace NetMaster.Services.Powershell
 {
@@ -37,13 +39,13 @@ namespace NetMaster.Services.Powershell
 
         }
 
-        public Task<ServiceResultModel> ListNetworkComputerComand(string ip)
+        public string[] ListNetworkComputerComand()
         {
             var computers = new string[] { "Higor-PC", "Gustavo-PC", "Convidado-PC" };
             var ips = new string[] { "192.168.0.3", "192.168.0.4", "192.168.0.10" };
-            var result = new { computers, ips };
-            return Task.FromResult(new ServiceResultModel(success: new SuccessServiceResult(result)));
+            return computers;
         }
+
 
         private static ServiceResultModel RunCommand(RepositoryResultModel result)
         {

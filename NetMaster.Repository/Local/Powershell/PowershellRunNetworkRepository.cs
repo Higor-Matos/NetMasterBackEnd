@@ -1,6 +1,7 @@
 ﻿using NetMaster.Domain.Models.Results;
 using System.Management.Automation.Runspaces;
 using System.Management.Automation;
+using System.Threading.Tasks;
 
 public class PowershellRunNetworkRepository
 {

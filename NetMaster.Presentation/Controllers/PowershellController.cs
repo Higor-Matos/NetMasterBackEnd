@@ -11,38 +11,40 @@ namespace NetMaster.Controllers
         private readonly PowershellService powershellService = new();
 
         [HttpPost("shutdownPc")]
-        public async Task<IActionResult> ShutdownPc(string ip)
+        public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
         {
-            var result = await powershellService.ShutdownPcComand(ip);
+            var result = await powershellService.ShutdownPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("restartPc")]
-        public async Task<IActionResult> RestartPc(string ip)
+        public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
         {
-            var result = await powershellService.RestartPcComand(ip);
+            var result = await powershellService.RestartPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("verifyChocolateyVersion")]
-        public async Task<IActionResult> VerifyChocolateyVersion(string ip)
+        public async Task<IActionResult> VerifyChocolateyVersion([FromBody] IpRequestController request)
         {
-            var result = await powershellService.VerifyChocolateyComand(ip);
+            var result = await powershellService.VerifyChocolateyComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installAdobeReader")]
-        public async Task<IActionResult> InstallAdobeReader(string ip)
+        public async Task<IActionResult> InstallAdobeReader([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallAdobeReaderComand(ip);
+            var result = await powershellService.InstallAdobeReaderComand(request.Ip);
             return this.ToResult(result);
         }
 
-        [HttpPost("listComputersNetwork")]
-        public IActionResult ListNetworkComputer(string ip)
+        [HttpGet("listComputersNetwork")]
+        public IActionResult ListNetworkComputer()
         {
-            var jsonResult = powershellService.ListNetworkComputerComand(ip);
-            return new JsonResult(jsonResult);
+            var computers = powershellService.ListNetworkComputerComand();
+            return new JsonResult(new { success = new { result = new { computers } } });
         }
+
+
     }
 }
