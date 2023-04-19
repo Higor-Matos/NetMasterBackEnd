@@ -1,7 +1,7 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Repository.Local.Powershell
+namespace NetMaster.Repository.Local.Powershell.Software
 {
     public class VerifyChocolateyRepository : BasePowershellRepository
     {
@@ -10,7 +10,7 @@ namespace NetMaster.Repository.Local.Powershell
 
         public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            return await base.ExecCommand(param, command, args);
+            return await ExecCommand(param, command, args);
         }
     }
 }

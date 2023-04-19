@@ -1,16 +1,16 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Repository.Local.Powershell
+namespace NetMaster.Repository.Local.Powershell.System
 {
-    public class RestartPcRepository : BasePowershellRepository
+    public class ShutdownPcRepository : BasePowershellRepository
     {
-        private static readonly string command = "Restart-Computer -force";
+        private static readonly string command = "Stop-Computer -force";
         private static readonly string args = "";
 
         public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            return await base.ExecCommand(param, command, args);
+            return await ExecCommand(param, command, args);
         }
     }
 }

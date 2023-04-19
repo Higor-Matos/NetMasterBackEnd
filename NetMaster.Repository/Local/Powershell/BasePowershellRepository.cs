@@ -1,6 +1,6 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell;
+using NetMaster.Repository.Local.Powershell.Credentials;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
