@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
 using NetMaster.Services.Powershell;
+using Microsoft.AspNetCore.Http;
+
 
 namespace NetMaster.Controllers
 {
@@ -9,6 +11,29 @@ namespace NetMaster.Controllers
     public class PowershellController : ControllerBase
     {
         private readonly PowershellService powershellService = new();
+
+
+        [HttpPost("uploadFile")]
+        public IActionResult UploadFile(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest("File not provided or empty.");
+            }
+
+            var destinationFolder = "uploads";
+            var fileData = new byte[file.Length];
+
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                fileData = memoryStream.ToArray();
+            }
+
+            var result = powershellService.UploadFile(file.FileName, fileData, destinationFolder);
+            return this.ToResult(result);
+        }
+
 
 
         [HttpPost("getUsers")]

@@ -22,4 +22,8 @@
     <ProjectReference Include="..\NetMaster.Services.csproj\NetMaster.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+
 </Project>

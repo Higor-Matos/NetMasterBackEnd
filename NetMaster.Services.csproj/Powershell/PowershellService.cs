@@ -4,6 +4,8 @@ using NetMaster.Repository.Local.Powershell.Hardware;
 using NetMaster.Repository.Local.Powershell.Software;
 using NetMaster.Repository.Local.Powershell.Software.Installers;
 using NetMaster.Repository.Local.Powershell.System;
+using NetMaster.Repository.Local.Upload;
+
 
 namespace NetMaster.Services.Powershell
 {
@@ -23,6 +25,15 @@ namespace NetMaster.Services.Powershell
         private readonly InstallWinrarRepository installWinrarRep = new();
         private readonly InstallGoogleChromeRepository installGoogleChromeRep = new();
         private readonly InstallOffice365Repository installOffice365Rep = new();
+        private readonly UploadFileRepository uploadFileRepository = new();
+
+
+        public ServiceResultModel UploadFile(string fileName, byte[] fileData, string destinationFolder)
+        {
+            RepositoryResultModel resultRep = uploadFileRepository.UploadFile(fileName, fileData, destinationFolder);
+            return RunCommand(resultRep);
+        }
+
 
 
         public async Task<ServiceResultModel> GetUsers(string ip)
