@@ -1,20 +1,17 @@
 ﻿using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell.Software.Installers;
 using NetMaster.Repository.Local.Upload;
 
-
-namespace NetMaster.Services.Powershell
+namespace NetMaster.Services
 {
-    public class PowershellService
+    public class UploadService
     {
+        private readonly UploadFileRepository uploadFileRepository = new();
 
-        public string[] ListNetworkComputerComand()
+        public ServiceResultModel UploadFile(string fileName, byte[] fileData, string destinationFolder)
         {
-            var computers = new string[] { "Higor-PC", "Gustavo-PC", "Convidado-PC" };
-            var ips = new string[] { "192.168.0.3", "192.168.0.4", "192.168.0.10" };
-            return computers;
+            RepositoryResultModel resultRep = uploadFileRepository.UploadFile(fileName, fileData, destinationFolder);
+            return RunCommand(resultRep);
         }
-
 
         private static ServiceResultModel RunCommand(RepositoryResultModel result)
         {
@@ -30,3 +27,5 @@ namespace NetMaster.Services.Powershell
         }
     }
 }
+
+

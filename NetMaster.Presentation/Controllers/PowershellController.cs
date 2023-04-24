@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
+using NetMaster.Services;
 using NetMaster.Services.Powershell;
-using Microsoft.AspNetCore.Http;
-
+using NetMaster.Services.Powershell.PowershellServices;
 
 namespace NetMaster.Controllers
 {
@@ -10,8 +10,20 @@ namespace NetMaster.Controllers
     [Route("powershell")]
     public class PowershellController : ControllerBase
     {
-        private readonly PowershellService powershellService = new();
+        private readonly HardwareService hardwareService;
+        private readonly SoftwareService softwareService;
+        private readonly SystemService systemService;
+        private readonly UploadService uploadService;
+        private readonly PowershellService powershellService;
 
+        public PowershellController(HardwareService hardwareService, SoftwareService softwareService, SystemService systemService, UploadService uploadService, PowershellService powershellService)
+        {
+            this.hardwareService = hardwareService;
+            this.softwareService = softwareService;
+            this.systemService = systemService;
+            this.uploadService = uploadService;
+            this.powershellService = powershellService;
+        }
 
         [HttpPost("uploadFile")]
         public IActionResult UploadFile(IFormFile file)
@@ -30,37 +42,36 @@ namespace NetMaster.Controllers
                 fileData = memoryStream.ToArray();
             }
 
-            var result = powershellService.UploadFile(file.FileName, fileData, destinationFolder);
+            var result = uploadService.UploadFile(file.FileName, fileData, destinationFolder);
             return this.ToResult(result);
         }
-
 
 
         [HttpPost("getUsers")]
         public async Task<IActionResult> GetUsers([FromBody] IpRequestController request)
         {
-            var result = await powershellService.GetUsers(request.Ip);
+            var result = await systemService.GetUsers(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("getOsVersion")]
         public async Task<IActionResult> GetOsVersion([FromBody] IpRequestController request)
         {
-            var result = await powershellService.GetOsVersion(request.Ip);
+            var result = await systemService.GetOsVersion(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("getInstalledPrograms")]
         public async Task<IActionResult> GetInstalledPrograms([FromBody] IpRequestController request)
         {
-            var result = await powershellService.GetInstalledPrograms(request.Ip);
+            var result = await systemService.GetInstalledPrograms(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("getRam")]
         public async Task<IActionResult> GetRamUsage([FromBody] IpRequestController request)
         {
-            var result = await powershellService.GetRamUsage(request.Ip);
+            var result = await hardwareService.GetRam(request.Ip);
             return this.ToResult(result);
         }
 
@@ -68,7 +79,7 @@ namespace NetMaster.Controllers
         [HttpPost("getStorage")]
         public async Task<IActionResult> GetStorageUsage([FromBody] IpRequestController request)
         {
-            var result = await powershellService.getStorage(request.Ip);
+            var result = await hardwareService.GetStorage(request.Ip);
             return this.ToResult(result);
         }
 
@@ -76,42 +87,42 @@ namespace NetMaster.Controllers
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
         {
-            var result = await powershellService.ShutdownPcComand(request.Ip);
+            var result = await systemService.ShutdownPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
         {
-            var result = await powershellService.RestartPcComand(request.Ip);
+            var result = await systemService.RestartPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("verifyChocolateyVersion")]
         public async Task<IActionResult> VerifyChocolateyVersion([FromBody] IpRequestController request)
         {
-            var result = await powershellService.VerifyChocolateyComand(request.Ip);
+            var result = await softwareService.VerifyChocolateyComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installAdobeReader")]
         public async Task<IActionResult> InstallAdobeReader([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallAdobeReaderComand(request.Ip);
+            var result = await softwareService.InstallAdobeReaderComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installFirefox")]
         public async Task<IActionResult> InstallFirefox([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallFirefoxComand(request.Ip);
+            var result = await softwareService.InstallFirefoxComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installGoogleChrome")]
         public async Task<IActionResult> InstallGoogleChrome([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallGoogleChromeComand(request.Ip);
+            var result = await softwareService.InstallGoogleChromeComand(request.Ip);
             return this.ToResult(result);
         }
 
@@ -119,7 +130,7 @@ namespace NetMaster.Controllers
         [HttpPost("installOffice365")]
         public async Task<IActionResult> InstallOffice365([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallOffice365Comand(request.Ip);
+            var result = await softwareService.InstallOffice365Comand(request.Ip);
             return this.ToResult(result);
         }
 
@@ -127,14 +138,14 @@ namespace NetMaster.Controllers
         [HttpPost("installVlc")]
         public async Task<IActionResult> InstallVlc([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallVlcComand(request.Ip);
+            var result = await softwareService.InstallVlcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("instalWinrar")]
         public async Task<IActionResult> InstallWinrar([FromBody] IpRequestController request)
         {
-            var result = await powershellService.InstallWinrarComand(request.Ip);
+            var result = await softwareService.InstallWinrarComand(request.Ip);
             return this.ToResult(result);
         }
 
@@ -149,3 +160,4 @@ namespace NetMaster.Controllers
 
     }
 }
+
