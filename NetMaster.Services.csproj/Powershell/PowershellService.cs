@@ -2,19 +2,21 @@
 using NetMaster.Repository.Local.Powershell.Software.Installers;
 using NetMaster.Repository.Local.Upload;
 
-
 namespace NetMaster.Services.Powershell
 {
     public class PowershellService
     {
-
-        public string[] ListNetworkComputerComand()
+        public object[] ListNetworkComputerComand()
         {
-            var computers = new string[] { "Higor-PC", "Gustavo-PC", "Convidado-PC" };
-            var ips = new string[] { "192.168.0.3", "192.168.0.4", "192.168.0.10" };
-            return computers;
-        }
+            var computersAndIPs = new object[]
+            {
+                new { Name = "Higor-PC", IP = "192.168.0.3" },
+                new { Name = "Gustavo-PC", IP = "192.168.0.4" },
+                new { Name = "Convidado-PC", IP = "192.168.0.10" },
+            };
 
+            return computersAndIPs;
+        }
 
         private static ServiceResultModel RunCommand(RepositoryResultModel result)
         {
