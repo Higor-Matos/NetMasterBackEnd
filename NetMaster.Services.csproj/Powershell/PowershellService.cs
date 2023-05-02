@@ -1,6 +1,8 @@
 ﻿using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Software.Installers;
 using NetMaster.Repository.Local.Upload;
+using System.Threading.Tasks;
+using System;
 
 namespace NetMaster.Services.Powershell
 {
@@ -18,16 +20,19 @@ namespace NetMaster.Services.Powershell
             return computersAndIPs;
         }
 
-        private static ServiceResultModel RunCommand(RepositoryResultModel result)
+        private static ServiceResultModel<object> RunCommand(RepositoryResultModel<object> result)
         {
+            DateTime timestamp = DateTime.UtcNow;
+            string computerName = Environment.MachineName;
+
             if (result.SuccessResult != null)
             {
-                return new ServiceResultModel(success: new SuccessServiceResult(result.SuccessResult.Result));
+                return new ServiceResultModel<object>(success: new SuccessServiceResult<object>(result.SuccessResult.Result, timestamp, computerName));
             }
             else
             {
                 string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel(error: new ErrorServiceResult(msgError));
+                return new ServiceResultModel<object>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
     }

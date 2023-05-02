@@ -6,7 +6,7 @@ namespace NetMaster.Domain.Extensions
 {
     public static class ControllerExtensions
     {
-        public static IActionResult ToResult(this ControllerBase controller, ServiceResultModel value)
+        public static IActionResult ToResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
         {
             if (value.SuccessResult != null)
             {

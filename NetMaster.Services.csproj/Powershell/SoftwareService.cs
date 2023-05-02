@@ -7,7 +7,7 @@ namespace NetMaster.Services.Powershell.PowershellServices
 {
     public class SoftwareService
     {
-       
+
         private readonly InstallFirefoxRepository installFirefoxRep = new();
         private readonly InstallVlcRepository installVlcRep = new();
         private readonly InstallWinrarRepository installWinrarRep = new();
@@ -16,66 +16,85 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
 
-        public async Task<ServiceResultModel> VerifyChocolateyComand(string ip)
+        public async Task<ServiceResultModel<object>> VerifyChocolateyComand(string ip)
         {
-            RepositoryResultModel resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            RepositoryResultModel<string> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(ConvertResult(resultRep));
+        }
+
+
+
+        public async Task<ServiceResultModel<object>> InstallAdobeReaderComand(string ip)
+        {
+            RepositoryResultModel<string> resultRep = await installAdobeReaderRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(ConvertResult(resultRep));
+        }
+
+
+
+        public async Task<ServiceResultModel<object>> InstallFirefoxComand(string ip)
+        {
+            RepositoryResultModel<string> resultRep = await installFirefoxRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand((ConvertResult(resultRep)));
 
         }
 
-        public async Task<ServiceResultModel> InstallAdobeReaderComand(string ip)
+        public async Task<ServiceResultModel<object>> InstallGoogleChromeComand(string ip)
         {
-            RepositoryResultModel resultRep = await installAdobeReaderRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            RepositoryResultModel<string> resultRep = await installGoogleChromeRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand((ConvertResult(resultRep)));
 
         }
 
-        public async Task<ServiceResultModel> InstallFirefoxComand(string ip)
+        public async Task<ServiceResultModel<object>> InstallOffice365Comand(string ip)
         {
-            RepositoryResultModel resultRep = await installFirefoxRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            RepositoryResultModel<string> resultRep = await installOffice365Rep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand((ConvertResult(resultRep)));
 
         }
 
-        public async Task<ServiceResultModel> InstallGoogleChromeComand(string ip)
+        public async Task<ServiceResultModel<object>> InstallVlcComand(string ip)
         {
-            RepositoryResultModel resultRep = await installGoogleChromeRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            RepositoryResultModel<string> resultRep = await installVlcRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand((ConvertResult(resultRep)));
 
         }
 
-        public async Task<ServiceResultModel> InstallOffice365Comand(string ip)
+        public async Task<ServiceResultModel<object>> InstallWinrarComand(string ip)
         {
-            RepositoryResultModel resultRep = await installOffice365Rep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            RepositoryResultModel<string> resultRep = await installWinrarRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand((ConvertResult(resultRep)));
 
         }
 
-        public async Task<ServiceResultModel> InstallVlcComand(string ip)
+        private static ServiceResultModel<object> RunCommand(RepositoryResultModel<object> result)
         {
-            RepositoryResultModel resultRep = await installVlcRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
+            DateTime timestamp = DateTime.UtcNow;
+            string computerName = Environment.MachineName;
 
-        }
-
-        public async Task<ServiceResultModel> InstallWinrarComand(string ip)
-        {
-            RepositoryResultModel resultRep = await installWinrarRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
-
-        }
-
-        private static ServiceResultModel RunCommand(RepositoryResultModel result)
-        {
             if (result.SuccessResult != null)
             {
-                return new ServiceResultModel(success: new SuccessServiceResult(result.SuccessResult.Result));
+                return new ServiceResultModel<object>(success: new SuccessServiceResult<object>(result.SuccessResult.Result, timestamp, computerName));
             }
             else
             {
                 string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel(error: new ErrorServiceResult(msgError));
+                return new ServiceResultModel<object>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
+
+        private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
+        {
+            if (result.SuccessResult != null)
+            {
+                return new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult);
+            }
+            else
+            {
+                return new RepositoryResultModel<object>(null, result.ErrorResult);
+            }
+        }
+
+
     }
 }

@@ -4,11 +4,13 @@ using System.Management.Automation.Runspaces;
 
 public class PowershellRunNetworkRepository
 {
-    public static async Task<RepositoryResultModel> RunCommandInSpace(
+    public static async Task<RepositoryResultModel<T>> RunCommandInSpace<T>(
         WSManConnectionInfo wsManConnectionInfo,
         string command,
+        Func<string, T> convertOutput,
         string? parameters
     )
+
     {
         using Runspace runSpace = RunspaceFactory.CreateRunspace(wsManConnectionInfo);
         try
@@ -27,12 +29,15 @@ public class PowershellRunNetworkRepository
 
             var commandResult = await powerShell.InvokeAsync();
             var returnResult = string.Join(Environment.NewLine, commandResult);
+            var convertedResult = convertOutput(returnResult);
 
-            return new RepositoryResultModel(success: new SuccessRepositoryResult(returnResult));
+            return new RepositoryResultModel<T>(success: new SuccessRepositoryResult<T>(convertedResult));
+
+
         }
         catch (Exception e)
         {
-            return new RepositoryResultModel(error: new ErrorRepositoryResult(e));
+            return new RepositoryResultModel<T>(error: new ErrorRepositoryResult(e));
         }
         finally
         {

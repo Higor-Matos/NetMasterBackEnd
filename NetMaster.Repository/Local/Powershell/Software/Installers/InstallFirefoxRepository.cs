@@ -6,11 +6,11 @@ namespace NetMaster.Repository.Local.Powershell.Software.Installers
     public class InstallFirefoxRepository : BasePowershellRepository
     {
         private static readonly string command = "choco install firefox -y --force";
-        private static readonly string args = "";
+        private static readonly string parameters = "";
 
-        public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            return await ExecCommand(param, command, args);
+            return await ExecCommand<string>(param, command, jsonOutput => jsonOutput, parameters);
         }
     }
 }

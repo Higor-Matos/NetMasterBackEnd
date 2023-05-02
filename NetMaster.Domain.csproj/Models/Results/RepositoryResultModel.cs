@@ -1,28 +1,51 @@
-﻿namespace NetMaster.Domain.Models.Results
+﻿using System;
+
+namespace NetMaster.Domain.Models.Results
 {
     public class RepositoryResultModel
     {
-        public RepositoryResultModel(
-            SuccessRepositoryResult? success = null,
-            ErrorRepositoryResult? error = null
-        )
+        public SuccessRepositoryResult? SuccessResult { get; protected set; }
+        public ErrorRepositoryResult? ErrorResult { get; protected set; }
+
+        protected RepositoryResultModel(SuccessRepositoryResult? success = null, ErrorRepositoryResult? error = null)
         {
             SuccessResult = success;
             ErrorResult = error;
         }
+    }
 
-        public SuccessRepositoryResult? SuccessResult { get; }
-        public ErrorRepositoryResult? ErrorResult { get; }
+    public class RepositoryResultModel<T> : RepositoryResultModel
+    {
+        public new SuccessRepositoryResult<T>? SuccessResult
+        {
+            get => (SuccessRepositoryResult<T>?)base.SuccessResult;
+            protected set => base.SuccessResult = value;
+        }
+
+        public RepositoryResultModel(SuccessRepositoryResult<T>? success = null, ErrorRepositoryResult? error = null)
+            : base(success, error)
+        {
+        }
+
+        public RepositoryResultModel(RepositoryResultModel model)
+        {
+            SuccessResult = (SuccessRepositoryResult<T>?)model.SuccessResult;
+            ErrorResult = model.ErrorResult;
+        }
     }
 
     public class SuccessRepositoryResult
     {
-        public SuccessRepositoryResult(string result)
+    }
+
+    public class SuccessRepositoryResult<T> : SuccessRepositoryResult
+    {
+        public SuccessRepositoryResult(T result)
         {
             Result = result;
         }
 
-        public string Result { get; }
+        public T Result { get; }
     }
 
     public class ErrorRepositoryResult

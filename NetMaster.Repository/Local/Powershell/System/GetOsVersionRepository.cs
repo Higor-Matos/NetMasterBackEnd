@@ -5,11 +5,11 @@ namespace NetMaster.Repository.Local.Powershell.System
 {
     public class GetOsVersionRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {
             string command = "Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object Caption, Version";
             string parameters = "";
-            return await ExecCommand(param, command, parameters);
+            return await ExecCommand<string>(param, command, jsonOutput => jsonOutput, parameters);
         }
     }
 }

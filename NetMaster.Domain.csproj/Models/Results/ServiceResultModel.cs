@@ -1,9 +1,9 @@
 ﻿namespace NetMaster.Domain.Models.Results
 {
-    public class ServiceResultModel
+    public class ServiceResultModel<T>
     {
         public ServiceResultModel(
-            SuccessServiceResult? success = null,
+            SuccessServiceResult<T>? success = null,
             ErrorServiceResult? error = null
         )
         {
@@ -11,27 +11,43 @@
             ErrorResult = error;
         }
 
-        public SuccessServiceResult? SuccessResult { get; }
+        public SuccessServiceResult<T>? SuccessResult { get; }
         public ErrorServiceResult? ErrorResult { get; }
     }
 
     public class SuccessServiceResult
     {
-        public SuccessServiceResult(object result)
+        public DateTime Timestamp { get; }
+        public string ComputerName { get; }
+
+        protected SuccessServiceResult(DateTime timestamp, string computerName)
+        {
+            Timestamp = timestamp;
+            ComputerName = computerName;
+        }
+    }
+
+    public class SuccessServiceResult<T> : SuccessServiceResult
+    {
+        public SuccessServiceResult(T result, DateTime timestamp, string computerName) : base(timestamp, computerName)
         {
             Result = result;
         }
 
-        public object Result { get; }
+        public T Result { get; }
     }
 
     public class ErrorServiceResult
     {
-        public ErrorServiceResult(string errorMessage)
+        public ErrorServiceResult(string errorMessage, DateTime timestamp, string computerName)
         {
             ErrorMessage = errorMessage;
+            Timestamp = timestamp;
+            ComputerName = computerName;
         }
 
         public string ErrorMessage { get; }
+        public DateTime Timestamp { get; }
+        public string ComputerName { get; }
     }
 }

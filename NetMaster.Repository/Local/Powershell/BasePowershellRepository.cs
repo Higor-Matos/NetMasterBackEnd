@@ -13,7 +13,7 @@ public abstract class BasePowershellRepository
         this.credentialProvider = new CredentialProviderRepository();
     }
 
-    protected async Task<RepositoryResultModel> ExecCommand(RepositoryPowerShellParamModel param, string command, string? parameters = null)
+    protected async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, string? parameters = null)
     {
         PSCredential credential = credentialProvider.GetCredential();
         WSManConnectionInfo wsManConnectionInfo = new()
@@ -22,6 +22,6 @@ public abstract class BasePowershellRepository
             Credential = credential
         };
 
-        return await PowershellRunNetworkRepository.RunCommandInSpace(wsManConnectionInfo, command, parameters);
+        return await PowershellRunNetworkRepository.RunCommandInSpace(wsManConnectionInfo, command, convertOutput, parameters);
     }
 }
