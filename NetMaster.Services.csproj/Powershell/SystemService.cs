@@ -1,11 +1,10 @@
-﻿
-using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.System;
 using Newtonsoft.Json.Linq;
 
-namespace NetMaster.Services.Powershell.PowershellServices
+namespace NetMaster.Services.Powershell
 {
     public class SystemService
     {
@@ -42,7 +41,7 @@ namespace NetMaster.Services.Powershell.PowershellServices
                 List<LocalUser> localUsers = resultJson["Users"].ToObject<List<LocalUser>>();
                 string computerName = resultJson["PSComputerName"].ToString();
 
-                LocalUsersInfoModel localUsersResponse = new LocalUsersInfoModel
+                LocalUsersInfoModel localUsersResponse = new()
                 {
                     Users = localUsers,
                     PSComputerName = computerName,
@@ -111,14 +110,9 @@ namespace NetMaster.Services.Powershell.PowershellServices
         }
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
-            if (result.SuccessResult != null)
-            {
-                return new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult);
-            }
-            else
-            {
-                return new RepositoryResultModel<object>(null, result.ErrorResult);
-            }
+            return result.SuccessResult != null
+                ? new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult)
+                : new RepositoryResultModel<object>(null, result.ErrorResult);
         }
 
     }

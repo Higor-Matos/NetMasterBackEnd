@@ -4,7 +4,7 @@ using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Hardware;
 using System.Text.Json;
 
-namespace NetMaster.Services.Powershell.PowershellServices
+namespace NetMaster.Services.Powershell
 {
     public class HardwareService
     {

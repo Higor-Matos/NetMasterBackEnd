@@ -32,14 +32,9 @@ namespace NetMaster.Services
 
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
-            if (result.SuccessResult != null)
-            {
-                return new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult);
-            }
-            else
-            {
-                return new RepositoryResultModel<object>(null, result.ErrorResult);
-            }
+            return result.SuccessResult != null
+                ? new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult)
+                : new RepositoryResultModel<object>(null, result.ErrorResult);
         }
 
     }

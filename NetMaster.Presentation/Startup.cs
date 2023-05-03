@@ -1,7 +1,6 @@
 using NetMaster.Presentation.Configuration;
 using NetMaster.Services;
 using NetMaster.Services.Powershell;
-using NetMaster.Services.Powershell.PowershellServices;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

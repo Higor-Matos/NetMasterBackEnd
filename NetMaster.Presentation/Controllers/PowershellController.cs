@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
 using NetMaster.Services;
 using NetMaster.Services.Powershell;
-using NetMaster.Services.Powershell.PowershellServices;
 
 namespace NetMaster.Presentation.Controllers
 {

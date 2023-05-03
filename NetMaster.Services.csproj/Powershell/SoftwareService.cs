@@ -72,7 +72,6 @@ namespace NetMaster.Services.Powershell
             }
         }
 
-
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
             return result.SuccessResult != null
