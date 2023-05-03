@@ -13,6 +13,9 @@ namespace NetMaster.Repository.Local.Configuration
                 .Build();
         }
 
-        public string GetValue(string key) => Configuration.GetSection(key).Value ?? string.Empty;
+        public string GetValue(string key)
+        {
+            return Configuration.GetSection(key).Value ?? string.Empty;
+        }
     }
 }

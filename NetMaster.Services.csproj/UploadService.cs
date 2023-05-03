@@ -1,5 +1,5 @@
 ﻿using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Upload;
+using NetMaster.Repository.Local.Uploud;
 
 namespace NetMaster.Services
 {

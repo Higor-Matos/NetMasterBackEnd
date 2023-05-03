@@ -1,8 +1,5 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
-using Newtonsoft.Json;
-using System;
-using System.Threading.Tasks;
 using NetMaster.Domain.Models.Results;
 using Newtonsoft.Json.Linq;
 
@@ -37,10 +34,10 @@ namespace NetMaster.Repository.Local.Powershell.System
                 Write-Output $jsonResult
             ";
 
-            Func<string, InstalledProgramsResponse> convertOutput = (jsonOutput) =>
+            static InstalledProgramsResponse convertOutput(string jsonOutput)
             {
                 JObject resultJson = JObject.Parse(jsonOutput);
-                var installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgramInfoModel>>();
+                List<InstalledProgramInfoModel>? installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgramInfoModel>>();
                 return new InstalledProgramsResponse
                 {
                     InstalledPrograms = installedPrograms,
@@ -48,7 +45,7 @@ namespace NetMaster.Repository.Local.Powershell.System
                     PSComputerName = resultJson["PSComputerName"].ToString(),
                     Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")
                 };
-            };
+            }
 
             return await ExecCommand(param, command, convertOutput);
         }

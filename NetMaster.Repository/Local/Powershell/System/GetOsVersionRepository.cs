@@ -2,8 +2,6 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using Newtonsoft.Json;
-using System;
-using System.Threading.Tasks;
 
 namespace NetMaster.Repository.Local.Powershell.System
 {
@@ -14,13 +12,13 @@ namespace NetMaster.Repository.Local.Powershell.System
             string command = "Get-CimInstance -ClassName Win32_OperatingSystem | " +
                              "Select-Object Caption, Version, @{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
-            Func<string, OSVersionInfoModel> convertOutput = (jsonOutput) =>
+            OSVersionInfoModel convertOutput(string jsonOutput)
             {
-                var osVersionInfo = JsonConvert.DeserializeObject<OSVersionInfoModel>(jsonOutput);
+                OSVersionInfoModel? osVersionInfo = JsonConvert.DeserializeObject<OSVersionInfoModel>(jsonOutput);
                 osVersionInfo.IpAddress = param.Ip;
                 osVersionInfo.Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
                 return osVersionInfo;
-            };
+            }
 
             return await base.ExecCommand(param, command, convertOutput);
         }

@@ -1,7 +1,6 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using System;
 using System.Text.Json;
 
 namespace NetMaster.Repository.Local.Powershell.System
@@ -24,22 +23,20 @@ namespace NetMaster.Repository.Local.Powershell.System
             $result | ConvertTo-Json -Depth 2 -Compress
             ";
 
-            Func<string, string> convertOutput = (jsonOutput) =>
+            string convertOutput(string jsonOutput)
             {
-                using (JsonDocument doc = JsonDocument.Parse(jsonOutput))
+                using JsonDocument doc = JsonDocument.Parse(jsonOutput);
+                string usersJson = doc.RootElement.GetProperty("Users").GetRawText();
+                string? psComputerName = doc.RootElement.GetProperty("PSComputerName").GetString();
+                LocalUsersInfoModel localUsersResponse = new()
                 {
-                    var usersJson = doc.RootElement.GetProperty("Users").GetRawText();
-                    var psComputerName = doc.RootElement.GetProperty("PSComputerName").GetString();
-                    var localUsersResponse = new LocalUsersInfoModel
-                    {
-                        Users = JsonSerializer.Deserialize<List<LocalUser>>(usersJson),
-                        PSComputerName = psComputerName,
-                        IpAddress = param.Ip,
-                        Timestamp = DateTimeOffset.Now.ToString("yyyy-MM-ddTHH:mm:ss")
-                    };
-                    return JsonSerializer.Serialize(localUsersResponse);
-                }
-            };
+                    Users = JsonSerializer.Deserialize<List<LocalUser>>(usersJson),
+                    PSComputerName = psComputerName,
+                    IpAddress = param.Ip,
+                    Timestamp = DateTimeOffset.Now.ToString("yyyy-MM-ddTHH:mm:ss")
+                };
+                return JsonSerializer.Serialize(localUsersResponse);
+            }
 
             return await base.ExecCommand<string>(param, command, convertOutput);
         }
