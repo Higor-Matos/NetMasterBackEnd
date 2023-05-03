@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models;
+﻿
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Software;
@@ -25,7 +26,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
             if (resultRep.SuccessResult != null)
             {
                 string jsonOutput = resultRep.SuccessResult.Result;
-                Console.WriteLine($"JSON Output: {jsonOutput}"); // Debug output
 
                 if (string.IsNullOrWhiteSpace(jsonOutput))
                 {
@@ -54,17 +54,30 @@ namespace NetMaster.Services.Powershell.PowershellServices
 
 
 
-        public async Task<ServiceResultModel<object>> GetOsVersion(string ip)
+        public async Task<ServiceResultModel<OSVersionInfo>> GetOsVersion(string ip)
         {
-            RepositoryResultModel<string> resultRep = await getOsVersionRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
+            RepositoryResultModel<OSVersionInfo> resultRep = await getOsVersionRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
         }
 
-        public async Task<ServiceResultModel<object>> GetInstalledPrograms(string ip)
+        public async Task<ServiceResultModel<InstalledProgramsResponse>> GetInstalledPrograms(string ip)
         {
-            RepositoryResultModel<string> resultRep = await getInstalledProgramsRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
+            RepositoryResultModel<InstalledProgramsResponse> resultRep = await getInstalledProgramsRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            DateTime timestamp = DateTime.UtcNow.ToLocalTime();
+
+            if (resultRep.SuccessResult != null)
+            {
+                InstalledProgramsResponse installedProgramsResponse = resultRep.SuccessResult.Result;
+                return new ServiceResultModel<InstalledProgramsResponse>(success: new SuccessServiceResult<InstalledProgramsResponse>(installedProgramsResponse, timestamp, installedProgramsResponse.PSComputerName));
+            }
+            else
+            {
+                string msgError = resultRep.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
+                return new ServiceResultModel<InstalledProgramsResponse>(error: new ErrorServiceResult(msgError, timestamp, Environment.MachineName));
+            }
         }
+
+
 
 
         public async Task<ServiceResultModel<object>> ShutdownPcComand(string ip)
@@ -79,21 +92,23 @@ namespace NetMaster.Services.Powershell.PowershellServices
             return RunCommand(ConvertResult(resultRep));
         }
 
-        private static ServiceResultModel<object> RunCommand(RepositoryResultModel<object> result)
+
+        private static ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result)
         {
             DateTime timestamp = DateTime.UtcNow;
             string computerName = Environment.MachineName;
 
             if (result.SuccessResult != null)
             {
-                return new ServiceResultModel<object>(success: new SuccessServiceResult<object>(result.SuccessResult.Result, timestamp, computerName));
+                return new ServiceResultModel<T>(success: new SuccessServiceResult<T>(result.SuccessResult.Result, timestamp, computerName));
             }
             else
             {
                 string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<object>(error: new ErrorServiceResult(msgError, timestamp, computerName));
+                return new ServiceResultModel<T>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
+
 
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {

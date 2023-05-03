@@ -14,7 +14,7 @@ public abstract class BasePowershellRepository
         this.credentialProvider = new CredentialProviderRepository();
     }
 
-    protected async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
+    public async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
     {
         PSCredential credential = credentialProvider.GetCredential();
         WSManConnectionInfo wsManConnectionInfo = new()

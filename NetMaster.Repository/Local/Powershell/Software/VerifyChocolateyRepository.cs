@@ -1,15 +1,25 @@
-﻿using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models;
 
-namespace NetMaster.Repository.Local.Powershell.Software
+public class VerifyChocolateyRepository : BasePowershellRepository
 {
-    public class VerifyChocolateyRepository : BasePowershellRepository
+    public async Task<RepositoryResultModel<ChocolateyInfo>> ExecCommand(RepositoryPowerShellParamModel param)
     {
-        private static readonly string command = "choco -v";
+        string command = "choco -v; (Get-WmiObject -Class Win32_ComputerSystem).Name";
 
-        public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
+        Func<string, ChocolateyInfo> convertOutput = (output) =>
         {
-            return await ExecCommand<string>(param, command, jsonOutput => jsonOutput);
-        }
+            var lines = output.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            return new ChocolateyInfo
+            {
+                ChocolateyVersion = lines[0].Trim(),
+                IpAddress = param.Ip,
+                PSComputerName = lines.Length > 1 ? lines[1].Trim() : string.Empty,
+                Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")
+            };
+        };
+
+        return await ExecCommand(param, command, convertOutput);
     }
 }

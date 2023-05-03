@@ -1,4 +1,5 @@
 ﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Software;
 using NetMaster.Repository.Local.Powershell.Software.Installers;
@@ -15,14 +16,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly InstallOffice365Repository installOffice365Rep = new();
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
-
-        public async Task<ServiceResultModel<object>> VerifyChocolateyComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-        }
-
-
 
         public async Task<ServiceResultModel<object>> InstallAdobeReaderComand(string ip)
         {
@@ -67,21 +60,28 @@ namespace NetMaster.Services.Powershell.PowershellServices
 
         }
 
-        private static ServiceResultModel<object> RunCommand(RepositoryResultModel<object> result)
+        public async Task<ServiceResultModel<ChocolateyInfo>> VerifyChocolateyComand(string ip)
+        {
+            RepositoryResultModel<ChocolateyInfo> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+        }
+
+        private static ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result)
         {
             DateTime timestamp = DateTime.UtcNow;
             string computerName = Environment.MachineName;
 
             if (result.SuccessResult != null)
             {
-                return new ServiceResultModel<object>(success: new SuccessServiceResult<object>(result.SuccessResult.Result, timestamp, computerName));
+                return new ServiceResultModel<T>(success: new SuccessServiceResult<T>(result.SuccessResult.Result, timestamp, computerName));
             }
             else
             {
                 string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<object>(error: new ErrorServiceResult(msgError, timestamp, computerName));
+                return new ServiceResultModel<T>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
+
 
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
