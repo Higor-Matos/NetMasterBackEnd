@@ -30,7 +30,7 @@ namespace NetMaster.Repository.Local.Powershell.System
                 {
                     var usersJson = doc.RootElement.GetProperty("Users").GetRawText();
                     var psComputerName = doc.RootElement.GetProperty("PSComputerName").GetString();
-                    var localUsersResponse = new LocalUsersResponse
+                    var localUsersResponse = new LocalUsersInfoModel
                     {
                         Users = JsonSerializer.Deserialize<List<LocalUser>>(usersJson),
                         PSComputerName = psComputerName,

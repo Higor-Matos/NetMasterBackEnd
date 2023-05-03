@@ -9,14 +9,14 @@ namespace NetMaster.Repository.Local.Powershell.System
 {
     public class GetOsVersionRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<OSVersionInfo>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<OSVersionInfoModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {
             string command = "Get-CimInstance -ClassName Win32_OperatingSystem | " +
                              "Select-Object Caption, Version, @{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
-            Func<string, OSVersionInfo> convertOutput = (jsonOutput) =>
+            Func<string, OSVersionInfoModel> convertOutput = (jsonOutput) =>
             {
-                var osVersionInfo = JsonConvert.DeserializeObject<OSVersionInfo>(jsonOutput);
+                var osVersionInfo = JsonConvert.DeserializeObject<OSVersionInfoModel>(jsonOutput);
                 osVersionInfo.IpAddress = param.Ip;
                 osVersionInfo.Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
                 return osVersionInfo;

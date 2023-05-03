@@ -4,14 +4,14 @@ using NetMaster.Domain.Models;
 
 public class VerifyChocolateyRepository : BasePowershellRepository
 {
-    public async Task<RepositoryResultModel<ChocolateyInfo>> ExecCommand(RepositoryPowerShellParamModel param)
+    public async Task<RepositoryResultModel<ChocolateyInfoModel>> ExecCommand(RepositoryPowerShellParamModel param)
     {
         string command = "choco -v; (Get-WmiObject -Class Win32_ComputerSystem).Name";
 
-        Func<string, ChocolateyInfo> convertOutput = (output) =>
+        Func<string, ChocolateyInfoModel> convertOutput = (output) =>
         {
             var lines = output.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            return new ChocolateyInfo
+            return new ChocolateyInfoModel
             {
                 ChocolateyVersion = lines[0].Trim(),
                 IpAddress = param.Ip,

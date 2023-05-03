@@ -40,7 +40,7 @@ namespace NetMaster.Repository.Local.Powershell.System
             Func<string, InstalledProgramsResponse> convertOutput = (jsonOutput) =>
             {
                 JObject resultJson = JObject.Parse(jsonOutput);
-                var installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgram>>();
+                var installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgramInfoModel>>();
                 return new InstalledProgramsResponse
                 {
                     InstalledPrograms = installedPrograms,

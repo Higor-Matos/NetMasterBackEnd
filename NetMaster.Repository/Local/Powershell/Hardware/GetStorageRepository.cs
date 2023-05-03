@@ -15,7 +15,7 @@ namespace NetMaster.Repository.Local.Powershell.Hardware
 
             Func<string, string> convertOutput = (jsonOutput) =>
             {
-                var storageInfo = JsonSerializer.Deserialize<StorageInfo>(jsonOutput);
+                var storageInfo = JsonSerializer.Deserialize<StorageInfoModel>(jsonOutput);
                 storageInfo.IpAddress = param.Ip;
                 storageInfo.Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
                 return JsonSerializer.Serialize(storageInfo);

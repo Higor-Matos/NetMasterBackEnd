@@ -17,13 +17,13 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
 
 
-        public async Task<ServiceResultModel<ChocolateyInfo>> VerifyChocolateyComand(string ip)
+        public async Task<ServiceResultModel<ChocolateyInfoModel>> VerifyChocolateyComand(string ip)
         {
-            RepositoryResultModel<ChocolateyInfo> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<ChocolateyInfoModel> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(resultRep);
         }
 
-        public async Task<ServiceResultModel<LocalUsersResponse>> GetUsers(string ip)
+        public async Task<ServiceResultModel<LocalUsersInfoModel>> GetUsers(string ip)
         {
             RepositoryResultModel<string> resultRep = await getUsersRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
             DateTime timestamp = DateTime.UtcNow.ToLocalTime();
@@ -35,32 +35,32 @@ namespace NetMaster.Services.Powershell.PowershellServices
 
                 if (string.IsNullOrWhiteSpace(jsonOutput))
                 {
-                    return new ServiceResultModel<LocalUsersResponse>(error: new ErrorServiceResult("A saída do comando PowerShell está vazia.", timestamp, Environment.MachineName));
+                    return new ServiceResultModel<LocalUsersInfoModel>(error: new ErrorServiceResult("A saída do comando PowerShell está vazia.", timestamp, Environment.MachineName));
                 }
 
                 JObject resultJson = JObject.Parse(jsonOutput);
                 List<LocalUser> localUsers = resultJson["Users"].ToObject<List<LocalUser>>();
                 string computerName = resultJson["PSComputerName"].ToString();
 
-                LocalUsersResponse localUsersResponse = new LocalUsersResponse
+                LocalUsersInfoModel localUsersResponse = new LocalUsersInfoModel
                 {
                     Users = localUsers,
                     PSComputerName = computerName,
                     Timestamp = timestamp.ToString("yyyy-MM-ddTHH:mm:ss"),
                     IpAddress = ip
                 };
-                return new ServiceResultModel<LocalUsersResponse>(success: new SuccessServiceResult<LocalUsersResponse>(localUsersResponse, timestamp, computerName));
+                return new ServiceResultModel<LocalUsersInfoModel>(success: new SuccessServiceResult<LocalUsersInfoModel>(localUsersResponse, timestamp, computerName));
             }
             else
             {
                 string msgError = resultRep.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<LocalUsersResponse>(error: new ErrorServiceResult(msgError, timestamp, Environment.MachineName));
+                return new ServiceResultModel<LocalUsersInfoModel>(error: new ErrorServiceResult(msgError, timestamp, Environment.MachineName));
             }
         }
 
-        public async Task<ServiceResultModel<OSVersionInfo>> GetOsVersion(string ip)
+        public async Task<ServiceResultModel<OSVersionInfoModel>> GetOsVersion(string ip)
         {
-            RepositoryResultModel<OSVersionInfo> resultRep = await getOsVersionRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<OSVersionInfoModel> resultRep = await getOsVersionRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(resultRep);
         }
 

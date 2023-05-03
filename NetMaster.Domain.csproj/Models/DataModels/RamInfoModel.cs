@@ -2,10 +2,10 @@
 
 namespace NetMaster.Domain.Models.DataModels
 {
-    public class OSVersionInfo
+    public class RamInfoModel
     {
-        public string Caption { get; set; }
-        public string Version { get; set; }
+        public double FreePhysicalMemory_GB { get; set; }
+        public double TotalVisibleMemorySize_GB { get; set; }
         public string PSComputerName { get; set; }
         public string Timestamp { get; set; }
         public string IpAddress { get; set; }

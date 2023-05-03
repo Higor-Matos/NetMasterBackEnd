@@ -7,10 +7,10 @@ namespace NetMaster.Domain.Models.DataModels
         public string Timestamp { get; set; }
         public string PSComputerName { get; set; }
         public string IpAddress { get; set; }
-        public List<InstalledProgram> InstalledPrograms { get; set; }
+        public List<InstalledProgramInfoModel> InstalledPrograms { get; set; }
     }
 
-    public class InstalledProgram
+    public class InstalledProgramInfoModel
     {
         public string DisplayName { get; set; }
         public string DisplayVersion { get; set; }

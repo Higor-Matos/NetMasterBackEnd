@@ -1,6 +1,6 @@
 ﻿namespace NetMaster.Domain.Models.DataModels
 {
-    public class ChocolateyInfo
+    public class ChocolateyInfoModel
     {
         public string ChocolateyVersion { get; set; }
         public string PSComputerName { get; set; }

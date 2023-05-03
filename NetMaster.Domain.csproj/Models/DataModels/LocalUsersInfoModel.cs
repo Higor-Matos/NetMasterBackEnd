@@ -5,7 +5,7 @@
         public string Name { get; set; }
     }
 
-    public class LocalUsersResponse
+    public class LocalUsersInfoModel
     {
         public List<LocalUser> Users { get; set; }
         public string PSComputerName { get; set; }

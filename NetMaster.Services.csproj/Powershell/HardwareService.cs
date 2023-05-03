@@ -13,13 +13,13 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly GetRamRepository getRamUsageRep = new();
         private readonly GetStorageRepository getStorageRep = new();
 
-        public async Task<ServiceResultModel<RamInfo>> GetRam(string ip)
+        public async Task<ServiceResultModel<RamInfoModel>> GetRam(string ip)
         {
-            RepositoryResultModel<RamInfo> resultRep = await getRamUsageRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<RamInfoModel> resultRep = await getRamUsageRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(resultRep);
         }
 
-        public async Task<ServiceResultModel<StorageInfo>> GetStorage(string ip)
+        public async Task<ServiceResultModel<StorageInfoModel>> GetStorage(string ip)
         {
             RepositoryResultModel<string> resultRep = await getStorageRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             DateTime timestamp = DateTime.UtcNow;
@@ -27,13 +27,13 @@ namespace NetMaster.Services.Powershell.PowershellServices
 
             if (resultRep.SuccessResult != null)
             {
-                StorageInfo storageInfo = JsonSerializer.Deserialize<StorageInfo>(resultRep.SuccessResult.Result);
-                return new ServiceResultModel<StorageInfo>(success: new SuccessServiceResult<StorageInfo>(storageInfo, timestamp, computerName));
+                StorageInfoModel storageInfo = JsonSerializer.Deserialize<StorageInfoModel>(resultRep.SuccessResult.Result);
+                return new ServiceResultModel<StorageInfoModel>(success: new SuccessServiceResult<StorageInfoModel>(storageInfo, timestamp, computerName));
             }
             else
             {
                 string msgError = resultRep.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<StorageInfo>(error: new ErrorServiceResult(msgError, timestamp, computerName));
+                return new ServiceResultModel<StorageInfoModel>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
 
