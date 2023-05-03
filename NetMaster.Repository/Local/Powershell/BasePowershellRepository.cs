@@ -3,6 +3,7 @@ using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Credentials;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
+using System.Collections.Generic;
 
 public abstract class BasePowershellRepository
 {
@@ -13,7 +14,7 @@ public abstract class BasePowershellRepository
         this.credentialProvider = new CredentialProviderRepository();
     }
 
-    protected async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, string? parameters = null)
+    protected async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
     {
         PSCredential credential = credentialProvider.GetCredential();
         WSManConnectionInfo wsManConnectionInfo = new()

@@ -1,7 +1,8 @@
 ﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using System.Management.Automation;
-using System.Management.Automation.Runspaces;
+using System;
+using System.Text.Json;
 
 namespace NetMaster.Repository.Local.Powershell.System
 {
@@ -9,23 +10,38 @@ namespace NetMaster.Repository.Local.Powershell.System
     {
         public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            string command = @"
-                $computer = '" + param.Ip + @"'
-                $computerName = (Get-WmiObject -Class Win32_ComputerSystem -ComputerName $computer).Name
-                $users = Get-LocalUser | Where-Object { $_.Enabled -eq 'True' } | Select-Object Name, @{
-                    Name='Group'; Expression={ (Get-LocalGroup -ComputerName $computer -Member $_).Name }
-                }, @{
-                    Name='IsAdmin'; Expression={ (Get-LocalGroup -ComputerName $computer -Member $_).Name -contains 'Administrators' }
-                }, @{
-                    Name='PSComputerName'; Expression={ $computerName }
+            string command = @"$users = Get-LocalUser | Where-Object { $_.Enabled -eq $True } | ForEach-Object {
+                $user = $_
+                [PSCustomObject]@{
+                    Name = $user.Name
                 }
-                $result = @{ 'PSComputerName' = $computerName; 'Users' = $users }
-                $result | ConvertTo-Json -Compress
+            }
+            $computerName = (Get-CimInstance -ClassName Win32_ComputerSystem).Name
+            $result = @{
+                'Users' = $users
+                'PSComputerName' = $computerName
+            }
+            $result | ConvertTo-Json -Depth 2 -Compress
             ";
 
+            Func<string, string> convertOutput = (jsonOutput) =>
+            {
+                using (JsonDocument doc = JsonDocument.Parse(jsonOutput))
+                {
+                    var usersJson = doc.RootElement.GetProperty("Users").GetRawText();
+                    var psComputerName = doc.RootElement.GetProperty("PSComputerName").GetString();
+                    var localUsersResponse = new LocalUsersResponse
+                    {
+                        Users = JsonSerializer.Deserialize<List<LocalUser>>(usersJson),
+                        PSComputerName = psComputerName,
+                        IpAddress = param.Ip,
+                        Timestamp = DateTimeOffset.Now.ToString("yyyy-MM-ddTHH:mm:ss")
+                    };
+                    return JsonSerializer.Serialize(localUsersResponse);
+                }
+            };
 
-            string parameters = "";
-            return await base.ExecCommand<string>(param, command, jsonOutput => jsonOutput, parameters);
+            return await base.ExecCommand<string>(param, command, convertOutput);
         }
     }
 }

@@ -19,11 +19,20 @@ namespace NetMaster.Services.Powershell.PowershellServices
         public async Task<ServiceResultModel<LocalUsersResponse>> GetUsers(string ip)
         {
             RepositoryResultModel<string> resultRep = await getUsersRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            DateTime timestamp = DateTime.UtcNow;
+            DateTime timestamp = DateTime.UtcNow.ToLocalTime();
+
 
             if (resultRep.SuccessResult != null)
             {
-                JObject resultJson = JObject.Parse(resultRep.SuccessResult.Result);
+                string jsonOutput = resultRep.SuccessResult.Result;
+                Console.WriteLine($"JSON Output: {jsonOutput}"); // Debug output
+
+                if (string.IsNullOrWhiteSpace(jsonOutput))
+                {
+                    return new ServiceResultModel<LocalUsersResponse>(error: new ErrorServiceResult("A saída do comando PowerShell está vazia.", timestamp, Environment.MachineName));
+                }
+
+                JObject resultJson = JObject.Parse(jsonOutput);
                 List<LocalUser> localUsers = resultJson["Users"].ToObject<List<LocalUser>>();
                 string computerName = resultJson["PSComputerName"].ToString();
 
@@ -31,7 +40,7 @@ namespace NetMaster.Services.Powershell.PowershellServices
                 {
                     Users = localUsers,
                     PSComputerName = computerName,
-                    Timestamp = timestamp.ToString(),
+                    Timestamp = timestamp.ToString("yyyy-MM-ddTHH:mm:ss"),
                     IpAddress = ip
                 };
                 return new ServiceResultModel<LocalUsersResponse>(success: new SuccessServiceResult<LocalUsersResponse>(localUsersResponse, timestamp, computerName));
@@ -42,6 +51,7 @@ namespace NetMaster.Services.Powershell.PowershellServices
                 return new ServiceResultModel<LocalUsersResponse>(error: new ErrorServiceResult(msgError, timestamp, Environment.MachineName));
             }
         }
+
 
 
         public async Task<ServiceResultModel<object>> GetOsVersion(string ip)

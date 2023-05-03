@@ -3,9 +3,7 @@
     public class LocalUser
     {
         public string Name { get; set; }
-        public string Group { get; set; }
     }
-
 
     public class LocalUsersResponse
     {
