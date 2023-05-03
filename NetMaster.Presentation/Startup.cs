@@ -1,10 +1,9 @@
-using NetMaster.Presentation;
-using Microsoft.AspNetCore.Cors.Infrastructure;
+using NetMaster.Presentation.Configuration;
 using NetMaster.Services;
 using NetMaster.Services.Powershell;
 using NetMaster.Services.Powershell.PowershellServices;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<StreamingServerConfigPresentation>(builder.Configuration.GetSection("StreamingServer"));
 
@@ -25,11 +24,11 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAllOrigins",
         builder =>
         {
-            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            _ = builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
         });
 });
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Use CORS policy
 app.UseCors("AllowAllOrigins");
@@ -42,7 +41,7 @@ app.UseSwaggerDocumentation();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllers();
+    _ = endpoints.MapControllers();
 });
 
 app.Run();

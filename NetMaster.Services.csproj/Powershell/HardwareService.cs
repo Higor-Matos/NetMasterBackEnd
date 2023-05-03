@@ -2,9 +2,7 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Hardware;
-using System.Threading.Tasks;
 using System.Text.Json;
-using System;
 
 namespace NetMaster.Services.Powershell.PowershellServices
 {

@@ -1,4 +1,4 @@
 ﻿public class IpRequestController
 {
-    public string Ip { get; set; }
+    public string? Ip { get; set; }
 }

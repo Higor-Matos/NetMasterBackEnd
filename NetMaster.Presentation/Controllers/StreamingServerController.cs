@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
-namespace NetMaster.Controllers
+namespace NetMaster.Presentation.Controllers
 {
     [ApiController]
     [Route("streaming")]
@@ -11,11 +11,10 @@ namespace NetMaster.Controllers
         private readonly StreamingServerConfigPresentation _config;
         private Process _streamingServerProcess;
         private const string ProcessName = "ScreenStreamingServer";
-
         public StreamingServerController(IOptions<StreamingServerConfigPresentation> config, IHostApplicationLifetime appLifetime)
         {
             _config = config.Value;
-            appLifetime.ApplicationStopping.Register(OnApplicationStopping);
+            _ = appLifetime.ApplicationStopping.Register(OnApplicationStopping);
         }
 
         [HttpPost("toggle")]
@@ -39,7 +38,6 @@ namespace NetMaster.Controllers
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
-
         private bool IsServerRunning()
         {
             return Process.GetProcessesByName(ProcessName).Any();
@@ -47,7 +45,7 @@ namespace NetMaster.Controllers
 
         private void StartStreamingServer()
         {
-            var processStartInfo = new ProcessStartInfo
+            ProcessStartInfo processStartInfo = new()
             {
                 FileName = _config.FileName,
                 UseShellExecute = _config.UseShellExecute,
@@ -56,15 +54,13 @@ namespace NetMaster.Controllers
             };
 
             _streamingServerProcess = new Process { StartInfo = processStartInfo };
-            _streamingServerProcess.Start();
+            _ = _streamingServerProcess.Start();
         }
-
         private void StopStreamingServer()
         {
-            var process = Process.GetProcessesByName(ProcessName).FirstOrDefault();
+            Process? process = Process.GetProcessesByName(ProcessName).FirstOrDefault();
             process?.Kill();
         }
-
         private void OnApplicationStopping()
         {
             StopStreamingServer();

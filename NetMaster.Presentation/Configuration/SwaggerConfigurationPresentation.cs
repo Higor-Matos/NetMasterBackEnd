@@ -1,14 +1,12 @@
 ﻿using Microsoft.OpenApi.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
 
-namespace NetMaster.Presentation
+namespace NetMaster.Presentation.Configuration
 {
     public static class SwaggerConfigurationPresentation
     {
         public static void AddSwaggerDocumentation(this IServiceCollection services)
         {
-            services.AddSwaggerGen(c =>
+            _ = services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
@@ -19,7 +17,7 @@ namespace NetMaster.Presentation
                     {
                         Name = "Higor Matos",
                         Email = "higordeus22@gmail.com",
-                        Url = new System.Uri("https://github.com/Higor-Matos")
+                        Url = new Uri("https://github.com/Higor-Matos")
                     }
                 });
             });
@@ -27,8 +25,8 @@ namespace NetMaster.Presentation
 
         public static void UseSwaggerDocumentation(this IApplicationBuilder app)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            _ = app.UseSwagger();
+            _ = app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetMaster API V1");
                 c.RoutePrefix = "swagger";

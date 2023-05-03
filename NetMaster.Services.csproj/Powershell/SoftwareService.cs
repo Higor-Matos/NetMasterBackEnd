@@ -1,9 +1,8 @@
 ﻿using NetMaster.Domain.Models;
-using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell.Software.Installers;
 
-namespace NetMaster.Services.Powershell.PowershellServices
+namespace NetMaster.Services.Powershell
 {
     public class SoftwareService
     {
@@ -25,35 +24,35 @@ namespace NetMaster.Services.Powershell.PowershellServices
         public async Task<ServiceResultModel<object>> InstallFirefoxComand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installFirefoxRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand((ConvertResult(resultRep)));
+            return RunCommand(ConvertResult(resultRep));
 
         }
 
         public async Task<ServiceResultModel<object>> InstallGoogleChromeComand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installGoogleChromeRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand((ConvertResult(resultRep)));
+            return RunCommand(ConvertResult(resultRep));
 
         }
 
         public async Task<ServiceResultModel<object>> InstallOffice365Comand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installOffice365Rep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand((ConvertResult(resultRep)));
+            return RunCommand(ConvertResult(resultRep));
 
         }
 
         public async Task<ServiceResultModel<object>> InstallVlcComand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installVlcRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand((ConvertResult(resultRep)));
+            return RunCommand(ConvertResult(resultRep));
 
         }
 
         public async Task<ServiceResultModel<object>> InstallWinrarComand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installWinrarRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand((ConvertResult(resultRep)));
+            return RunCommand(ConvertResult(resultRep));
 
         }
 
@@ -76,14 +75,9 @@ namespace NetMaster.Services.Powershell.PowershellServices
 
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
-            if (result.SuccessResult != null)
-            {
-                return new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult);
-            }
-            else
-            {
-                return new RepositoryResultModel<object>(null, result.ErrorResult);
-            }
+            return result.SuccessResult != null
+                ? new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult)
+                : new RepositoryResultModel<object>(null, result.ErrorResult);
         }
 
 

@@ -1,8 +1,4 @@
 ﻿using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell.Software.Installers;
-using NetMaster.Repository.Local.Upload;
-using System.Threading.Tasks;
-using System;
 
 namespace NetMaster.Services.Powershell
 {
