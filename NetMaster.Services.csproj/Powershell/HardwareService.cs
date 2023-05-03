@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace NetMaster.Services.Powershell
 {
-    public class HardwareService
+    public class HardwareService : BaseService
     {
         private readonly GetRamRepository getRamUsageRep = new();
         private readonly GetStorageRepository getStorageRep = new();
@@ -35,20 +35,5 @@ namespace NetMaster.Services.Powershell
             }
         }
 
-        private static ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result)
-        {
-            DateTime timestamp = DateTime.UtcNow;
-            string computerName = Environment.MachineName;
-
-            if (result.SuccessResult != null)
-            {
-                return new ServiceResultModel<T>(success: new SuccessServiceResult<T>(result.SuccessResult.Result, timestamp, computerName));
-            }
-            else
-            {
-                string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<T>(error: new ErrorServiceResult(msgError, timestamp, computerName));
-            }
-        }
     }
 }
