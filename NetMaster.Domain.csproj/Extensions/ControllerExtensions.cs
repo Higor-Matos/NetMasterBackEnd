@@ -12,13 +12,11 @@ namespace NetMaster.Domain.Extensions
             {
                 return controller.Ok(value.SuccessResult.Result);
             }
-            else if (value.ErrorResult != null)
-            {
-                return controller.BadRequest(value.ErrorResult.ErrorMessage);
-            }
             else
             {
-                return controller.StatusCode(StatusCodes.Status500InternalServerError);
+                return value.ErrorResult != null
+                    ? controller.BadRequest(value.ErrorResult.ErrorMessage)
+                    : controller.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
     }

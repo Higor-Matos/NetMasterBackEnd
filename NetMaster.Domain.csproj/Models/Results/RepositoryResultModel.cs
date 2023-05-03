@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NetMaster.Domain.Models.Results
+﻿namespace NetMaster.Domain.Models.Results
 {
     public class RepositoryResultModel
     {
