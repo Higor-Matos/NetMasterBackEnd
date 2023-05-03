@@ -12,6 +12,8 @@ namespace NetMaster.Domain.Models.DataModels
 
     public class InstalledProgram
     {
-        public string Name { get; set; }
+        public string DisplayName { get; set; }
+        public string DisplayVersion { get; set; }
     }
+
 }

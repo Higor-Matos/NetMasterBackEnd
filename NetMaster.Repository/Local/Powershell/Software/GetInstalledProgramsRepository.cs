@@ -13,27 +13,38 @@ namespace NetMaster.Repository.Local.Powershell.Software
         public async Task<RepositoryResultModel<InstalledProgramsResponse>> ExecCommand(RepositoryPowerShellParamModel param)
         {
             string command = @"
-                $programs = choco list --local-only | Select-Object -Skip 1 | Where-Object { $_ -notmatch '^\\d+ packages installed' } | Where-Object { $_ -notmatch '^KB\\d+' } | Where-Object { $_ -notmatch '\\d+ packages installed' };
-                $computerName = (Get-WmiObject -Class Win32_ComputerSystem).Name;
-                @{
-                    'Programs' = $programs;
-                    'PSComputerName' = $computerName;
-                } | ConvertTo-Json
+                $list = @()
+                $pcname = (Get-WmiObject -Class Win32_ComputerSystem).Name
+                $InstalledSoftwareKey = 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall'
+                $InstalledSoftware = [microsoft.win32.registrykey]::OpenRemoteBaseKey('LocalMachine', $pcname)
+                $RegistryKey = $InstalledSoftware.OpenSubKey($InstalledSoftwareKey)
+                $SubKeys = $RegistryKey.GetSubKeyNames()
+                Foreach ($key in $SubKeys) {
+                    $thisKey = $InstalledSoftwareKey + '\\' + $key
+                    $thisSubKey = $InstalledSoftware.OpenSubKey($thisKey)
+                    $obj = New-Object PSObject
+                    $obj | Add-Member -MemberType NoteProperty -Name 'DisplayName' -Value $($thisSubKey.GetValue('DisplayName'))
+                    $obj | Add-Member -MemberType NoteProperty -Name 'DisplayVersion' -Value $($thisSubKey.GetValue('DisplayVersion'))
+                    $list += $obj
+                }
+                $filtered = $list | Where-Object { $_.DisplayName }
+                $result = @{
+                    'Programs' = $filtered;
+                    'PSComputerName' = $pcname;
+                    'IpAddress' = (Test-Connection -ComputerName $pcname -Count 1).IPv4Address.IPAddressToString;
+                };
+                $jsonResult = $result | ConvertTo-Json
+                Write-Output $jsonResult
             ";
 
             Func<string, InstalledProgramsResponse> convertOutput = (jsonOutput) =>
             {
                 JObject resultJson = JObject.Parse(jsonOutput);
-                var installedProgramNames = resultJson["Programs"].ToObject<List<string>>();
-                var installedPrograms = new List<InstalledProgram>();
-                foreach (var name in installedProgramNames)
-                {
-                    installedPrograms.Add(new InstalledProgram { Name = name });
-                }
+                var installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgram>>();
                 return new InstalledProgramsResponse
                 {
                     InstalledPrograms = installedPrograms,
-                    IpAddress = param.Ip,
+                    IpAddress = resultJson["IpAddress"].ToString(),
                     PSComputerName = resultJson["PSComputerName"].ToString(),
                     Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")
                 };
