@@ -1,7 +1,6 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell.Software;
 using NetMaster.Repository.Local.Powershell.Software.Installers;
 
 namespace NetMaster.Services.Powershell.PowershellServices
@@ -14,16 +13,14 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly InstallWinrarRepository installWinrarRep = new();
         private readonly InstallGoogleChromeRepository installGoogleChromeRep = new();
         private readonly InstallOffice365Repository installOffice365Rep = new();
-        private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
         private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
+
 
         public async Task<ServiceResultModel<object>> InstallAdobeReaderComand(string ip)
         {
             RepositoryResultModel<string> resultRep = await installAdobeReaderRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
-
-
 
         public async Task<ServiceResultModel<object>> InstallFirefoxComand(string ip)
         {
@@ -58,12 +55,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
             RepositoryResultModel<string> resultRep = await installWinrarRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand((ConvertResult(resultRep)));
 
-        }
-
-        public async Task<ServiceResultModel<ChocolateyInfo>> VerifyChocolateyComand(string ip)
-        {
-            RepositoryResultModel<ChocolateyInfo> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(resultRep);
         }
 
         private static ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result)

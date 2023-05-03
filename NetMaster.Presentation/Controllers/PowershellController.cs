@@ -101,7 +101,7 @@ namespace NetMaster.Controllers
         [HttpPost("verifyChocolateyVersion")]
         public async Task<IActionResult> VerifyChocolateyVersion([FromBody] IpRequestController request)
         {
-            var result = await softwareService.VerifyChocolateyComand(request.Ip);
+            var result = await systemService.VerifyChocolateyComand(request.Ip);
             return this.ToResult(result);
         }
 

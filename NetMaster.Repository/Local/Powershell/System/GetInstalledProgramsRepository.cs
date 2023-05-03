@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NetMaster.Domain.Models.Results;
 using Newtonsoft.Json.Linq;
 
-namespace NetMaster.Repository.Local.Powershell.Software
+namespace NetMaster.Repository.Local.Powershell.System
 {
     public class GetInstalledProgramsRepository : BasePowershellRepository
     {
@@ -50,7 +50,7 @@ namespace NetMaster.Repository.Local.Powershell.Software
                 };
             };
 
-            return await base.ExecCommand(param, command, convertOutput);
+            return await ExecCommand(param, command, convertOutput);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace NetMaster.Repository.Local.Powershell.Software.Installers
 
         public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            return await ExecCommand<string>(param, command, jsonOutput => jsonOutput);
+            return await ExecCommand(param, command, jsonOutput => jsonOutput);
         }
     }
 }

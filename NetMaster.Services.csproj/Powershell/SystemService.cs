@@ -2,9 +2,7 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell.Software;
 using NetMaster.Repository.Local.Powershell.System;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace NetMaster.Services.Powershell.PowershellServices
@@ -16,6 +14,14 @@ namespace NetMaster.Services.Powershell.PowershellServices
         private readonly GetUsersRepository getUsersRepository = new();
         private readonly GetOsVersionRepository getOsVersionRep = new();
         private readonly GetInstalledProgramsRepository getInstalledProgramsRep = new();
+        private readonly VerifyChocolateyRepository verifyChocolateyRep = new();
+
+
+        public async Task<ServiceResultModel<ChocolateyInfo>> VerifyChocolateyComand(string ip)
+        {
+            RepositoryResultModel<ChocolateyInfo> resultRep = await verifyChocolateyRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
+        }
 
         public async Task<ServiceResultModel<LocalUsersResponse>> GetUsers(string ip)
         {
@@ -52,8 +58,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
             }
         }
 
-
-
         public async Task<ServiceResultModel<OSVersionInfo>> GetOsVersion(string ip)
         {
             RepositoryResultModel<OSVersionInfo> resultRep = await getOsVersionRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
@@ -76,9 +80,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
                 return new ServiceResultModel<InstalledProgramsResponse>(error: new ErrorServiceResult(msgError, timestamp, Environment.MachineName));
             }
         }
-
-
-
 
         public async Task<ServiceResultModel<object>> ShutdownPcComand(string ip)
         {
@@ -108,8 +109,6 @@ namespace NetMaster.Services.Powershell.PowershellServices
                 return new ServiceResultModel<T>(error: new ErrorServiceResult(msgError, timestamp, computerName));
             }
         }
-
-
         private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
             if (result.SuccessResult != null)
