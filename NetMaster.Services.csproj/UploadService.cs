@@ -1,43 +1,34 @@
-﻿using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Uploud;
+﻿using Microsoft.AspNetCore.Http;
+using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Local.Upload;
 
 namespace NetMaster.Services
 {
-    public class UploadService
+    public class UploadService : BaseService
     {
-        private readonly UploadFileRepository uploadFileRepository = new();
+        private readonly UploadFileRepository _uploadFileRepository;
 
-        public ServiceResultModel<object> UploadFile(string fileName, byte[] fileData, string destinationFolder)
+        public UploadService()
         {
-            RepositoryResultModel<string> resultRep = uploadFileRepository.UploadFile(fileName, fileData, destinationFolder);
+            _uploadFileRepository = new UploadFileRepository();
+        }
+
+        public ServiceResultModel<object> UploadFile(IFormFile file)
+        {
+            string destinationFolder = "Uploads";
+            byte[] fileData = ReadFileData(file);
+
+            RepositoryResultModel<string> resultRep = _uploadFileRepository.UploadFile(file.FileName, fileData, destinationFolder);
             return RunCommand(ConvertResult(resultRep));
         }
 
-
-        private static ServiceResultModel<object> RunCommand(RepositoryResultModel<object> result)
+        private byte[] ReadFileData(IFormFile file)
         {
-            DateTime timestamp = DateTime.UtcNow;
-            string computerName = Environment.MachineName;
-
-            if (result.SuccessResult != null)
+            using (MemoryStream memoryStream = new())
             {
-                return new ServiceResultModel<object>(success: new SuccessServiceResult<object>(result.SuccessResult.Result, timestamp, computerName));
-            }
-            else
-            {
-                string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<object>(error: new ErrorServiceResult(msgError, timestamp, computerName));
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
             }
         }
-
-        private static RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
-        {
-            return result.SuccessResult != null
-                ? new RepositoryResultModel<object>(new SuccessRepositoryResult<object>(result.SuccessResult.Result), result.ErrorResult)
-                : new RepositoryResultModel<object>(null, result.ErrorResult);
-        }
-
     }
 }
-
-

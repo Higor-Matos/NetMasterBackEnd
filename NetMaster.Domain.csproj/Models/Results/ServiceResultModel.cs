@@ -1,6 +1,6 @@
 ﻿namespace NetMaster.Domain.Models.Results
 {
-    public class ServiceResultModel<T>
+    public class ServiceResultModel<T> where T : class
     {
         public ServiceResultModel(
             SuccessServiceResult<T>? success = null,
@@ -13,6 +13,9 @@
 
         public SuccessServiceResult<T>? SuccessResult { get; }
         public ErrorServiceResult? ErrorResult { get; }
+        public bool IsSuccess => SuccessResult != null;
+        public T? Success => SuccessResult?.Result;
+        public string? Error => ErrorResult?.ErrorMessage;
     }
 
     public class SuccessServiceResult
