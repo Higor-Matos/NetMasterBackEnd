@@ -16,7 +16,6 @@ builder.Services.AddScoped<NetworkService>();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocumentation();
 
-// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -28,7 +27,6 @@ builder.Services.AddCors(options =>
 
 WebApplication app = builder.Build();
 
-// Use CORS policy
 app.UseCors("AllowAllOrigins");
 
 app.UseRouting();

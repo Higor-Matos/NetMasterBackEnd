@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-NetMaster.Services", "2-N
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-NetMaster.Repository", "3-NetMaster.Repository", "{26E10E2F-57A7-44F3-A0D4-A2598A1D6D7F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-NetMaster.Domain", "4-NetMaster.Domain", "{B2D901C5-562F-4A69-AB81-1E2124B90D03}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-NetMaster.Domain", "5-NetMaster.Domain", "{B2D901C5-562F-4A69-AB81-1E2124B90D03}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Services", "..\NetMaster.Services.csproj\NetMaster.Services.csproj", "{D5EC6D89-2EBD-4792-88AB-8B3CFA78C324}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Repository", "..\
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Domain", "..\NetMaster.Domain.csproj\NetMaster.Domain.csproj", "{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-NetMaster.Infrastructure", "4-NetMaster.Infrastructure", "{97A405A5-F212-49F5-AA5D-93AB1FE2FBF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMaster.Infrastructure", "..\NetMaster.Infrastructure\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj", "{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,10 @@ Global
 		{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{D5EC6D89-2EBD-4792-88AB-8B3CFA78C324} = {5DCCE6AF-7388-4B65-88BE-E689F834B540}
 		{6DFA626D-678D-49AA-8F72-9E0E93AA2298} = {26E10E2F-57A7-44F3-A0D4-A2598A1D6D7F}
 		{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B} = {B2D901C5-562F-4A69-AB81-1E2124B90D03}
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4} = {97A405A5-F212-49F5-AA5D-93AB1FE2FBF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DC63952-B2B8-4BE7-A4EA-DF8C435FD432}

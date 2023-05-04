@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	 <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
     <ProjectReference Include="..\NetMaster.Domain.csproj\NetMaster.Domain.csproj" />
     <ProjectReference Include="..\NetMaster.Repository\NetMaster.Repository.csproj" />
   </ItemGroup>
