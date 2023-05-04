@@ -1,6 +1,6 @@
 ﻿namespace NetMaster.Services
 {
-    public class PowershellService
+    public class NetworkService
     {
         public object[] ListNetworkComputerComand()
         {

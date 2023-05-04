@@ -5,9 +5,9 @@ using NetMaster.Services;
 [Route("network")]
 public class NetworkController : BaseController
 {
-    private readonly PowershellService _powershellService;
+    private readonly NetworkService _powershellService;
 
-    public NetworkController(PowershellService powershellService)
+    public NetworkController(NetworkService powershellService)
     {
         _powershellService = powershellService;
     }
