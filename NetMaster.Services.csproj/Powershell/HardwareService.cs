@@ -19,20 +19,8 @@ namespace NetMaster.Services.Powershell
 
         public async Task<ServiceResultModel<StorageInfoModel>> GetStorage(string ip)
         {
-            RepositoryResultModel<string> resultRep = await getStorageRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            DateTime timestamp = DateTime.UtcNow;
-            string computerName = Environment.MachineName;
-
-            if (resultRep.SuccessResult != null)
-            {
-                StorageInfoModel storageInfo = JsonSerializer.Deserialize<StorageInfoModel>(resultRep.SuccessResult.Result);
-                return new ServiceResultModel<StorageInfoModel>(success: new SuccessServiceResult<StorageInfoModel>(storageInfo, timestamp, computerName));
-            }
-            else
-            {
-                string msgError = resultRep.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                return new ServiceResultModel<StorageInfoModel>(error: new ErrorServiceResult(msgError, timestamp, computerName));
-            }
+            RepositoryResultModel<StorageInfoModel> resultRep = await getStorageRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            return RunCommand(resultRep);
         }
 
     }

@@ -33,7 +33,7 @@ public class PowershellRunNetworkRepository
                 powerShell.BeginInvoke(),
                 powerShell.EndInvoke);
             string returnResult = string.Join(Environment.NewLine, commandResult);
-            T? convertedResult = convertOutput(returnResult);
+                T? convertedResult = convertOutput(returnResult);
 
             return new RepositoryResultModel<T>(success: new SuccessRepositoryResult<T>(convertedResult));
         }
