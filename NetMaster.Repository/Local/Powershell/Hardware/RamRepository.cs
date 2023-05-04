@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace NetMaster.Repository.Local.Powershell.Hardware
 {
-    public class GetRamRepository : BasePowershellRepository
+    public class RamRepository : BasePowershellRepository
     {
         public async Task<RepositoryResultModel<RamInfoModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

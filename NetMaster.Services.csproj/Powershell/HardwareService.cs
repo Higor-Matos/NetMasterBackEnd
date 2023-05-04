@@ -8,8 +8,8 @@ namespace NetMaster.Services.Powershell
 {
     public class HardwareService : BaseService
     {
-        private readonly GetRamRepository getRamUsageRep = new();
-        private readonly GetStorageRepository getStorageRep = new();
+        private readonly RamRepository getRamUsageRep = new();
+        private readonly StorageRepository getStorageRep = new();
 
         public async Task<ServiceResultModel<RamInfoModel>> GetRam(string ip)
         {

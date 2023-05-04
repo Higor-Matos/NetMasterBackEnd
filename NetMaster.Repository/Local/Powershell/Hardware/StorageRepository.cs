@@ -4,7 +4,7 @@ using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Local.Powershell.Hardware
 {
-    public class GetStorageRepository : BasePowershellRepository
+    public class StorageRepository : BasePowershellRepository
     {
         public async Task<RepositoryResultModel<StorageInfoModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

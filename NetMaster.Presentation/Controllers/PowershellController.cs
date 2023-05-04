@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
+using NetMaster.Domain.Models.DataModels;
+using NetMaster.Domain.Models.Results;
 using NetMaster.Services;
 using NetMaster.Services.Powershell;
 
@@ -41,30 +43,31 @@ namespace NetMaster.Presentation.Controllers
                 fileData = memoryStream.ToArray();
             }
 
-            Domain.Models.Results.ServiceResultModel<object> result = uploadService.UploadFile(file.FileName, fileData, destinationFolder);
+            ServiceResultModel<object> result = uploadService.UploadFile(file.FileName, fileData, destinationFolder);
             return this.ToResult(result);
         }
 
         [HttpPost("getUsers")]
         public async Task<IActionResult> GetUsers([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.LocalUsersInfoModel> result = await systemService.GetUsers(request.Ip);
+            ServiceResultModel<Domain.Models.DataModels.LocalUsersInfoModel> result = await systemService.GetUsers(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("getOsVersion")]
         public async Task<IActionResult> GetOsVersion([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.OSVersionInfoModel> result = await systemService.GetOsVersion(request.Ip);
+            ServiceResultModel<Domain.Models.DataModels.OSVersionInfoModel> result = await systemService.GetOsVersion(request.Ip);
             return this.ToResult(result);
         }
-
+  
         [HttpPost("getInstalledPrograms")]
         public async Task<IActionResult> GetInstalledPrograms([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.InstalledProgramsResponse> result = await systemService.GetInstalledPrograms(request.Ip);
+            ServiceResultModel<InstalledProgramsResponseModel> result = await systemService.GetInstalledPrograms(request.Ip);
             return this.ToResult(result);
         }
+
 
         [HttpPost("getRam")]
         public async Task<IActionResult> GetRamUsage([FromBody] IpRequestController request)
@@ -76,70 +79,70 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("getStorage")]
         public async Task<IActionResult> GetStorageUsage([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.StorageInfoModel> result = await hardwareService.GetStorage(request.Ip);
+            ServiceResultModel<Domain.Models.DataModels.StorageInfoModel> result = await hardwareService.GetStorage(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await systemService.ShutdownPcComand(request.Ip);
+            ServiceResultModel<object> result = await systemService.ShutdownPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await systemService.RestartPcComand(request.Ip);
+            ServiceResultModel<object> result = await systemService.RestartPcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("verifyChocolateyVersion")]
         public async Task<IActionResult> VerifyChocolateyVersion([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.ChocolateyInfoModel> result = await systemService.VerifyChocolateyComand(request.Ip);
+            ServiceResultModel<Domain.Models.DataModels.ChocolateyInfoModel> result = await systemService.VerifyChocolateyComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installAdobeReader")]
         public async Task<IActionResult> InstallAdobeReader([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallAdobeReaderComand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallAdobeReaderComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installFirefox")]
         public async Task<IActionResult> InstallFirefox([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallFirefoxComand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallFirefoxComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installGoogleChrome")]
         public async Task<IActionResult> InstallGoogleChrome([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallGoogleChromeComand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallGoogleChromeComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installOffice365")]
         public async Task<IActionResult> InstallOffice365([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallOffice365Comand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallOffice365Comand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("installVlc")]
         public async Task<IActionResult> InstallVlc([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallVlcComand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallVlcComand(request.Ip);
             return this.ToResult(result);
         }
 
         [HttpPost("instalWinrar")]
         public async Task<IActionResult> InstallWinrar([FromBody] IpRequestController request)
         {
-            Domain.Models.Results.ServiceResultModel<object> result = await softwareService.InstallWinrarComand(request.Ip);
+            ServiceResultModel<object> result = await softwareService.InstallWinrarComand(request.Ip);
             return this.ToResult(result);
         }
 

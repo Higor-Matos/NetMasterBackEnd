@@ -1,13 +1,12 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using Newtonsoft.Json.Linq;
 
 namespace NetMaster.Repository.Local.Powershell.System
 {
-    public class GetInstalledProgramsRepository : BasePowershellRepository
+    public class InstalledProgramsRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<InstalledProgramsResponse>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {
             string command = @"
                 $list = @()
@@ -34,20 +33,7 @@ namespace NetMaster.Repository.Local.Powershell.System
                 Write-Output $jsonResult
             ";
 
-            static InstalledProgramsResponse convertOutput(string jsonOutput)
-            {
-                JObject resultJson = JObject.Parse(jsonOutput);
-                List<InstalledProgramInfoModel>? installedPrograms = resultJson["Programs"].ToObject<List<InstalledProgramInfoModel>>();
-                return new InstalledProgramsResponse
-                {
-                    InstalledPrograms = installedPrograms,
-                    IpAddress = resultJson["IpAddress"].ToString(),
-                    PSComputerName = resultJson["PSComputerName"].ToString(),
-                    Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")
-                };
-            }
-
-            return await ExecCommand(param, command, convertOutput);
+            return await base.ExecCommand<InstalledProgramsResponseModel>(param, command, jsonOutput => ConvertOutput<InstalledProgramsResponseModel>(jsonOutput, param.Ip));
         }
     }
 }
