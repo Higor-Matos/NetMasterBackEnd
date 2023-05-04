@@ -5,11 +5,10 @@
         public string? Name { get; set; }
     }
 
-    public class LocalUsersInfoModel
+    public class LocalUsersInfoModel : BaseInfoModel
     {
         public List<LocalUser>? Users { get; set; }
         public string? PSComputerName { get; set; }
-        public string? Timestamp { get; set; }
-        public string? IpAddress { get; set; }
+
     }
 }

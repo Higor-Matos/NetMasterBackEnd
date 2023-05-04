@@ -1,10 +1,8 @@
 ﻿namespace NetMaster.Domain.Models.DataModels
 {
-    public class InstalledProgramsResponse
+    public class InstalledProgramsResponse : BaseInfoModel
     {
-        public string? Timestamp { get; set; }
         public string? PSComputerName { get; set; }
-        public string? IpAddress { get; set; }
         public List<InstalledProgramInfoModel>? InstalledPrograms { get; set; }
     }
 

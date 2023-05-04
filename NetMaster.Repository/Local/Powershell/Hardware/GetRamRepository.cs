@@ -14,15 +14,7 @@ namespace NetMaster.Repository.Local.Powershell.Hardware
                              "@{Name='TotalVisibleMemorySize_GB';Expression={[math]::Round($_.TotalVisibleMemorySize / 1MB, 2)}}, " +
                              "@{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
-            RamInfoModel convertOutput(string jsonOutput)
-            {
-                RamInfoModel? ramInfo = JsonConvert.DeserializeObject<RamInfoModel>(jsonOutput);
-                ramInfo.IpAddress = param.Ip;
-                ramInfo.Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
-                return ramInfo;
-            }
-
-            return await base.ExecCommand(param, command, convertOutput);
+            return await base.ExecCommand<RamInfoModel>(param, command, jsonOutput => ConvertOutput<RamInfoModel>(jsonOutput, param.Ip));
         }
     }
 }

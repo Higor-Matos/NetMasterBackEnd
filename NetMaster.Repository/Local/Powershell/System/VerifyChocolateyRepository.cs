@@ -1,6 +1,7 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Local.Powershell;
 
 public class VerifyChocolateyRepository : BasePowershellRepository
 {
