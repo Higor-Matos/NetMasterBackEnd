@@ -1,5 +1,4 @@
 ﻿using NetMaster.Domain.Models.Results;
-using System;
 
 namespace NetMaster.Services
 {

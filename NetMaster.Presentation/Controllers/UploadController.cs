@@ -27,13 +27,8 @@ public class UploadController : BaseController
         return ToActionResult(result);
     }
 
-    private IActionResult ValidateFile(IFormFile file)
+    private IActionResult? ValidateFile(IFormFile file)
     {
-        if (file == null || file.Length == 0)
-        {
-            return BadRequest("File not provided or empty.");
-        }
-
-        return null;
+        return file == null || file.Length == 0 ? BadRequest("File not provided or empty.") : (IActionResult?)null;
     }
 }

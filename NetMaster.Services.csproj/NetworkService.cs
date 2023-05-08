@@ -1,14 +1,16 @@
-﻿namespace NetMaster.Services
+﻿using NetMaster.Domain.Models.DataModels;
+
+namespace NetMaster.Services
 {
     public class NetworkService
     {
-        public object[] ListNetworkComputerComand()
+        public NetworkComputer[] ListNetworkComputerComand()
         {
-            object[] computersAndIPs = new object[]
+            NetworkComputer[] computersAndIPs = new NetworkComputer[]
             {
-                new { Name = "Higor-PC", IP = "192.168.0.3" },
-                new { Name = "Gustavo-PC", IP = "192.168.0.4" },
-                new { Name = "Convidado-PC", IP = "192.168.0.10" },
+                new NetworkComputer { Name = "Higor-PC", IP = "192.168.0.3" },
+                new NetworkComputer { Name = "Gustavo-PC", IP = "192.168.0.4" },
+                new NetworkComputer { Name = "RAMO-PC", IP = "192.168.100.16" },
             };
 
             return computersAndIPs;

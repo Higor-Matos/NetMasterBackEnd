@@ -1,7 +1,6 @@
 ﻿using NetMaster.Domain.Models.Results;
-using System.IO;
 
-namespace NetMaster.Repository.Local.Upload
+namespace NetMaster.Repository.Local.Uploud
 {
     public class UploadFileRepository
     {

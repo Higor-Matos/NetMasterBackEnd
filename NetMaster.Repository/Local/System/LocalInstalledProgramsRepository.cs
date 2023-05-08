@@ -5,7 +5,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.System
 {
-    public class InstalledProgramsRepository : BasePowershellRepository
+    public class LocalInstalledProgramsRepository : BasePowershellRepository
     {
         public async Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

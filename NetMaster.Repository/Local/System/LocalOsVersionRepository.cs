@@ -2,11 +2,10 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
-using System.Text.Json;
 
 namespace NetMaster.Repository.Local.System
 {
-    public class OsVersionRepository : BasePowershellRepository
+    public class LocalOsVersionRepository : BasePowershellRepository
     {
         public async Task<RepositoryResultModel<OSVersionInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

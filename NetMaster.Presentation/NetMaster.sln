@@ -23,6 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Services", "..\Ne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Repository", "..\NetMaster.Repository\NetMaster.Repository.csproj", "{6DFA626D-678D-49AA-8F72-9E0E93AA2298}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4} = {C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}
 		{CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B} = {CC0A30B4-0AB9-45C8-9B1E-F5ABF1327A2B}
 	EndProjectSection
 EndProject

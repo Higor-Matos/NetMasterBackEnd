@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
 using NetMaster.Services;
 
 [ApiController]
@@ -14,17 +12,10 @@ public class HardwareController : BaseController
         _hardwareService = hardwareService;
     }
 
-    [HttpPost("getRam")]
-    public async Task<IActionResult> GetRamUsage([FromBody] IpRequestController request)
+    [HttpGet("getInfo/{infoType}/{computerName}")]
+    public async Task<IActionResult> GetInfo(string infoType, string computerName)
     {
-        ServiceResultModel<RamInfoDataModel> result = await _hardwareService.GetRam(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("getStorage")]
-    public async Task<IActionResult> GetStorageUsage([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<StorageInfoDataModel> result = await _hardwareService.GetStorage(request.Ip);
+        var result = await _hardwareService.GetInfoAsync(infoType, computerName);
         return ToActionResult(result);
     }
 }

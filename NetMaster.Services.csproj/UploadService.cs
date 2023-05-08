@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Upload;
+using NetMaster.Repository.Local.Uploud;
 
 namespace NetMaster.Services
 {
@@ -24,11 +24,9 @@ namespace NetMaster.Services
 
         private byte[] ReadFileData(IFormFile file)
         {
-            using (MemoryStream memoryStream = new())
-            {
-                file.CopyTo(memoryStream);
-                return memoryStream.ToArray();
-            }
+            using MemoryStream memoryStream = new();
+            file.CopyTo(memoryStream);
+            return memoryStream.ToArray();
         }
     }
 }
