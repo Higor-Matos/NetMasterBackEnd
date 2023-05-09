@@ -1,6 +1,4 @@
-﻿// HardwareService
-
-using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository;
@@ -47,15 +45,15 @@ namespace NetMaster.Services
 
         public async Task<ServiceResultModel<object>> GetInfoAsync(string infoType, string computerName)
         {
-            object info = null;
+            object? info = null;
 
             switch (infoType.ToLower())
             {
                 case "ram":
-                    info = await _ramRepository.GetByComputerNameAsync(computerName);
+                    info = await _ramRepository.GetMostRecentByComputerNameAsync(computerName);
                     break;
                 case "storage":
-                    info = await _storageRepository.GetByComputerNameAsync(computerName);
+                    info = await _storageRepository.GetMostRecentByComputerNameAsync(computerName);
                     break;
             }
 
@@ -67,6 +65,7 @@ namespace NetMaster.Services
                     error: new ErrorServiceResult($"Não foi possível obter informações do tipo {infoType}.", DateTime.UtcNow, computerName)
                     );
         }
+
         public async Task<IEnumerable<RamInfoDataModel>> GetRamInfosAsync()
         {
             return await _ramRepository.GetAllAsync();

@@ -33,5 +33,13 @@ namespace NetMaster.Repository
             FilterDefinition<T> filter = Builders<T>.Filter.Eq("_id", entity.Id);
             _ = await _mongoCollection.ReplaceOneAsync(filter, entity);
         }
+
+        public async Task<T> GetMostRecentByComputerNameAsync(string computerName)
+        {
+            FilterDefinition<T> filter = Builders<T>.Filter.Eq("PSComputerName", computerName);
+            SortDefinition<T> sort = Builders<T>.Sort.Descending("Timestamp");
+            IAsyncCursor<T> result = await _mongoCollection.FindAsync(filter, new FindOptions<T, T> { Sort = sort });
+            return await result.FirstOrDefaultAsync();
+        }
     }
 }

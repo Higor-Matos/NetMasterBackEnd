@@ -8,5 +8,7 @@ namespace NetMaster.Repository
         Task<T> GetByComputerNameAsync(string computerName);
         Task InsertAsync(T entity);
         Task UpdateAsync(T entity);
+        Task<T> GetMostRecentByComputerNameAsync(string computerName);
     }
+
 }

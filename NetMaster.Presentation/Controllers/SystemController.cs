@@ -13,39 +13,45 @@ public class SystemController : BaseController
         _systemService = systemService;
     }
 
-    [HttpPost("getUsers")]
-    public async Task<IActionResult> GetUsers([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<UsersInfoDataModel> result = await _systemService.GetUsers(request.Ip);
-        return ToActionResult(result);
-    }
-
     [HttpPost("shutdownPc")]
     public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
     {
         ServiceResultModel<object> result = await _systemService.ShutdownPcComand(request.Ip);
-        return ToActionResult(result);
+        return this.ToActionResult(result);
     }
 
     [HttpPost("restartPc")]
     public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
     {
         ServiceResultModel<object> result = await _systemService.RestartPcComand(request.Ip);
-        return ToActionResult(result);
+        return this.ToActionResult(result);
     }
 
-    [HttpPost("verifyChocolateyVersion")]
-    public async Task<IActionResult> VerifyChocolateyVersion([FromBody] IpRequestController request)
+    [HttpGet("getInfo/{infoType}/{computerName}")]
+    public async Task<IActionResult> GetInfo(string infoType, string computerName)
     {
-        ServiceResultModel<ChocolateyInfoDataModel> result = await _systemService.VerifyChocolateyComand(request.Ip);
-        return ToActionResult(result);
+        switch (infoType.ToLower())
+        {
+            case "users":
+                ServiceResultModel<UsersInfoDataModel> usersResult = await _systemService.GetUsers(computerName);
+                return ToActionResult(usersResult);
+
+            case "chocolatey":
+                ServiceResultModel<ChocolateyInfoDataModel> chocolateyResult = await _systemService.VerifyChocolateyComand(computerName);
+                return ToActionResult(chocolateyResult);
+
+            case "osversion":
+                ServiceResultModel<OSVersionInfoDataModel> osVersionResult = await _systemService.GetOsVersion(computerName);
+                return ToActionResult(osVersionResult);
+
+            case "installedprograms":
+                ServiceResultModel<InstalledProgramsResponseModel> installedProgramsResult = await _systemService.GetInstalledPrograms(computerName);
+                return ToActionResult(installedProgramsResult);
+
+            default:
+                return BadRequest($"Invalid infoType: {infoType}. Valid options are: users, shutdown, restart, chocolatey, osversion, installedprograms.");
+        }
     }
 
 
-    [HttpPost("getOsVersion")]
-    public async Task<IActionResult> GetOsVersion([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<OSVersionInfoDataModel> result = await _systemService.GetOsVersion(request.Ip);
-        return ToActionResult(result);
-    }
 }

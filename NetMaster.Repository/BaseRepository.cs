@@ -13,6 +13,14 @@ namespace NetMaster.Repository
             _collection = dbContext.Database.GetCollection<T>(collectionName);
         }
 
+        public async Task<T> GetMostRecentByComputerNameAsync(string computerName)
+        {
+            FilterDefinition<T> filter = Builders<T>.Filter.Eq("PSComputerName", computerName);
+            SortDefinition<T> sort = Builders<T>.Sort.Descending("Timestamp");
+            IAsyncCursor<T> result = await _collection.FindAsync(filter, new FindOptions<T, T> { Sort = sort });
+            return await result.FirstOrDefaultAsync();
+        }
+
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             IAsyncCursor<T> result = await _collection.FindAsync(Builders<T>.Filter.Empty);

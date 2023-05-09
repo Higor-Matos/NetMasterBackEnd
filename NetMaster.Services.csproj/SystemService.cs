@@ -11,6 +11,10 @@ public class SystemService : BaseService
     private readonly IBaseRepository<UsersInfoDataModel> _usersRepository;
     private readonly IBaseRepository<OSVersionInfoDataModel> _osVersionRepository;
     private readonly IBaseRepository<InstalledProgramsResponseModel> _installedProgramsRepository;
+    private readonly LocalChocolateyRepository _localChocolateyRepository;
+    private readonly LocalUsersRepository _localUsersRepository;
+    private readonly LocalOsVersionRepository _localOsVersionRepository;
+    private readonly LocalInstalledProgramsRepository _localInstalledProgramsRepository;
     private readonly ShutdownPcRepository shutdownPcConectorRepository = new();
     private readonly RestartPcRepository restartPcConectorRepository = new();
 
@@ -18,12 +22,66 @@ public class SystemService : BaseService
         IBaseRepository<ChocolateyInfoDataModel> chocolateyRepository,
         IBaseRepository<UsersInfoDataModel> usersRepository,
         IBaseRepository<OSVersionInfoDataModel> osVersionRepository,
-        IBaseRepository<InstalledProgramsResponseModel> installedProgramsRepository)
+        IBaseRepository<InstalledProgramsResponseModel> installedProgramsRepository,
+        LocalChocolateyRepository localChocolateyRepository,
+        LocalUsersRepository localUsersRepository,
+        LocalOsVersionRepository localOsVersionRepository,
+        LocalInstalledProgramsRepository localInstalledProgramsRepository)
     {
         _chocolateyRepository = chocolateyRepository;
         _usersRepository = usersRepository;
         _osVersionRepository = osVersionRepository;
         _installedProgramsRepository = installedProgramsRepository;
+        _localChocolateyRepository = localChocolateyRepository;
+        _localUsersRepository = localUsersRepository;
+        _localOsVersionRepository = localOsVersionRepository;
+        _localInstalledProgramsRepository = localInstalledProgramsRepository;
+    }
+
+    public async Task SaveLocalChocolateyInfoAsync(string ip)
+    {
+        RepositoryResultModel<ChocolateyInfoDataModel> localChocolateyInfoResult = await _localChocolateyRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+        if (localChocolateyInfoResult.SuccessResult != null)
+        {
+            ChocolateyInfoDataModel chocolateyInfo = localChocolateyInfoResult.SuccessResult.Result;
+            if (!string.IsNullOrEmpty(chocolateyInfo.ChocolateyVersion))
+            {
+                await _chocolateyRepository.InsertAsync(chocolateyInfo);
+            }
+            else
+            {
+                string erro;
+            }
+        }
+    }
+
+
+
+    public async Task SaveLocalUsersInfoAsync(string ip)
+    {
+        RepositoryResultModel<UsersInfoDataModel> localUsersInfoResult = await _localUsersRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+        if (localUsersInfoResult.SuccessResult != null)
+        {
+            await _usersRepository.InsertAsync(localUsersInfoResult.SuccessResult.Result);
+        }
+    }
+
+    public async Task SaveLocalOSVersionInfoAsync(string ip)
+    {
+        RepositoryResultModel<OSVersionInfoDataModel> localOSVersionInfoResult = await _localOsVersionRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+        if (localOSVersionInfoResult.SuccessResult != null)
+        {
+            await _osVersionRepository.InsertAsync(localOSVersionInfoResult.SuccessResult.Result);
+        }
+    }
+
+    public async Task SaveLocalInstalledProgramsInfoAsync(string ip)
+    {
+        RepositoryResultModel<InstalledProgramsResponseModel> localInstalledProgramsInfoResult = await _localInstalledProgramsRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+        if (localInstalledProgramsInfoResult.SuccessResult != null)
+        {
+            await _installedProgramsRepository.InsertAsync(localInstalledProgramsInfoResult.SuccessResult.Result);
+        }
     }
 
     public async Task<ServiceResultModel<ChocolateyInfoDataModel>> VerifyChocolateyComand(string ip)
