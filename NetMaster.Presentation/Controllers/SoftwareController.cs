@@ -1,57 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Models.Results;
 using NetMaster.Services;
+using System.Threading.Tasks;
 
-[ApiController]
-[Route("software")]
-public class SoftwareController : BaseController
+namespace NetMaster.Presentation.Controllers
 {
-    private readonly SoftwareService _softwareService;
-
-    public SoftwareController(SoftwareService softwareService)
+    [ApiController]
+    [Route("software")]
+    public class SoftwareController : BaseController
     {
-        _softwareService = softwareService;
-    }
+        private readonly ISoftwareService _softwareService;
 
-    [HttpPost("installAdobeReader")]
-    public async Task<IActionResult> InstallAdobeReader([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallAdobeReaderComand(request.Ip);
-        return ToActionResult(result);
-    }
+        public SoftwareController(ISoftwareService softwareService)
+        {
+            _softwareService = softwareService;
+        }
 
-    [HttpPost("installFirefox")]
-    public async Task<IActionResult> InstallFirefox([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallFirefoxComand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("installGoogleChrome")]
-    public async Task<IActionResult> InstallGoogleChrome([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallGoogleChromeComand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("installOffice365")]
-    public async Task<IActionResult> InstallOffice365([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallOffice365Comand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("installVlc")]
-    public async Task<IActionResult> InstallVlc([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallVlcComand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("instalWinrar")]
-    public async Task<IActionResult> InstallWinrar([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _softwareService.InstallWinrarComand(request.Ip);
-        return ToActionResult(result);
+        [HttpPost("install/{software}")]
+        public async Task<IActionResult> InstallSoftware([FromBody] IpRequestController request, string software)
+        {
+            var result = await _softwareService.InstallSoftwareCommand(request.Ip, software);
+            return ToActionResult(result);
+        }
     }
 }

@@ -1,57 +1,42 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Services;
 
-[ApiController]
-[Route("system")]
-public class SystemController : BaseController
+namespace NetMaster.Presentation.Controllers
 {
-    private readonly SystemService _systemService;
-
-    public SystemController(SystemService systemService)
+    [ApiController]
+    [Route("system")]
+    public class SystemController : BaseController
     {
-        _systemService = systemService;
-    }
+        private readonly SystemCommandService _systemCommandService;
+        private readonly SystemService _systemService;
 
-    [HttpPost("shutdownPc")]
-    public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _systemService.ShutdownPcComand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpPost("restartPc")]
-    public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
-    {
-        ServiceResultModel<object> result = await _systemService.RestartPcComand(request.Ip);
-        return ToActionResult(result);
-    }
-
-    [HttpGet("getInfo/{infoType}/{computerName}")]
-    public async Task<IActionResult> GetInfo(string infoType, string computerName)
-    {
-        switch (infoType.ToLower())
+        public SystemController(SystemCommandService systemCommandService, SystemService systemService)
         {
-            case "users":
-                ServiceResultModel<UsersInfoDataModel> usersResult = await _systemService.GetUsers(computerName);
-                return ToActionResult(usersResult);
+            _systemCommandService = systemCommandService;
+            _systemService = systemService;
+        }
 
-            case "chocolatey":
-                ServiceResultModel<ChocolateyInfoDataModel> chocolateyResult = await _systemService.VerifyChocolateyComand(computerName);
-                return ToActionResult(chocolateyResult);
+        [HttpPost("shutdownPc")]
+        public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
+        {
+            Domain.Models.Results.ServiceResultModel<object> result = await _systemCommandService.ShutdownPcComandAsync(request.Ip);
+            return ToActionResult(result);
+        }
 
-            case "osversion":
-                ServiceResultModel<OSVersionInfoDataModel> osVersionResult = await _systemService.GetOsVersion(computerName);
-                return ToActionResult(osVersionResult);
+        [HttpPost("restartPc")]
+        public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
+        {
+            Domain.Models.Results.ServiceResultModel<object> result = await _systemCommandService.RestartPcComandAsync(request.Ip);
+            return ToActionResult(result);
+        }
 
-            case "installedprograms":
-                ServiceResultModel<InstalledProgramsResponseModel> installedProgramsResult = await _systemService.GetInstalledPrograms(computerName);
-                return ToActionResult(installedProgramsResult);
-
-            default:
-                return BadRequest($"Invalid infoType: {infoType}. Valid options are: users, shutdown, restart, chocolatey, osversion, installedprograms.");
+        [HttpGet("getInfo/{infoType}/{computerName}")]
+        public async Task<IActionResult> GetInfo(string infoType, string computerName)
+        {
+            var result = await _systemService.GetInfoAsync<BaseInfoDataModel>(infoType, computerName);
+            return result != null ? ToActionResult(result) : BadRequest($"Invalid infoType: {infoType}. Valid options are: users, chocolatey, osversion, installedprograms.");
         }
     }
-
-
 }

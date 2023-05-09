@@ -11,6 +11,13 @@
             ErrorResult = error;
         }
 
+        public static ServiceResultModel<T> Fail(string errorMessage)
+        {
+            DateTime timestamp = DateTime.UtcNow;
+            string computerName = Environment.MachineName;
+            return new ServiceResultModel<T>(error: new ErrorServiceResult(errorMessage, timestamp, computerName));
+        }
+
         public SuccessServiceResult<T>? SuccessResult { get; }
         public ErrorServiceResult? ErrorResult { get; }
         public bool IsSuccess => SuccessResult != null;

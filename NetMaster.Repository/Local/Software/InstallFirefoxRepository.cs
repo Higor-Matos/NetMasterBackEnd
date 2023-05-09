@@ -4,7 +4,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallFirefoxRepository : BasePowershellRepository
+    public class InstallFirefoxRepository : BasePowershellRepository, IRepository
     {
         private static readonly string command = "choco install firefox -y --force";
 

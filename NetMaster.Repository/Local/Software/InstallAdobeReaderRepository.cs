@@ -4,7 +4,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallAdobeReaderRepository : BasePowershellRepository
+    public class InstallAdobeReaderRepository : BasePowershellRepository, IRepository
     {
         private static readonly string command = "choco install adobereader -y --force";
 

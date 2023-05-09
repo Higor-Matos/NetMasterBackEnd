@@ -4,7 +4,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallOffice365Repository : BasePowershellRepository
+    public class InstallOffice365Repository : BasePowershellRepository, IRepository
     {
         private static readonly string command = "choco install office365business -y --force";
 

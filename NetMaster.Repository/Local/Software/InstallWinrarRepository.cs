@@ -4,7 +4,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallWinrarRepository : BasePowershellRepository
+    public class InstallWinrarRepository : BasePowershellRepository, IRepository
     {
         private static readonly string command = "choco install winrar -y --force";
 

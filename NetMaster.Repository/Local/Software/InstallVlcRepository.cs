@@ -4,7 +4,7 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallVlcRepository : BasePowershellRepository
+    public class InstallVlcRepository : BasePowershellRepository, IRepository
     {
         private static readonly string command = "choco install vlc -y --force";
 
