@@ -17,14 +17,14 @@ public class SystemController : BaseController
     public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
     {
         ServiceResultModel<object> result = await _systemService.ShutdownPcComand(request.Ip);
-        return this.ToActionResult(result);
+        return ToActionResult(result);
     }
 
     [HttpPost("restartPc")]
     public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
     {
         ServiceResultModel<object> result = await _systemService.RestartPcComand(request.Ip);
-        return this.ToActionResult(result);
+        return ToActionResult(result);
     }
 
     [HttpGet("getInfo/{infoType}/{computerName}")]

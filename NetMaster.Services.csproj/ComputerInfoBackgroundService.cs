@@ -1,9 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Domain.Models.DataModels;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace NetMaster.Services
 {
@@ -35,16 +32,14 @@ namespace NetMaster.Services
             {
                 string ip = computer.IP;
 
-                using (var scope = _serviceProvider.CreateScope())
-                {
-                    var systemService = scope.ServiceProvider.GetRequiredService<SystemService>();
-                    var hardwareService = scope.ServiceProvider.GetRequiredService<HardwareService>();
-                    await hardwareService.SaveLocalRamInfoAsync(ip);
-                    await hardwareService.SaveLocalStorageInfoAsync(ip);
-                    await systemService.SaveLocalUsersInfoAsync(ip);
-                    await systemService.SaveLocalOSVersionInfoAsync(ip);
-                    await systemService.SaveLocalInstalledProgramsInfoAsync(ip);
-                }
+                using IServiceScope scope = _serviceProvider.CreateScope();
+                SystemService systemService = scope.ServiceProvider.GetRequiredService<SystemService>();
+                HardwareService hardwareService = scope.ServiceProvider.GetRequiredService<HardwareService>();
+                await hardwareService.SaveLocalRamInfoAsync(ip);
+                await hardwareService.SaveLocalStorageInfoAsync(ip);
+                await systemService.SaveLocalUsersInfoAsync(ip);
+                await systemService.SaveLocalOSVersionInfoAsync(ip);
+                await systemService.SaveLocalInstalledProgramsInfoAsync(ip);
             }
         }
 

@@ -15,7 +15,7 @@ public class HardwareController : BaseController
     [HttpGet("getInfo/{infoType}/{computerName}")]
     public async Task<IActionResult> GetInfo(string infoType, string computerName)
     {
-        var result = await _hardwareService.GetInfoAsync(infoType, computerName);
+        NetMaster.Domain.Models.Results.ServiceResultModel<object> result = await _hardwareService.GetInfoAsync(infoType, computerName);
         return ToActionResult(result);
     }
 }
