@@ -1,8 +1,8 @@
-﻿namespace NetMaster.Domain.Models.DataModels
+﻿// NetMaster.Domain/Models/DataModels/InstalledProgramInfoDataModel.cs
+namespace NetMaster.Domain.Models.DataModels
 {
     public class InstalledProgramsResponseModel : BaseInfoDataModel
     {
-        public string? PSComputerName { get; set; }
         public List<InstalledProgramInfoDataModel>? Programs { get; set; }
     }
 

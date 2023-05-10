@@ -1,4 +1,4 @@
-﻿using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository;
 using NetMaster.Repository.Local.Software;
@@ -33,7 +33,7 @@ namespace NetMaster.Services
             }
 
             IRepository repository = _softwareRepositories[software];
-            RepositoryResultModel<string> resultRep = await repository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<string> resultRep = await repository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
     }

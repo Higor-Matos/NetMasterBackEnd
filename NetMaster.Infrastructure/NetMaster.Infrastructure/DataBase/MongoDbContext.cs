@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
 
-namespace NetMaster.Infrastructure
+namespace NetMaster.Infrastructure.DataBase
 {
     public class MongoDbContext
     {

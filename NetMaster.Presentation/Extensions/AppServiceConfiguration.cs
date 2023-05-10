@@ -21,7 +21,7 @@ namespace NetMaster.Presentation.Extensions
 
         public void ConfigureAppSettings()
         {
-            _ = _services.Configure<MongoDbSettings>(_builder.Configuration.GetSection("MongoDbSettings"));
+            _ = _services.Configure<MongoDbConfiguration>(_builder.Configuration.GetSection("MongoDbSettings"));
             _ = _services.Configure<StreamingServerConfigPresentation>(_builder.Configuration.GetSection("StreamingServer"));
         }
 

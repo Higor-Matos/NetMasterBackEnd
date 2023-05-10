@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Service/SystemCommandService.cs
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.System;
 
@@ -17,13 +18,13 @@ namespace NetMaster.Services
 
         public async Task<ServiceResultModel<object>> ShutdownPcComandAsync(string ip)
         {
-            RepositoryResultModel<string> resultRep = await _shutdownPcRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<string> resultRep = await _shutdownPcRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
 
         public async Task<ServiceResultModel<object>> RestartPcComandAsync(string ip)
         {
-            RepositoryResultModel<string> resultRep = await _restartPcRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<string> resultRep = await _restartPcRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
     }

@@ -1,5 +1,5 @@
 ﻿using NetMaster.Domain.Configuration;
-using NetMaster.Infrastructure;
+using NetMaster.Infrastructure.DataBase;
 using NetMaster.Presentation.Extensions;
 
 namespace NetMaster.Presentation.Configuration
@@ -20,7 +20,7 @@ namespace NetMaster.Presentation.Configuration
             _ = _services.AddSingleton<MongoDbContext>(provider =>
             {
                 IConfiguration configuration = provider.GetRequiredService<IConfiguration>();
-                MongoDbSettings mongoDbSettings = configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>();
+                MongoDbConfiguration mongoDbSettings = configuration.GetSection("MongoDbSettings").Get<MongoDbConfiguration>();
                 return new MongoDbContext(mongoDbSettings.ConnectionString, mongoDbSettings.DatabaseName);
             });
         }

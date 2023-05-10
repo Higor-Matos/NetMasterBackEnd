@@ -1,6 +1,4 @@
 ﻿// NetMaster.Service/HardwareService.cs
-
-using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository;
@@ -29,7 +27,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalRamInfoAsync(string ip)
         {
-            RepositoryResultModel<RamInfoDataModel> localRamInfoResult = await _localRamRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<RamInfoDataModel> localRamInfoResult = await _localRamRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localRamInfoResult.SuccessResult != null)
             {
                 await _ramRepository.InsertAsync(localRamInfoResult.SuccessResult.Result);
@@ -38,7 +36,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalStorageInfoAsync(string ip)
         {
-            RepositoryResultModel<StorageInfoDataModel> localStorageInfoResult = await _localStorageRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<StorageInfoDataModel> localStorageInfoResult = await _localStorageRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localStorageInfoResult.SuccessResult != null)
             {
                 await _storageRepository.InsertAsync(localStorageInfoResult.SuccessResult.Result);

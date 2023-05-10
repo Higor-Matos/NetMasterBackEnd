@@ -7,7 +7,7 @@ namespace NetMaster.Repository.Local.System
 {
     public class LocalOsVersionRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<OSVersionInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<OSVersionInfoDataModel>> ExecCommand(RepositoryPowerShellParamDataModel param)
         {
             string command = "Get-CimInstance -ClassName Win32_OperatingSystem | " +
                              "Select-Object Caption, Version, @{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";

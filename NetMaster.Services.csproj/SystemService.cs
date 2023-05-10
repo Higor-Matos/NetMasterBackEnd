@@ -40,7 +40,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalChocolateyInfoAsync(string ip)
         {
-            RepositoryResultModel<ChocolateyInfoDataModel> localChocolateyInfoResult = await _localChocolateyRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<ChocolateyInfoDataModel> localChocolateyInfoResult = await _localChocolateyRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localChocolateyInfoResult.SuccessResult != null)
             {
                 ChocolateyInfoDataModel chocolateyInfo = localChocolateyInfoResult.SuccessResult.Result;
@@ -53,7 +53,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalUsersInfoAsync(string ip)
         {
-            RepositoryResultModel<UsersInfoDataModel> localUsersInfoResult = await _localUsersRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<UsersInfoDataModel> localUsersInfoResult = await _localUsersRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localUsersInfoResult.SuccessResult != null)
             {
                 await _usersRepository.InsertAsync(localUsersInfoResult.SuccessResult.Result);
@@ -62,7 +62,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalOSVersionInfoAsync(string ip)
         {
-            RepositoryResultModel<OSVersionInfoDataModel> localOSVersionInfoResult = await _localOsVersionRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<OSVersionInfoDataModel> localOSVersionInfoResult = await _localOsVersionRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localOSVersionInfoResult.SuccessResult != null)
             {
                 await _osVersionRepository.InsertAsync(localOSVersionInfoResult.SuccessResult.Result);
@@ -71,7 +71,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalInstalledProgramsInfoAsync(string ip)
         {
-            RepositoryResultModel<InstalledProgramsResponseModel> localInstalledProgramsInfoResult = await _localInstalledProgramsRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<InstalledProgramsResponseModel> localInstalledProgramsInfoResult = await _localInstalledProgramsRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localInstalledProgramsInfoResult.SuccessResult != null)
             {
                 await _installedProgramsRepository.InsertAsync(localInstalledProgramsInfoResult.SuccessResult.Result);
@@ -104,13 +104,13 @@ namespace NetMaster.Services
 
         public async Task<ServiceResultModel<object>> ShutdownPcComand(string ip, ShutdownPcRepository shutdownPcRepository)
         {
-            RepositoryResultModel<string> resultRep = await shutdownPcRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<string> resultRep = await shutdownPcRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
 
         public async Task<ServiceResultModel<object>> RestartPcComand(string ip, RestartPcRepository restartPcRepository)
         {
-            RepositoryResultModel<string> resultRep = await restartPcRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<string> resultRep = await restartPcRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
         }
 

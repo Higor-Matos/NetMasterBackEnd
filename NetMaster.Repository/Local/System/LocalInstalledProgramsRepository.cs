@@ -7,7 +7,7 @@ namespace NetMaster.Repository.Local.System
 {
     public class LocalInstalledProgramsRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamDataModel param)
         {
             string command = @"
                 $list = @()

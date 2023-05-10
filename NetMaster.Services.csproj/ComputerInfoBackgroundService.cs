@@ -30,7 +30,7 @@ namespace NetMaster.Services
 
             foreach (NetworkComputer computer in computers)
             {
-                string ip = computer.IP;
+                string ip = computer.IPAddress;
 
                 using IServiceScope scope = _serviceProvider.CreateScope();
                 ComputerInfoCollectorService collector = scope.ServiceProvider.GetRequiredService<ComputerInfoCollectorService>();

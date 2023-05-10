@@ -8,7 +8,7 @@ namespace NetMaster.Repository.Local.Hardware
 {
     public class LocalRamRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamDataModel param)
         {
             string command = "Get-WmiObject -Class Win32_OperatingSystem | " +
                              "Select-Object -Property @{Name='FreePhysicalMemory_GB';Expression={[math]::Round($_.FreePhysicalMemory / 1MB, 2)}}, " +
