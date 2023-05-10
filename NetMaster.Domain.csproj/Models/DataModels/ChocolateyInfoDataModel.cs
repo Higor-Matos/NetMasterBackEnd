@@ -1,4 +1,6 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿// NetMaster.Domain/Models/DataModels/ChocolateyInfoDataModel.cs
+
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace NetMaster.Domain.Models.DataModels
 {

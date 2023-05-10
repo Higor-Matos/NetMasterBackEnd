@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Services;
-using System.Threading.Tasks;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -18,7 +17,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("install/{software}")]
         public async Task<IActionResult> InstallSoftware([FromBody] IpRequestController request, string software)
         {
-            var result = await _softwareService.InstallSoftwareCommand(request.Ip, software);
+            Domain.Models.Results.ServiceResultModel<object> result = await _softwareService.InstallSoftwareCommand(request.Ip, software);
             return ToActionResult(result);
         }
     }

@@ -13,10 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
+	 <FrameworkReference Include="Microsoft.AspNetCore.App" />
+	 <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
 	<PackageReference Include="MongoDB.Driver" Version="2.19.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.5" />
+
   </ItemGroup>
 
   <ItemGroup>

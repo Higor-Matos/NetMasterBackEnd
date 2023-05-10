@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models.DataModels;
+﻿// NetMaster.Repository/Local/Hardware/ChocolateyRepository.cs
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
 
 namespace NetMaster.Repository.Local.System

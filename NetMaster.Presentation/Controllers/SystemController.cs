@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// NetMaster.Presentation/Controllers/SystemService.cs
+using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Services;
@@ -35,8 +36,9 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/{infoType}/{computerName}")]
         public async Task<IActionResult> GetInfo(string infoType, string computerName)
         {
-            var result = await _systemService.GetInfoAsync<BaseInfoDataModel>(infoType, computerName);
+            ServiceResultModel<object> result = await _systemService.GetInfoAsync(infoType, computerName);
             return result != null ? ToActionResult(result) : BadRequest($"Invalid infoType: {infoType}. Valid options are: users, chocolatey, osversion, installedprograms.");
         }
+
     }
 }

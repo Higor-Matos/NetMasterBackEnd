@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Repository/Local/Hardware/LocalRamRepository.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;

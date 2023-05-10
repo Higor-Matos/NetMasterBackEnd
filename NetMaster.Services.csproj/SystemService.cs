@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Service/SystemService.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository;
@@ -124,18 +125,26 @@ namespace NetMaster.Services
                 );
         }
 
-        public async Task<ServiceResultModel<T>> GetInfoAsync<T>(string infoType, string computerName) where T : BaseInfoDataModel
+        public async Task<ServiceResultModel<object>> GetInfoAsync(string infoType, string computerName)
         {
-            Console.WriteLine($"infoType: {infoType}");
-
-            return infoType.ToLowerInvariant() switch
+            object? info = infoType.ToLowerInvariant() switch
             {
-                "users" => await GetUsers(computerName) as ServiceResultModel<T>,
-                "chocolatey" => await VerifyChocolateyComand(computerName) as ServiceResultModel<T>,
-                "osversion" => await GetOsVersion(computerName) as ServiceResultModel<T>,
-                "installedprograms" => await GetInstalledPrograms(computerName) as ServiceResultModel<T>,
+                "users" => await _usersRepository.GetMostRecentByComputerNameAsync(computerName),
+                "chocolatey" => await _chocolateyRepository.GetMostRecentByComputerNameAsync(computerName),
+                "osversion" => await _osVersionRepository.GetMostRecentByComputerNameAsync(computerName),
+                "installedprograms" => await _installedProgramsRepository.GetMostRecentByComputerNameAsync(computerName),
                 _ => null,
             };
+
+            return info != null
+                ? new ServiceResultModel<object>(
+                    success: new SuccessServiceResult<object>(info, DateTime.UtcNow, computerName)
+                    )
+                : new ServiceResultModel<object>(
+                    error: new ErrorServiceResult($"Não foi possível obter informações do tipo {infoType}.", DateTime.UtcNow, computerName)
+                    );
         }
+
+
     }
 }
