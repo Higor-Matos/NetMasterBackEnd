@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// NetMaster.Controllers/BaseController.cs
+using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
 using NetMaster.Domain.Models.Results;
 
