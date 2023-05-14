@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Presentation.Controllers;
 
 [ApiController]
 [Route("system")]

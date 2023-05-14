@@ -3,10 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Extensions;
 using NetMaster.Domain.Models.Results;
 
-public abstract class BaseController : ControllerBase
+namespace NetMaster.Presentation.Controllers
 {
-    protected IActionResult ToActionResult<T>(ServiceResultModel<T> result) where T : class
+    public abstract class BaseController : ControllerBase
     {
-        return this.ToResult(result);
+        protected IActionResult ToActionResult<T>(ServiceResultModel<T> result) where T : class
+        {
+            return this.ToResult(result);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿// UploadController.cs
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Presentation.Controllers;
 using NetMaster.Services;
 
 [ApiController]

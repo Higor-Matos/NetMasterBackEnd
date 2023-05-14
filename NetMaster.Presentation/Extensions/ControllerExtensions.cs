@@ -1,9 +1,9 @@
-﻿// NetMaster.Domain/Extensions/ControllerExtensions.cs
+﻿// NetMaster.Presentation/ControllerExtensions.cs
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Domain.Extensions
+namespace NetMaster.Presentation.Extensions
 {
     public static class ControllerExtensions
     {
