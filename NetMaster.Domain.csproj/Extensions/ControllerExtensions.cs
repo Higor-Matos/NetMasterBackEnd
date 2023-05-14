@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// NetMaster.Domain/Extensions/ControllerExtensions.cs
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.Results;
 
@@ -6,7 +7,7 @@ namespace NetMaster.Domain.Extensions
 {
     public static class ControllerExtensions
     {
-        public static IActionResult ToResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
+        public static IActionResult ToActionResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
             where T : class
         {
             return value.SuccessResult != null

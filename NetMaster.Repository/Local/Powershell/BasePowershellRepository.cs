@@ -16,7 +16,7 @@ namespace NetMaster.Repository.Local.Powershell
             credentialProvider = new CredentialProviderRepository();
         }
 
-        public async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
+        public async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamDataModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
         {
             PSCredential credential = credentialProvider.GetCredential();
             WSManConnectionInfo wsManConnectionInfo = new()

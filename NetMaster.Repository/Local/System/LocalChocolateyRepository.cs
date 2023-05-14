@@ -5,7 +5,7 @@ using NetMaster.Repository.Local.Powershell;
 
 public class LocalChocolateyRepository : BasePowershellRepository
 {
-    public async Task<RepositoryResultModel<ChocolateyInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
+    public async Task<RepositoryResultModel<ChocolateyInfoDataModel>> ExecCommand(RepositoryPowerShellParamDataModel param)
     {
         string command = "choco -v; (Get-WmiObject -Class Win32_ComputerSystem).Name";
 

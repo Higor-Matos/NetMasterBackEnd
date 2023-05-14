@@ -1,4 +1,4 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Service/HardwareService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository;
@@ -27,7 +27,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalRamInfoAsync(string ip)
         {
-            RepositoryResultModel<RamInfoDataModel> localRamInfoResult = await _localRamRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<RamInfoDataModel> localRamInfoResult = await _localRamRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localRamInfoResult.SuccessResult != null)
             {
                 await _ramRepository.InsertAsync(localRamInfoResult.SuccessResult.Result);
@@ -36,7 +36,7 @@ namespace NetMaster.Services
 
         public async Task SaveLocalStorageInfoAsync(string ip)
         {
-            RepositoryResultModel<StorageInfoDataModel> localStorageInfoResult = await _localStorageRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            RepositoryResultModel<StorageInfoDataModel> localStorageInfoResult = await _localStorageRepository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             if (localStorageInfoResult.SuccessResult != null)
             {
                 await _storageRepository.InsertAsync(localStorageInfoResult.SuccessResult.Result);
@@ -45,17 +45,12 @@ namespace NetMaster.Services
 
         public async Task<ServiceResultModel<object>> GetInfoAsync(string infoType, string computerName)
         {
-            object? info = null;
-
-            switch (infoType.ToLower())
+            object? info = infoType.ToLowerInvariant() switch
             {
-                case "ram":
-                    info = await _ramRepository.GetMostRecentByComputerNameAsync(computerName);
-                    break;
-                case "storage":
-                    info = await _storageRepository.GetMostRecentByComputerNameAsync(computerName);
-                    break;
-            }
+                "ram" => await _ramRepository.GetMostRecentByComputerNameAsync(computerName),
+                "storage" => await _storageRepository.GetMostRecentByComputerNameAsync(computerName),
+                _ => null,
+            };
 
             return info != null
                 ? new ServiceResultModel<object>(
@@ -65,6 +60,7 @@ namespace NetMaster.Services
                     error: new ErrorServiceResult($"Não foi possível obter informações do tipo {infoType}.", DateTime.UtcNow, computerName)
                     );
         }
+
 
         public async Task<IEnumerable<RamInfoDataModel>> GetRamInfosAsync()
         {

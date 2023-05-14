@@ -1,59 +1,40 @@
-﻿using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository;
 using NetMaster.Repository.Local.Software;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NetMaster.Services
 {
-    public class SoftwareService : BaseService
+    public class SoftwareService : BaseService, ISoftwareService
     {
+        private readonly Dictionary<string, IRepository> _softwareRepositories;
 
-        private readonly InstallFirefoxRepository installFirefoxRep = new();
-        private readonly InstallVlcRepository installVlcRep = new();
-        private readonly InstallWinrarRepository installWinrarRep = new();
-        private readonly InstallGoogleChromeRepository installGoogleChromeRep = new();
-        private readonly InstallOffice365Repository installOffice365Rep = new();
-        private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
-
-
-        public async Task<ServiceResultModel<object>> InstallAdobeReaderComand(string ip)
+        public SoftwareService()
         {
-            RepositoryResultModel<string> resultRep = await installAdobeReaderRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
+            _softwareRepositories = new Dictionary<string, IRepository>
+            {
+                { "adobereader", new InstallAdobeReaderRepository() },
+                { "firefox", new InstallFirefoxRepository() },
+                { "googlechrome", new InstallGoogleChromeRepository() },
+                { "office365", new InstallOffice365Repository() },
+                { "vlc", new InstallVlcRepository() },
+                { "winrar", new InstallWinrarRepository() },
+            };
         }
 
-        public async Task<ServiceResultModel<object>> InstallFirefoxComand(string ip)
+        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string software)
         {
-            RepositoryResultModel<string> resultRep = await installFirefoxRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
+            software = software.ToLower();
+            if (!_softwareRepositories.ContainsKey(software))
+            {
+                return ServiceResultModel<object>.Fail($"Software '{software}' not supported.");
+            }
+
+            IRepository repository = _softwareRepositories[software];
+            RepositoryResultModel<string> resultRep = await repository.ExecCommand(new RepositoryPowerShellParamDataModel(ip));
             return RunCommand(ConvertResult(resultRep));
-
-        }
-
-        public async Task<ServiceResultModel<object>> InstallGoogleChromeComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await installGoogleChromeRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-
-        }
-
-        public async Task<ServiceResultModel<object>> InstallOffice365Comand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await installOffice365Rep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-
-        }
-
-        public async Task<ServiceResultModel<object>> InstallVlcComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await installVlcRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-
-        }
-
-        public async Task<ServiceResultModel<object>> InstallWinrarComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await installWinrarRep.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿// NetMaster.Controllers/SystemController.cs
+// NetMaster.Controllers/SystemController.cs
+
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Services;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -9,6 +11,7 @@ namespace NetMaster.Presentation.Controllers
     [Route("system")]
     public class SystemController : BaseController
     {
+
         private readonly SystemService _systemService;
 
         public SystemController(SystemService systemService)
@@ -54,8 +57,27 @@ namespace NetMaster.Presentation.Controllers
                 default:
                     return BadRequest($"Invalid infoType: {infoType}. Valid options are: users, shutdown, restart, chocolatey, osversion, installedprograms.");
             }
+            
+        private readonly SystemCommandService _systemCommandService;
+        private readonly SystemService _systemService;
+
+        public SystemController(SystemCommandService systemCommandService, SystemService systemService)
+        {
+            _systemCommandService = systemCommandService;
+            _systemService = systemService;
         }
 
+        [HttpPost("shutdownPc")]
+        public async Task<IActionResult> ShutdownPc([FromBody] IpRequestController request)
+        {
+            Domain.Models.Results.ServiceResultModel<object> result = await _systemCommandService.ShutdownPcComandAsync(request.Ip);
+            return ToActionResult(result);
+        }
 
-    }
+        [HttpPost("restartPc")]
+        public async Task<IActionResult> RestartPc([FromBody] IpRequestController request)
+        {
+            Domain.Models.Results.ServiceResultModel<object> result = await _systemCommandService.RestartPcComandAsync(request.Ip);
+            return ToActionResult(result);
+        }
 }

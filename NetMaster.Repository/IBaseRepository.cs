@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models.DataModels;
+﻿// NetMaster.Repository/IBaseRepository.cs
+using NetMaster.Domain.Models.DataModels;
 
 namespace NetMaster.Repository
 {

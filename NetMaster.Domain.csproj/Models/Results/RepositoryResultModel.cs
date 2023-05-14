@@ -1,4 +1,5 @@
-﻿namespace NetMaster.Domain.Models.Results
+﻿// NetMaster.Domain/Models/Results/RepositoryResultModel.cs
+namespace NetMaster.Domain.Models.Results
 {
     public class RepositoryResultModel
     {

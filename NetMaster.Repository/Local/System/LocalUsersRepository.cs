@@ -7,7 +7,7 @@ namespace NetMaster.Repository.Local.System
 {
     public class LocalUsersRepository : BasePowershellRepository
     {
-        public async Task<RepositoryResultModel<UsersInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
+        public async Task<RepositoryResultModel<UsersInfoDataModel>> ExecCommand(RepositoryPowerShellParamDataModel param)
         {
             string command = @"$users = Get-LocalUser | Where-Object { $_.Enabled -eq $True } | ForEach-Object {
                 $user = $_

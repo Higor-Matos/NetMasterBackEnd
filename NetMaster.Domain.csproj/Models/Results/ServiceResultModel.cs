@@ -1,4 +1,5 @@
-﻿namespace NetMaster.Domain.Models.Results
+﻿// NetMaster.Domain/Models/Results/ServiceResultModel.cs
+namespace NetMaster.Domain.Models.Results
 {
     public class ServiceResultModel<T> where T : class
     {
@@ -9,6 +10,13 @@
         {
             SuccessResult = success;
             ErrorResult = error;
+        }
+
+        public static ServiceResultModel<T> Fail(string errorMessage)
+        {
+            DateTime timestamp = DateTime.UtcNow;
+            string computerName = Environment.MachineName;
+            return new ServiceResultModel<T>(error: new ErrorServiceResult(errorMessage, timestamp, computerName));
         }
 
         public SuccessServiceResult<T>? SuccessResult { get; }

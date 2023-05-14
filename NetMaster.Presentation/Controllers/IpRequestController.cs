@@ -1,4 +1,7 @@
-﻿public class IpRequestController
+﻿namespace NetMaster.Presentation.Controllers
 {
-    public string? Ip { get; set; }
+    public class IpRequestController
+    {
+        public string? Ip { get; set; }
+    }
 }
