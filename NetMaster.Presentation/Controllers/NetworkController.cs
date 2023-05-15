@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NetMaster.Presentation.Controllers;
-using NetMaster.Services;
+using NetMaster.Services.Implementations.Network;
 
 [ApiController]
 [Route("network")]
@@ -16,7 +16,7 @@ public class NetworkController : BaseController
     [HttpGet("listComputersNetwork")]
     public IActionResult ListNetworkComputer()
     {
-        object[] computers = _powershellService.ListNetworkComputerComand();
+        object[] computers = _powershellService.ListNetworkComputerCommand();
         return new JsonResult(new { success = new { result = new { computers } } });
     }
 }

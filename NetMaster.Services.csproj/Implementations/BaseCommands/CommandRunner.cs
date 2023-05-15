@@ -1,8 +1,8 @@
-﻿// NetMaster.Services/Implementations/CommandRunner.cs
+﻿// NetMaster.Services/Implementations/BaseCommands/CommandRunner.cs
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Interfaces.BaseCommands;
 
-namespace NetMaster.Services.Implementations
+namespace NetMaster.Services.Implementations.BaseCommands
 {
     public class CommandRunner : ICommandRunner
     {

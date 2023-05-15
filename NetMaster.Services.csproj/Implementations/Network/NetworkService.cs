@@ -1,11 +1,12 @@
-﻿// NetMaster.Services/NetworkService.cs
+﻿// NetMaster.Services/Implementations/Network/NetworkService.cs
 using NetMaster.Domain.Models.DataModels;
+using NetMaster.Services.Interfaces;
 
-namespace NetMaster.Services
+namespace NetMaster.Services.Implementations.Network
 {
-    public class NetworkService
+    public class NetworkService : INetworkService
     {
-        public NetworkComputer[] ListNetworkComputerComand()
+        public NetworkComputer[] ListNetworkComputerCommand()
         {
             NetworkComputer[] computersAndIPs = new NetworkComputer[]
             {

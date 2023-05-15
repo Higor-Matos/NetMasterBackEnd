@@ -1,10 +1,10 @@
-﻿// NetMaster.Services/BaseService.cs
+﻿// NetMaster.Services/Implementations/BaseCommands/BaseService.cs
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Interfaces.BaseCommands;
 
-namespace NetMaster.Services
+namespace NetMaster.Services.Implementations.BaseCommands
 {
-    public abstract class BaseService
+    public abstract class BaseService : IBaseService
     {
         private readonly ICommandRunner _commandRunner;
         private readonly IResultConverter _resultConverter;
@@ -15,12 +15,12 @@ namespace NetMaster.Services
             _resultConverter = resultConverter;
         }
 
-        protected ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result) where T : class
+        public ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result) where T : class
         {
-            return _commandRunner.Run<T>(result);
+            return _commandRunner.Run(result);
         }
 
-        protected RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
+        public RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
             return _resultConverter.Convert(result);
         }

@@ -1,8 +1,8 @@
-﻿// NetMaster.Services/Implementations/ResultConverter.cs
+﻿// NetMaster.Services/Implementations/BaseCommands/CResultConverter.cs
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Interfaces.BaseCommands;
 
-namespace NetMaster.Services.Implementations
+namespace NetMaster.Services.Implementations.BaseCommands
 {
     public class ResultConverter : IResultConverter
     {

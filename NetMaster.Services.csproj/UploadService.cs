@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Uploud;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Interfaces.BaseCommands;
 
 namespace NetMaster.Services
 {

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Domain.Models.DataModels;
+using NetMaster.Services.Implementations.Network;
 using NetMaster.Services.Interfaces.Hardware;
 
 namespace NetMaster.Services.Implementations.BackgroundServices
@@ -28,7 +29,7 @@ namespace NetMaster.Services.Implementations.BackgroundServices
 
         private async Task CollectAndStoreComputerInfoAsync()
         {
-            NetworkComputer[] computers = _networkService.ListNetworkComputerComand();
+            NetworkComputer[] computers = _networkService.ListNetworkComputerCommand();
 
             foreach (NetworkComputer computer in computers)
             {

@@ -2,7 +2,8 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Interfaces;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Interfaces.BaseCommands;
 
 namespace NetMaster.Services.Implementations.Hardware
 {
