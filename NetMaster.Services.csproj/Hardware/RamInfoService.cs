@@ -39,20 +39,6 @@ namespace NetMaster.Services.Hardware
             }
         }
 
-
-
-        public async Task<ServiceResultModel<RamInfoDataModel>> GetRamInfoAsync(string computerName)
-        {
-            RamInfoDataModel ramInfo = await _ramRepository.GetMostRecentByComputerNameAsync(computerName);
-            var successResult = new SuccessServiceResult<RamInfoDataModel>(ramInfo, DateTime.UtcNow, computerName);
-            return new ServiceResultModel<RamInfoDataModel>(successResult);
-        }
-
-        public async Task<IEnumerable<RamInfoDataModel>> GetRamInfosAsync()
-        {
-            return await _ramRepository.GetAllAsync();
-        }
-
         public async Task<ServiceResultModel<RamInfoDataModel>> GetRamInfoByComputerNameAsync(string computerName)
         {
             RamInfoDataModel ramInfo = await _ramRepository.GetByComputerNameAsync(computerName);

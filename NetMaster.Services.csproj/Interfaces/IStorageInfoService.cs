@@ -8,6 +8,6 @@ namespace NetMaster.Services.Interfaces
     public interface IStorageInfoService
     {
         Task SaveLocalStorageInfoAsync(string ip);
-        Task<ServiceResultModel<StorageInfoDataModel>> GetStorageInfoAsync(string computerName);
+        Task<ServiceResultModel<StorageInfoDataModel>> GetStorageInfoByComputerNameAsync(string computerName);
     }
 }

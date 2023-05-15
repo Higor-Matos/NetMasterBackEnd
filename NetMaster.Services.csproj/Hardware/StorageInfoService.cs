@@ -26,7 +26,7 @@ namespace NetMaster.Services.Hardware
                 await _storageRepository.InsertAsync(localStorageInfoResult.SuccessResult.Result);
             }
         }
-        public async Task<ServiceResultModel<StorageInfoDataModel>> GetStorageInfoAsync(string computerName)
+        public async Task<ServiceResultModel<StorageInfoDataModel>> GetStorageInfoByComputerNameAsync(string computerName)
         {
             StorageInfoDataModel storageInfo = await _storageRepository.GetByComputerNameAsync(computerName);
             SuccessServiceResult<StorageInfoDataModel> successResult = new(storageInfo, DateTime.UtcNow, computerName);
