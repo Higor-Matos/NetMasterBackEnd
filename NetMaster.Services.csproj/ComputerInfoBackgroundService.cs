@@ -22,7 +22,7 @@ namespace NetMaster.Services
             while (!stoppingToken.IsCancellationRequested)
             {
                 await CollectAndStoreComputerInfoAsync();
-                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(10), stoppingToken);
             }
         }
 
@@ -44,8 +44,8 @@ namespace NetMaster.Services
                     throw new Exception("One or more required services are null.");
                 }
 
-                await ramInfoService.SaveLocalRamInfoAsync(ip);
-                await storageInfoService.SaveLocalStorageInfoAsync(ip);
+                _ = await ramInfoService.SaveLocalRamInfoAsync(ip);
+                _ = await storageInfoService.SaveLocalStorageInfoAsync(ip);
                 await systemService.SaveLocalUsersInfoAsync(ip);
                 await systemService.SaveLocalOSVersionInfoAsync(ip);
                 await systemService.SaveLocalInstalledProgramsInfoAsync(ip);

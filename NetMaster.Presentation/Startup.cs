@@ -7,7 +7,7 @@ using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.Hardware;
 using NetMaster.Repository.Local.System;
 using NetMaster.Services;
-using NetMaster.Services.Hardware;
+using NetMaster.Services.Implementations.Hardware;
 using NetMaster.Services.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -74,5 +74,10 @@ app.UseEndpoints(endpoints =>
 {
     _ = endpoints.MapControllers();
 });
+
+
+TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
+
 
 app.Run();

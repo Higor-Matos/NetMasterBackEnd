@@ -1,7 +1,6 @@
 ﻿// NetMaster.Services/Interfaces/IStorageInfoService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Hardware;
 
 namespace NetMaster.Services.Interfaces
 {

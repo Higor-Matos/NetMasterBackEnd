@@ -1,9 +1,9 @@
-﻿// NetMaster.Services/Hardware/HardwareInfoService.cs
+﻿// NetMaster.Services/Implementations/Hardware/HardwareInfoService.cs
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Interfaces;
 
-namespace NetMaster.Services.Hardware
+namespace NetMaster.Services.Implementations.Hardware
 {
     public abstract class HardwareInfoService<T> : BaseService where T : class
     {

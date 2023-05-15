@@ -34,9 +34,12 @@ namespace NetMaster.Repository.Local.Powershell
         {
             T result = JsonSerializer.Deserialize<T>(jsonOutput);
             result.IpAddress = ipAddress;
-            result.Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+            TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+            DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
+            result.Timestamp = brasiliaTime;
             return result;
         }
+
 
     }
 }

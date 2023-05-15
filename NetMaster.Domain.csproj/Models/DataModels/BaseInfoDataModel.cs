@@ -11,6 +11,8 @@ namespace NetMaster.Domain.Models.DataModels
         public string? Id { get; set; }
 
         public string? IpAddress { get; set; }
-        public string? Timestamp { get; set; }
+
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+        public DateTime? Timestamp { get; set; }
     }
 }

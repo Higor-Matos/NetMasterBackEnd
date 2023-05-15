@@ -1,9 +1,9 @@
 ﻿//NetMaster.Repository/BaseMongoRepository.cs
 using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
+using NetMaster.Domain.Models.Results;
 using NetMaster.Infrastructure;
 using NetMaster.Repository.Interfaces;
-using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository
 {
@@ -39,10 +39,7 @@ namespace NetMaster.Repository
 
         public async Task<RepositoryResultModel<T>> GetMostRecentByComputerNameAsync(string computerName)
         {
-            FilterDefinition<T> filter = Builders<T>.Filter.Eq("PSComputerName", computerName);
-            SortDefinition<T> sort = Builders<T>.Sort.Descending("Timestamp");
-            IAsyncCursor<T> result = await _mongoCollection.FindAsync(filter, new FindOptions<T, T> { Sort = sort });
-            T entity = await result.FirstOrDefaultAsync();
+            T entity = await GetMostRecentEntityByComputerName(computerName);
 
             return new RepositoryResultModel<T>
             {
@@ -51,5 +48,15 @@ namespace NetMaster.Repository
                 Message = entity != null ? "" : $"No records found for computer name: {computerName}"
             };
         }
+
+        private async Task<T> GetMostRecentEntityByComputerName(string computerName)
+        {
+            FilterDefinition<T> filter = Builders<T>.Filter.Eq("PSComputerName", computerName);
+            SortDefinition<T> sort = Builders<T>.Sort.Descending(x => x.Timestamp);
+            IAsyncCursor<T> result = await _mongoCollection.FindAsync(filter, new FindOptions<T, T> { Sort = sort });
+
+            return await result.FirstOrDefaultAsync();
+        }
+
     }
 }
