@@ -7,8 +7,9 @@ using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.Hardware;
 using NetMaster.Repository.Local.System;
 using NetMaster.Services;
+using NetMaster.Services.Implementations.BackgroundServices;
 using NetMaster.Services.Implementations.Hardware;
-using NetMaster.Services.Interfaces;
+using NetMaster.Services.Interfaces.Hardware;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

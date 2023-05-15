@@ -1,7 +1,6 @@
 ﻿// NetMaster.Controllers/HardwareController.cs
 using Microsoft.AspNetCore.Mvc;
-using NetMaster.Services.Interfaces;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Services.Interfaces.Hardware;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -19,14 +18,14 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/ram/{computerName}")]
         public async Task<IActionResult> GetRamInfo(string computerName)
         {
-            var result = await _hardwareService.GetRamInfoAsync(computerName);
+            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.RamInfoDataModel> result = await _hardwareService.GetRamInfoAsync(computerName);
             return ToActionResult(result);
         }
 
         [HttpGet("getInfo/storage/{computerName}")]
         public async Task<IActionResult> GetStorageInfo(string computerName)
         {
-            var result = await _hardwareService.GetStorageInfoAsync(computerName);
+            Domain.Models.Results.ServiceResultModel<Domain.Models.DataModels.StorageInfoDataModel> result = await _hardwareService.GetStorageInfoAsync(computerName);
             return ToActionResult(result);
         }
     }

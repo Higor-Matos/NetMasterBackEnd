@@ -1,8 +1,8 @@
-﻿// NetMaster.Services/Interfaces/IRamInfoService.cs
+﻿// NetMaster.Services.Interfaces/Hardware/IRamInfoService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Services.Interfaces
+namespace NetMaster.Services.Interfaces.Hardware
 {
     public interface IRamInfoService : IHardwareInfoService<RamInfoDataModel>
     {

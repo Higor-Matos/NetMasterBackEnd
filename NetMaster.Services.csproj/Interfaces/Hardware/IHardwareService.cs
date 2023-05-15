@@ -1,8 +1,8 @@
-﻿// NetMaster.Services/Interfaces/IHardwareService.cs
+﻿// NetMaster.Services.Interfaces/Hardware/IHardwareService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Services.Interfaces
+namespace NetMaster.Services.Interfaces.Hardware
 {
     public interface IHardwareService
     {

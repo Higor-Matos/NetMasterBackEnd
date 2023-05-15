@@ -24,7 +24,6 @@ namespace NetMaster.Services
         }
 
 
-
         protected RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
             return result.SuccessResult != null
