@@ -1,17 +1,14 @@
-﻿using NetMaster.Domain.Models.DataModels;
+﻿// NetMaster.Repository/Local/Hardware/StorageRepository.cs
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
+using NetMaster.Repository.Interfaces;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class StorageRepository : BaseRepository<StorageInfoDataModel>
+    public class StorageRepository : BaseMongoRepository<StorageInfoDataModel>, IStorageRepository
     {
         public StorageRepository(MongoDbContext dbContext) : base(dbContext, "StorageInfo")
         {
         }
     }
 }
-
-
-
-
-

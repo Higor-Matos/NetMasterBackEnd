@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿// NetMaster.Domain/Models/DataModels/BaseInfoDataModel.cs
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace NetMaster.Domain.Models.DataModels

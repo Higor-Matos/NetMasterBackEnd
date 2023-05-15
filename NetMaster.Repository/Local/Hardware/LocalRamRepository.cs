@@ -1,11 +1,13 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Repository/Local/Hardware/LocalRamRepository.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Powershell;
+using NetMaster.Repository.Interfaces;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class LocalRamRepository : BasePowershellRepository
+    public class LocalRamRepository : BasePowershellRepository, ILocalRamRepository
     {
         public async Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

@@ -1,4 +1,5 @@
-﻿namespace NetMaster.Domain.Models.DataModels
+﻿// NetMaster.Domain/Models/DataModels/RamInfoDataModel.cs
+namespace NetMaster.Domain.Models.DataModels
 {
     public class RamInfoDataModel : BaseInfoDataModel
     {

@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Services/SoftwareService.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Software;
 

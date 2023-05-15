@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models.Results;
+﻿// NetMaster.Services/BaseService.cs
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Services
 {

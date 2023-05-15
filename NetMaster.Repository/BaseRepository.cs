@@ -1,6 +1,8 @@
-﻿using MongoDB.Driver;
+﻿// NetMaster.Repository/BaseRepository.cs
+using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
+using NetMaster.Repository.Interfaces;
 
 namespace NetMaster.Repository
 {

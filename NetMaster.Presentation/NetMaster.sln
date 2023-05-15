@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Domain", "..\NetM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-NetMaster.Infrastructure", "4-NetMaster.Infrastructure", "{97A405A5-F212-49F5-AA5D-93AB1FE2FBF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMaster.Infrastructure", "..\NetMaster.Infrastructure\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj", "{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMaster.Infrastructure", "..\NetMaster.Infrastructure\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj", "{C3A42FC8-1A71-4531-A1BC-4F90DE8DBBD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

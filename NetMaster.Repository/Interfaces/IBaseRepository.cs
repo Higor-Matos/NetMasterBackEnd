@@ -1,6 +1,7 @@
-﻿using NetMaster.Domain.Models.DataModels;
+﻿//NetMaster.Repository/Interfaces/IBaseRepository.cs
+using NetMaster.Domain.Models.DataModels;
 
-namespace NetMaster.Repository
+namespace NetMaster.Repository.Interfaces
 {
     public interface IBaseRepository<T> where T : BaseInfoDataModel
     {

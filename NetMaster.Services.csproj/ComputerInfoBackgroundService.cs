@@ -1,9 +1,8 @@
-﻿using System;
+﻿// NetMaster.Services/ComputerInfoBackgroundService.cs
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Domain.Models.DataModels;
-using System.Threading;
-using System.Threading.Tasks;
+using NetMaster.Services.Interfaces;
 
 namespace NetMaster.Services
 {
@@ -35,16 +34,21 @@ namespace NetMaster.Services
             {
                 string ip = computer.IP;
 
-                using (var scope = _serviceProvider.CreateScope())
+                using IServiceScope scope = _serviceProvider.CreateScope();
+                SystemService systemService = scope.ServiceProvider.GetRequiredService<SystemService>();
+                IRamInfoService ramInfoService = scope.ServiceProvider.GetRequiredService<IRamInfoService>();
+                IStorageInfoService storageInfoService = scope.ServiceProvider.GetRequiredService<IStorageInfoService>();
+
+                if (systemService == null || ramInfoService == null || storageInfoService == null)
                 {
-                    var systemService = scope.ServiceProvider.GetRequiredService<SystemService>();
-                    var hardwareService = scope.ServiceProvider.GetRequiredService<HardwareService>();
-                    await hardwareService.SaveLocalRamInfoAsync(ip);
-                    await hardwareService.SaveLocalStorageInfoAsync(ip);
-                    await systemService.SaveLocalUsersInfoAsync(ip);
-                    await systemService.SaveLocalOSVersionInfoAsync(ip);
-                    await systemService.SaveLocalInstalledProgramsInfoAsync(ip);
+                    throw new Exception("One or more required services are null.");
                 }
+
+                await ramInfoService.SaveLocalRamInfoAsync(ip);
+                await storageInfoService.SaveLocalStorageInfoAsync(ip);
+                await systemService.SaveLocalUsersInfoAsync(ip);
+                await systemService.SaveLocalOSVersionInfoAsync(ip);
+                await systemService.SaveLocalInstalledProgramsInfoAsync(ip);
             }
         }
 

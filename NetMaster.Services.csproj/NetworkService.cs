@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models.DataModels;
+﻿// NetMaster.Services/NetworkService.cs
+using NetMaster.Domain.Models.DataModels;
 
 namespace NetMaster.Services
 {

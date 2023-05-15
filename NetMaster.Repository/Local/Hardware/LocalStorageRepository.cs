@@ -1,11 +1,13 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Repository/Local/Hardware/LocalStorageRepository.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class LocalStorageRepository : BasePowershellRepository
+    public class LocalStorageRepository : BasePowershellRepository, ILocalStorageRepository
     {
         public async Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {

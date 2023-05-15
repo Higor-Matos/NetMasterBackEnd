@@ -1,13 +1,15 @@
-﻿using NetMaster.Domain.Models;
+﻿// NetMaster.Repository/Local/Powershell/BasePowershellRepository.cs
+using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Text.Json;
 
 namespace NetMaster.Repository.Local.Powershell
 {
-    public abstract class BasePowershellRepository
+    public abstract class BasePowershellRepository : IBasePowershellRepository
     {
         private readonly CredentialProviderRepository credentialProvider;
 

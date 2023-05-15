@@ -1,4 +1,5 @@
-﻿namespace NetMaster.Domain.Models.Results
+﻿//NetMaster.Domain/Models/Results/ServiceResultModel.cs
+namespace NetMaster.Domain.Models.Results
 {
     public class ServiceResultModel<T> where T : class
     {

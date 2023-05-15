@@ -1,11 +1,14 @@
+//NetMaster.Presentation/Startup.cs
 using NetMaster.Domain.Configuration;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
 using NetMaster.Presentation.Configuration;
-using NetMaster.Repository;
+using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.Hardware;
 using NetMaster.Repository.Local.System;
 using NetMaster.Services;
+using NetMaster.Services.Hardware;
+using NetMaster.Services.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -20,14 +23,19 @@ builder.Services.AddSingleton<MongoDbContext>(provider =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<LocalRamRepository>();
-builder.Services.AddScoped<LocalStorageRepository>();
+builder.Services.AddScoped<ILocalRamRepository, LocalRamRepository>();
+builder.Services.AddScoped<ILocalStorageRepository, LocalStorageRepository>();
 builder.Services.AddScoped<LocalChocolateyRepository>();
 builder.Services.AddScoped<LocalInstalledProgramsRepository>();
 builder.Services.AddScoped<LocalOsVersionRepository>();
 builder.Services.AddScoped<LocalUsersRepository>();
 builder.Services.AddScoped<HardwareService>();
+builder.Services.AddScoped<IRamInfoService, RamInfoService>();
+builder.Services.AddScoped<IStorageInfoService, StorageInfoService>();
 
+builder.Services.AddScoped<IRamRepository, RamRepository>();
+builder.Services.AddScoped<IStorageRepository, StorageRepository>();
+builder.Services.AddScoped<IHardwareService, HardwareService>();
 builder.Services.AddScoped<SoftwareService>();
 builder.Services.AddScoped<SystemService>();
 builder.Services.AddScoped<UploadService>();

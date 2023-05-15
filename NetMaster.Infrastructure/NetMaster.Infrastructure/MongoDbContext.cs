@@ -13,7 +13,7 @@ namespace NetMaster.Infrastructure
 
         public IMongoDatabase Database { get; }
 
-        public IMongoCollection<RamInfoDataModel> RamInfos => Database.GetCollection<RamInfoDataModel>("RamInfos");
+        public IMongoCollection<StorageInfoDataModel> RamInfos => Database.GetCollection<StorageInfoDataModel>("RamInfos");
         public IMongoCollection<ChocolateyInfoDataModel> ChocolateyInfos => Database.GetCollection<ChocolateyInfoDataModel>("ChocolateyInfos");
         public IMongoCollection<InstalledProgramsResponseModel> InstalledPrograms => Database.GetCollection<InstalledProgramsResponseModel>("InstalledPrograms");
         public IMongoCollection<StorageInfoDataModel> StorageInfos => Database.GetCollection<StorageInfoDataModel>("StorageInfos");
