@@ -4,6 +4,7 @@ using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.System;
+using NetMaster.Services.Interfaces;
 
 namespace NetMaster.Services
 {
@@ -28,7 +29,10 @@ namespace NetMaster.Services
             LocalChocolateyRepository localChocolateyRepository,
             LocalUsersRepository localUsersRepository,
             LocalOsVersionRepository localOsVersionRepository,
-            LocalInstalledProgramsRepository localInstalledProgramsRepository)
+            LocalInstalledProgramsRepository localInstalledProgramsRepository,
+            ICommandRunner commandRunner,
+            IResultConverter resultConverter
+        ) : base(commandRunner, resultConverter)
         {
             _chocolateyRepository = chocolateyRepository;
             _usersRepository = usersRepository;

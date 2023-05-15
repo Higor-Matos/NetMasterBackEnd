@@ -7,9 +7,12 @@ using NetMaster.Repository.Interfaces;
 using NetMaster.Repository.Local.Hardware;
 using NetMaster.Repository.Local.System;
 using NetMaster.Services;
+using NetMaster.Services.Implementations;
 using NetMaster.Services.Implementations.BackgroundServices;
 using NetMaster.Services.Implementations.Hardware;
+using NetMaster.Services.Interfaces;
 using NetMaster.Services.Interfaces.Hardware;
+using System.Web.Services.Description;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +36,8 @@ builder.Services.AddScoped<LocalUsersRepository>();
 builder.Services.AddScoped<HardwareService>();
 builder.Services.AddScoped<IRamInfoService, RamInfoService>();
 builder.Services.AddScoped<IStorageInfoService, StorageInfoService>();
+builder.Services.AddScoped<ICommandRunner, CommandRunner>();
+builder.Services.AddScoped<IResultConverter, ResultConverter>();
 
 builder.Services.AddScoped<IRamRepository, RamRepository>();
 builder.Services.AddScoped<IStorageRepository, StorageRepository>();

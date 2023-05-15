@@ -2,14 +2,21 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Interfaces;
+using NetMaster.Services.Interfaces;
 using NetMaster.Services.Interfaces.Hardware;
 
 namespace NetMaster.Services.Implementations.Hardware
 {
     public class StorageInfoService : HardwareInfoService<StorageInfoDataModel>, IStorageInfoService
     {
-        public StorageInfoService(IStorageRepository storageRepository, ILocalStorageRepository localStorageRepository)
-            : base(storageRepository, localStorageRepository) { }
+        public StorageInfoService(
+            IStorageRepository storageRepository,
+            ILocalStorageRepository localStorageRepository,
+            ICommandRunner commandRunner,
+            IResultConverter resultConverter
+        ) : base(storageRepository, localStorageRepository, commandRunner, resultConverter)
+        {
+        }
 
         public Task<ServiceResultModel<StorageInfoDataModel>> SaveLocalStorageInfoAsync(string ip)
         {

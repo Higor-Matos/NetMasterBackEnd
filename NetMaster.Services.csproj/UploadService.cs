@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Uploud;
+using NetMaster.Services.Interfaces;
 
 namespace NetMaster.Services
 {
@@ -8,7 +9,7 @@ namespace NetMaster.Services
     {
         private readonly UploadFileRepository _uploadFileRepository;
 
-        public UploadService()
+        public UploadService(ICommandRunner commandRunner, IResultConverter resultConverter) : base(commandRunner, resultConverter)
         {
             _uploadFileRepository = new UploadFileRepository();
         }

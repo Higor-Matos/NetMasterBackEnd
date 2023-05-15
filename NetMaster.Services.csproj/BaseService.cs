@@ -1,35 +1,28 @@
 ﻿// NetMaster.Services/BaseService.cs
 using NetMaster.Domain.Models.Results;
+using NetMaster.Services.Interfaces;
 
 namespace NetMaster.Services
 {
     public abstract class BaseService
     {
-        protected ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result) where T : class
-        {
-            DateTime timestamp = DateTime.UtcNow;
-            string computerName = Environment.MachineName;
+        private readonly ICommandRunner _commandRunner;
+        private readonly IResultConverter _resultConverter;
 
-            if (result.SuccessResult != null)
-            {
-                var successResult = new SuccessServiceResult<T>(result.SuccessResult.Result, timestamp, computerName);
-                return new ServiceResultModel<T>(success: successResult);
-            }
-            else
-            {
-                string msgError = result.ErrorResult?.Exception.Message ?? "Ocorreu um erro.";
-                var errorResult = new ErrorServiceResult(msgError, timestamp, computerName);
-                return new ServiceResultModel<T>(error: errorResult);
-            }
+        protected BaseService(ICommandRunner commandRunner, IResultConverter resultConverter)
+        {
+            _commandRunner = commandRunner;
+            _resultConverter = resultConverter;
         }
 
+        protected ServiceResultModel<T> RunCommand<T>(RepositoryResultModel<T> result) where T : class
+        {
+            return _commandRunner.Run<T>(result);
+        }
 
         protected RepositoryResultModel<object> ConvertResult(RepositoryResultModel<string> result)
         {
-            return result.SuccessResult != null
-                ? new RepositoryResultModel<object>(data: result.SuccessResult.Result, success: true, error: result.ErrorResult)
-                : new RepositoryResultModel<object>(success: false, error: result.ErrorResult);
+            return _resultConverter.Convert(result);
         }
-
     }
 }

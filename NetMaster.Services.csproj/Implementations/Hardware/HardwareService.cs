@@ -1,6 +1,7 @@
 ﻿// NetMaster.Services/Implementations/Hardware//HardwareService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Services.Interfaces;
 using NetMaster.Services.Interfaces.Hardware;
 
 namespace NetMaster.Services.Implementations.Hardware
@@ -12,12 +13,15 @@ namespace NetMaster.Services.Implementations.Hardware
 
         public HardwareService(
             IRamInfoService ramInfoService,
-            IStorageInfoService storageInfoService
-        )
+            IStorageInfoService storageInfoService,
+            ICommandRunner commandRunner,
+            IResultConverter resultConverter
+        ) : base(commandRunner, resultConverter)
         {
             _ramInfoService = ramInfoService;
             _storageInfoService = storageInfoService;
         }
+
         public async Task<ServiceResultModel<RamInfoDataModel>> GetRamInfoAsync(string computerName)
         {
             return await _ramInfoService.GetHardwareInfoByComputerNameAsync(computerName);

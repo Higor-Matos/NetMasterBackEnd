@@ -1,4 +1,4 @@
-﻿// NetMaster.Services/ComputerInfoBackgroundService.cs
+﻿// NetMaster.Services/Implementations/ComputerInfoBackgroundService.cs
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Domain.Models.DataModels;

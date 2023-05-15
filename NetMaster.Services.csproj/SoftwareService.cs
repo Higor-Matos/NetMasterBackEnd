@@ -2,6 +2,7 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Local.Software;
+using NetMaster.Services.Interfaces;
 
 namespace NetMaster.Services
 {
@@ -15,6 +16,9 @@ namespace NetMaster.Services
         private readonly InstallOffice365Repository installOffice365Rep = new();
         private readonly InstallAdobeReaderRepository installAdobeReaderRep = new();
 
+        public SoftwareService(ICommandRunner commandRunner, IResultConverter resultConverter) : base(commandRunner, resultConverter)
+        {
+        }
 
         public async Task<ServiceResultModel<object>> InstallAdobeReaderComand(string ip)
         {
