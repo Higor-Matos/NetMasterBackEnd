@@ -2,12 +2,12 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Powershell;
 using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class LocalRamRepository : BasePowershellRepository, ILocalRamRepository
+    public class LocalRamRepository : BasePowershellRepository, ILocalRamRepository, ILocalHardwareRepository<RamInfoDataModel>
     {
         public async Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {
@@ -17,6 +17,12 @@ namespace NetMaster.Repository.Local.Hardware
                              "@{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
             return await ExecCommand(param, command, jsonOutput => ConvertOutput<RamInfoDataModel>(jsonOutput, param.Ip));
+        }
+
+        public async Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(string ip)
+        {
+            RepositoryPowerShellParamModel param = new(ip);
+            return await ExecCommand(param);
         }
     }
 }

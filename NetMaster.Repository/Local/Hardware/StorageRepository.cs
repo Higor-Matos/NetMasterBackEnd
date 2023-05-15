@@ -5,7 +5,7 @@ using NetMaster.Repository.Interfaces;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class StorageRepository : BaseMongoRepository<StorageInfoDataModel>, IStorageRepository
+    public class StorageRepository : BaseMongoRepository<StorageInfoDataModel>, IStorageRepository, IHardwareRepository<StorageInfoDataModel>
     {
         public StorageRepository(MongoDbContext dbContext) : base(dbContext, "StorageInfo")
         {

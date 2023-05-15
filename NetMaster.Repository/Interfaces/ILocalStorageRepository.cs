@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetMaster.Repository.Interfaces
 {
-    public interface ILocalStorageRepository : IBasePowershellRepository
+    public interface ILocalStorageRepository : ILocalHardwareRepository<StorageInfoDataModel>, IBasePowershellRepository
     {
         Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }

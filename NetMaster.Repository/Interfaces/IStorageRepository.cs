@@ -4,7 +4,7 @@ using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Interfaces
 {
-    public interface IStorageRepository : IBaseRepository<StorageInfoDataModel>
+    public interface IStorageRepository : IHardwareRepository<StorageInfoDataModel>
     {
     }
 }

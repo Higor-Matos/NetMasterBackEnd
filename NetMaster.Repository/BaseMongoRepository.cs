@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
 using NetMaster.Repository.Interfaces;
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository
 {
@@ -36,12 +37,19 @@ namespace NetMaster.Repository
             _ = await _mongoCollection.ReplaceOneAsync(filter, entity);
         }
 
-        public async Task<T> GetMostRecentByComputerNameAsync(string computerName)
+        public async Task<RepositoryResultModel<T>> GetMostRecentByComputerNameAsync(string computerName)
         {
             FilterDefinition<T> filter = Builders<T>.Filter.Eq("PSComputerName", computerName);
             SortDefinition<T> sort = Builders<T>.Sort.Descending("Timestamp");
             IAsyncCursor<T> result = await _mongoCollection.FindAsync(filter, new FindOptions<T, T> { Sort = sort });
-            return await result.FirstOrDefaultAsync();
+            T entity = await result.FirstOrDefaultAsync();
+
+            return new RepositoryResultModel<T>
+            {
+                Data = entity,
+                Success = entity != null,
+                Message = entity != null ? "" : $"No records found for computer name: {computerName}"
+            };
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿//NetMaster.Repository/Interfaces/IBaseRepository.cs
 using NetMaster.Domain.Models.DataModels;
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Interfaces
 {
@@ -9,7 +10,6 @@ namespace NetMaster.Repository.Interfaces
         Task<T> GetByComputerNameAsync(string computerName);
         Task InsertAsync(T entity);
         Task UpdateAsync(T entity);
-        Task<T> GetMostRecentByComputerNameAsync(string computerName);
+        Task<RepositoryResultModel<T>> GetMostRecentByComputerNameAsync(string computerName);
     }
-
 }

@@ -1,4 +1,5 @@
-﻿using NetMaster.Domain.Models.Results;
+﻿//NetMaster.Repository/Local/Uploud/UploadFileRepository.cs
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Repository.Local.Uploud
 {
@@ -11,14 +12,14 @@ namespace NetMaster.Repository.Local.Uploud
                 string filePath = Path.Combine(destinationFolder, fileName);
                 WriteFileData(filePath, fileData);
 
-                return new RepositoryResultModel<string>(success: new SuccessRepositoryResult<string>("File uploaded successfully."));
-
+                return new RepositoryResultModel<string>(data: "File uploaded successfully.", success: true);
             }
             catch (Exception e)
             {
                 return new RepositoryResultModel<string>(error: new ErrorRepositoryResult(e));
             }
         }
+
 
         private void WriteFileData(string filePath, byte[] fileData)
         {

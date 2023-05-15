@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class RamRepository : BaseMongoRepository<RamInfoDataModel>, IRamRepository
+    public class RamRepository : BaseMongoRepository<RamInfoDataModel>, IRamRepository, IHardwareRepository<RamInfoDataModel>
     {
         public RamRepository(MongoDbContext dbContext) : base(dbContext, "RamInfo")
         {

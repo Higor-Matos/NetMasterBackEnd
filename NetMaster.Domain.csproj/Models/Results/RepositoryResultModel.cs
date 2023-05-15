@@ -1,9 +1,10 @@
-﻿namespace NetMaster.Domain.Models.Results
+﻿// NetMaster.Domain.Models.Results/Results/RepositoryResultModel.cs
+namespace NetMaster.Domain.Models.Results
 {
     public class RepositoryResultModel
     {
-        public SuccessRepositoryResult? SuccessResult { get; protected set; }
-        public ErrorRepositoryResult? ErrorResult { get; protected set; }
+        public SuccessRepositoryResult? SuccessResult { get; set; }
+        public ErrorRepositoryResult? ErrorResult { get; set; }
 
         protected RepositoryResultModel(SuccessRepositoryResult? success = null, ErrorRepositoryResult? error = null)
         {
@@ -14,15 +15,22 @@
 
     public class RepositoryResultModel<T> : RepositoryResultModel
     {
+        public T Data { get;  set; }
+        public bool Success { get;  set; }
+        public string Message { get;  set; }
+
         public new SuccessRepositoryResult<T>? SuccessResult
         {
             get => (SuccessRepositoryResult<T>?)base.SuccessResult;
             protected set => base.SuccessResult = value;
         }
 
-        public RepositoryResultModel(SuccessRepositoryResult<T>? success = null, ErrorRepositoryResult? error = null)
-            : base(success, error)
+        public RepositoryResultModel(T data = default(T), bool success = false, string message = "", ErrorRepositoryResult? error = null)
+            : base(success ? new SuccessRepositoryResult<T>(data) : null, error)
         {
+            Data = data;
+            Success = success;
+            Message = message;
         }
 
         public RepositoryResultModel(RepositoryResultModel model)

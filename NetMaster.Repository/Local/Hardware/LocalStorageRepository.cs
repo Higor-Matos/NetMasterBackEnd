@@ -7,13 +7,19 @@ using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Hardware
 {
-    public class LocalStorageRepository : BasePowershellRepository, ILocalStorageRepository
+    public class LocalStorageRepository : BasePowershellRepository, ILocalStorageRepository, ILocalHardwareRepository<StorageInfoDataModel>
     {
         public async Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {
             string command = "Get-CimInstance -ClassName Win32_LogicalDisk | Select-Object -Property DeviceID,@{Name='Size_GB';Expression={[math]::Round(($_.Size / 1GB), 2)}},@{Name='FreeSpace_GB';Expression={[math]::Round(($_.FreeSpace / 1GB), 2)}},@{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
             return await ExecCommand(param, command, jsonOutput => ConvertOutput<StorageInfoDataModel>(jsonOutput, param.Ip));
+        }
+
+        public async Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(string ip)
+        {
+            RepositoryPowerShellParamModel param = new(ip);
+            return await ExecCommand(param);
         }
     }
 }
