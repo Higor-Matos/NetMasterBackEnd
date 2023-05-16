@@ -1,140 +1,56 @@
-﻿// NetMaster.Services/SoftwareService.cs
-using NetMaster.Domain.Models;
+﻿// NetMaster.Services/SystemService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Implementation.System;
-using NetMaster.Repository.Interfaces.BaseCommand;
-using NetMaster.Services.Implementations.BaseCommands;
-using NetMaster.Services.Interfaces.BaseCommands;
+using NetMaster.Repository.Interfaces.System;
 
 namespace NetMaster.Services
 {
-    public class SystemService : BaseService
+    public class SystemService
     {
-        private readonly IBaseRepository<ChocolateyInfoDataModel> _chocolateyRepository;
-        private readonly IBaseRepository<UsersInfoDataModel> _usersRepository;
-        private readonly IBaseRepository<OSVersionInfoDataModel> _osVersionRepository;
-        private readonly IBaseRepository<InstalledProgramsResponseModel> _installedProgramsRepository;
-        private readonly LocalChocolateyRepository _localChocolateyRepository;
-        private readonly LocalUsersRepository _localUsersRepository;
-        private readonly LocalOsVersionRepository _localOsVersionRepository;
-        private readonly LocalInstalledProgramsRepository _localInstalledProgramsRepository;
-        private readonly ShutdownPcRepository shutdownPcConectorRepository = new();
-        private readonly RestartPcRepository restartPcConectorRepository = new();
+        private readonly ISystemInfoService<ChocolateyInfoDataModel> _chocolateyService;
+        private readonly ISystemInfoService<UsersInfoDataModel> _usersService;
+        private readonly ISystemInfoService<OSVersionInfoDataModel> _osVersionService;
+        private readonly ISystemInfoService<InstalledProgramsResponseModel> _installedProgramsService;
 
         public SystemService(
-            IBaseRepository<ChocolateyInfoDataModel> chocolateyRepository,
-            IBaseRepository<UsersInfoDataModel> usersRepository,
-            IBaseRepository<OSVersionInfoDataModel> osVersionRepository,
-            IBaseRepository<InstalledProgramsResponseModel> installedProgramsRepository,
-            LocalChocolateyRepository localChocolateyRepository,
-            LocalUsersRepository localUsersRepository,
-            LocalOsVersionRepository localOsVersionRepository,
-            LocalInstalledProgramsRepository localInstalledProgramsRepository,
-            ICommandRunner commandRunner,
-            IResultConverter resultConverter
-        ) : base(commandRunner, resultConverter)
+            ISystemInfoService<ChocolateyInfoDataModel> chocolateyService,
+            ISystemInfoService<UsersInfoDataModel> usersService,
+            ISystemInfoService<OSVersionInfoDataModel> osVersionService,
+            ISystemInfoService<InstalledProgramsResponseModel> installedProgramsService
+        )
         {
-            _chocolateyRepository = chocolateyRepository;
-            _usersRepository = usersRepository;
-            _osVersionRepository = osVersionRepository;
-            _installedProgramsRepository = installedProgramsRepository;
-            _localChocolateyRepository = localChocolateyRepository;
-            _localUsersRepository = localUsersRepository;
-            _localOsVersionRepository = localOsVersionRepository;
-            _localInstalledProgramsRepository = localInstalledProgramsRepository;
+            _chocolateyService = chocolateyService;
+            _usersService = usersService;
+            _osVersionService = osVersionService;
+            _installedProgramsService = installedProgramsService;
         }
 
-        public async Task SaveLocalChocolateyInfoAsync(string ip)
+        public async Task SaveLocalSystemInfoAsync(string ip)
         {
-            RepositoryResultModel<ChocolateyInfoDataModel> localChocolateyInfoResult = await _localChocolateyRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            if (localChocolateyInfoResult.SuccessResult != null)
-            {
-                ChocolateyInfoDataModel chocolateyInfo = localChocolateyInfoResult.SuccessResult.Result;
-                if (!string.IsNullOrEmpty(chocolateyInfo.ChocolateyVersion))
-                {
-                    await _chocolateyRepository.InsertAsync(chocolateyInfo);
-                }
-                else
-                {
-                }
-            }
-        }
-
-
-
-        public async Task SaveLocalUsersInfoAsync(string ip)
-        {
-            RepositoryResultModel<UsersInfoDataModel> localUsersInfoResult = await _localUsersRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            if (localUsersInfoResult.SuccessResult != null)
-            {
-                await _usersRepository.InsertAsync(localUsersInfoResult.SuccessResult.Result);
-            }
-        }
-
-        public async Task SaveLocalOSVersionInfoAsync(string ip)
-        {
-            RepositoryResultModel<OSVersionInfoDataModel> localOSVersionInfoResult = await _localOsVersionRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            if (localOSVersionInfoResult.SuccessResult != null)
-            {
-                await _osVersionRepository.InsertAsync(localOSVersionInfoResult.SuccessResult.Result);
-            }
-        }
-
-        public async Task SaveLocalInstalledProgramsInfoAsync(string ip)
-        {
-            RepositoryResultModel<InstalledProgramsResponseModel> localInstalledProgramsInfoResult = await _localInstalledProgramsRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            if (localInstalledProgramsInfoResult.SuccessResult != null)
-            {
-                await _installedProgramsRepository.InsertAsync(localInstalledProgramsInfoResult.SuccessResult.Result);
-            }
+            await _chocolateyService.SaveLocalSystemInfoAsync(ip);
+            await _usersService.SaveLocalSystemInfoAsync(ip);
+            await _osVersionService.SaveLocalSystemInfoAsync(ip);
+            await _installedProgramsService.SaveLocalSystemInfoAsync(ip);
         }
 
         public async Task<ServiceResultModel<ChocolateyInfoDataModel>> VerifyChocolateyComand(string ip)
         {
-            ChocolateyInfoDataModel chocolateyInfo = await _chocolateyRepository.GetByComputerNameAsync(ip);
-            return CreateServiceResult(chocolateyInfo, "Não foi possível verificar o comando Chocolatey.", ip);
+            return await _chocolateyService.GetSystemInfo(ip);
         }
 
         public async Task<ServiceResultModel<UsersInfoDataModel>> GetUsers(string ip)
         {
-            UsersInfoDataModel usersInfo = await _usersRepository.GetByComputerNameAsync(ip);
-            return CreateServiceResult(usersInfo, "Não foi possível obter informações dos usuários locais.", ip);
+            return await _usersService.GetSystemInfo(ip);
         }
 
         public async Task<ServiceResultModel<OSVersionInfoDataModel>> GetOsVersion(string ip)
         {
-            OSVersionInfoDataModel osVersionInfo = await _osVersionRepository.GetByComputerNameAsync(ip);
-            return CreateServiceResult(osVersionInfo, "Não foi possível obter informações da versão do sistema operacional.", ip);
+            return await _osVersionService.GetSystemInfo(ip);
         }
 
         public async Task<ServiceResultModel<InstalledProgramsResponseModel>> GetInstalledPrograms(string ip)
         {
-            InstalledProgramsResponseModel installedProgramsInfo = await _installedProgramsRepository.GetByComputerNameAsync(ip);
-            return CreateServiceResult(installedProgramsInfo, "Não foi possível obter informações dos programas instalados.", ip);
-        }
-
-
-        public async Task<ServiceResultModel<object>> ShutdownPcComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await shutdownPcConectorRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-        }
-
-        public async Task<ServiceResultModel<object>> RestartPcComand(string ip)
-        {
-            RepositoryResultModel<string> resultRep = await restartPcConectorRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
-            return RunCommand(ConvertResult(resultRep));
-        }
-        private ServiceResultModel<T> CreateServiceResult<T>(T data, string errorMessage, string ip) where T : BaseInfoDataModel
-        {
-            return data != null
-                ? new ServiceResultModel<T>(
-                    success: new SuccessServiceResult<T>(data, DateTime.UtcNow, ip)
-                )
-                : new ServiceResultModel<T>(
-                    error: new ErrorServiceResult(errorMessage, DateTime.UtcNow, ip)
-                );
+            return await _installedProgramsService.GetSystemInfo(ip);
         }
     }
 }

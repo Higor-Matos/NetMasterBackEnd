@@ -3,13 +3,15 @@ namespace NetMaster.Domain.Models.Results
 {
     public class RepositoryResultModel
     {
+        public string Ip { get; set; }
         public SuccessRepositoryResult? SuccessResult { get; set; }
         public ErrorRepositoryResult? ErrorResult { get; set; }
 
-        protected RepositoryResultModel(SuccessRepositoryResult? success = null, ErrorRepositoryResult? error = null)
+        protected RepositoryResultModel(SuccessRepositoryResult? success = null, ErrorRepositoryResult? error = null, string ip = "")
         {
             SuccessResult = success;
             ErrorResult = error;
+            Ip = ip;
         }
     }
 
@@ -25,12 +27,13 @@ namespace NetMaster.Domain.Models.Results
             protected set => base.SuccessResult = value;
         }
 
-        public RepositoryResultModel(T data = default(T), bool success = false, string message = "", ErrorRepositoryResult? error = null)
-            : base(success ? new SuccessRepositoryResult<T>(data) : null, error)
+        public RepositoryResultModel(T data = default(T), bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
+            : base(success ? new SuccessRepositoryResult<T>(data) : null, error, ip)  // Adicionado parâmetro ip
         {
             Data = data;
             Success = success;
             Message = message;
+            Ip = ip;
         }
 
         public RepositoryResultModel(RepositoryResultModel model)
@@ -56,11 +59,13 @@ namespace NetMaster.Domain.Models.Results
 
     public class ErrorRepositoryResult
     {
-        public ErrorRepositoryResult(Exception exception)
+        public ErrorRepositoryResult(Exception exception, string message = "")
         {
             Exception = exception;
+            Message = message; 
         }
 
         public Exception Exception { get; }
+        public string Message { get; set; } 
     }
 }

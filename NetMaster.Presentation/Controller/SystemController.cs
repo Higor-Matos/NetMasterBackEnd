@@ -2,6 +2,7 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Services;
+using NetMaster.Services.Implementation.System;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -10,6 +11,7 @@ namespace NetMaster.Presentation.Controllers
     public class SystemController : BaseController
     {
         private readonly SystemService _systemService;
+        private readonly SystemCommandService _systemCommandService;
 
         public SystemController(SystemService systemService)
         {
@@ -19,16 +21,17 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc([FromBody] IpRequestDataModels request)
         {
-            ServiceResultModel<object> result = await _systemService.ShutdownPcComand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.ShutdownPcComand(request.Ip);
             return ToActionResult(result);
         }
 
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc([FromBody] IpRequestDataModels request)
         {
-            ServiceResultModel<object> result = await _systemService.RestartPcComand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.RestartPcComand(request.Ip);
             return ToActionResult(result);
         }
+
 
         [HttpGet("getInfo/{infoType}/{computerName}")]
         public async Task<IActionResult> GetInfo(string infoType, string computerName)

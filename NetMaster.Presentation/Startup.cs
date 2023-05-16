@@ -10,10 +10,12 @@ using NetMaster.Repository.Implementation.Uploud;
 using NetMaster.Repository.Interfaces.BaseCommand;
 using NetMaster.Repository.Interfaces.Hardware;
 using NetMaster.Repository.Interfaces.Software;
+using NetMaster.Repository.Interfaces.System;
 using NetMaster.Repository.Interfaces.Uploud;
 using NetMaster.Services;
+using NetMaster.Services.Implementation.BackgroundServices;
+using NetMaster.Services.Implementation.System;
 using NetMaster.Services.Implementation.Uploud;
-using NetMaster.Services.Implementations.BackgroundServices;
 using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Implementations.Hardware;
 using NetMaster.Services.Implementations.Network;
@@ -21,6 +23,7 @@ using NetMaster.Services.Implementations.Software;
 using NetMaster.Services.Interfaces.BaseCommands;
 using NetMaster.Services.Interfaces.Hardware;
 using NetMaster.Services.Interfaces.Software;
+using NetMaster.Services.Interfaces.System;
 using NetMaster.Services.Interfaces.Uploud;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -60,6 +63,15 @@ builder.Services.AddScoped<IInstallWinrarRepository, InstallWinrarRepository>();
 builder.Services.AddScoped<IInstallGoogleChromeRepository, InstallGoogleChromeRepository>();
 builder.Services.AddScoped<IInstallOffice365Repository, InstallOffice365Repository>();
 builder.Services.AddScoped<IUploadFileRepository, UploadFileRepository>();
+builder.Services.AddScoped<ISystemInfoService<ChocolateyInfoDataModel>, ChocolateyInfoService>();
+builder.Services.AddScoped<ISystemInfoService<UsersInfoDataModel>, UsersInfoService>();
+builder.Services.AddScoped<ISystemInfoService<OSVersionInfoDataModel>, OsVersionInfoService>();
+builder.Services.AddScoped<ISystemInfoService<InstalledProgramsResponseModel>, InstalledProgramsInfoService>();
+builder.Services.AddScoped<IChocolateyInfoService, ChocolateyInfoService>();
+builder.Services.AddScoped<IInstalledProgramsInfoService, InstalledProgramsInfoService>();
+builder.Services.AddScoped<IUsersInfoService, UsersInfoService>();
+builder.Services.AddScoped<IOsVersionInfoService, OsVersionInfoService>();
+
 
 builder.Services.AddScoped<Dictionary<string, ISoftwareInstallerService>>(provider => new Dictionary<string, ISoftwareInstallerService>
 {
@@ -69,7 +81,7 @@ builder.Services.AddScoped<Dictionary<string, ISoftwareInstallerService>>(provid
     { "Winrar", provider.GetRequiredService<IWinrarInstallerService>() },
     { "GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>() },
     { "Office365", provider.GetRequiredService<IOffice365InstallerService>() },
-});
+    });
 
 builder.Services.AddScoped<IRamRepository, RamRepository>();
 builder.Services.AddScoped<IStorageRepository, StorageRepository>();
@@ -92,10 +104,10 @@ builder.Services.AddSwaggerDocumentation();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            _ = builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-        });
+    builder =>
+    {
+        _ = builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
 });
 
 WebApplication app = builder.Build();
@@ -113,9 +125,7 @@ app.UseEndpoints(endpoints =>
     _ = endpoints.MapControllers();
 });
 
-
 TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
-
 
 app.Run();
