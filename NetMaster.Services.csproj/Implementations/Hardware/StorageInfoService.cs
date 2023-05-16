@@ -1,7 +1,7 @@
 ﻿// NetMaster.Services/Implementations/Hardware/StorageInfoService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.Hardware;
 using NetMaster.Services.Interfaces.BaseCommands;
 using NetMaster.Services.Interfaces.Hardware;
 

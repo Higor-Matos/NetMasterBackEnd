@@ -1,10 +1,11 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces.Software;
 using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallOffice365Repository : BasePowershellRepository
+    public class InstallOffice365Repository : BasePowershellRepository, IInstallOffice365Repository
     {
         private static readonly string command = "choco install office365business -y --force";
 

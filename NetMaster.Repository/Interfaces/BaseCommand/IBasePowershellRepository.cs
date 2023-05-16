@@ -2,7 +2,7 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Repository.Interfaces
+namespace NetMaster.Repository.Interfaces.BaseCommand
 {
     public interface IBasePowershellRepository
     {

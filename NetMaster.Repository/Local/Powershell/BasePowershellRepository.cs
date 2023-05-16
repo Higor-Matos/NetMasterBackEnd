@@ -2,7 +2,7 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.BaseCommand;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Text.Json;

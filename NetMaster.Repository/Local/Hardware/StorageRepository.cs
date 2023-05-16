@@ -1,7 +1,7 @@
 ﻿// NetMaster.Repository/Local/Hardware/StorageRepository.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.Hardware;
 
 namespace NetMaster.Repository.Local.Hardware
 {

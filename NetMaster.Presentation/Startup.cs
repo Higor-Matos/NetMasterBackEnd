@@ -3,16 +3,21 @@ using NetMaster.Domain.Configuration;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Infrastructure;
 using NetMaster.Presentation.Configuration;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.BaseCommand;
+using NetMaster.Repository.Interfaces.Hardware;
+using NetMaster.Repository.Interfaces.Software;
 using NetMaster.Repository.Local.Hardware;
+using NetMaster.Repository.Local.Software;
 using NetMaster.Repository.Local.System;
 using NetMaster.Services;
 using NetMaster.Services.Implementations.BackgroundServices;
 using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Implementations.Hardware;
 using NetMaster.Services.Implementations.Network;
+using NetMaster.Services.Implementations.Software;
 using NetMaster.Services.Interfaces.BaseCommands;
 using NetMaster.Services.Interfaces.Hardware;
+using NetMaster.Services.Interfaces.Software;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +43,28 @@ builder.Services.AddScoped<IRamInfoService, RamInfoService>();
 builder.Services.AddScoped<IStorageInfoService, StorageInfoService>();
 builder.Services.AddScoped<ICommandRunner, CommandRunner>();
 builder.Services.AddScoped<IResultConverter, ResultConverter>();
+builder.Services.AddScoped<IAdobeReaderInstallerService, AdobeReaderInstallerService>();
+builder.Services.AddScoped<IFirefoxInstallerService, FirefoxInstallerService>();
+builder.Services.AddScoped<IVlcInstallerService, VlcInstallerService>();
+builder.Services.AddScoped<IWinrarInstallerService, WinrarInstallerService>();
+builder.Services.AddScoped<IGoogleChromeInstallerService, GoogleChromeInstallerService>();
+builder.Services.AddScoped<IOffice365InstallerService, Office365InstallerService>();
+builder.Services.AddScoped<IInstallAdobeReaderRepository, InstallAdobeReaderRepository>();
+builder.Services.AddScoped<IInstallFirefoxRepository, InstallFirefoxRepository>();
+builder.Services.AddScoped<IInstallVlcRepository, InstallVlcRepository>();
+builder.Services.AddScoped<IInstallWinrarRepository, InstallWinrarRepository>();
+builder.Services.AddScoped<IInstallGoogleChromeRepository, InstallGoogleChromeRepository>();
+builder.Services.AddScoped<IInstallOffice365Repository, InstallOffice365Repository>();
+
+builder.Services.AddScoped<Dictionary<string, ISoftwareInstallerService>>(provider => new Dictionary<string, ISoftwareInstallerService>
+{
+    { "AdobeReader", provider.GetRequiredService<IAdobeReaderInstallerService>() },
+    { "Firefox", provider.GetRequiredService<IFirefoxInstallerService>() },
+    { "Vlc", provider.GetRequiredService<IVlcInstallerService>() },
+    { "Winrar", provider.GetRequiredService<IWinrarInstallerService>() },
+    { "GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>() },
+    { "Office365", provider.GetRequiredService<IOffice365InstallerService>() },
+});
 
 builder.Services.AddScoped<IRamRepository, RamRepository>();
 builder.Services.AddScoped<IStorageRepository, StorageRepository>();

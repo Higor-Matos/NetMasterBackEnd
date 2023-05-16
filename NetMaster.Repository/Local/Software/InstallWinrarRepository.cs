@@ -1,10 +1,11 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces.Software;
 using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallWinrarRepository : BasePowershellRepository
+    public class InstallWinrarRepository : BasePowershellRepository, IInstallWinrarRepository
     {
         private static readonly string command = "choco install winrar -y --force";
 

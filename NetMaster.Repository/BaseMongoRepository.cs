@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Infrastructure;
-using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.BaseCommand;
 
 namespace NetMaster.Repository
 {

@@ -2,9 +2,9 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Infrastructure;
-using NetMaster.Repository.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using NetMaster.Repository.Interfaces.Hardware;
 
 namespace NetMaster.Repository.Local.Hardware
 {

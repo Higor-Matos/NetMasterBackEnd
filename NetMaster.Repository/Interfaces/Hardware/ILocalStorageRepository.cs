@@ -2,10 +2,11 @@
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces.BaseCommand;
 using NetMaster.Repository.Local.Powershell;
 using System.Threading.Tasks;
 
-namespace NetMaster.Repository.Interfaces
+namespace NetMaster.Repository.Interfaces.Hardware
 {
     public interface ILocalStorageRepository : ILocalHardwareRepository<StorageInfoDataModel>, IBasePowershellRepository
     {

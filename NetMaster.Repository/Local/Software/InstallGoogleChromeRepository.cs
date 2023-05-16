@@ -1,10 +1,11 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces.Software;
 using NetMaster.Repository.Local.Powershell;
 
 namespace NetMaster.Repository.Local.Software
 {
-    public class InstallGoogleChromeRepository : BasePowershellRepository
+    public class InstallGoogleChromeRepository : BasePowershellRepository, IInstallGoogleChromeRepository
     {
         private static readonly string command = "choco install googlechrome -y --force";
 

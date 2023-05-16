@@ -2,7 +2,7 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 
-namespace NetMaster.Repository.Interfaces
+namespace NetMaster.Repository.Interfaces.BaseCommand
 {
     public interface IBaseRepository<T> where T : BaseInfoDataModel
     {

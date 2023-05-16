@@ -1,5 +1,6 @@
 ﻿// NetMaster.Repository.Interfaces/IBaseMongoRepository.cs
-namespace NetMaster.Repository.Interfaces
+
+namespace NetMaster.Repository.Interfaces.MongoDB
 {
     public interface IBaseMongoRepository<T> where T : class
     {
