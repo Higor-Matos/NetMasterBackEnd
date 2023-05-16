@@ -6,10 +6,13 @@ using NetMaster.Presentation.Configuration;
 using NetMaster.Repository.Implementation.Hardware;
 using NetMaster.Repository.Implementation.Software;
 using NetMaster.Repository.Implementation.System;
+using NetMaster.Repository.Implementation.Uploud;
 using NetMaster.Repository.Interfaces.BaseCommand;
 using NetMaster.Repository.Interfaces.Hardware;
 using NetMaster.Repository.Interfaces.Software;
+using NetMaster.Repository.Interfaces.Uploud;
 using NetMaster.Services;
+using NetMaster.Services.Implementation.Uploud;
 using NetMaster.Services.Implementations.BackgroundServices;
 using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Implementations.Hardware;
@@ -18,6 +21,7 @@ using NetMaster.Services.Implementations.Software;
 using NetMaster.Services.Interfaces.BaseCommands;
 using NetMaster.Services.Interfaces.Hardware;
 using NetMaster.Services.Interfaces.Software;
+using NetMaster.Services.Interfaces.Uploud;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +59,7 @@ builder.Services.AddScoped<IInstallVlcRepository, InstallVlcRepository>();
 builder.Services.AddScoped<IInstallWinrarRepository, InstallWinrarRepository>();
 builder.Services.AddScoped<IInstallGoogleChromeRepository, InstallGoogleChromeRepository>();
 builder.Services.AddScoped<IInstallOffice365Repository, InstallOffice365Repository>();
+builder.Services.AddScoped<IUploadFileRepository, UploadFileRepository>();
 
 builder.Services.AddScoped<Dictionary<string, ISoftwareInstallerService>>(provider => new Dictionary<string, ISoftwareInstallerService>
 {
@@ -71,7 +76,7 @@ builder.Services.AddScoped<IStorageRepository, StorageRepository>();
 builder.Services.AddScoped<IHardwareService, HardwareService>();
 builder.Services.AddScoped<SoftwareService>();
 builder.Services.AddScoped<SystemService>();
-builder.Services.AddScoped<UploadService>();
+builder.Services.AddScoped<IUploadService, UploadService>();
 builder.Services.AddSingleton<NetworkService>();
 builder.Services.AddScoped<IBaseRepository<RamInfoDataModel>, RamRepository>();
 builder.Services.AddScoped<IBaseRepository<StorageInfoDataModel>, StorageRepository>();

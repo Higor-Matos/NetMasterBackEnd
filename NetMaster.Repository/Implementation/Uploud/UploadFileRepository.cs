@@ -1,9 +1,10 @@
-﻿//NetMaster.Repository/Local/Uploud/UploadFileRepository.cs
+﻿//NetMaster.Repository/Implementation/Uploud/UploadFileRepository.cs
 using NetMaster.Domain.Models.Results;
+using NetMaster.Repository.Interfaces.Uploud;
 
 namespace NetMaster.Repository.Implementation.Uploud
 {
-    public class UploadFileRepository
+    public class UploadFileRepository : IUploadFileRepository
     {
         public RepositoryResultModel<string> UploadFile(string fileName, byte[] fileData, string destinationFolder)
         {

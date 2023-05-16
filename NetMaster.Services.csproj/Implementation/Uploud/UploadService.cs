@@ -1,19 +1,23 @@
-﻿// NetMaster.Services/UploadService.cs
+﻿// NetMaster.Services/Implementations/Uplooud/UploadService.cs
 using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Implementation.Uploud;
+using NetMaster.Repository.Interfaces;
+using NetMaster.Repository.Interfaces.Uploud;
 using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Interfaces;
 using NetMaster.Services.Interfaces.BaseCommands;
+using NetMaster.Services.Interfaces.Uploud;
 
-namespace NetMaster.Services
+namespace NetMaster.Services.Implementation.Uploud
 {
-    public class UploadService : BaseService
+    public class UploadService : BaseService, IUploadService
     {
-        private readonly UploadFileRepository _uploadFileRepository;
+        private readonly IUploadFileRepository _uploadFileRepository;
 
-        public UploadService(ICommandRunner commandRunner, IResultConverter resultConverter) : base(commandRunner, resultConverter)
+        public UploadService(ICommandRunner commandRunner, IResultConverter resultConverter, IUploadFileRepository uploadFileRepository)
+            : base(commandRunner, resultConverter)
         {
-            _uploadFileRepository = new UploadFileRepository();
+            _uploadFileRepository = uploadFileRepository;
         }
 
         public ServiceResultModel<object> UploadFile(IFormFile file)
