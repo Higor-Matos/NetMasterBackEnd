@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// NetMaster.Services/UploadService.cs
+using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Local.Uploud;
+using NetMaster.Repository.Implementation.Uploud;
 using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Interfaces.BaseCommands;
 

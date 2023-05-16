@@ -3,7 +3,7 @@ using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Interfaces.BaseCommand;
-using NetMaster.Repository.Local.Powershell;
+using NetMaster.Repository.Implementation.Powershell;
 using System.Threading.Tasks;
 
 namespace NetMaster.Repository.Interfaces.Hardware
