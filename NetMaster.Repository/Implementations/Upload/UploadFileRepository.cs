@@ -6,18 +6,25 @@ namespace NetMaster.Repository.Implementation.Uploud
 {
     public class UploadFileRepository : IUploadFileRepository
     {
-        public RepositoryResultModel<string> UploadFile(string fileName, byte[] fileData, string destinationFolder)
+        public RepositoryResultModel<UploadResult> UploadFile(string fileName, byte[] fileData, string destinationFolder)
         {
             try
             {
                 string filePath = Path.Combine(destinationFolder, fileName);
                 WriteFileData(filePath, fileData);
 
-                return new RepositoryResultModel<string>(data: "File uploaded successfully.", success: true);
+                return new RepositoryResultModel<UploadResult>(
+                    data: new UploadResult
+                    {
+                        FilePath = filePath,
+                        Message = "File uploaded successfully."
+                    },
+                    success: true
+                );
             }
             catch (Exception e)
             {
-                return new RepositoryResultModel<string>(error: new ErrorRepositoryResult(e));
+                return new RepositoryResultModel<UploadResult>(error: new ErrorRepositoryResult(e));
             }
         }
 

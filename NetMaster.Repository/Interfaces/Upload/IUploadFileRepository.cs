@@ -7,6 +7,6 @@ namespace NetMaster.Repository.Interfaces.Uploud
     [AutoDI]
     public interface IUploadFileRepository
     {
-        RepositoryResultModel<string> UploadFile(string fileName, byte[] fileData, string destinationFolder);
+        RepositoryResultModel<UploadResult> UploadFile(string fileName, byte[] fileData, string destinationFolder);
     }
 }

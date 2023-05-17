@@ -1,7 +1,7 @@
-﻿// UploadController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Interfaces.Uploud;
+using NetMaster.Services.Interfaces.Upload;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -19,19 +19,14 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("file")]
         public IActionResult UploadFile(IFormFile file)
         {
-            IActionResult validationResult = ValidateFile(file);
-            if (validationResult != null)
+            ServiceResultModel<object> validationResult = _uploadService.ValidateFile(file);
+            if (!validationResult.IsSuccess)
             {
-                return validationResult;
+                return ToActionResult(validationResult);
             }
 
-            ServiceResultModel<object> result = _uploadService.UploadFile(file);
+            ServiceResultModel<UploadResult> result = _uploadService.UploadFile(file);
             return ToActionResult(result);
-        }
-
-        private IActionResult? ValidateFile(IFormFile file)
-        {
-            return file == null || file.Length == 0 ? BadRequest("File not provided or empty.") : (IActionResult?)null;
         }
     }
 }
