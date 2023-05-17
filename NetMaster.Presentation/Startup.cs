@@ -1,36 +1,18 @@
 //NetMaster.Presentation/Startup.cs
 using NetMaster.Domain.Configuration;
-using NetMaster.Domain.Models.DataModels;
-using NetMaster.Infrastructure;
+using NetMaster.Infrastructure.Context;
 using NetMaster.Presentation.Configuration;
-using NetMaster.Repository.Implementation.Hardware;
+using NetMaster.Presentation.Extensions;
 using NetMaster.Repository.Implementation.Software;
-using NetMaster.Repository.Implementation.System;
-using NetMaster.Repository.Implementation.Uploud;
-using NetMaster.Repository.Interfaces.BaseCommand;
-using NetMaster.Repository.Interfaces.Hardware;
-using NetMaster.Repository.Interfaces.Software;
-using NetMaster.Repository.Interfaces.System;
-using NetMaster.Repository.Interfaces.Uploud;
-using NetMaster.Services;
-using NetMaster.Services.Implementation.BackgroundServices;
-using NetMaster.Services.Implementation.System;
-using NetMaster.Services.Implementation.Uploud;
-using NetMaster.Services.Implementations.BaseCommands;
-using NetMaster.Services.Implementations.Hardware;
-using NetMaster.Services.Implementations.Network;
-using NetMaster.Services.Implementations.Software;
-using NetMaster.Services.Interfaces.BaseCommands;
-using NetMaster.Services.Interfaces.Hardware;
-using NetMaster.Services.Interfaces.Software;
-using NetMaster.Services.Interfaces.System;
-using NetMaster.Services.Interfaces.Uploud;
+
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+// Add configurations
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 builder.Services.Configure<StreamingServerConfigPresentation>(builder.Configuration.GetSection("StreamingServer"));
 
+// Add database context
 builder.Services.AddSingleton<MongoDbContext>(provider =>
 {
     IConfiguration configuration = provider.GetRequiredService<IConfiguration>();
@@ -38,94 +20,45 @@ builder.Services.AddSingleton<MongoDbContext>(provider =>
     return new MongoDbContext(mongoDbSettings.ConnectionString, mongoDbSettings.DatabaseName);
 });
 
+// Add services and repositories from assembly
+builder.Services.AddServicesInAssembly();
+
+
+// Add controllers
 builder.Services.AddControllers();
-builder.Services.AddScoped<ILocalRamRepository, LocalRamRepository>();
-builder.Services.AddScoped<ILocalStorageRepository, LocalStorageRepository>();
-builder.Services.AddScoped<LocalChocolateyRepository>();
-builder.Services.AddScoped<LocalInstalledProgramsRepository>();
-builder.Services.AddScoped<LocalOsVersionRepository>();
-builder.Services.AddScoped<LocalUsersRepository>();
-builder.Services.AddScoped<HardwareService>();
-builder.Services.AddScoped<IRamInfoService, RamInfoService>();
-builder.Services.AddScoped<IStorageInfoService, StorageInfoService>();
-builder.Services.AddScoped<ICommandRunner, CommandRunner>();
-builder.Services.AddScoped<IResultConverter, ResultConverter>();
-builder.Services.AddScoped<IAdobeReaderInstallerService, AdobeReaderInstallerService>();
-builder.Services.AddScoped<IFirefoxInstallerService, FirefoxInstallerService>();
-builder.Services.AddScoped<IVlcInstallerService, VlcInstallerService>();
-builder.Services.AddScoped<IWinrarInstallerService, WinrarInstallerService>();
-builder.Services.AddScoped<IGoogleChromeInstallerService, GoogleChromeInstallerService>();
-builder.Services.AddScoped<IOffice365InstallerService, Office365InstallerService>();
-builder.Services.AddScoped<IInstallAdobeReaderRepository, InstallAdobeReaderRepository>();
-builder.Services.AddScoped<IInstallFirefoxRepository, InstallFirefoxRepository>();
-builder.Services.AddScoped<IInstallVlcRepository, InstallVlcRepository>();
-builder.Services.AddScoped<IInstallWinrarRepository, InstallWinrarRepository>();
-builder.Services.AddScoped<IInstallGoogleChromeRepository, InstallGoogleChromeRepository>();
-builder.Services.AddScoped<IInstallOffice365Repository, InstallOffice365Repository>();
-builder.Services.AddScoped<IUploadFileRepository, UploadFileRepository>();
-builder.Services.AddScoped<ISystemInfoService<ChocolateyInfoDataModel>, ChocolateyInfoService>();
-builder.Services.AddScoped<ISystemInfoService<UsersInfoDataModel>, UsersInfoService>();
-builder.Services.AddScoped<ISystemInfoService<OSVersionInfoDataModel>, OsVersionInfoService>();
-builder.Services.AddScoped<ISystemInfoService<InstalledProgramsResponseModel>, InstalledProgramsInfoService>();
-builder.Services.AddScoped<IChocolateyInfoService, ChocolateyInfoService>();
-builder.Services.AddScoped<IInstalledProgramsInfoService, InstalledProgramsInfoService>();
-builder.Services.AddScoped<IUsersInfoService, UsersInfoService>();
-builder.Services.AddScoped<IOsVersionInfoService, OsVersionInfoService>();
 
-
-builder.Services.AddScoped<Dictionary<string, ISoftwareInstallerService>>(provider => new Dictionary<string, ISoftwareInstallerService>
-{
-    { "AdobeReader", provider.GetRequiredService<IAdobeReaderInstallerService>() },
-    { "Firefox", provider.GetRequiredService<IFirefoxInstallerService>() },
-    { "Vlc", provider.GetRequiredService<IVlcInstallerService>() },
-    { "Winrar", provider.GetRequiredService<IWinrarInstallerService>() },
-    { "GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>() },
-    { "Office365", provider.GetRequiredService<IOffice365InstallerService>() },
-    });
-
-builder.Services.AddScoped<IRamRepository, RamRepository>();
-builder.Services.AddScoped<IStorageRepository, StorageRepository>();
-builder.Services.AddScoped<IHardwareService, HardwareService>();
-builder.Services.AddScoped<SoftwareService>();
-builder.Services.AddScoped<SystemService>();
-builder.Services.AddScoped<IUploadService, UploadService>();
-builder.Services.AddSingleton<NetworkService>();
-builder.Services.AddScoped<IBaseRepository<RamInfoDataModel>, RamRepository>();
-builder.Services.AddScoped<IBaseRepository<StorageInfoDataModel>, StorageRepository>();
-builder.Services.AddScoped<IBaseRepository<ChocolateyInfoDataModel>, ChocolateyRepository>();
-builder.Services.AddScoped<IBaseRepository<InstalledProgramsResponseModel>, InstalledProgramsRepository>();
-builder.Services.AddScoped<IBaseRepository<UsersInfoDataModel>, UsersRepository>();
-builder.Services.AddScoped<IBaseRepository<OSVersionInfoDataModel>, OsVersionRepository>();
-builder.Services.AddSingleton<IHostedService, ComputerInfoBackgroundService>();
-
+// Add Swagger
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocumentation();
 
+// Add CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
-    builder =>
-    {
-        _ = builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    });
+        builder =>
+        {
+            _ = builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        });
 });
 
 WebApplication app = builder.Build();
 
+// Use CORS
 app.UseCors("AllowAllOrigins");
 
+// Use routing
 app.UseRouting();
 
+// Use authorization
 app.UseAuthorization();
 
+// Use Swagger documentation
 app.UseSwaggerDocumentation();
 
+// Map controllers
 app.UseEndpoints(endpoints =>
 {
     _ = endpoints.MapControllers();
 });
-
-TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
-DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
 
 app.Run();

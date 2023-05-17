@@ -1,11 +1,14 @@
 ﻿// NetMaster.Services/Interfaces/System/IOsVersionInfoService.cs
-
+using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Repository.Interfaces.System;
+using NetMaster.Domain.Models.Results;
 
 namespace NetMaster.Services.Interfaces.System
 {
+    [AutoDI]
     public interface IOsVersionInfoService : ISystemInfoService<OSVersionInfoDataModel>
     {
+        Task<ServiceResultModel<OSVersionInfoDataModel>> SaveLocalOsVersionInfoAsync(string ip);
+        Task<ServiceResultModel<OSVersionInfoDataModel>> GetOsVersionInfoByComputerNameAsync(string computerName);
     }
 }

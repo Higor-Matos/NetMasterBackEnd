@@ -9,17 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controller\Class.cs" />
+    <Compile Remove="Controllers\Class.cs" />
   </ItemGroup>
 
   <ItemGroup>
 	<PackageReference Include="MongoDB.Driver" Version="2.19.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="6.8.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NetMaster.Common\NetMaster.Common.csproj" />
+    <ProjectReference Include="..\NetMaster.Repository\NetMaster.Repository.csproj" />
     <ProjectReference Include="..\NetMaster.Services.csproj\NetMaster.Services.csproj" />
   </ItemGroup>
 

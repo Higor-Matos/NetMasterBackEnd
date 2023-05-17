@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetMaster.Domain.csproj\NetMaster.Domain.csproj" />
+    <ProjectReference Include="..\NetMaster.Common\NetMaster.Common.csproj" />
     <ProjectReference Include="..\NetMaster.Infrastructure\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj" />
   </ItemGroup>
 
