@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace NetMaster.Infrastructure.Context
 {
-    public class MongoDbContext
+    public class MongoDbContext : IMongoDbContext
     {
         public MongoDbContext(string connectionString, string databaseName)
         {

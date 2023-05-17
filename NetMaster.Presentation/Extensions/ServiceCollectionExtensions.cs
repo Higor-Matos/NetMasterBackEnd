@@ -36,15 +36,20 @@ namespace NetMaster.Presentation.Extensions
 
                 foreach (Type type in types.Where(t => t.IsClass && !t.IsAbstract))
                 {
-                    foreach (Type @interface in type.GetInterfaces())
-                    {
-                        AutoDIAttribute autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
+                    RegisterServiceForType(services, type);
+                }
+            }
+        }
 
-                        if (autoDiAttribute != null)
-                        {
-                            RegisterService(services, type, @interface);
-                        }
-                    }
+        private static void RegisterServiceForType(IServiceCollection services, Type type)
+        {
+            foreach (Type @interface in type.GetInterfaces())
+            {
+                AutoDIAttribute autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
+
+                if (autoDiAttribute != null)
+                {
+                    RegisterService(services, type, @interface);
                 }
             }
         }
@@ -79,7 +84,7 @@ namespace NetMaster.Presentation.Extensions
                 .First();
 
             MethodInfo constructedMethod = genericMethod.MakeGenericMethod(serviceType);
-            constructedMethod.Invoke(null, new object[] { services });
+            _ = constructedMethod.Invoke(null, new object[] { services });
         }
 
 
