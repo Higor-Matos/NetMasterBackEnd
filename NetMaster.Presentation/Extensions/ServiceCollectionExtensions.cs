@@ -1,6 +1,7 @@
 ﻿using NetMaster.Common;
 using NetMaster.Infrastructure.Context;
 using NetMaster.Repository.Interfaces.Base;
+using NetMaster.Services.Interfaces.Software;
 using System.Reflection;
 
 namespace NetMaster.Presentation.Extensions
@@ -66,6 +67,22 @@ namespace NetMaster.Presentation.Extensions
                 // Register base Mongo repository
                 RegisterBaseMongoRepository(services, @interface, type);
             }
+            else if (@interface == typeof(ISoftwareInstallerService))
+            {
+                // Register software installer service dictionary
+                _ = services.AddScoped(provider =>
+                {
+                    var dictionary = new Dictionary<string, ISoftwareInstallerService>();
+                    dictionary.Add("AdobeReader", provider.GetRequiredService<IAdobeReaderInstallerService>());
+                    dictionary.Add("Firefox", provider.GetRequiredService<IFirefoxInstallerService>());
+                    dictionary.Add("GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>());
+                    dictionary.Add("Office365", provider.GetRequiredService<IOffice365InstallerService>());
+                    dictionary.Add("Vlc", provider.GetRequiredService<IVlcInstallerService>());
+                    dictionary.Add("Winrar", provider.GetRequiredService<IWinrarInstallerService>());
+                    return dictionary;
+                });
+
+            }
             else
             {
                 // Register all other services
@@ -74,6 +91,7 @@ namespace NetMaster.Presentation.Extensions
 
             Console.WriteLine($"Registered {@interface.FullName} with {type.FullName}");
         }
+
 
         private static void RegisterHostedService(IServiceCollection services, Type serviceType)
         {

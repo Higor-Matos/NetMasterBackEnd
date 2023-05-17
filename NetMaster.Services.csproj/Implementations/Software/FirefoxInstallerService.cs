@@ -18,7 +18,7 @@ namespace NetMaster.Services.Implementations.Software
             _installFirefoxRepository = installFirefoxRepository;
         }
 
-        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip)
+        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string softwareName)
         {
             RepositoryResultModel<string> resultRep = await _installFirefoxRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(ConvertResult(resultRep));

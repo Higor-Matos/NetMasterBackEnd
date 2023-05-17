@@ -18,7 +18,7 @@ namespace NetMaster.Services.Implementations.Software
             _installVlcRepository = installVlcRepository;
         }
 
-        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip)
+        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string softwareName)
         {
             RepositoryResultModel<string> resultRep = await _installVlcRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(ConvertResult(resultRep));

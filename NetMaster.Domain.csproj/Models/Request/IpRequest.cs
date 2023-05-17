@@ -2,7 +2,7 @@
 
 namespace NetMaster.Domain.Models.DataModels
 {
-    public class IpRequestDataModels
+    public class IpRequest
     {
         public string? Ip { get; set; }
     }

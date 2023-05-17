@@ -6,7 +6,7 @@ namespace NetMaster.Presentation.Extensions
 {
     public static class ControllerExtensions
     {
-        public static IActionResult ToResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
+        public static IActionResult CreateActionResultFromServiceResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
             where T : class
         {
             return value.SuccessResult != null

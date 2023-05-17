@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Implementation.System;
 using NetMaster.Services.Interfaces.System;
 
 namespace NetMaster.Presentation.Controllers
@@ -11,52 +10,54 @@ namespace NetMaster.Presentation.Controllers
     public class SystemController : BaseController
     {
         private readonly ISystemService _systemService;
-        private readonly SystemCommandService _systemCommandService;
+        private readonly ISystemCommandService _systemCommandService;
 
-        public SystemController(ISystemService systemService)
+        public SystemController(ISystemService systemService, ISystemCommandService systemCommandService)
         {
             _systemService = systemService;
+            _systemCommandService = systemCommandService;
         }
 
         [HttpPost("shutdownPc")]
-        public async Task<IActionResult> ShutdownPc([FromBody] IpRequestDataModels request)
+        public async Task<IActionResult> ShutdownPc([FromBody] IpRequest request)
         {
-            ServiceResultModel<string> result = await _systemCommandService.ShutdownPcComand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.ShutdownPcCommand(request.Ip);
             return ToActionResult(result);
         }
 
         [HttpPost("restartPc")]
-        public async Task<IActionResult> RestartPc([FromBody] IpRequestDataModels request)
+        public async Task<IActionResult> RestartPc([FromBody] IpRequest request)
         {
-            ServiceResultModel<string> result = await _systemCommandService.RestartPcComand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.RestartPcCommand(request.Ip);
             return ToActionResult(result);
         }
 
-
-        [HttpGet("getInfo/{infoType}/{computerName}")]
-        public async Task<IActionResult> GetInfo(string infoType, string computerName)
+        [HttpGet("getUsersInfo/{computerName}")]
+        public async Task<IActionResult> GetUsersInfo(string computerName)
         {
-            switch (infoType.ToLower())
-            {
-                case "users":
-                    ServiceResultModel<UsersInfoDataModel> usersResult = await _systemService.GetUsersInfoAsync(computerName);
-                    return ToActionResult(usersResult);
+            ServiceResultModel<UsersInfoDataModel> result = await _systemService.GetUsersInfoAsync(computerName);
+            return ToActionResult(result);
+        }
 
-                case "chocolatey":
-                    ServiceResultModel<ChocolateyInfoDataModel> chocolateyResult = await _systemService.GetChocolateyInfoAsync(computerName);
-                    return ToActionResult(chocolateyResult);
+        [HttpGet("getChocolateyInfo/{computerName}")]
+        public async Task<IActionResult> GetChocolateyInfo(string computerName)
+        {
+            ServiceResultModel<ChocolateyInfoDataModel> result = await _systemService.GetChocolateyInfoAsync(computerName);
+            return ToActionResult(result);
+        }
 
-                case "osversion":
-                    ServiceResultModel<OSVersionInfoDataModel> osVersionResult = await _systemService.GetOsVersionInfoAsync(computerName);
-                    return ToActionResult(osVersionResult);
+        [HttpGet("getOsVersionInfo/{computerName}")]
+        public async Task<IActionResult> GetOsVersionInfo(string computerName)
+        {
+            ServiceResultModel<OSVersionInfoDataModel> result = await _systemService.GetOsVersionInfoAsync(computerName);
+            return ToActionResult(result);
+        }
 
-                case "installedprograms":
-                    ServiceResultModel<InstalledProgramsResponseModel> installedProgramsResult = await _systemService.GetInstalledProgramsInfoAsync(computerName);
-                    return ToActionResult(installedProgramsResult);
-
-                default:
-                    return BadRequest($"Invalid infoType: {infoType}. Valid options are: users, chocolatey, osversion, installedprograms.");
-            }
+        [HttpGet("getInstalledProgramsInfo/{computerName}")]
+        public async Task<IActionResult> GetInstalledProgramsInfo(string computerName)
+        {
+            ServiceResultModel<InstalledProgramsResponseModel> result = await _systemService.GetInstalledProgramsInfoAsync(computerName);
+            return ToActionResult(result);
         }
     }
 }

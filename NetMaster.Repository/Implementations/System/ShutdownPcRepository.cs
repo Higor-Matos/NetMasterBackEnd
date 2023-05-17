@@ -1,10 +1,11 @@
 ﻿using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Repository.Implementation.Powershell;
+using NetMaster.Repository.Interfaces.System;
 
 namespace NetMaster.Repository.Implementation.System
 {
-    public class ShutdownPcRepository : BasePowershellRepository
+    public class ShutdownPcRepository : BasePowershellRepository, IShutdownPcRepository
     {
         private static readonly string command = "Stop-Computer -force";
 

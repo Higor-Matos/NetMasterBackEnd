@@ -7,6 +7,7 @@ namespace NetMaster.Services.Interfaces.Software
     [AutoDI]
     public interface ISoftwareInstallerService
     {
-        Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip);
+        Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string softwareName);
+
     }
 }

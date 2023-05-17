@@ -19,7 +19,7 @@ namespace NetMaster.Services.Implementations.Software
             _installOffice365Repository = installOffice365Repository;
         }
 
-        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip)
+        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string softwareName)
         {
             RepositoryResultModel<string> resultRep = await _installOffice365Repository.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(ConvertResult(resultRep));

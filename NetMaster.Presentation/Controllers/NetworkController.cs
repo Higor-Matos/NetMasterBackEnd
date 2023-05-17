@@ -1,24 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
-using NetMaster.Presentation.Controllers;
-using NetMaster.Services.Implementations.Network;
+using NetMaster.Services.Interfaces.Network;
 
-[ApiController]
-[Route("network")]
-public class NetworkController : BaseController
+namespace NetMaster.Presentation.Controllers
 {
-    private readonly NetworkService _powershellService;
-
-    public NetworkController(NetworkService powershellService)
+    [ApiController]
+    [Route("network")]
+    public class NetworkController : BaseController
     {
-        _powershellService = powershellService;
-    }
+        private readonly INetworkService _networkService;
 
-    [HttpGet("listComputersNetwork")]
-    public IActionResult ListNetworkComputer()
-    {
-        object[] computers = _powershellService.ListNetworkComputerCommand();
-        return new JsonResult(new { success = new { result = new { computers } } });
+        public NetworkController(INetworkService networkService)
+        {
+            _networkService = networkService;
+        }
+
+        [HttpGet("listComputersNetwork")]
+        public IActionResult ListNetworkComputer()
+        {
+            object[] computers = _networkService.ListNetworkComputerCommand();
+            return new JsonResult(new { success = new { result = new { computers } } });
+        }
     }
 }
-
-

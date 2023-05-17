@@ -19,7 +19,7 @@ namespace NetMaster.Services.Implementations.Software
             _installGoogleChromeRepository = installGoogleChromeRepository;
         }
 
-        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip)
+        public async Task<ServiceResultModel<object>> InstallSoftwareCommand(string ip, string softwareName)
         {
             RepositoryResultModel<string> resultRep = await _installGoogleChromeRepository.ExecCommand(new RepositoryPowerShellParamModel(ip));
             return RunCommand(ConvertResult(resultRep));
