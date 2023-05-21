@@ -5,8 +5,8 @@ namespace NetMaster.Domain.Models.Results.Repository
     public class RepositoryResultModel
     {
         public string Ip { get; set; }
-        public SuccessRepositoryResult? SuccessResult { get; set; }
-        public ErrorRepositoryResult? ErrorResult { get; set; }
+        public SuccessRepositoryResult? SuccessResult { get; set; } = null;
+        public ErrorRepositoryResult? ErrorResult { get; set; } = null;
 
         protected RepositoryResultModel(SuccessRepositoryResult? success = null, ErrorRepositoryResult? error = null, string ip = "")
         {
@@ -23,18 +23,14 @@ namespace NetMaster.Domain.Models.Results.Repository
 {
     public class RepositoryResultModel<T> : RepositoryResultModel
     {
-        public T Data { get; set; }
+        public T? Data { get; set; } // Alterado para ser anulável
         public bool Success { get; set; }
         public string Message { get; set; }
 
-        public new SuccessRepositoryResult<T>? SuccessResult
-        {
-            get => (SuccessRepositoryResult<T>?)base.SuccessResult;
-            protected set => base.SuccessResult = value;
-        }
+        public new SuccessRepositoryResult<T>? SuccessResult { get; set; } = null;
 
-        public RepositoryResultModel(T data = default, bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
-            : base(success ? new SuccessRepositoryResult<T>(data) : null, error, ip)  // Adicionado parâmetro ip
+        public RepositoryResultModel(T? data = default, bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
+            : base(success ? new SuccessRepositoryResult<T>(data) : null, error, ip)
         {
             Data = data;
             Success = success;
