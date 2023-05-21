@@ -1,4 +1,4 @@
-﻿namespace NetMaster.Domain.Models
+﻿namespace NetMaster.Domain.Models.DataModels
 {
     public class RepositoryPowerShellParamModel
     {

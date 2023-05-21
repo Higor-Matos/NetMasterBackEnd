@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Services.Interfaces.Upload;
+using NetMaster.Domain.Models.Results.Service;
 
 namespace NetMaster.Presentation.Controllers
 {

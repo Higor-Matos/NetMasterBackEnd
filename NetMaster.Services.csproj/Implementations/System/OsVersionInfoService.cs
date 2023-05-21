@@ -1,6 +1,6 @@
 ﻿// NetMaster.Services/Implementation/System/OsVersionInfoService.cs
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.System;
 using NetMaster.Services.Implementations.System;
 using NetMaster.Services.Interfaces.Base;

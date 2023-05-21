@@ -1,6 +1,6 @@
 ﻿// NetMaster.Services/Interfaces/BaseCommands/IResultConverter.cs
 using NetMaster.Common;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 
 namespace NetMaster.Services.Interfaces.Base
 {

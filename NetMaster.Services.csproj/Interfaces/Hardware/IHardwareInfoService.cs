@@ -1,6 +1,6 @@
 ﻿// NetMaster.Services.Interfaces/Hardware/IHardwareInfoService.cs
 using NetMaster.Common;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 
 namespace NetMaster.Services.Interfaces.Hardware
 {

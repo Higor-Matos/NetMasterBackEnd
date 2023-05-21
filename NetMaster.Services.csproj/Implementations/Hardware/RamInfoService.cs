@@ -1,6 +1,6 @@
 ﻿// NetMaster.Services/Implementations/Hardware/RamInfoService.cs
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.Hardware;
 using NetMaster.Repository.Interfaces.System;
 using NetMaster.Services.Interfaces.Base;

@@ -1,6 +1,7 @@
 ﻿// NetMaster.Services/Implementations/Upload/FileValidationService.cs
 using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.Upload;
 using System;
 

@@ -1,7 +1,6 @@
 ﻿// NetMaster.Repository/Local/Hardware/LocalStorageRepository.cs
-using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Interfaces.System;
 

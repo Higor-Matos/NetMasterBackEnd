@@ -5,6 +5,8 @@ using NetMaster.Services.Interfaces.Upload;
 using NetMaster.Infrastructure.Utils;
 using System;
 using NetMaster.Repository.Interfaces.Uploud;
+using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Domain.Models.Results.Repository;
 
 namespace NetMaster.Services.Implementations.Upload
 {

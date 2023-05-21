@@ -1,9 +1,11 @@
-﻿using NetMaster.Domain.Models.Results;
-using NetMaster.Domain.Models;
+﻿using NetMaster.Domain.Models;
 using NetMaster.Repository.Interfaces.Software;
 using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Software;
+using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Domain.Models.DataModels;
 
 namespace NetMaster.Services.Implementations.Software
 {

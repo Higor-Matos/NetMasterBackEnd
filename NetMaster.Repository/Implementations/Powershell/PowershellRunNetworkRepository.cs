@@ -1,5 +1,5 @@
 ﻿//NetMaster.Repository/Local//Powershell/PowershellRunNetworkRepository.cs
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 

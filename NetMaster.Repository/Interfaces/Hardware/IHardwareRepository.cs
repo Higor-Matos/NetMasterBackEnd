@@ -1,7 +1,7 @@
 ﻿// NetMaster.Repository/Interfaces/IHardwareRepository.cs
 using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Interfaces.Base;
 using System.Threading.Tasks;
 

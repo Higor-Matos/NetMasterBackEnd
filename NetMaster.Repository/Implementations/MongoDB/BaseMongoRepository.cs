@@ -1,7 +1,7 @@
 ﻿// NetMaster.Repository/BaseMongoRepository.cs
 using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Infrastructure.Context;
 using NetMaster.Repository.Interfaces.Base;
 using System.Collections.Generic;

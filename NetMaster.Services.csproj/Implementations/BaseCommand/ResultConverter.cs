@@ -1,5 +1,5 @@
 ﻿// NetMaster.Services/Implementations/BaseCommands/CResultConverter.cs
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Services.Interfaces.Base;
 
 namespace NetMaster.Services.Implementations.BaseCommands

@@ -1,5 +1,6 @@
 ﻿// NetMaster.Domain.Models.Results/Results/RepositoryResultModel.cs
-namespace NetMaster.Domain.Models.Results
+
+namespace NetMaster.Domain.Models.Results.Repository
 {
     public class RepositoryResultModel
     {
@@ -14,12 +15,17 @@ namespace NetMaster.Domain.Models.Results
             Ip = ip;
         }
     }
+}
 
+
+// NetMaster.Domain.Models.Results/Results/RepositoryResultModel.Generic.cs
+namespace NetMaster.Domain.Models.Results.Repository
+{
     public class RepositoryResultModel<T> : RepositoryResultModel
     {
-        public T Data { get;  set; }
-        public bool Success { get;  set; }
-        public string Message { get;  set; }
+        public T Data { get; set; }
+        public bool Success { get; set; }
+        public string Message { get; set; }
 
         public new SuccessRepositoryResult<T>? SuccessResult
         {
@@ -27,7 +33,7 @@ namespace NetMaster.Domain.Models.Results
             protected set => base.SuccessResult = value;
         }
 
-        public RepositoryResultModel(T data = default(T), bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
+        public RepositoryResultModel(T data = default, bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
             : base(success ? new SuccessRepositoryResult<T>(data) : null, error, ip)  // Adicionado parâmetro ip
         {
             Data = data;
@@ -38,34 +44,11 @@ namespace NetMaster.Domain.Models.Results
 
         public RepositoryResultModel(RepositoryResultModel model)
         {
-            SuccessResult = (SuccessRepositoryResult<T>?)model.SuccessResult;
+            if (model.SuccessResult != null)
+            {
+                SuccessResult = (SuccessRepositoryResult<T>?)model.SuccessResult;
+            }
             ErrorResult = model.ErrorResult;
         }
-    }
-
-    public class SuccessRepositoryResult
-    {
-    }
-
-    public class SuccessRepositoryResult<T> : SuccessRepositoryResult
-    {
-        public SuccessRepositoryResult(T result)
-        {
-            Result = result;
-        }
-
-        public T Result { get; }
-    }
-
-    public class ErrorRepositoryResult
-    {
-        public ErrorRepositoryResult(Exception exception, string message = "")
-        {
-            Exception = exception;
-            Message = message; 
-        }
-
-        public Exception Exception { get; }
-        public string Message { get; set; } 
     }
 }

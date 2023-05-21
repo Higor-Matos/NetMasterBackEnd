@@ -1,6 +1,6 @@
 ﻿// NetMaster.Services/Interfaces/System/ISystemInfoService.cs
 using NetMaster.Common;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 
 namespace NetMaster.Services.Interfaces.System
 {

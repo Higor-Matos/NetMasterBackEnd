@@ -1,6 +1,6 @@
 ﻿// NetMaster.Presentation/ControllerExtensions.cs
 using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 
 namespace NetMaster.Presentation.Extensions
 {

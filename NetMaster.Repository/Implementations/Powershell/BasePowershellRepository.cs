@@ -1,7 +1,6 @@
 ﻿// NetMaster.Repository/Local/Powershell/BasePowershellRepository.cs
-using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Interfaces.Base;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;

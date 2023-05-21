@@ -1,7 +1,7 @@
 ﻿// NetMaster.Controllers/BaseController.cs
 using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Extensions;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Presentation.Extensions;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -9,7 +9,7 @@ namespace NetMaster.Presentation.Controllers
     {
         protected IActionResult ToActionResult<T>(ServiceResultModel<T> result) where T : class
         {
-            return this.ToResult(result);
+            return this.CreateActionResultFromServiceResult(result);
         }
     }
 }

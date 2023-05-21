@@ -1,13 +1,13 @@
 ﻿// NetMaster.Repository/Interfaces/IBaseMongoRepository.cs
 using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NetMaster.Repository.Interfaces.Base
 {
-    
+
     public interface IBaseMongoRepository<T> where T : BaseInfoDataModel
     {
         Task<IEnumerable<T>> GetAllAsync();

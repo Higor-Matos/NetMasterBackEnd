@@ -1,5 +1,6 @@
 ﻿//NetMaster.Repository/Implementation/Uploud/UploadFileRepository.cs
 using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Interfaces.Uploud;
 
 namespace NetMaster.Repository.Implementation.Uploud

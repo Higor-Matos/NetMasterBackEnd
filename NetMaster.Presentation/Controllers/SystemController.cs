@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.System;
 
 namespace NetMaster.Presentation.Controllers

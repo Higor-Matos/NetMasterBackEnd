@@ -1,5 +1,8 @@
 ﻿using NetMaster.Domain.Models;
+using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
+using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.System;
 using NetMaster.Services.Interfaces.System;
 
