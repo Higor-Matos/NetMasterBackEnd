@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using NetMaster.Presentation.Configuration;
 using System.Diagnostics;
 
 namespace NetMaster.Presentation.Controllers

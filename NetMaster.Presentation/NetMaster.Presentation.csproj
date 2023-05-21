@@ -6,10 +6,15 @@
 	<OutputType>Exe</OutputType>
 	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
     <ImplicitUsings>enable</ImplicitUsings>
+    <CodeAnalysisRuleSet>.sonarlint\higor-matos_netmasterbackendcsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include=".sonarlint\higor-matos_netmasterbackend\CSharp\SonarLint.xml" />
   </ItemGroup>
 
   <ItemGroup>

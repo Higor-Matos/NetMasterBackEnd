@@ -1,0 +1,16 @@
+﻿C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Configurations\MongoDbSettings.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Extensions\ControllerExtensions.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\BaseInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\ChocolateyInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\InstalledProgramInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\NetworkComputerDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\OSVersionInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\RamInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\StorageInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\DataModels\UsersInfoDataModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\RepositoryPowerShellParamModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Request\IpRequest.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Request\SoftwareInstallRequest.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\UploadResult.cs

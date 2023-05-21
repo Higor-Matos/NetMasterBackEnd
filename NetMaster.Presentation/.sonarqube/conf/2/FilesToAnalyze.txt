@@ -1,0 +1,3 @@
+﻿C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Infrastructure\NetMaster.Infrastructure\Context\MongoDbContext.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Infrastructure\NetMaster.Infrastructure\Interface\IMongoDbContext.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Infrastructure\NetMaster.Infrastructure\Upload\FileUtils.cs

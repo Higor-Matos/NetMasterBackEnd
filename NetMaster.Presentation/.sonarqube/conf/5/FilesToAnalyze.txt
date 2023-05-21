@@ -1,0 +1,23 @@
+﻿C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\StreamingServerConfigPresentation.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\SwaggerConfigurationPresentation.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\BaseController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\HardwareController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\NetworkController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SoftwareController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\UploadController.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ControllerExtensions.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Startup.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.GlobalUsings.g.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\appsettings.json
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\README.md
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Uploads\Higor De Deus Matos - Course MongoDB_ realizando consultas - Alura.pdf
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Uploads\perfil.jpeg
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Uploads\Wallpaper.png
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Uploads\Wallpaper.webp
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Properties\launchSettings.json

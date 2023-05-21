@@ -1,0 +1,19 @@
+{
+  "ServerUri": "https://sonarcloud.io/",
+  "Organization": {
+    "Key": "higor-matos",
+    "Name": "Higor"
+  },
+  "ProjectKey": "Higor-Matos_NetMasterBackEnd",
+  "ProjectName": "NetMasterBackEnd",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AYf-Ez3Rw3H45f5KA7c9",
+      "ProfileTimestamp": "2023-04-20T10:52:15Z"
+    },
+    "Secrets": {
+      "ProfileKey": "AYf-Ez3Rw3H45f5KA7co",
+      "ProfileTimestamp": "2023-01-25T09:40:14Z"
+    }
+  }
+}
