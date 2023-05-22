@@ -9,11 +9,11 @@ using NetMaster.Services.Interfaces.Upload;
 
 namespace NetMaster.Services.Implementations.Upload
 {
-    public class UploadService : BaseService, IUploadService
+    public class FileUploadService : BaseService, IFileUploadService
     {
         private readonly IUploadFileRepository _uploadFileRepository;
 
-        public UploadService(ICommandRunner commandRunner, IResultConverter resultConverter, IUploadFileRepository uploadFileRepository)
+        public FileUploadService(ICommandRunner commandRunner, IResultConverter resultConverter, IUploadFileRepository uploadFileRepository)
             : base(commandRunner, resultConverter)
         {
             _uploadFileRepository = uploadFileRepository;
@@ -26,8 +26,8 @@ namespace NetMaster.Services.Implementations.Upload
                     error: new ErrorServiceResult("File not provided or empty.", DateTime.Now, Environment.MachineName)
                 )
                 : new ServiceResultModel<object>(
-                success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
-            );
+                    success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
+                );
         }
 
         public ServiceResultModel<UploadResult> UploadFile(IFormFile file)

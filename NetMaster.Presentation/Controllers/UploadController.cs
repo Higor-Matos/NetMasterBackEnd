@@ -10,9 +10,9 @@ namespace NetMaster.Presentation.Controllers
     [Route("upload")]
     public class UploadController : BaseController
     {
-        private readonly IUploadService _uploadService;
+        private readonly IFileUploadService _uploadService;
 
-        public UploadController(IUploadService uploadService)
+        public UploadController(IFileUploadService uploadService)
         {
             _uploadService = uploadService;
         }

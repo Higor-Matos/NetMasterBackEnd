@@ -12,10 +12,16 @@ namespace NetMaster.Presentation.Controllers
             return this.CreateActionResultFromServiceResult(result);
         }
 
-        protected IActionResult? CheckIpIsNull(string ip)
+        protected IActionResult CheckIpIsNull(string ip)
         {
-            return string.IsNullOrWhiteSpace(ip) ? BadRequest("IP address is required.") : (IActionResult?)null;
+            if (string.IsNullOrWhiteSpace(ip))
+            {
+                return BadRequest("IP address is required.");
+            }
+
+            return Ok();
         }
+
 
         protected IActionResult CheckComputerNameIsNull(string computerName)
         {

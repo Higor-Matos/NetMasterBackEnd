@@ -15,10 +15,14 @@ namespace NetMaster.Presentation.Controllers
         {
             _softwareService = softwareService;
         }
-
         [HttpPost("install")]
         public IActionResult InstallSoftware([FromBody] SoftwareInstallRequest request)
         {
+            if (request.Ip == null)
+            {
+                return BadRequest("IP address is required.");
+            }
+
             IActionResult? ipCheckResult = CheckIpIsNull(request.Ip);
             if (ipCheckResult != null)
             {
@@ -35,5 +39,6 @@ namespace NetMaster.Presentation.Controllers
                 return BadRequest("Software name is required.");
             }
         }
+
     }
 }

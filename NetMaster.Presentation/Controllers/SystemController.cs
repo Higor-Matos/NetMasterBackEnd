@@ -22,7 +22,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc([FromBody] IpRequest request)
         {
-            var ipCheckResult = CheckIpIsNull(request.Ip);
+            IActionResult ipCheckResult = CheckIpIsNull(request.Ip);
             if (ipCheckResult != null)
             {
                 return ipCheckResult;
@@ -36,7 +36,7 @@ namespace NetMaster.Presentation.Controllers
         public async Task<IActionResult> RestartPc([FromBody] IpRequest request)
         {
 
-            var ipCheckResult = CheckIpIsNull(request.Ip);
+            IActionResult ipCheckResult = CheckIpIsNull(request.Ip);
             if (ipCheckResult != null)
             {
                 return ipCheckResult;
@@ -49,7 +49,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getUsersInfo/{computerName}")]
         public async Task<IActionResult> GetUsersInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;
@@ -62,7 +62,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getChocolateyInfo/{computerName}")]
         public async Task<IActionResult> GetChocolateyInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;
@@ -74,7 +74,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getOsVersionInfo/{computerName}")]
         public async Task<IActionResult> GetOsVersionInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;
@@ -86,7 +86,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInstalledProgramsInfo/{computerName}")]
         public async Task<IActionResult> GetInstalledProgramsInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;

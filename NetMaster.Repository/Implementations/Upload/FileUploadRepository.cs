@@ -8,11 +8,11 @@ using NetMaster.Repository.Interfaces.Uploud;
 
 namespace NetMaster.Services.Implementations.Upload
 {
-    public class FileUploadService : IFileUploadService
+    public class FileUploadRepository : IFileUploadRepository
     {
         private readonly IUploadFileRepository _uploadFileRepository;
 
-        public FileUploadService(IUploadFileRepository uploadFileRepository)
+        public FileUploadRepository(IUploadFileRepository uploadFileRepository)
         {
             _uploadFileRepository = uploadFileRepository;
         }

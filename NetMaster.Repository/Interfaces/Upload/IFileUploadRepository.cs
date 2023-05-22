@@ -6,7 +6,7 @@ using NetMaster.Domain.Models.Results.Service;
 namespace NetMaster.Services.Interfaces.Upload
 {
     [AutoDI]
-    public interface IFileUploadService
+    public interface IFileUploadRepository
     {
         ServiceResultModel<string> UploadFile(IFormFile file);
     }
