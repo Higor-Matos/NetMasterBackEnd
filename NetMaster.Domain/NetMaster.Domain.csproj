@@ -4,20 +4,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <CodeAnalysisRuleSet>..\..\NetMaster.Presentation\.sonarlint\higor-matos_netmasterbackendcsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\NetMaster.Presentation\.sonarlint\higor-matos_netmasterbackend\CSharp\SonarLint.xml" Link="SonarLint.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NetMaster.Common\NetMaster.Common.csproj" />
-    <ProjectReference Include="..\NetMaster.Domain\NetMaster.Domain.csproj" />
   </ItemGroup>
 
 </Project>

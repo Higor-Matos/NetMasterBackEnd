@@ -59,75 +59,6 @@
         }
       }
     },
-    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj",
-        "projectName": "NetMaster.Domain",
-        "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj",
-        "packagesPath": "C:\\Users\\hdmni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\hdmni\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.19.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -168,13 +99,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Abstractions": {
+            "Microsoft.AspNetCore.Hosting.Server.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.AspNetCore.Mvc.Core": {
+            "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[2.2.5, )"
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
@@ -225,79 +164,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj"
-              },
               "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
                 "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj"
               },
               "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj": {
                 "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.19.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj",
-        "projectName": "NetMaster.Infrastructure",
-        "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\hdmni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\hdmni\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain.csproj\\NetMaster.Domain.csproj"
               }
             }
           }
@@ -364,8 +235,8 @@
               "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
                 "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj"
               },
-              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj"
+              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj"
               }
             }
           }
@@ -448,12 +319,6 @@
               "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
                 "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj"
               },
-              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj"
-              },
-              "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj"
-              },
               "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Repository\\NetMaster.Repository.csproj": {
                 "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Repository\\NetMaster.Repository.csproj"
               }
@@ -470,13 +335,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "MongoDB.Driver": {
+            "Microsoft.AspNetCore.Hosting.Server.Abstractions": {
               "target": "Package",
-              "version": "[2.19.1, )"
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

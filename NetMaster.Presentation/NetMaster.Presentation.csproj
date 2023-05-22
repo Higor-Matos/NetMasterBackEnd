@@ -29,7 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NetMaster.Common\NetMaster.Common.csproj" />
     <ProjectReference Include="..\NetMaster.Repository\NetMaster.Repository.csproj" />
-    <ProjectReference Include="..\NetMaster.Services.csproj\NetMaster.Services.csproj" />
+    <ProjectReference Include="..\NetMaster.Services\NetMaster.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

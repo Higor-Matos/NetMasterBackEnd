@@ -99,13 +99,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Abstractions": {
+            "Microsoft.AspNetCore.Hosting.Server.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.AspNetCore.Mvc.Core": {
+            "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[2.2.5, )"
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",

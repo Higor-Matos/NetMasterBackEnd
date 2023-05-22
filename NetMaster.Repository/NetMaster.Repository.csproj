@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetMaster.Common\NetMaster.Common.csproj" />
-    <ProjectReference Include="..\NetMaster.Infrastructure\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj" />
+    <ProjectReference Include="..\NetMaster.Infrastructure\NetMaster.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
