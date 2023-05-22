@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Services.Interfaces.Upload;
 using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Services.Interfaces.Upload;
 
 namespace NetMaster.Presentation.Controllers
 {

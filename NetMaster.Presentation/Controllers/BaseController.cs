@@ -14,23 +14,13 @@ namespace NetMaster.Presentation.Controllers
 
         protected IActionResult CheckIpIsNull(string ip)
         {
-            if (string.IsNullOrWhiteSpace(ip))
-            {
-                return BadRequest("IP address is required.");
-            }
-
-            return Ok();
+            return string.IsNullOrWhiteSpace(ip) ? BadRequest("IP address is required.") : Ok();
         }
 
 
-        protected IActionResult CheckComputerNameIsNull(string computerName)
+        protected IActionResult? CheckComputerNameIsNull(string computerName)
         {
-            if (string.IsNullOrWhiteSpace(computerName))
-            {
-                return BadRequest("Computer name is required.");
-            }
-
-            return null;
+            return string.IsNullOrWhiteSpace(computerName) ? BadRequest("Computer name is required.") : (IActionResult?)null;
         }
 
     }

@@ -32,27 +32,38 @@ namespace NetMaster.Services.Implementations.BackgroundServices
 
         private async Task CollectAndStoreComputerInfoAsync(INetworkService networkService)
         {
-            NetworkComputer[] computers = networkService.ListNetworkComputerCommand();
+            NetworkComputer[]? computers = networkService.ListNetworkComputerCommand();
 
-            foreach (NetworkComputer computer in computers)
+            foreach (NetworkComputer? computer in computers)
             {
-                string ip = computer.IP;
+                string? ip = computer?.IP;
 
-                using IServiceScope scope = _serviceProvider.CreateScope();
-
-                (ISystemService ISystemService, IRamInfoService RamInfoService, IStorageInfoService StorageInfoService, IChocolateyInfoService ChocolateyInfoService, IInstalledProgramsInfoService InstalledProgramsInfoService, IOsVersionInfoService OsVersionInfoService, IUsersInfoService UserInfoService) services = GetRequiredServices(scope.ServiceProvider);
-
-                List<Task> tasks = new()
+                if (ip != null)
                 {
-                    services.RamInfoService.SaveLocalRamInfoAsync(ip),
-                    services.StorageInfoService.SaveLocalStorageInfoAsync(ip),
-                    services.UserInfoService.SaveLocalSystemInfoAsync(ip),
-                    services.OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
-                    services.InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
-                    services.ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
-                };
+                    using IServiceScope scope = _serviceProvider.CreateScope();
 
-                await Task.WhenAll(tasks);
+                    (
+                        ISystemService ISystemService,
+                        IRamInfoService RamInfoService,
+                        IStorageInfoService StorageInfoService,
+                        IChocolateyInfoService ChocolateyInfoService,
+                        IInstalledProgramsInfoService InstalledProgramsInfoService,
+                        IOsVersionInfoService OsVersionInfoService,
+                        IUsersInfoService UserInfoService
+                    ) services = GetRequiredServices(scope.ServiceProvider);
+
+                    List<Task> tasks = new()
+                    {
+                        services.RamInfoService.SaveLocalRamInfoAsync(ip),
+                        services.StorageInfoService.SaveLocalStorageInfoAsync(ip),
+                        services.UserInfoService.SaveLocalSystemInfoAsync(ip),
+                        services.OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
+                        services.InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
+                        services.ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
+                    };
+
+                    await Task.WhenAll(tasks);
+                }
             }
         }
 

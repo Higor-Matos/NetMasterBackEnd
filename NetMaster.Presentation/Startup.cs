@@ -3,7 +3,6 @@ using NetMaster.Domain.Configuration;
 using NetMaster.Infrastructure.Context;
 using NetMaster.Presentation.Configuration;
 using NetMaster.Presentation.Extensions;
-using NetMaster.Repository.Implementation.Software;
 
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -16,9 +15,12 @@ builder.Services.Configure<StreamingServerConfigPresentation>(builder.Configurat
 builder.Services.AddSingleton<MongoDbContext>(provider =>
 {
     IConfiguration configuration = provider.GetRequiredService<IConfiguration>();
-    MongoDbSettings mongoDbSettings = configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>();
-    return new MongoDbContext(mongoDbSettings.ConnectionString, mongoDbSettings.DatabaseName);
+    MongoDbSettings? mongoDbSettings = configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>();
+    string connectionString = mongoDbSettings?.ConnectionString ?? throw new ArgumentNullException(nameof(mongoDbSettings.ConnectionString));
+    string databaseName = mongoDbSettings?.DatabaseName ?? throw new ArgumentNullException(nameof(mongoDbSettings.DatabaseName));
+    return new MongoDbContext(connectionString, databaseName);
 });
+
 
 // Add services and repositories from assembly
 builder.Services.AddServicesInAssembly();

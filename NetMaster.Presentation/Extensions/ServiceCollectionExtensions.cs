@@ -25,6 +25,7 @@ namespace NetMaster.Presentation.Extensions
 
             Assembly repositoryAssembly = Assembly.Load("NetMaster.Repository");
             assemblies = assemblies.Concat(new[] { repositoryAssembly });
+            assemblies ??= Enumerable.Empty<Assembly>();
 
             return assemblies;
         }
@@ -46,7 +47,7 @@ namespace NetMaster.Presentation.Extensions
         {
             foreach (Type @interface in type.GetInterfaces())
             {
-                AutoDIAttribute autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
+                AutoDIAttribute? autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
 
                 if (autoDiAttribute != null)
                 {
@@ -72,16 +73,17 @@ namespace NetMaster.Presentation.Extensions
                 // Register software installer service dictionary
                 _ = services.AddScoped(provider =>
                 {
-                    var dictionary = new Dictionary<string, ISoftwareInstallerService>();
-                    dictionary.Add("AdobeReader", provider.GetRequiredService<IAdobeReaderInstallerService>());
-                    dictionary.Add("Firefox", provider.GetRequiredService<IFirefoxInstallerService>());
-                    dictionary.Add("GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>());
-                    dictionary.Add("Office365", provider.GetRequiredService<IOffice365InstallerService>());
-                    dictionary.Add("Vlc", provider.GetRequiredService<IVlcInstallerService>());
-                    dictionary.Add("Winrar", provider.GetRequiredService<IWinrarInstallerService>());
+                    Dictionary<string, ISoftwareInstallerService> dictionary = new()
+                    {
+                        { "AdobeReader", provider.GetRequiredService<IAdobeReaderInstallerService>() },
+                        { "Firefox", provider.GetRequiredService<IFirefoxInstallerService>() },
+                        { "GoogleChrome", provider.GetRequiredService<IGoogleChromeInstallerService>() },
+                        { "Office365", provider.GetRequiredService<IOffice365InstallerService>() },
+                        { "Vlc", provider.GetRequiredService<IVlcInstallerService>() },
+                        { "Winrar", provider.GetRequiredService<IWinrarInstallerService>() }
+                    };
                     return dictionary;
                 });
-
             }
             else
             {
@@ -91,7 +93,6 @@ namespace NetMaster.Presentation.Extensions
 
             Console.WriteLine($"Registered {@interface.FullName} with {type.FullName}");
         }
-
 
         private static void RegisterHostedService(IServiceCollection services, Type serviceType)
         {
@@ -105,7 +106,6 @@ namespace NetMaster.Presentation.Extensions
             _ = constructedMethod.Invoke(null, new object[] { services });
         }
 
-
         private static void RegisterBaseMongoRepository(IServiceCollection services, Type @interface, Type type)
         {
             // Register the service with a factory that can provide the necessary parameters
@@ -114,7 +114,7 @@ namespace NetMaster.Presentation.Extensions
                 MongoDbContext dbContext = provider.GetRequiredService<MongoDbContext>();
                 Type genericArg = @interface.GetGenericArguments()[0];
 
-                return Activator.CreateInstance(type, dbContext, genericArg.Name);
+                return Activator.CreateInstance(type, dbContext, genericArg.Name)!;
             });
         }
     }

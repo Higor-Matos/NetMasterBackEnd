@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NetMaster.Domain.Models.Results;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Services.Interfaces.Hardware;
-using System.Threading.Tasks;
 using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Services.Interfaces.Hardware;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -21,7 +19,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/ram/{computerName}")]
         public async Task<IActionResult> GetRamInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;
@@ -33,7 +31,7 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/storage/{computerName}")]
         public async Task<IActionResult> GetStorageInfo(string computerName)
         {
-            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            IActionResult nameCheckResult = CheckComputerNameIsNull(computerName);
             if (nameCheckResult != null)
             {
                 return nameCheckResult;

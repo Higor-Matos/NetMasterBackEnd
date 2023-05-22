@@ -21,14 +21,20 @@ namespace NetMaster.Services.Implementations.Upload
 
         public ServiceResultModel<object> ValidateFile(IFormFile file)
         {
-            return file == null || file.Length == 0
-                ? new ServiceResultModel<object>(
+            if (file == null || file.Length == 0)
+            {
+                return new ServiceResultModel<object>(
                     error: new ErrorServiceResult("File not provided or empty.", DateTime.Now, Environment.MachineName)
-                )
-                : new ServiceResultModel<object>(
+                );
+            }
+            else
+            {
+                return new ServiceResultModel<object>(
                     success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
                 );
+            }
         }
+
 
         public ServiceResultModel<UploadResult> UploadFile(IFormFile file)
         {

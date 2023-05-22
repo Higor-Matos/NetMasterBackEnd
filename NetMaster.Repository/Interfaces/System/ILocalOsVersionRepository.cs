@@ -8,6 +8,6 @@ namespace NetMaster.Repository.Interfaces.System
     [AutoDI]
     public interface ILocalOsVersionRepository : ILocalSystemRepository<OSVersionInfoDataModel>
     {
-        Task<RepositoryResultModel<OSVersionInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
+        new Task<RepositoryResultModel<OSVersionInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }
 }

@@ -9,6 +9,6 @@ namespace NetMaster.Repository.Interfaces.System
     [AutoDI]
     public interface ILocalRamRepository : ILocalHardwareRepository<RamInfoDataModel>
     {
-        Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
+        new Task<RepositoryResultModel<RamInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }
 }

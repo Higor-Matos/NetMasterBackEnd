@@ -1,12 +1,12 @@
-﻿// NetMaster.Repository/Local/Powershell/BasePowershellRepository.cs
-using NetMaster.Domain.Models.DataModels;
+﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Interfaces.Base;
+using Newtonsoft.Json;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
-using System.Text.Json;
 
-namespace NetMaster.Repository.Implementation.Powershell
+namespace NetMaster.Repository.Implementations.Powershell
 {
     public abstract class BasePowershellRepository : IBasePowershellRepository
     {
@@ -19,11 +19,11 @@ namespace NetMaster.Repository.Implementation.Powershell
 
         public async Task<RepositoryResultModel<T>> ExecCommand<T>(RepositoryPowerShellParamModel param, string command, Func<string, T> convertOutput, Dictionary<string, object>? parameters = null)
         {
-            PSCredential credential = credentialProvider.GetCredential();
+            PSCredential? credential = credentialProvider.GetCredential();
             WSManConnectionInfo wsManConnectionInfo = new()
             {
                 ComputerName = param.Ip,
-                Credential = credential
+                Credential = credential ?? throw new InvalidOperationException("Credential is null.")
             };
 
             return await PowershellRunNetworkRepository.RunCommandInSpace(wsManConnectionInfo, command, convertOutput, parameters);
@@ -31,14 +31,12 @@ namespace NetMaster.Repository.Implementation.Powershell
 
         protected T ConvertOutput<T>(string jsonOutput, string ipAddress) where T : BaseInfoDataModel
         {
-            T result = JsonSerializer.Deserialize<T>(jsonOutput);
+            T result = JsonConvert.DeserializeObject<T>(jsonOutput)!;
             result.IpAddress = ipAddress;
             TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
             DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
             result.Timestamp = brasiliaTime;
             return result;
         }
-
-
     }
 }

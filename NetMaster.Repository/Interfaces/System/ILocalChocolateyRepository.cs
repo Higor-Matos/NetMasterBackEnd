@@ -8,6 +8,6 @@ namespace NetMaster.Repository.Interfaces.System
     [AutoDI]
     public interface ILocalChocolateyRepository : ILocalSystemRepository<ChocolateyInfoDataModel>
     {
-        Task<RepositoryResultModel<ChocolateyInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
+        new Task<RepositoryResultModel<ChocolateyInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }
 }

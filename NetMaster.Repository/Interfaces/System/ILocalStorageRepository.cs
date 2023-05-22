@@ -1,5 +1,4 @@
-﻿// NetMaster.Repository.Interfaces/ILocalStorageRepository.cs
-using NetMaster.Common;
+﻿using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Implementation.Powershell;
@@ -12,6 +11,6 @@ namespace NetMaster.Repository.Interfaces.System
     [AutoDI]
     public interface ILocalStorageRepository : ILocalHardwareRepository<StorageInfoDataModel>, IBasePowershellRepository
     {
-        Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
+        new Task<RepositoryResultModel<StorageInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }
 }

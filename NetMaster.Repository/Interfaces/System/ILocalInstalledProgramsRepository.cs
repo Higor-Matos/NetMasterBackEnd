@@ -8,6 +8,6 @@ namespace NetMaster.Repository.Interfaces.System
     [AutoDI]
     public interface ILocalInstalledProgramsRepository : ILocalSystemRepository<InstalledProgramsResponseModel>
     {
-        Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamModel param);
+        new Task<RepositoryResultModel<InstalledProgramsResponseModel>> ExecCommand(RepositoryPowerShellParamModel param);
     }
 }

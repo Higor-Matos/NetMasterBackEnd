@@ -16,7 +16,7 @@ namespace NetMaster.Services.Implementations.Hardware
         protected readonly IHardwareRepository<T> _hardwareRepository;
         protected readonly ILocalHardwareRepository<T> _localHardwareRepository;
 
-        public HardwareInfoService(IHardwareRepository<T> hardwareRepository, ILocalHardwareRepository<T> localHardwareRepository, ICommandRunner commandRunner, IResultConverter resultConverter) : base(commandRunner, resultConverter)
+        protected HardwareInfoService(IHardwareRepository<T> hardwareRepository, ILocalHardwareRepository<T> localHardwareRepository, ICommandRunner commandRunner, IResultConverter resultConverter) : base(commandRunner, resultConverter)
         {
             _hardwareRepository = hardwareRepository;
             _localHardwareRepository = localHardwareRepository;
