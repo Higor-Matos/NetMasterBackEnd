@@ -35,7 +35,7 @@ namespace NetMaster.Repository.Implementations.Upload
                     success: new SuccessServiceResult<string>(resultRep.Data.Message!, DateTime.Now, Environment.MachineName)
                 )
                 : new ServiceResultModel<string>(
-                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message, DateTime.Now, Environment.MachineName)
+                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message ?? "An error occurred while uploading the file.", DateTime.Now, Environment.MachineName)
                 );
         }
     }

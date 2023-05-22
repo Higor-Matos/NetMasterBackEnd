@@ -2,6 +2,7 @@
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Implementations.Powershell;
 using NetMaster.Repository.Interfaces.System;
+using Newtonsoft.Json;
 
 namespace NetMaster.Repository.Implementations.System
 {
@@ -9,21 +10,9 @@ namespace NetMaster.Repository.Implementations.System
     {
         public async Task<RepositoryResultModel<ChocolateyInfoDataModel>> ExecCommand(RepositoryPowerShellParamModel param)
         {
-            string command = "choco -v; (Get-WmiObject -Class Win32_ComputerSystem).Name";
+            string command = "choco -v | Select-Object @{Name='ChocolateyVersion';Expression={$_}}, @{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1";
 
-            return await ExecCommand(param, command, output =>
-            {
-                string[] lines = output.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
-                DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
-                return new ChocolateyInfoDataModel
-                {
-                    ChocolateyVersion = lines[0].Trim(),
-                    IpAddress = param.Ip,
-                    PSComputerName = lines.Length > 1 ? lines[1].Trim() : string.Empty,
-                    Timestamp = brasiliaTime
-                };
-            });
+            return await ExecCommand<ChocolateyInfoDataModel>(param, command, jsonOutput => ConvertOutput<ChocolateyInfoDataModel>(jsonOutput, param.Ip));
         }
     }
 }

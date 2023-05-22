@@ -33,10 +33,14 @@ namespace NetMaster.Repository.Implementations.Powershell
         {
             T result = JsonConvert.DeserializeObject<T>(jsonOutput)!;
             result.IpAddress = ipAddress;
+
             TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
             DateTime brasiliaTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
+
             result.Timestamp = brasiliaTime;
+
             return result;
         }
+
     }
 }

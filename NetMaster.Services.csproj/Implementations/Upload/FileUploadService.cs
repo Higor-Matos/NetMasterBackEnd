@@ -26,7 +26,7 @@ namespace NetMaster.Services.Implementations.Upload
                     error: new ErrorServiceResult("File not provided or empty.", DateTime.Now, Environment.MachineName)
                 )
                 : new ServiceResultModel<object>(
-                    success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
+                    success: new SuccessServiceResult<object>(new { Message = "File is valid" }, DateTime.Now, Environment.MachineName)
                 );
         }
 

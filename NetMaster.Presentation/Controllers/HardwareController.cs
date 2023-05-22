@@ -24,7 +24,8 @@ namespace NetMaster.Presentation.Controllers
             {
                 return nameCheckResult;
             }
-            ServiceResultModel<RamInfoDataModel> result = await _hardwareService.GetRamInfoAsync(computerName);
+
+            ServiceResultModel<RamInfoDataModel> result = await _hardwareService.GetRamInfoAsync(computerName!);
             return ToActionResult(result);
         }
 
@@ -36,8 +37,14 @@ namespace NetMaster.Presentation.Controllers
             {
                 return nameCheckResult;
             }
-            ServiceResultModel<StorageInfoDataModel> result = await _hardwareService.GetStorageInfoAsync(computerName);
+
+            ServiceResultModel<StorageInfoDataModel> result = await _hardwareService.GetStorageInfoAsync(computerName!);
             return ToActionResult(result);
+        }
+
+        private new IActionResult? CheckComputerNameIsNull(string computerName)
+        {
+            return string.IsNullOrEmpty(computerName) ? BadRequest("Computer name is required.") : (IActionResult?)null;
         }
     }
 }

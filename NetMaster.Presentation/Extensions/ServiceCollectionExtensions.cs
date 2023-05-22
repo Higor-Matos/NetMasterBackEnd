@@ -46,14 +46,15 @@ namespace NetMaster.Presentation.Extensions
         {
             foreach (Type @interface in type.GetInterfaces())
             {
-                AutoDIAttribute? autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
+                var autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
 
-                if (autoDiAttribute != null)
+                if (autoDiAttribute is not null)
                 {
                     RegisterService(services, type, @interface);
                 }
             }
         }
+
 
         private static void RegisterService(IServiceCollection services, Type type, Type @interface)
         {
@@ -89,8 +90,6 @@ namespace NetMaster.Presentation.Extensions
                 // Register all other services
                 _ = services.AddScoped(@interface, type);
             }
-
-            Console.WriteLine($"Registered {@interface.FullName} with {type.FullName}");
         }
 
         private static void RegisterBaseMongoRepository(IServiceCollection services, Type @interface, Type type)
@@ -101,10 +100,18 @@ namespace NetMaster.Presentation.Extensions
                 MongoDbContext dbContext = provider.GetRequiredService<MongoDbContext>();
                 Type genericArg = @interface.GetGenericArguments().FirstOrDefault();
 
-                return genericArg != null
-                    ? Activator.CreateInstance(type, dbContext, genericArg.Name)
-                    : throw new InvalidOperationException($"Failed to create an instance of {type.FullName}.");
+                if (genericArg != null)
+                {
+                    var instance = Activator.CreateInstance(type, dbContext, genericArg.Name);
+                    if (instance is not null)
+                    {
+                        return instance;
+                    }
+                }
+
+                throw new InvalidOperationException($"Failed to create an instance of {type.FullName}.");
             });
         }
+
     }
 }

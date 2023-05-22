@@ -2,6 +2,7 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.System;
+using System.Threading.Tasks;
 
 namespace NetMaster.Presentation.Controllers
 {
@@ -27,21 +28,20 @@ namespace NetMaster.Presentation.Controllers
                 return ipCheckResult;
             }
 
-            ServiceResultModel<string> result = await _systemCommandService.ShutdownPcCommand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.ShutdownPcCommand(request.Ip!);
             return ToActionResult(result);
         }
 
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc([FromBody] IpRequest request)
         {
-
             IActionResult ipCheckResult = CheckIpIsNull(request.Ip);
             if (ipCheckResult != null)
             {
                 return ipCheckResult;
             }
 
-            ServiceResultModel<string> result = await _systemCommandService.RestartPcCommand(request.Ip);
+            ServiceResultModel<string> result = await _systemCommandService.RestartPcCommand(request.Ip!);
             return ToActionResult(result);
         }
 
@@ -54,7 +54,7 @@ namespace NetMaster.Presentation.Controllers
                 return nameCheckResult;
             }
 
-            ServiceResultModel<UsersInfoDataModel> result = await _systemService.GetUsersInfoAsync(computerName);
+            ServiceResultModel<UsersInfoDataModel> result = await _systemService.GetUsersInfoAsync(computerName!);
             return ToActionResult(result);
         }
 
@@ -66,7 +66,8 @@ namespace NetMaster.Presentation.Controllers
             {
                 return nameCheckResult;
             }
-            ServiceResultModel<ChocolateyInfoDataModel> result = await _systemService.GetChocolateyInfoAsync(computerName);
+
+            ServiceResultModel<ChocolateyInfoDataModel> result = await _systemService.GetChocolateyInfoAsync(computerName!);
             return ToActionResult(result);
         }
 
@@ -78,7 +79,8 @@ namespace NetMaster.Presentation.Controllers
             {
                 return nameCheckResult;
             }
-            ServiceResultModel<OSVersionInfoDataModel> result = await _systemService.GetOsVersionInfoAsync(computerName);
+
+            ServiceResultModel<OSVersionInfoDataModel> result = await _systemService.GetOsVersionInfoAsync(computerName!);
             return ToActionResult(result);
         }
 
@@ -90,7 +92,8 @@ namespace NetMaster.Presentation.Controllers
             {
                 return nameCheckResult;
             }
-            ServiceResultModel<InstalledProgramsResponseModel> result = await _systemService.GetInstalledProgramsInfoAsync(computerName);
+
+            ServiceResultModel<InstalledProgramsResponseModel> result = await _systemService.GetInstalledProgramsInfoAsync(computerName!);
             return ToActionResult(result);
         }
     }
