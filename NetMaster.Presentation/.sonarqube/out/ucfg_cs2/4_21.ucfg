@@ -1,0 +1,24 @@
+
+PNetMaster.Services.Implementation.System.SystemService.GetUsersInfoAsync(string)}
+sC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemService.cs&< &(M"0*Ô
+0( ((Rá
+Þ
+( (($<
+%06NetMaster.Services.Interfaces.System.IUsersInfoService"__id*Š*‡8
+6NetMaster.Services.Implementation.System.SystemService"K
+_usersInfoService6NetMaster.Services.Interfaces.System.IUsersInfoService¦£
+( ((S*
+%1$System.Threading.Tasks.Task<TResult>"cNetMaster.Services.Interfaces.System.ISystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)*@>
+<
+%06NetMaster.Services.Interfaces.System.IUsersInfoService*
+
+computerNamestring2(GetSystemInfoByComputerNameAsync(string)"8
+( ((T,
+*
+%1$System.Threading.Tasks.Task<TResult>*.
+1)	 )(	"
+) )(	
+implicit return:"
+&N &(a
+computerNamestringB:8
+6NetMaster.Services.Implementation.System.SystemService

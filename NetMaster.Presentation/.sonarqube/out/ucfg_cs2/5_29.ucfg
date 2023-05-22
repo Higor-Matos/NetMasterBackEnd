@@ -1,0 +1,54 @@
+
+}NetMaster.Presentation.Controllers.SoftwareController.InstallSoftware(NetMaster.Domain.Models.Request.SoftwareInstallRequest)t
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SoftwareController.cs (,"2*ª
+0 (á
+Þ
+ (=
+%07NetMaster.Services.Interfaces.Software.ISoftwareService"__id*Œ‰*†7
+5NetMaster.Presentation.Controllers.SoftwareController"K
+_softwareService7NetMaster.Services.Interfaces.Software.ISoftwareService¡
+ž
+- (7
+%1string"=NetMaster.Domain.Models.Request.SoftwareInstallRequest.Ip.get*EC
+A
+request6NetMaster.Domain.Models.Request.SoftwareInstallRequest«
+¨
+9 (M
+%2string"GNetMaster.Domain.Models.Request.SoftwareInstallRequest.SoftwareName.get*EC
+A
+request6NetMaster.Domain.Models.Request.SoftwareInstallRequest‘Ž
+ (N!
+%3System.Threading.Tasks.Task"WNetMaster.Services.Interfaces.Software.ISoftwareService.InstallSoftware(string, string)*A?
+=
+%07NetMaster.Services.Interfaces.Software.ISoftwareService*
+
+%1string*
+
+%2string2InstallSoftware(string, string)™–
+ ('
+%4!Microsoft.AspNetCore.Mvc.OkResult",Microsoft.AspNetCore.Mvc.ControllerBase.Ok()*-+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Ok()"5
+ ()
+'
+%4!Microsoft.AspNetCore.Mvc.OkResult*.
+1	 (	"
+ (	
+implicit return*œ
+2W (Wm
+k
+ (,Q
+A
+request6NetMaster.Domain.Models.Request.SoftwareInstallRequest"
+Ipstring"__entrypointw
+u
+ (,[
+A
+request6NetMaster.Domain.Models.Request.SoftwareInstallRequest"
+SoftwareNamestring"__entrypoint 
+
+ (,
+%5"__entrypoint*
+0:M
+- (VA
+request6NetMaster.Domain.Models.Request.SoftwareInstallRequestB97
+5NetMaster.Presentation.Controllers.SoftwareController

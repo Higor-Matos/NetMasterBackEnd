@@ -1,0 +1,11 @@
+…
+!StreamingServerConfigPresentationobjectl
+#StreamingServerConfigPresentation()EStreamingServerConfigPresentation.StreamingServerConfigPresentation()>
+FileName.get.StreamingServerConfigPresentation.FileName.get>
+FileName.set.StreamingServerConfigPresentation.FileName.setL
+UseShellExecute.get5StreamingServerConfigPresentation.UseShellExecute.getL
+UseShellExecute.set5StreamingServerConfigPresentation.UseShellExecute.setZ
+RedirectStandardOutput.get<StreamingServerConfigPresentation.RedirectStandardOutput.getZ
+RedirectStandardOutput.set<StreamingServerConfigPresentation.RedirectStandardOutput.setJ
+CreateNoWindow.get4StreamingServerConfigPresentation.CreateNoWindow.getJ
+CreateNoWindow.set4StreamingServerConfigPresentation.CreateNoWindow.set

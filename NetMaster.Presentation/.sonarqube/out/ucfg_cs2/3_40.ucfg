@@ -1,0 +1,147 @@
+
+kNetMaster.Services.Implementations.Upload.FileUploadService.UploadFile(Microsoft.AspNetCore.Http.IFormFile)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Upload\FileUploadService.cs* (4"0*™
+0 (!>
+<
+ (0
+destinationFolderstring"__id*	
+Uploadsÿ
+’
+ (:
+%0byte[]"ZNetMaster.Infrastructure.Utils.FileUtils.ReadFileData(Microsoft.AspNetCore.Http.IFormFile)*.,"*
+(NetMaster.Infrastructure.Utils.FileUtils*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile8
+6
+ (:
+fileDatabyte[]"__id*
+
+%0byte[]ˆ
+Û
+< (QB
+%1<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository"__id*úô*ñ=
+;NetMaster.Services.Implementations.Upload.FileUploadService"U
+_uploadFileRepository<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepositoryåâ
+] (j
+%2string"0Microsoft.AspNetCore.Http.IFormFile.FileName.get*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile2FileName.getÊ„
+	< (à>
+%38NetMaster.Domain.Models.Results.RepositoryResultModel<T>"_NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository.UploadFile(string, byte[], string)*FD
+B
+%1<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository*
+
+%2string*
+
+fileDatabyte[]*
+
+destinationFolderstring2"UploadFile(string, byte[], string)ü
+ú
+	0 (àE
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*B@
+>
+%38NetMaster.Domain.Models.Results.RepositoryResultModel<T>™
+ß
+ (!
+
+%4bool"DNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Success.get*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+1
+2*Â
+1 ({œ
+Ã
+> (L2
+%5,NetMaster.Domain.Models.Results.UploadResult"ANetMaster.Domain.Models.Results.RepositoryResultModel<T>.Data.get*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>ç
+ä
+> (T
+%6string"8NetMaster.Domain.Models.Results.UploadResult.Message.get*64
+2
+%5,NetMaster.Domain.Models.Results.UploadResultS
+Q
+V (b
+%7System.DateTime"System.DateTime.Now.get*"
+System.DateTimeX
+V
+d ({
+%8string""System.Environment.MachineName.get*"
+System.EnvironmentÖÇ
+ (|=
+%97NetMaster.Domain.Models.Results.SuccessServiceResult<T>"7NetMaster.Domain.Models.Results.SuccessServiceResult<T>Ü
+É
+! (=
+%10void"hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)*A?
+=
+%97NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+
+%6string*
+
+%7System.DateTime*
+
+%8stringÅ
+ (<
+%115NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>„
+‡
+ (5
+%12void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*@>
+<
+%115NetMaster.Domain.Models.Results.ServiceResultModel<T>*A?
+=
+%97NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+"""J
+ (>
+<
+%115NetMaster.Domain.Models.Results.ServiceResultModel<T>*˜
+2" #(v›
+⁄
+#2 #(G<
+%135NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>°
+û
+#2 #(O
+%14string"ANetMaster.Domain.Models.Results.ErrorRepositoryResult.Message.get*@>
+<
+%135NetMaster.Domain.Models.Results.ErrorRepositoryResultT
+R
+#Q #(]
+%15System.DateTime"System.DateTime.Now.get*"
+System.DateTimeY
+W
+#_ #(v
+%16string""System.Environment.MachineName.get*"
+System.Environment{y
+# #(w9
+%172NetMaster.Domain.Models.Results.ErrorServiceResult"2NetMaster.Domain.Models.Results.ErrorServiceResultÉ
+Ä
+# #(1
+%18void"fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)*=;
+9
+%172NetMaster.Domain.Models.Results.ErrorServiceResult*
+
+%14string*
+
+%15System.DateTime*
+
+%16stringÅ
+" $(<
+%195NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>ﬂ
+‹
+" "(5
+%20void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*@>
+<
+%195NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+""*=;
+9
+%172NetMaster.Domain.Models.Results.ErrorServiceResult"J
+" $(>
+<
+%195NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+3&	 &(	"
+& &(	
+implicit return:7
+5 (C+
+file#Microsoft.AspNetCore.Http.IFormFileB?=
+;NetMaster.Services.Implementations.Upload.FileUploadService

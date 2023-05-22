@@ -1,0 +1,19 @@
+
+`NetMaster.Services.Implementations.Hardware.StorageInfoService.SaveLocalStorageInfoAsync(string)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\StorageInfoService.cs> (W"0*Æ
+0 (0ü
+ù
+ (1*
+%0$System.Threading.Tasks.Task<TResult>"eNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>.SaveLocalHardwareInfoAsync(string)*HFD
+BNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>*
+
+ipstring"8
+ (2,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:
+X (a
+ipstringBB@
+>NetMaster.Services.Implementations.Hardware.StorageInfoService

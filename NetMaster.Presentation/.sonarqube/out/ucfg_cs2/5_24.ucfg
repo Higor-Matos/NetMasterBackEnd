@@ -1,0 +1,53 @@
+
+LNetMaster.Presentation.Controllers.HardwareController.GetStorageInfo(string)t
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\HardwareController.cs) (7"2*Ô
+0d ((â
+ß
+	s (ƒ=
+%07NetMaster.Services.Interfaces.Hardware.IHardwareService"__id*Œ‰*†7
+5NetMaster.Presentation.Controllers.HardwareController"K
+_hardwareService7NetMaster.Services.Interfaces.Hardware.IHardwareService‹ˆ
+	s (¥*
+%1$System.Threading.Tasks.Task<TResult>"SNetMaster.Services.Interfaces.Hardware.IHardwareService.GetStorageInfoAsync(string)*A?
+=
+%07NetMaster.Services.Interfaces.Hardware.IHardwareService*
+
+computerNamestring2GetStorageInfoAsync(string)^
+\
+	d (¥?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+²
+ (),
+%2&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+ (*.
+,
+%2&Microsoft.AspNetCore.Mvc.IActionResult*.
+1	 (	"
+ (	
+implicit return*–
+2L (L<
+:
+) (7
+%3"__entrypoint*
+
+computerNamestring…
+‚
+	 (2
+%4"
+__annotate*HFD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+computerNamestring<
+:
+8 (K
+computerNamestring"__annotation*
+
+%4*
+0:"
+8 (K
+computerNamestringB97
+5NetMaster.Presentation.Controllers.HardwareController

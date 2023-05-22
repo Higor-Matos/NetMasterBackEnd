@@ -1,0 +1,21 @@
+
+ÖNetMaster.Repository.Implementation.System.ChocolateyRepository.ChocolateyRepository(NetMaster.Infrastructure.Context.MongoDbContext)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\ChocolateyRepository.cs (#"1*
+1	 (	*
+0*‰
+0> (`œ
+Ã
+> (a
+
+%0void"êNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.BaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)*IGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>*@>
+<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContext*
+ChocolateyInfo*
+2*.
+2	 (	"
+ (	
+implicit return:H
+$ (<<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContextBCA
+?NetMaster.Repository.Implementation.System.ChocolateyRepository

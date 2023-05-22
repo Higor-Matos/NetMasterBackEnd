@@ -1,0 +1,40 @@
+
+…NetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(NetMaster.Domain.Models.Results.RepositoryResultModel){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs' '($"1*
+1+	 +(	*
+0*
+0) *(+Ù
+Ö
+)9 )(L=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult"GNetMaster.Domain.Models.Results.RepositoryResultModel.SuccessResult.get*B@
+>
+model5NetMaster.Domain.Models.Results.RepositoryResultModel[
+Y
+) )(L
+%1"__id*A?
+=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResultå
+â
+) )(L@
+%2:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.set*><:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+
+%1Õ
+Ò
+* *(+;
+%35NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*B@
+>
+model5NetMaster.Domain.Models.Results.RepositoryResultModel
+Œ
+* *(+;
+%45NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.set*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*?=
+;
+%35NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+2*.
+2+	 +(	"
++ +(	
+implicit return:J
+'% '(@>
+model5NetMaster.Domain.Models.Results.RepositoryResultModelB<:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>

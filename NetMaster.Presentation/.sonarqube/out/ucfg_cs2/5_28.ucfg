@@ -1,0 +1,49 @@
+
+œNetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable<System.Reflection.Assembly>)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.cs   (,"0*
+0"* "(4*
+1*
+1+	 +(	*
+2
+3*“
+2$" &(Q´®
+$* $(@/
+%0)System.Collections.Generic.IEnumerable<T>",System.Reflection.Assembly.ExportedTypes.get**(
+&
+assemblySystem.Reflection.Assembly2ExportedTypes.get{
+y
+$" $(@2
+types)System.Collections.Generic.IEnumerable<T>"__id*31
+/
+%0)System.Collections.Generic.IEnumerable<T>í
+è
+&& &(R/
+%1)System.Collections.Generic.IEnumerable<T>"rSystem.Linq.Enumerable.Where<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, bool>)*"
+System.Linq.Enumerable*64
+2
+types)System.Collections.Generic.IEnumerable<T>*
+""*
+4*
+4+	 +(	*
+5
+1*˙
+5( ((9Â
+‚
+( ((:
+
+%2void"ûNetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterServiceForType(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type)*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+typeSystem.Type*
+4*.
+3+	 +(	"
++ +(	
+implicit return:S
+ -  (HG
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection:C
+ J  (j7
+
+assemblies)System.Collections.Generic.IEnumerable<T>BA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions

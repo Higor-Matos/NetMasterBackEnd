@@ -1,0 +1,49 @@
+
+èNetMaster.Repository.Implementation.System.LocalInstalledProgramsRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)å
+ÅC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\LocalInstalledProgramsRepository.csQ (\"0*Ì
+0	 '(Ü‚
+ﬂ
+ %(
+commandstring"__id*π∂≥
+∞
+                $list = @()
+                $pcname = (Get-WmiObject -Class Win32_ComputerSystem).Name
+                $InstalledSoftwareKey = 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall'
+                $InstalledSoftware = [microsoft.win32.registrykey]::OpenRemoteBaseKey('LocalMachine', $pcname)
+                $RegistryKey = $InstalledSoftware.OpenSubKey($InstalledSoftwareKey)
+                $SubKeys = $RegistryKey.GetSubKeyNames()
+                Foreach ($key in $SubKeys) {
+                    $thisKey = $InstalledSoftwareKey + '\\' + $key
+                    $thisSubKey = $InstalledSoftware.OpenSubKey($thisKey)
+                    $obj = New-Object PSObject
+                    $obj | Add-Member -MemberType NoteProperty -Name 'DisplayName' -Value $($thisSubKey.GetValue('DisplayName'))
+                    $obj | Add-Member -MemberType NoteProperty -Name 'DisplayVersion' -Value $($thisSubKey.GetValue('DisplayVersion'))
+                    $list += $obj
+                }
+                $filtered = $list | Where-Object { $_.DisplayName }
+                $result = @{
+                    'Programs' = $filtered;
+                    'PSComputerName' = $pcname;
+                    'IpAddress' = (Test-Connection -ComputerName $pcname -Count 1).IPv4Address.IPAddressToString;
+                };
+                $jsonResult = $result | ConvertTo-Json
+                Write-Output $jsonResult
+            ‚
+ﬂ
+	' '(á*
+%0$System.Threading.Tasks.Task<TResult>"ÊNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+commandstring*
+""*
+"""
+	' '(à
+""*.
+1(	 ((	"
+( ((	
+implicit return:L
+	] (Å?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBOM
+KNetMaster.Repository.Implementation.System.LocalInstalledProgramsRepository

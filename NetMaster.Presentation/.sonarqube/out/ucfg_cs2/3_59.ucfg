@@ -1,0 +1,45 @@
+
+bNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetByComputerNameAsync(string)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs (3"0*¡
+0 (c’
+“
+ ()0
+%0*MongoDB.Driver.IMongoCollection<TDocument>"__id*çä*áE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>ü
+ú
+/ (A7
+%11MongoDB.Driver.FilterDefinitionBuilder<TDocument>"-MongoDB.Driver.Builders<TDocument>.Filter.get*(&"$
+"MongoDB.Driver.Builders<TDocument>ß
+§
+/ (d0
+%2*MongoDB.Driver.FilterDefinition<TDocument>"wMongoDB.Driver.FilterDefinitionBuilder<TDocument>.Eq<TField>(MongoDB.Driver.FieldDefinition<TDocument, TField>, TField)*;9
+7
+%11MongoDB.Driver.FilterDefinitionBuilder<TDocument>*
+PSComputerName*
+
+computerNamestringû
+õ
+ (e8
+%32MongoDB.Driver.IFindFluent<TDocument, TProjection>"≠MongoDB.Driver.IMongoCollectionExtensions.Find<TDocument>(MongoDB.Driver.IMongoCollection<TDocument>, MongoDB.Driver.FilterDefinition<TDocument>, MongoDB.Driver.FindOptions)*/-"+
+)MongoDB.Driver.IMongoCollectionExtensions*42
+0
+%0*MongoDB.Driver.IMongoCollection<TDocument>*42
+0
+%2*MongoDB.Driver.FilterDefinition<TDocument>*
+""ÿ
+’
+ ({*
+%4$System.Threading.Tasks.Task<TResult>"®MongoDB.Driver.IFindFluentExtensions.FirstOrDefaultAsync<TDocument, TProjection>(MongoDB.Driver.IFindFluent<TDocument, TProjection>, System.Threading.CancellationToken)**("&
+$MongoDB.Driver.IFindFluentExtensions*<:
+8
+%32MongoDB.Driver.IFindFluent<TDocument, TProjection>*
+"""
+ (|
+""*.
+1	 (	"
+ (	
+implicit return:"
+4 (G
+computerNamestringBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

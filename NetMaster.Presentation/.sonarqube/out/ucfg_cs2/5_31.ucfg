@@ -1,0 +1,39 @@
+
+JNetMaster.Presentation.Controllers.NetworkController.ListNetworkComputer()s
+iC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\NetworkController.cs (0"2*ú
+0 (PÛ
+Ø
+! (0;
+%05NetMaster.Services.Interfaces.Network.INetworkService"__id*ˆ…*‚6
+4NetMaster.Presentation.Controllers.NetworkController"H
+_networkService5NetMaster.Services.Interfaces.Network.INetworkServiceüù
+! (M:
+%14NetMaster.Domain.Models.DataModels.NetworkComputer[]"RNetMaster.Services.Interfaces.Network.INetworkService.ListNetworkComputerCommand()*?=
+;
+%05NetMaster.Services.Interfaces.Network.INetworkService2ListNetworkComputerCommand()i
+g
+ (M
+	computersobject[]"__id*><
+:
+%14NetMaster.Domain.Models.DataModels.NetworkComputer[]\Z
+ (W)
+%2#Microsoft.AspNetCore.Mvc.JsonResult"#Microsoft.AspNetCore.Mvc.JsonResult‹
+ˆ
+ (!
+
+%3void"7Microsoft.AspNetCore.Mvc.JsonResult.JsonResult(object?)*-+
+)
+%2#Microsoft.AspNetCore.Mvc.JsonResult*
+"""7
+ (X+
+)
+%2#Microsoft.AspNetCore.Mvc.JsonResult*.
+1	 (	"
+ (	
+implicit return*4
+22 (2 
+
+ (0
+%4"__entrypoint*
+0B86
+4NetMaster.Presentation.Controllers.NetworkController

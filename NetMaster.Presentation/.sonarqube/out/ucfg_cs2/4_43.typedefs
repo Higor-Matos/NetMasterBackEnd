@@ -1,0 +1,6 @@
+Ã
+
+=NetMaster.Services.Implementation.System.OsVersionInfoService>NetMaster.Services.Implementations.System.SystemInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject:NetMaster.Services.Interfaces.System.IOsVersionInfoServiceš
+ëOsVersionInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.OSVersionInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.OSVersionInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)©NetMaster.Services.Implementation.System.OsVersionInfoService.OsVersionInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.OSVersionInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.OSVersionInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)ˆ
+#SaveLocalOsVersionInfoAsync(string)aNetMaster.Services.Implementation.System.OsVersionInfoService.SaveLocalOsVersionInfoAsync(string)˜
++GetOsVersionInfoByComputerNameAsync(string)iNetMaster.Services.Implementation.System.OsVersionInfoService.GetOsVersionInfoByComputerNameAsync(string)

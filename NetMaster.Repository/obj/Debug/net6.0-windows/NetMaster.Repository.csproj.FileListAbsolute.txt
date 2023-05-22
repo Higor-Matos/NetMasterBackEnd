@@ -1,0 +1,5 @@
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\obj\Debug\net6.0-windows\NetMaster.Repository.csproj.AssemblyReference.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\obj\Debug\net6.0-windows\NetMaster.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\obj\Debug\net6.0-windows\NetMaster.Repository.AssemblyInfoInputs.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\obj\Debug\net6.0-windows\NetMaster.Repository.AssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\obj\Debug\net6.0-windows\NetMaster.Repository.csproj.CoreCompileInputs.cache

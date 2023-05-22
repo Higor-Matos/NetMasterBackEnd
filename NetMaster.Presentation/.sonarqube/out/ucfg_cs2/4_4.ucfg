@@ -1,0 +1,27 @@
+
+¯NetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)€
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BaseCommand\BaseService.cs ("1*
+1	 (	*
+0*ä
+0 (.â
+ß
+ (*„=
+;NetMaster.Services.Implementations.BaseCommands.BaseService"C
+_commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner"__id*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunnerê
+ç
+ (.ˆ=
+;NetMaster.Services.Implementations.BaseCommands.BaseService"G
+_resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter"__id*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter*
+2*.
+2	 (	"
+ (	
+implicit return:N
+ (:B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+< (\F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterB?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService

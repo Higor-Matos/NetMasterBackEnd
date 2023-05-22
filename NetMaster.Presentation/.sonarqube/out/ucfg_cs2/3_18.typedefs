@@ -1,0 +1,3 @@
+ï
+>NetMaster.Repository.Implementation.Hardware.StorageRepositoryCNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>object;NetMaster.Repository.Interfaces.Hardware.IStorageRepository»
+BStorageRepository(NetMaster.Infrastructure.Context.MongoDbContext)ÅNetMaster.Repository.Implementation.Hardware.StorageRepository.StorageRepository(NetMaster.Infrastructure.Context.MongoDbContext)

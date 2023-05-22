@@ -1,0 +1,24 @@
+
+\NetMaster.Services.Implementation.System.SystemService.GetInstalledProgramsInfoAsync(string)}
+sC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemService.cs0H 0(e"0*„
+02 2(^…
+‚
+2 2(0H
+%0BNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService"__id*¥¢*Ÿ8
+6NetMaster.Services.Implementation.System.SystemService"c
+_installedProgramsInfoServiceBNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService²¯
+2 2(_*
+%1$System.Threading.Tasks.Task<TResult>"cNetMaster.Services.Interfaces.System.ISystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)*LJ
+H
+%0BNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService*
+
+computerNamestring2(GetSystemInfoByComputerNameAsync(string)"8
+2 2(`,
+*
+%1$System.Threading.Tasks.Task<TResult>*.
+13	 3(	"
+3 3(	
+implicit return:"
+0f 0(y
+computerNamestringB:8
+6NetMaster.Services.Implementation.System.SystemService

@@ -1,0 +1,52 @@
+
+iNetMaster.Services.Implementations.Software.WinrarInstallerService.InstallSoftwareCommand(string, string)ˆ
+~C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\WinrarInstallerService.cs6 (L"0*þ
+0* (5Š
+‡
+< (TG
+%0ANetMaster.Repository.Interfaces.Software.IInstallWinrarRepository"__id*«¨*¥D
+BNetMaster.Services.Implementations.Software.WinrarInstallerService"]
+_installWinrarRepositoryANetMaster.Repository.Interfaces.Software.IInstallWinrarRepository„
+	a (‡<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÍ
+Ê
+	e (ƒ
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstring–“
+	< (ˆ*
+%3$System.Threading.Tasks.Task<TResult>"…NetMaster.Repository.Interfaces.Software.IInstallWinrarRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*KI
+G
+%0ANetMaster.Repository.Interfaces.Software.IInstallWinrarRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (ˆE
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""æ
+ã
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"ˆNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>×
+Ô
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ƒNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBFD
+BNetMaster.Services.Implementations.Software.WinrarInstallerService

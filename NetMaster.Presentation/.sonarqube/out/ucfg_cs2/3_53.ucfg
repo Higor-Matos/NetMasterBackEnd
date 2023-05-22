@@ -1,0 +1,26 @@
+
+ˆNetMaster.Repository.Implementation.System.LocalChocolateyRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\LocalChocolateyRepository.csJ (U"0*î
+0 (wg
+e
+ (Y
+commandstring"__id*@><
+:choco -v; (Get-WmiObject -Class Win32_ComputerSystem).Nameá
+Þ
+ (x*
+%0$System.Threading.Tasks.Task<TResult>"æNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+commandstring*
+""*
+"""
+ (y
+""*.
+1	 (	"
+ (	
+implicit return:K
+V (z?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBHF
+DNetMaster.Repository.Implementation.System.LocalChocolateyRepository

@@ -1,0 +1,9 @@
+ﬁ	
+3NetMaster.Presentation.Controllers.SystemController1NetMaster.Presentation.Controllers.BaseController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectº
+ÅSystemController(NetMaster.Services.Interfaces.System.ISystemService, NetMaster.Services.Interfaces.System.ISystemCommandService)µNetMaster.Presentation.Controllers.SystemController.SystemController(NetMaster.Services.Interfaces.System.ISystemService, NetMaster.Services.Interfaces.System.ISystemCommandService)®
+8ShutdownPc(NetMaster.Domain.Models.DataModels.IpRequest)lNetMaster.Presentation.Controllers.SystemController.ShutdownPc(NetMaster.Domain.Models.DataModels.IpRequest)¶
+7RestartPc(NetMaster.Domain.Models.DataModels.IpRequest)kNetMaster.Presentation.Controllers.SystemController.RestartPc(NetMaster.Domain.Models.DataModels.IpRequest)`
+GetUsersInfo(string)HNetMaster.Presentation.Controllers.SystemController.GetUsersInfo(string)j
+GetChocolateyInfo(string)MNetMaster.Presentation.Controllers.SystemController.GetChocolateyInfo(string)h
+GetOsVersionInfo(string)LNetMaster.Presentation.Controllers.SystemController.GetOsVersionInfo(string)x
+ GetInstalledProgramsInfo(string)TNetMaster.Presentation.Controllers.SystemController.GetInstalledProgramsInfo(string)

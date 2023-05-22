@@ -1,0 +1,14 @@
+
+oNetMaster.Repository.Implementation.Software.InstallAdobeReaderRepository.InstallAdobeReaderRepository()!static‰
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallAdobeReaderRepository.cs (-"0*Ò
+0 (¡
+ž
+
+' 
+(W`K
+INetMaster.Repository.Implementation.Software.InstallAdobeReaderRepository"
+commandstring"__id**(&
+$choco install adobereader -y --force"
+ (
+implicit returnBM"K
+INetMaster.Repository.Implementation.Software.InstallAdobeReaderRepository

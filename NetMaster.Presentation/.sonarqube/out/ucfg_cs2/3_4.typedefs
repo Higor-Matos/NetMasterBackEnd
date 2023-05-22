@@ -1,0 +1,4 @@
+Š
+?NetMaster.Repository.Implementation.Hardware.LocalRamRepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject:NetMaster.Repository.Interfaces.System.ILocalRamRepositoryË
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)ƒNetMaster.Repository.Implementation.Hardware.LocalRamRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)l
+LocalRamRepository()TNetMaster.Repository.Implementation.Hardware.LocalRamRepository.LocalRamRepository()

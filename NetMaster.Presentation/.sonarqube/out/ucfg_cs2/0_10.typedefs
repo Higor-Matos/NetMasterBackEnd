@@ -1,0 +1,9 @@
+Í
+3NetMaster.Domain.Models.DataModels.RamInfoDataModel4NetMaster.Domain.Models.DataModels.BaseInfoDataModelobject\
+RamInfoDataModel()FNetMaster.Domain.Models.DataModels.RamInfoDataModel.RamInfoDataModel()j
+FreePhysicalMemory_GB.getMNetMaster.Domain.Models.DataModels.RamInfoDataModel.FreePhysicalMemory_GB.getj
+FreePhysicalMemory_GB.setMNetMaster.Domain.Models.DataModels.RamInfoDataModel.FreePhysicalMemory_GB.setr
+TotalVisibleMemorySize_GB.getQNetMaster.Domain.Models.DataModels.RamInfoDataModel.TotalVisibleMemorySize_GB.getr
+TotalVisibleMemorySize_GB.setQNetMaster.Domain.Models.DataModels.RamInfoDataModel.TotalVisibleMemorySize_GB.set\
+PSComputerName.getFNetMaster.Domain.Models.DataModels.RamInfoDataModel.PSComputerName.get\
+PSComputerName.setFNetMaster.Domain.Models.DataModels.RamInfoDataModel.PSComputerName.set

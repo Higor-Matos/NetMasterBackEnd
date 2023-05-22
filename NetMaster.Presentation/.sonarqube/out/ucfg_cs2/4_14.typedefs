@@ -1,0 +1,5 @@
+¾
+;NetMaster.Services.Implementations.Hardware.HardwareService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject7NetMaster.Services.Interfaces.Hardware.IHardwareService˜
+ëHardwareService(NetMaster.Services.Interfaces.Hardware.IRamInfoService, NetMaster.Services.Interfaces.Hardware.IStorageInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)§NetMaster.Services.Implementations.Hardware.HardwareService.HardwareService(NetMaster.Services.Interfaces.Hardware.IRamInfoService, NetMaster.Services.Interfaces.Hardware.IStorageInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)n
+GetRamInfoAsync(string)SNetMaster.Services.Implementations.Hardware.HardwareService.GetRamInfoAsync(string)v
+GetStorageInfoAsync(string)WNetMaster.Services.Implementations.Hardware.HardwareService.GetStorageInfoAsync(string)

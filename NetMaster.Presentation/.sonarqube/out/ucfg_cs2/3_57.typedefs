@@ -1,0 +1,4 @@
+Š
+>NetMaster.Repository.Implementation.System.RestartPcRepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject;NetMaster.Repository.Interfaces.System.IRestartPcRepositoryÊ
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)‚NetMaster.Repository.Implementation.System.RestartPcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)m
+RestartPcRepository()TNetMaster.Repository.Implementation.System.RestartPcRepository.RestartPcRepository()

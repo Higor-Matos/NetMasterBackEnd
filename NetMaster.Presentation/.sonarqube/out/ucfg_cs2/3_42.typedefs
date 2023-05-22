@@ -1,0 +1,4 @@
+½
+GNetMaster.Repository.Implementation.Software.InstallOffice365RepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobjectDNetMaster.Repository.Interfaces.Software.IInstallOffice365RepositoryÓ
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)‹NetMaster.Repository.Implementation.Software.InstallOffice365Repository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)„
+InstallOffice365Repository()dNetMaster.Repository.Implementation.Software.InstallOffice365Repository.InstallOffice365Repository()

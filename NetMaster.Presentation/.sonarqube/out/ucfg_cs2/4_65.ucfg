@@ -1,0 +1,20 @@
+
+–NetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.NetMaster.Services.Interfaces.BackgroundServices.IComputerInfoBackgroundService.GetRequiredServices(System.IServiceProvider)ú
+èC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BackgroundServices\ComputerInfoBackgroundService.csb« b(⁄"0*‰
+0d d(/RP
+d d(/$
+%0System.NotImplementedException"System.NotImplementedException|
+z
+d d(-
+
+%1void"8System.NotImplementedException.NotImplementedException()*(&
+$
+%0System.NotImplementedException*
+1*.
+1e	 e(	"
+e e(	
+implicit return:8
+
+b€ b(˚*
+serviceProviderSystem.IServiceProviderBWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService

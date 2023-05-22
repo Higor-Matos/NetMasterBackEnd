@@ -1,0 +1,5 @@
+∑
+5NetMaster.Presentation.Controllers.HardwareController1NetMaster.Presentation.Controllers.BaseController'Microsoft.AspNetCore.Mvc.ControllerBaseobject—
+KHardwareController(NetMaster.Services.Interfaces.Hardware.IHardwareService)ÅNetMaster.Presentation.Controllers.HardwareController.HardwareController(NetMaster.Services.Interfaces.Hardware.IHardwareService)^
+GetRamInfo(string)HNetMaster.Presentation.Controllers.HardwareController.GetRamInfo(string)f
+GetStorageInfo(string)LNetMaster.Presentation.Controllers.HardwareController.GetStorageInfo(string)

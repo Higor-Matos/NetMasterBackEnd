@@ -1,0 +1,27 @@
+
+ŽNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)‹
+€C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallGoogleChromeRepository.cs9 (D"0*‹
+0 (Mˆ
+…
+, (3
+%0string"__id*ec*aL
+JNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository"
+commandstringÜ
+Ù
+ (N*
+%1$System.Threading.Tasks.Task<TResult>"æNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+%0string*
+""*
+"""
+ (O
+""*.
+1	 (	"
+ (	
+implicit return:K
+E (i?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBNL
+JNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository

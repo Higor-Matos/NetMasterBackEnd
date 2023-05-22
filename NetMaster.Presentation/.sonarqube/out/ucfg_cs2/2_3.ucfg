@@ -1,0 +1,51 @@
+
+NNetMaster.Infrastructure.Context.MongoDbContext.MongoDbContext(string, string)á
+}C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Infrastructure\NetMaster.Infrastructure\Context\MongoDbContext.cs ("1*
+1	 (	*
+0*˛
+0
+ (6JH
+
+! 
+(B 
+%0MongoDB.Driver.MongoClient"MongoDB.Driver.MongoClientè
+å
+
+% 
+(0
+
+%1void".MongoDB.Driver.MongoClient.MongoClient(string)*$"
+ 
+%0MongoDB.Driver.MongoClient*
+
+connectionStringstring^
+\
+
+ 
+(B$
+clientMongoDB.Driver.MongoClient"__id*$"
+ 
+%0MongoDB.Driver.MongoClientÿ
+’
+ (7#
+%2MongoDB.Driver.IMongoDatabase"TMongoDB.Driver.MongoClient.GetDatabase(string, MongoDB.Driver.MongoDatabaseSettings)*(&
+$
+clientMongoDB.Driver.MongoClient*
+
+databaseNamestring*
+""–
+Õ
+ (7#
+%3MongoDB.Driver.IMongoDatabase"<NetMaster.Infrastructure.Context.MongoDbContext.Database.set*531
+/NetMaster.Infrastructure.Context.MongoDbContext*'%
+#
+%2MongoDB.Driver.IMongoDatabase*
+2*.
+2	 (	"
+ (	
+implicit return:&
+ (5
+connectionStringstring:"
+7 (J
+databaseNamestringB31
+/NetMaster.Infrastructure.Context.MongoDbContext

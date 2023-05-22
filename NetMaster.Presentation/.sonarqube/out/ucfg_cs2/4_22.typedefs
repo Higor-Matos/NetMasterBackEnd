@@ -1,0 +1,5 @@
+ž
+:NetMaster.Services.Implementations.Hardware.RamInfoServiceBNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject6NetMaster.Services.Interfaces.Hardware.IRamInfoService—
+ëRamInfoService(NetMaster.Repository.Interfaces.Hardware.IRamRepository, NetMaster.Repository.Interfaces.System.ILocalRamRepository, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)¦NetMaster.Services.Implementations.Hardware.RamInfoService.RamInfoService(NetMaster.Repository.Interfaces.Hardware.IRamRepository, NetMaster.Repository.Interfaces.System.ILocalRamRepository, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)y
+SaveLocalRamInfoAsync(string)XNetMaster.Services.Implementations.Hardware.RamInfoService.SaveLocalRamInfoAsync(string)‰
+%GetRamInfoByComputerNameAsync(string)`NetMaster.Services.Implementations.Hardware.RamInfoService.GetRamInfoByComputerNameAsync(string)

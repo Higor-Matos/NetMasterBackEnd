@@ -1,0 +1,44 @@
+
+XNetMaster.Services.Implementations.System.SystemCommandService.ShutdownPcCommand(string)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemCommandService.cs6 (G"0*š
+0* (1ù
+ö
+C (XB
+%0<NetMaster.Repository.Interfaces.System.IShutdownPcRepository"__id*Ÿœ*™@
+>NetMaster.Services.Implementations.System.SystemCommandService"U
+_shutdownPcRepository<NetMaster.Repository.Interfaces.System.IShutdownPcRepository„
+	e (‹<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÍ
+Ê
+	i (‡
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstringŒ‰
+	C (Œ*
+%3$System.Threading.Tasks.Task<TResult>"€NetMaster.Repository.Interfaces.System.IShutdownPcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*FD
+B
+%0<NetMaster.Repository.Interfaces.System.IShutdownPcRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)k
+i
+	* (ŒL
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""ð
+í
+ (2;
+%45NetMaster.Domain.Models.Results.ServiceResultModel<T>"‹NetMaster.Services.Implementations.System.SystemCommandService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*DB@
+>NetMaster.Services.Implementations.System.SystemCommandService*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (3=
+;
+%45NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+H (Q
+ipstringBB@
+>NetMaster.Services.Implementations.System.SystemCommandService

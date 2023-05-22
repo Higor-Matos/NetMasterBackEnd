@@ -1,0 +1,49 @@
+
+×NetMaster.Presentation.Controllers.StreamingServerController.StreamingServerController(Microsoft.Extensions.Options.IOptions<StreamingServerConfigPresentation>, Microsoft.Extensions.Hosting.IHostApplicationLifetime){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.cs (("3*‹
+1	 (	w
+u
+
+%0void"8Microsoft.AspNetCore.Mvc.ControllerBase.ControllerBase()*-+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+0*©
+0 (N»¸
+ ("'
+%1!StreamingServerConfigPresentation"9Microsoft.Extensions.Options.IOptions<TOptions>.Value.get*=;
+9
+config/Microsoft.Extensions.Options.IOptions<TOptions>2	Value.get°
+­
+ ("n>
+<NetMaster.Presentation.Controllers.StreamingServerController",
+_config!StreamingServerConfigPresentation"__id*+)
+'
+%1!StreamingServerConfigPresentationéæ
+ (/(
+%2"System.Threading.CancellationToken"MMicrosoft.Extensions.Hosting.IHostApplicationLifetime.ApplicationStopping.get*HF
+D
+appLifetime5Microsoft.Extensions.Hosting.IHostApplicationLifetime2ApplicationStopping.get·
+´
+ (O4
+%3.System.Threading.CancellationTokenRegistration":System.Threading.CancellationToken.Register(System.Action)*,*
+(
+%2"System.Threading.CancellationToken*
+""*
+2*.
+2	 (	"
+ (	
+implicit return*Á
+3
+‚ (‚ª
+§
+ ((
+%4"__entrypoint*=;
+9
+config/Microsoft.Extensions.Options.IOptions<TOptions>*HF
+D
+appLifetime5Microsoft.Extensions.Hosting.IHostApplicationLifetime*
+1:E
+) ([9
+config/Microsoft.Extensions.Options.IOptions<TOptions>:Q
+	] (D
+appLifetime5Microsoft.Extensions.Hosting.IHostApplicationLifetimeB@>
+<NetMaster.Presentation.Controllers.StreamingServerController

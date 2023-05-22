@@ -1,0 +1,6 @@
+†
+
+9NetMaster.Services.Implementation.System.UsersInfoService>NetMaster.Services.Implementations.System.SystemInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject6NetMaster.Services.Interfaces.System.IUsersInfoServiceþ
+ßUsersInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.UsersInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.UsersInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)™NetMaster.Services.Implementation.System.UsersInfoService.UsersInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.UsersInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.UsersInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)|
+SaveLocalUsersInfoAsync(string)YNetMaster.Services.Implementation.System.UsersInfoService.SaveLocalUsersInfoAsync(string)Œ
+'GetUsersInfoByComputerNameAsync(string)aNetMaster.Services.Implementation.System.UsersInfoService.GetUsersInfoByComputerNameAsync(string)

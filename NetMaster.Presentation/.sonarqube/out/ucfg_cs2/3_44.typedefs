@@ -1,0 +1,4 @@
+£
+?NetMaster.Services.Implementations.Upload.FileValidationServiceobject;NetMaster.Services.Interfaces.Upload.IFileValidationService¦
+1ValidateFile(Microsoft.AspNetCore.Http.IFormFile)qNetMaster.Services.Implementations.Upload.FileValidationService.ValidateFile(Microsoft.AspNetCore.Http.IFormFile)r
+FileValidationService()WNetMaster.Services.Implementations.Upload.FileValidationService.FileValidationService()

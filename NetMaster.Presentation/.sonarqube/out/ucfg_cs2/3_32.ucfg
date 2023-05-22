@@ -1,0 +1,22 @@
+
+SNetMaster.Repository.Implementations.Uploud.FileUtils.WriteFileData(string, byte[])t
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Upload\FileUtils.cs (("0*¢
+0 (1ç
+ä
+ (2
+
+%0void",System.IO.File.WriteAllBytes(string, byte[])*"
+System.IO.File*
+
+filePathstring*
+
+fileDatabyte[]*
+1*.
+1	 (	"
+ (	
+implicit return:
+) (8
+filePathstring:
+: (I
+fileDatabyte[]B9"7
+5NetMaster.Repository.Implementations.Uploud.FileUtils

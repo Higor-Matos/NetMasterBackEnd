@@ -1,0 +1,4 @@
+­
+BNetMaster.Services.Implementations.Software.WinrarInstallerService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject>NetMaster.Services.Interfaces.Software.IWinrarInstallerServiceË
+ÁWinrarInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallWinrarRepository)„NetMaster.Services.Implementations.Software.WinrarInstallerService.WinrarInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallWinrarRepository)“
+&InstallSoftwareCommand(string, string)iNetMaster.Services.Implementations.Software.WinrarInstallerService.InstallSoftwareCommand(string, string)

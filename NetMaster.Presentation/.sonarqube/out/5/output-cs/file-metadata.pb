@@ -1,0 +1,17 @@
+„
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\StreamingServerConfigPresentation.csutf-8ƒ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\SwaggerConfigurationPresentation.csutf-8o
+fC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\BaseController.csutf-8s
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\HardwareController.csutf-8r
+iC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\NetworkController.csutf-8s
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SoftwareController.csutf-8z
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.csutf-8q
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.csutf-8q
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\UploadController.csutf-8t
+kC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ControllerExtensions.csutf-8{
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.csutf-8\
+SC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Startup.csutf-8Ž
+‚C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.GlobalUsings.g.csutf-8”
+ˆC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8Œ
+€C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfo.csutf-8Ÿ
+“C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.csutf-8

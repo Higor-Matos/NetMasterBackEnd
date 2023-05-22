@@ -1,0 +1,89 @@
+
+cNetMaster.Presentation.Controllers.UploadController.UploadFile(Microsoft.AspNetCore.Http.IFormFile)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\UploadController.cs ('"4*•
+0' (+Ô
+Ñ
+: (H9
+%03NetMaster.Services.Interfaces.Upload.IUploadService"__id*ƒ€*~5
+3NetMaster.Presentation.Controllers.UploadController"E
+_uploadService3NetMaster.Services.Interfaces.Upload.IUploadServiceÔÑ
+: ([;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>"eNetMaster.Services.Interfaces.Upload.IUploadService.ValidateFile(Microsoft.AspNetCore.Http.IFormFile)*=;
+9
+%03NetMaster.Services.Interfaces.Upload.IUploadService*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile21ValidateFile(Microsoft.AspNetCore.Http.IFormFile)Ÿ
+œ
+' ([I
+validationResult5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*?=
+;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>­
+ª
+ (+
+
+%2bool"CNetMaster.Domain.Models.Results.ServiceResultModel<T>.IsSuccess.get*MK
+I
+validationResult5NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+1
+2*‹
+1 (6¿
+¼
+ (7,
+%3&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*MK
+I
+validationResult5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+ (8.
+,
+%3&Microsoft.AspNetCore.Mvc.IActionResult*Ã
+2- ((Ô
+Ñ
+6 (D9
+%43NetMaster.Services.Interfaces.Upload.IUploadService"__id*ƒ€*~5
+3NetMaster.Presentation.Controllers.UploadController"E
+_uploadService3NetMaster.Services.Interfaces.Upload.IUploadServiceÐÍ
+6 (U;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"cNetMaster.Services.Interfaces.Upload.IUploadService.UploadFile(Microsoft.AspNetCore.Http.IFormFile)*=;
+9
+%43NetMaster.Services.Interfaces.Upload.IUploadService*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile2/UploadFile(Microsoft.AspNetCore.Http.IFormFile)•
+’
+- (U?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*?=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>µ
+²
+ (),
+%6&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+ (*.
+,
+%6&Microsoft.AspNetCore.Mvc.IActionResult*.
+3	 (	"
+ (	
+implicit return*×
+47 (7Q
+O
+ ('
+%7"__entrypoint*/-
++
+file#Microsoft.AspNetCore.Http.IFormFileœ
+™
+	 (
+%8"
+__annotate*JHF
+DMicrosoft.AspNetCore.Mvc.HttpPostAttribute.HttpPostAttribute(string)*/-
++
+file#Microsoft.AspNetCore.Http.IFormFileQ
+O
+( (6+
+file#Microsoft.AspNetCore.Http.IFormFile"__annotation*
+
+%8*
+0:7
+( (6+
+file#Microsoft.AspNetCore.Http.IFormFileB75
+3NetMaster.Presentation.Controllers.UploadController

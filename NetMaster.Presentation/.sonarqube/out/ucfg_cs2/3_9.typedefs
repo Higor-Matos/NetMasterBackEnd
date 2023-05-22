@@ -1,0 +1,2 @@
+
+?NetMaster.Repository.Interfaces.Hardware.IHardwareRepository<T><NetMaster.Repository.Interfaces.Base.IBaseMongoRepository<T>

@@ -1,0 +1,21 @@
+
+ìNetMaster.Repository.Implementation.System.InstalledProgramsRepository.InstalledProgramsRepository(NetMaster.Infrastructure.Context.MongoDbContext)â
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\InstalledProgramsRepository.cs.cs (*"1*
+1	 (	*
+0*‚
+0E (eÕ
+ 
+E (f
+
+%0void"êNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.BaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)*IGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>*@>
+<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContext*
+ProgramsInfo*
+2*.
+2	 (	"
+ (	
+implicit return:H
++ (C<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContextBJH
+FNetMaster.Repository.Implementation.System.InstalledProgramsRepository

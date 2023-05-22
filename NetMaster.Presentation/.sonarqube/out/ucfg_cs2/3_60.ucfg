@@ -1,0 +1,24 @@
+
+RNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.InsertAsync(T)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs (%"0*‰
+0! !(8’
+“
+! !("0
+%0*MongoDB.Driver.IMongoCollection<TDocument>"__id*çä*áE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>˜Ù
+! !(9!
+%1System.Threading.Tasks.Task"âMongoDB.Driver.IMongoCollection<TDocument>.InsertOneAsync(TDocument, MongoDB.Driver.InsertOneOptions, System.Threading.CancellationToken)*42
+0
+%0*MongoDB.Driver.IMongoCollection<TDocument>*
+
+entityT*
+""*
+""2^InsertOneAsync(TDocument, MongoDB.Driver.InsertOneOptions, System.Threading.CancellationToken)*
+1*.
+1"	 "(	"
+" "(	
+implicit return:
+& (.
+entityTBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

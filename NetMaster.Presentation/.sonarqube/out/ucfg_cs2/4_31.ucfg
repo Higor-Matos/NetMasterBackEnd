@@ -1,0 +1,23 @@
+
+SNetMaster.Services.Implementations.Hardware.HardwareService.GetRamInfoAsync(string)Å
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\HardwareService.cs@ (O"0*π
+0 (X‰
+·
+ ((<
+%06NetMaster.Services.Interfaces.Hardware.IRamInfoService"__id*êç*ä=
+;NetMaster.Services.Implementations.Hardware.HardwareService"I
+_ramInfoService6NetMaster.Services.Interfaces.Hardware.IRamInfoServiceÆ´
+ (Y*
+%1$System.Threading.Tasks.Task<TResult>"iNetMaster.Services.Interfaces.Hardware.IHardwareInfoService<T>.GetHardwareInfoByComputerNameAsync(string)*@>
+<
+%06NetMaster.Services.Interfaces.Hardware.IRamInfoService*
+
+computerNamestring2*GetHardwareInfoByComputerNameAsync(string)"
+ (Z
+""*.
+1	 (	"
+ (	
+implicit return:"
+P (c
+computerNamestringB?=
+;NetMaster.Services.Implementations.Hardware.HardwareService

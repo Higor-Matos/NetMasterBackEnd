@@ -1,0 +1,93 @@
+
+ŸNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs ($"1*
+1%	 %(	*
+0*
+0 (*
+2
+3*¡
+2 (@‹ˆ
+ (A@
+%3:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>":NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>Å
+Â
+! (;
+
+%4void"UNetMaster.Domain.Models.Results.SuccessRepositoryResult<T>.SuccessRepositoryResult(T)*DB
+@
+%3:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+	
+dataT›
+˜
+ (A@
+%1:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"__id*DB
+@
+%3:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>˜
+•
+ (A=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult"__id*DB
+@
+%1:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+4*“
+3D (H"
+ 
+D (H
+%2"__id*
+""[
+Y
+D (H=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult"__id*
+
+%2*
+4*‰	
+4 $(·
+´
+ (T
+
+%5void"ÅNetMaster.Domain.Models.Results.RepositoryResultModel.RepositoryResultModel(NetMaster.Domain.Models.Results.SuccessRepositoryResult?, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*A?
+=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult*B@
+>
+error5NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+
+ipstring¨
+¥
+! !(
+%6T"ANetMaster.Domain.Models.Results.RepositoryResultModel<T>.Data.set*><:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+	
+dataT©
+¦
+" "(
+
+%7bool"DNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Success.set*><:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+""¸
+µ
+# #(
+%8string"DNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Message.set*><:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+
+messagestring¨
+¥
+$ $(
+%9string"<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.set*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*
+
+ipstring*
+5*.
+5%	 %(	"
+% %(	
+implicit return:
+% (8	
+dataT:
+: (N
+successbool:
+P (c
+messagestring:K
+	e (ˆ>
+error5NetMaster.Domain.Models.Results.ErrorRepositoryResult:
+
+Š (˜
+ipstringB<:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>

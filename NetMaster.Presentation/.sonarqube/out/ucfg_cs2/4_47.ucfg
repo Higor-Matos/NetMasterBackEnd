@@ -1,0 +1,33 @@
+
+‡NetMaster.Services.Implementations.Software.FirefoxInstallerService.FirefoxInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository)‰
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\FirefoxInstallerService.cs (&"1*
+1	 (	*
+0*ß
+0	› (@¤
+¡
+
+› (Á
+
+%0void"¯NetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter¢
+Ÿ
+ (@¨E
+CNetMaster.Services.Implementations.Software.FirefoxInstallerService"_
+_installFirefoxRepositoryBNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository"__id*b`
+^
+installFirefoxRepositoryBNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository*
+2*.
+2	 (	"
+ (	
+implicit return:N
+' (CB
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+E (eF
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter:k
+	g (™^
+installFirefoxRepositoryBNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepositoryBGE
+CNetMaster.Services.Implementations.Software.FirefoxInstallerService

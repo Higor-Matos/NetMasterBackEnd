@@ -1,0 +1,70 @@
+
+TNetMaster.Presentation.Controllers.StreamingServerController.ToggleStreamingServer(){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.cs (2"6*Å
+0 (%­
+ª
+ (%
+
+%0bool"NNetMaster.Presentation.Controllers.StreamingServerController.IsServerRunning()*B@>
+<NetMaster.Presentation.Controllers.StreamingServerController*
+1
+2*Ï
+1 (9±
+®
+ ()
+
+%1void"RNetMaster.Presentation.Controllers.StreamingServerController.StopStreamingServer()*B@>
+<NetMaster.Presentation.Controllers.StreamingServerControllerÎË
+ (:-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult"3Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object?)*-+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Streaming server stopped.2Ok(object?)";
+ (;/
+-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult*Ð
+2  !(9²
+¯
+   (*
+
+%3void"SNetMaster.Presentation.Controllers.StreamingServerController.StartStreamingServer()*B@>
+<NetMaster.Presentation.Controllers.StreamingServerControllerÎË
+! !(:-
+%4'Microsoft.AspNetCore.Mvc.OkObjectResult"3Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object?)*-+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Streaming server started.2Ok(object?)";
+! !(;/
+-
+%4'Microsoft.AspNetCore.Mvc.OkObjectResult*
+3(	 ((	*
+4
+5*õ
+4& &(Ga_
+&= &(G
+%5string"System.Exception.Message.get*
+
+exSystem.Exception2Message.gete
+c
+&' &(I
+%6string"__concat*#
+&) &(<
+An error occurred: *
+&< &(H
+
+%5stringàÝ
+& &(J+
+%7%Microsoft.AspNetCore.Mvc.ObjectResult"@Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode(int, object?)*-+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*2ô*
+
+%6string2StatusCode(int, object?)"9
+& &(K-
++
+%7%Microsoft.AspNetCore.Mvc.ObjectResult*.
+5(	 ((	"
+( ((	
+implicit return*4
+64 (4 
+
+ (2
+%8"__entrypoint*
+0B@>
+<NetMaster.Presentation.Controllers.StreamingServerController

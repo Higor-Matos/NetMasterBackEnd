@@ -1,0 +1,43 @@
+
+ÅNetMaster.Domain.Models.Results.RepositoryResultModel.RepositoryResultModel(NetMaster.Domain.Models.Results.SuccessRepositoryResult?, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs
+ 
+('"1*
+1	 (	*
+0*ï
+0 (š
+—
+ (#=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult"GNetMaster.Domain.Models.Results.RepositoryResultModel.SuccessResult.set*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*FD
+B
+success7NetMaster.Domain.Models.Results.SuccessRepositoryResult’
+
+ (;
+%15NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.set*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*B@
+>
+error5NetMaster.Domain.Models.Results.ErrorRepositoryResult¨
+¥
+ (
+%2string"<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.set*;97
+5NetMaster.Domain.Models.Results.RepositoryResultModel*
+
+ipstring*
+2*.
+2	 (	"
+ (	
+implicit return:N
+
+( 
+(OB
+success7NetMaster.Domain.Models.Results.SuccessRepositoryResult:J
+
+Q 
+(t>
+error5NetMaster.Domain.Models.Results.ErrorRepositoryResult:
+	
+v 
+(„
+ipstringB97
+5NetMaster.Domain.Models.Results.RepositoryResultModel

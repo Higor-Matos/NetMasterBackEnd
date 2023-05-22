@@ -1,0 +1,42 @@
+
+·NetMaster.Services.Implementations.System.SystemInfoService<T>.SystemInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<T>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemInfoService.cs ( "1*
+1	 (	*
+0*Ò
+0	¹ (:¤
+¡
+
+¹ (ß
+
+%0void"¯NetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterÿ
+ü
+ (0”@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>"P
+_systemRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>"__id*SQ
+O
+systemRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>“
+
+ (:ž@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>"Z
+_localSystemRepository@NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>"__id*][
+Y
+localSystemRepository@NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>*
+2*.
+2	 (	"
+ (	
+implicit return:[
+! (FO
+systemRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>:e
+H (wY
+localSystemRepository@NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>:O
+	y (•B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:T
+
+— (·F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterBB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>

@@ -1,0 +1,14 @@
+
+_NetMaster.Repository.Implementation.Software.InstallVlcRepository.InstallVlcRepository()!staticÅ
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallVlcRepository.cs (%"0*¬
+0 (ë
+é
+
+' 
+(OXC
+ANetMaster.Repository.Implementation.Software.InstallVlcRepository"
+commandstring"__id*" 
+choco install vlc -y --force"
+ (
+implicit returnBE"C
+ANetMaster.Repository.Implementation.Software.InstallVlcRepository

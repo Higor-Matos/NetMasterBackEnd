@@ -1,0 +1,19 @@
+
+cNetMaster.Services.Implementation.System.ChocolateyInfoService.SaveLocalChocolateyInfoAsync(string)…
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\ChocolateyInfoService.csA (]"0*¼
+0 (.ò
+ï
+ (/*
+%0$System.Threading.Tasks.Task<TResult>"_NetMaster.Services.Implementations.System.SystemInfoService<T>.SaveLocalSystemInfoAsync(string)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*
+
+ipstring"8
+ (0,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:
+^ (g
+ipstringBB@
+>NetMaster.Services.Implementation.System.ChocolateyInfoService

@@ -1,0 +1,14 @@
+
+]NetMaster.Repository.Implementation.System.ShutdownPcRepository.ShutdownPcRepository()!static
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\ShutdownPcRepository.cs (%"0*¸
+0 (‡
+„
+
+' 
+(GVA
+?NetMaster.Repository.Implementation.System.ShutdownPcRepository"
+commandstring"__id*
+Stop-Computer -force"
+ (
+implicit returnBC"A
+?NetMaster.Repository.Implementation.System.ShutdownPcRepository

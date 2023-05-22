@@ -1,0 +1,6 @@
+¥
+6NetMaster.Services.Implementation.Upload.UploadService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject3NetMaster.Services.Interfaces.Upload.IUploadService£
+≥UploadService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository)ÍNetMaster.Services.Implementation.Upload.UploadService.UploadService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository)ù
+1ValidateFile(Microsoft.AspNetCore.Http.IFormFile)hNetMaster.Services.Implementation.Upload.UploadService.ValidateFile(Microsoft.AspNetCore.Http.IFormFile)ô
+/UploadFile(Microsoft.AspNetCore.Http.IFormFile)fNetMaster.Services.Implementation.Upload.UploadService.UploadFile(Microsoft.AspNetCore.Http.IFormFile)ù
+1ReadFileData(Microsoft.AspNetCore.Http.IFormFile)hNetMaster.Services.Implementation.Upload.UploadService.ReadFileData(Microsoft.AspNetCore.Http.IFormFile)

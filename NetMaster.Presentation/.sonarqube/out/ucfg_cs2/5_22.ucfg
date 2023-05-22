@@ -1,0 +1,49 @@
+
+kNetMaster.Presentation.Controllers.SystemController.RestartPc(NetMaster.Domain.Models.DataModels.IpRequest)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs) (2"2*‡
+0'  ((Í
+Á
+6 (K@
+%0:NetMaster.Services.Interfaces.System.ISystemCommandService"__id*íè*å5
+3NetMaster.Presentation.Controllers.SystemController"S
+_systemCommandService:NetMaster.Services.Interfaces.System.ISystemCommandServiceç
+ä
+] (g
+%1string"3NetMaster.Domain.Models.DataModels.IpRequest.Ip.get*;9
+7
+request,NetMaster.Domain.Models.DataModels.IpRequestÄ˝
+6 (h*
+%2$System.Threading.Tasks.Task<TResult>"SNetMaster.Services.Interfaces.System.ISystemCommandService.RestartPcCommand(string)*DB
+@
+%0:NetMaster.Services.Interfaces.System.ISystemCommandService*
+
+%1string2RestartPcCommand(string)]
+[
+' (h?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+≤
+   (),
+%3&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+   (*.
+,
+%3&Microsoft.AspNetCore.Mvc.IActionResult*.
+1!	 !(	"
+! !(	
+implicit return*ô
+2P (Pc
+a
+) (2G
+7
+request,NetMaster.Domain.Models.DataModels.IpRequest"
+Ipstring"__entrypoint 
+
+) (2
+%4"__entrypoint*
+0:C
+3 (O7
+request,NetMaster.Domain.Models.DataModels.IpRequestB75
+3NetMaster.Presentation.Controllers.SystemController

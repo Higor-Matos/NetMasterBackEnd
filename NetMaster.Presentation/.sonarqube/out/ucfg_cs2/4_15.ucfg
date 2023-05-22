@@ -1,0 +1,34 @@
+
+€NetMaster.Services.Implementation.System.InstalledProgramsInfoService.InstalledProgramsInfoService(NetMaster.Repository.Interfaces.Software.IInstalledProgramsRepository, NetMaster.Repository.Interfaces.System.ILocalInstalledProgramsRepository, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)ç
+ÇC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\InstalledProgramsInfoService.cs (+"1*
+1	 (	*
+0*û
+0
+ (nâ
+Ü
+
+ (o
+
+%0void"∑NetMaster.Services.Implementations.System.SystemInfoService<T>.SystemInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<T>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*hf
+d
+installedProgramsRepositoryENetMaster.Repository.Interfaces.Software.IInstalledProgramsRepository*pn
+l
+ localinstalledProgramsRepositoryHNetMaster.Repository.Interfaces.System.ILocalInstalledProgramsRepository*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter*
+2*.
+2	 (	"
+ (	
+implicit return:p
+ (Dd
+installedProgramsRepositoryENetMaster.Repository.Interfaces.Software.IInstalledProgramsRepository:x
+ (Nl
+ localinstalledProgramsRepositoryHNetMaster.Repository.Interfaces.System.ILocalInstalledProgramsRepository:N
+ ((B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+ (,F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterBIG
+ENetMaster.Services.Implementation.System.InstalledProgramsInfoService

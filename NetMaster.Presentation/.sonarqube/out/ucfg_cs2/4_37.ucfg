@@ -1,0 +1,19 @@
+
+XNetMaster.Services.Implementations.Hardware.RamInfoService.SaveLocalRamInfoAsync(string)€
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\RamInfoService.cs: (O"0*Æ
+0 (0ü
+ù
+ (1*
+%0$System.Threading.Tasks.Task<TResult>"eNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>.SaveLocalHardwareInfoAsync(string)*HFD
+BNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>*
+
+ipstring"8
+ (2,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:
+P (Y
+ipstringB><
+:NetMaster.Services.Implementations.Hardware.RamInfoService

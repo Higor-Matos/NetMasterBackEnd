@@ -1,0 +1,158 @@
+
+ãNetMaster.Services.Implementations.System.SystemCommandService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemCommandService.cs"+ "(8"0*£
+0$ $(6Ì
+Í
+$ $(.@
+%0:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>õ
+ò
+$ $(6
+
+%1bool""object.operator !=(object, object)*
+"
+object*DB
+@
+%0:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+""*
+1
+2*Û
+1	& '(âÌ
+Í
+'> '(\@
+%2:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>®
+•
+'> '(c
+%3string"ENetMaster.Domain.Models.Results.SuccessRepositoryResult<T>.Result.get*DB
+@
+%2:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>V
+T
+'e '(t
+%4System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTime¨
+©
+	'v '(â
+%5string"<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>ÜÉ
+	' '(ä=
+%67NetMaster.Domain.Models.Results.SuccessServiceResult<T>"7NetMaster.Domain.Models.Results.SuccessServiceResult<T>Ö
+Ç
+'! '(=
+
+%7void"hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)*A?
+=
+%67NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+
+%3string*
+
+%4System.DateTime*
+
+%5stringÄ~
+& ((;
+%85NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>·
+ﬁ
+& &(5
+
+%9void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*?=
+;
+%85NetMaster.Domain.Models.Results.ServiceResultModel<T>*A?
+=
+%67NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+"""I
+& ((=
+;
+%85NetMaster.Domain.Models.Results.ServiceResultModel<T>*ó
+2, ,(;‰
+·
+, ,(3<
+%105NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>ò
+ï
+, ,(;
+%11bool""object.operator !=(object, object)*
+"
+object*@>
+<
+%105NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+""*
+3
+4*Ω
+3	- .(å‰
+·
+.B .(^<
+%155NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>°
+û
+.B .(f
+%16string"ANetMaster.Domain.Models.Results.ErrorRepositoryResult.Message.get*@>
+<
+%155NetMaster.Domain.Models.Results.ErrorRepositoryResultW
+U
+.h .(w
+%17System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTime≠
+™
+	.y .(å
+%18string"<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.get*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>|z
+	.+ .(ç9
+%192NetMaster.Domain.Models.Results.ErrorServiceResult"2NetMaster.Domain.Models.Results.ErrorServiceResultÉ
+Ä
+./ .(A
+%20void"fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)*=;
+9
+%192NetMaster.Domain.Models.Results.ErrorServiceResult*
+
+%16string*
+
+%17System.DateTime*
+
+%18stringÅ
+- /(!<
+%215NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>ﬂ
+‹
+- -(4
+%22void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*@>
+<
+%215NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+""*=;
+9
+%192NetMaster.Domain.Models.Results.ErrorServiceResultì
+ê
+- /(!<
+%135NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*@>
+<
+%215NetMaster.Domain.Models.Results.ServiceResultModel<T>ì
+ê
+- /(!<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*@>
+<
+%135NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+5*Õ
+4	0 0(ÖXV
+	0 0(Ü'
+%23 System.InvalidOperationException" System.InvalidOperationException›
+⁄
+0  0(9
+%24void"CSystem.InvalidOperationException.InvalidOperationException(string?)*+)
+'
+%23 System.InvalidOperationException*OMK
+IInvalid repository result. Must have either SuccessResult or ErrorResult.*
+6*Z
+52	 2(	"K
+	, 0(á>
+<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+62	 2(	"
+2 2(	
+implicit return:X
+"9 "(gL
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>BB@
+>NetMaster.Services.Implementations.System.SystemCommandService

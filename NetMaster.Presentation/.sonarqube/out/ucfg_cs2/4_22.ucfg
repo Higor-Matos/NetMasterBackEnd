@@ -1,0 +1,32 @@
+
+„NetMaster.Services.Implementations.Software.WinrarInstallerService.WinrarInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallWinrarRepository)ˆ
+~C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\WinrarInstallerService.cs (%"1*
+1	 (	*
+0*×
+0 (>¢
+Ÿ
+ (2
+
+%0void"¯NetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter
+š
+ (>¥D
+BNetMaster.Services.Implementations.Software.WinrarInstallerService"]
+_installWinrarRepositoryANetMaster.Repository.Interfaces.Software.IInstallWinrarRepository"__id*`^
+\
+installWinrarRepositoryANetMaster.Repository.Interfaces.Software.IInstallWinrarRepository*
+2*.
+2	 (	"
+ (	
+implicit return:N
+& (BB
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+D (dF
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter:i
+	f (–\
+installWinrarRepositoryANetMaster.Repository.Interfaces.Software.IInstallWinrarRepositoryBFD
+BNetMaster.Services.Implementations.Software.WinrarInstallerService

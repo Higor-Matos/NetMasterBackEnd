@@ -1,0 +1,24 @@
+
+ˆNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)€
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BaseCommand\BaseService.cs- (:"0*Ø
+0 (2ß
+Ü
+ (#9
+%03NetMaster.Services.Interfaces.Base.IResultConverter"__id*Ž‹*ˆ=
+;NetMaster.Services.Implementations.BaseCommands.BaseService"G
+_resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter˜•
+ (3>
+%18NetMaster.Domain.Models.Results.RepositoryResultModel<T>"zNetMaster.Services.Interfaces.Base.IResultConverter.Convert(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*=;
+9
+%03NetMaster.Services.Interfaces.Base.IResultConverter*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>2FConvert(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)"L
+ (4@
+>
+%18NetMaster.Domain.Models.Results.RepositoryResultModel<T>*.
+1	 (	"
+ (	
+implicit return:N
+; (_B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>B?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService

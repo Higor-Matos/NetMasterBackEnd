@@ -1,0 +1,25 @@
+
+bNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.BasePowershellRepository()‡
+}C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Powershell\BasePowershellRepository.cs (*"1*
+1	 (	*
+0*¿
+0 (C­ª
+! (CQ
+%0KNetMaster.Repository.Implementation.Powershell.CredentialProviderRepository"KNetMaster.Repository.Implementation.Powershell.CredentialProviderRepositoryÜ
+Ù
+% (A
+
+%1void"jNetMaster.Repository.Implementation.Powershell.CredentialProviderRepository.CredentialProviderRepository()*US
+Q
+%0KNetMaster.Repository.Implementation.Powershell.CredentialProviderRepository›
+˜
+ (C®I
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository"a
+credentialProviderKNetMaster.Repository.Implementation.Powershell.CredentialProviderRepository"__id*US
+Q
+%0KNetMaster.Repository.Implementation.Powershell.CredentialProviderRepository*
+2*.
+2	 (	"
+ (	
+implicit returnBKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository

@@ -1,0 +1,13 @@
+‹	
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>objectæ
+ÅServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)\
+SuccessResult.getGNetMaster.Domain.Models.Results.ServiceResultModel<T>.SuccessResult.get\
+SuccessResult.setGNetMaster.Domain.Models.Results.ServiceResultModel<T>.SuccessResult.setX
+ErrorResult.getENetMaster.Domain.Models.Results.ServiceResultModel<T>.ErrorResult.getX
+ErrorResult.setENetMaster.Domain.Models.Results.ServiceResultModel<T>.ErrorResult.setT
+IsSuccess.getCNetMaster.Domain.Models.Results.ServiceResultModel<T>.IsSuccess.getT
+IsSuccess.setCNetMaster.Domain.Models.Results.ServiceResultModel<T>.IsSuccess.setP
+Success.getANetMaster.Domain.Models.Results.ServiceResultModel<T>.Success.getP
+Success.setANetMaster.Domain.Models.Results.ServiceResultModel<T>.Success.setL
+	Error.get?NetMaster.Domain.Models.Results.ServiceResultModel<T>.Error.getL
+	Error.set?NetMaster.Domain.Models.Results.ServiceResultModel<T>.Error.set

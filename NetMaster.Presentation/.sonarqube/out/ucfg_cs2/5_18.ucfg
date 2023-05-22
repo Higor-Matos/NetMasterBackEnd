@@ -1,0 +1,24 @@
+
+zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)p
+fC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\BaseController.cs
+  
+(."0*‹
+0 ('ê
+ç
+ ((,
+%0&Microsoft.AspNetCore.Mvc.IActionResult"úNetMaster.Domain.Extensions.ControllerExtensions.ToResult<T>(Microsoft.AspNetCore.Mvc.ControllerBase, NetMaster.Domain.Models.Results.ServiceResultModel<T>)*64"2
+0NetMaster.Domain.Extensions.ControllerExtensions*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+ ().
+,
+%0&Microsoft.AspNetCore.Mvc.IActionResult*.
+1	 (	"
+ (	
+implicit return:K
+
+2 
+(N?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>B53
+1NetMaster.Presentation.Controllers.BaseController

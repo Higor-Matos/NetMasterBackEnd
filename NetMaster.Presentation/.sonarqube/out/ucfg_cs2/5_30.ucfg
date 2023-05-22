@@ -1,0 +1,25 @@
+
+èNetMaster.Presentation.Configuration.SwaggerConfigurationPresentation.UseSwaggerDocumentation(Microsoft.AspNetCore.Builder.IApplicationBuilder)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\SwaggerConfigurationPresentation.cs (2"0*ö
+0 !(¸
+˘
+ ( 6
+%00Microsoft.AspNetCore.Builder.IApplicationBuilder"∞Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.Action<Swashbuckle.AspNetCore.Swagger.SwaggerOptions>)*;9"7
+5Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions*;9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+""Ü
+É
+ !(6
+%10Microsoft.AspNetCore.Builder.IApplicationBuilder"∏Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.Action<Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions>)*=;"9
+7Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions*;9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+""*
+1*.
+1"	 "(	"
+" "(	
+implicit return:C
+3 (O7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilderBI"G
+ENetMaster.Presentation.Configuration.SwaggerConfigurationPresentation

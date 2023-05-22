@@ -1,0 +1,23 @@
+
+äNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.ComputerInfoBackgroundService(System.IServiceProvider)ö
+èC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BackgroundServices\ComputerInfoBackgroundService.cs (,"1*û
+1	 (	â
+Ü
+
+%0void"BMicrosoft.Extensions.Hosting.BackgroundService.BackgroundService()*420
+.Microsoft.Extensions.Hosting.BackgroundService*
+0*ﬂ
+0 (. 
+«
+ (.ÑU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService"+
+_serviceProviderSystem.IServiceProvider"__id*.,
+*
+serviceProviderSystem.IServiceProvider*
+2*.
+2	 (	"
+ (	
+implicit return:6
+- (M*
+serviceProviderSystem.IServiceProviderBWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService

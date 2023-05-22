@@ -1,0 +1,44 @@
+
+WNetMaster.Services.Implementations.System.SystemCommandService.RestartPcCommand(string)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemCommandService.cs6 (F"0*î
+0* (1ˆ
+Û
+C (WA
+%0;NetMaster.Repository.Interfaces.System.IRestartPcRepository"__id*ùö*ó@
+>NetMaster.Services.Implementations.System.SystemCommandService"S
+_restartPcRepository;NetMaster.Repository.Interfaces.System.IRestartPcRepositoryÑÅ
+	d (ä<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÕ
+ 
+	h (Ü
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstringâÜ
+	C (ã*
+%3$System.Threading.Tasks.Task<TResult>"NetMaster.Repository.Interfaces.System.IRestartPcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*EC
+A
+%0;NetMaster.Repository.Interfaces.System.IRestartPcRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)k
+i
+	* (ãL
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""
+Ì
+ (2;
+%45NetMaster.Domain.Models.Results.ServiceResultModel<T>"ãNetMaster.Services.Implementations.System.SystemCommandService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*DB@
+>NetMaster.Services.Implementations.System.SystemCommandService*PN
+L
+repositoryResult8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (3=
+;
+%45NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1 	  (	"
+   (	
+implicit return:
+G (P
+ipstringBB@
+>NetMaster.Services.Implementations.System.SystemCommandService

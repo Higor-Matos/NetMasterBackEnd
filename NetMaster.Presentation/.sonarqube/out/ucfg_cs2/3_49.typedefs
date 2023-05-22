@@ -1,0 +1,4 @@
+¨
+CNetMaster.Repository.Implementation.System.LocalOsVersionRepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject@NetMaster.Repository.Interfaces.System.ILocalOsVersionRepositoryÏ
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)‡NetMaster.Repository.Implementation.System.LocalOsVersionRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)|
+LocalOsVersionRepository()^NetMaster.Repository.Implementation.System.LocalOsVersionRepository.LocalOsVersionRepository()

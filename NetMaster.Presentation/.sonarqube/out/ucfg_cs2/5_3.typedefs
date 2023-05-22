@@ -1,0 +1,4 @@
+…
+1NetMaster.Presentation.Controllers.BaseController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectÆ
+HToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)V
+BaseController()BNetMaster.Presentation.Controllers.BaseController.BaseController()

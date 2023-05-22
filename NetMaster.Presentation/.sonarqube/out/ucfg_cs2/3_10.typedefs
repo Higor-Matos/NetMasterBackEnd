@@ -1,0 +1,9 @@
+ﬁ
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>object<NetMaster.Repository.Interfaces.Base.IBaseMongoRepository<T>·
+LBaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)êNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.BaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)b
+GetAllAsync()QNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetAllAsync()Ñ
+GetByComputerNameAsync(string)bNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetByComputerNameAsync(string)d
+InsertAsync(T)RNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.InsertAsync(T)d
+UpdateAsync(T)RNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.UpdateAsync(T)ò
+(GetMostRecentByComputerNameAsync(string)lNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetMostRecentByComputerNameAsync(string)ö
+)GetMostRecentEntityByComputerName(string)mNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetMostRecentEntityByComputerName(string)

@@ -1,0 +1,4 @@
+µ
+CNetMaster.Services.Implementations.Software.FirefoxInstallerService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject?NetMaster.Services.Interfaces.Software.IFirefoxInstallerServiceÐ
+ÃFirefoxInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository)‡NetMaster.Services.Implementations.Software.FirefoxInstallerService.FirefoxInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository)”
+&InstallSoftwareCommand(string, string)jNetMaster.Services.Implementations.Software.FirefoxInstallerService.InstallSoftwareCommand(string, string)

@@ -1,0 +1,6 @@
+µ
+>NetMaster.Services.Implementations.System.SystemCommandServiceobject:NetMaster.Services.Interfaces.System.ISystemCommandService„
+èSystemCommandService(NetMaster.Repository.Interfaces.System.IShutdownPcRepository, NetMaster.Repository.Interfaces.System.IRestartPcRepository)ŒNetMaster.Services.Implementations.System.SystemCommandService.SystemCommandService(NetMaster.Repository.Interfaces.System.IShutdownPcRepository, NetMaster.Repository.Interfaces.System.IRestartPcRepository)u
+ShutdownPcCommand(string)XNetMaster.Services.Implementations.System.SystemCommandService.ShutdownPcCommand(string)s
+RestartPcCommand(string)WNetMaster.Services.Implementations.System.SystemCommandService.RestartPcCommand(string)‹
+LConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)ãNetMaster.Services.Implementations.System.SystemCommandService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)

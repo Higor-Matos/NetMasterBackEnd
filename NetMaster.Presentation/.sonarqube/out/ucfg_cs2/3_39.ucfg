@@ -1,0 +1,22 @@
+
+]NetMaster.Repository.Implementation.Uploud.UploadFileRepository.WriteFileData(string, byte[])
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Upload\UploadFileRepository.cs   (""0*¢
+0" "(1ç
+ä
+" "(2
+
+%0void",System.IO.File.WriteAllBytes(string, byte[])*"
+System.IO.File*
+
+filePathstring*
+
+fileDatabyte[]*
+1*.
+1#	 #(	"
+# #(	
+implicit return:
+ #  (2
+filePathstring:
+ 4  (C
+fileDatabyte[]BCA
+?NetMaster.Repository.Implementation.Uploud.UploadFileRepository

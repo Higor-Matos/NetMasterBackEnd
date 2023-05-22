@@ -1,0 +1,4 @@
+÷
+3NetMaster.Presentation.Controllers.UploadController1NetMaster.Presentation.Controllers.BaseController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectÂ
+EUploadController(NetMaster.Services.Interfaces.Upload.IUploadService)yNetMaster.Presentation.Controllers.UploadController.UploadController(NetMaster.Services.Interfaces.Upload.IUploadService)–
+/UploadFile(Microsoft.AspNetCore.Http.IFormFile)cNetMaster.Presentation.Controllers.UploadController.UploadFile(Microsoft.AspNetCore.Http.IFormFile)

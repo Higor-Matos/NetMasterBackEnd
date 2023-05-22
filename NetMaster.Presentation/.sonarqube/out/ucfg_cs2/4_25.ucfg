@@ -1,0 +1,43 @@
+
+≈NetMaster.Services.Implementations.Hardware.HardwareInfoService<T>.HardwareInfoService(NetMaster.Repository.Interfaces.Hardware.IHardwareRepository<T>, NetMaster.Repository.Interfaces.Hardware.ILocalHardwareRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)Ö
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\HardwareInfoService.cs (""1*
+1	 (	*
+0*Ú
+0	√ (>§
+°
+
+√ (È
+
+%0void"ØNetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterè
+å
+ (4ûD
+BNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>"V
+_hardwareRepository?NetMaster.Repository.Interfaces.Hardware.IHardwareRepository<T>"__id*YW
+U
+hardwareRepository?NetMaster.Repository.Interfaces.Hardware.IHardwareRepository<T>£
+†
+ (>®D
+BNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>"`
+_localHardwareRepositoryDNetMaster.Repository.Interfaces.Hardware.ILocalHardwareRepository<T>"__id*ca
+_
+localHardwareRepositoryDNetMaster.Repository.Interfaces.Hardware.ILocalHardwareRepository<T>*
+2*.
+2	 (	"
+ (	
+implicit return:a
+# (LU
+hardwareRepository?NetMaster.Repository.Interfaces.Hardware.IHardwareRepository<T>:l
+	N (Å_
+localHardwareRepositoryDNetMaster.Repository.Interfaces.Hardware.ILocalHardwareRepository<T>:P
+
+É (üB
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:T
+
+° (¡F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterBFD
+BNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>

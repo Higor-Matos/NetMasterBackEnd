@@ -1,0 +1,9 @@
+Å
+4NetMaster.Domain.Models.DataModels.BaseInfoDataModelobject_
+BaseInfoDataModel()HNetMaster.Domain.Models.DataModels.BaseInfoDataModel.BaseInfoDataModel()E
+Id.get;NetMaster.Domain.Models.DataModels.BaseInfoDataModel.Id.getE
+Id.set;NetMaster.Domain.Models.DataModels.BaseInfoDataModel.Id.setS
+IpAddress.getBNetMaster.Domain.Models.DataModels.BaseInfoDataModel.IpAddress.getS
+IpAddress.setBNetMaster.Domain.Models.DataModels.BaseInfoDataModel.IpAddress.setS
+Timestamp.getBNetMaster.Domain.Models.DataModels.BaseInfoDataModel.Timestamp.getS
+Timestamp.setBNetMaster.Domain.Models.DataModels.BaseInfoDataModel.Timestamp.set

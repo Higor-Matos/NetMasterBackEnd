@@ -1,0 +1,39 @@
+
+RNetMaster.Presentation.Controllers.StreamingServerController.StopStreamingServer(){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.cs; ;(("0*‹
+0= >("
+ 
+=: =(E
+%0"__id*
+""•
+’
+= =(F"
+%1System.Diagnostics.Process[]"6System.Diagnostics.Process.GetProcessesByName(string?)* "
+System.Diagnostics.Process*
+
+%0Ö
+Ó
+= =(W 
+%2System.Diagnostics.Process"_System.Linq.Enumerable.FirstOrDefault<TSource>(System.Collections.Generic.IEnumerable<TSource>)*"
+System.Linq.Enumerable*&$
+"
+%1System.Diagnostics.Process[]_
+]
+= =(W%
+processSystem.Diagnostics.Process"__id*$"
+ 
+%2System.Diagnostics.Process*
+1
+2*z
+2> >(f
+d
+> >(
+
+%3void"!System.Diagnostics.Process.Kill()*)'
+%
+processSystem.Diagnostics.Process*
+1*.
+1?	 ?(	"
+? ?(	
+implicit returnB@>
+<NetMaster.Presentation.Controllers.StreamingServerController

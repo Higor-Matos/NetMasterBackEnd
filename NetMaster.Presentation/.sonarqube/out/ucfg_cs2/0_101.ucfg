@@ -1,0 +1,27 @@
+
+·NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)x
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs (!"1*
+1	 (	*
+0*¾
+0 (š
+—
+ (#=
+%07NetMaster.Domain.Models.Results.SuccessServiceResult<T>"GNetMaster.Domain.Models.Results.ServiceResultModel<T>.SuccessResult.set*;97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>*FD
+B
+success7NetMaster.Domain.Models.Results.SuccessServiceResult<T>Œ
+‰
+ (8
+%12NetMaster.Domain.Models.Results.ErrorServiceResult"ENetMaster.Domain.Models.Results.ServiceResultModel<T>.ErrorResult.set*;97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>*?=
+;
+error2NetMaster.Domain.Models.Results.ErrorServiceResult*
+2*.
+2	 (	"
+ (	
+implicit return:N
+ (3B
+success7NetMaster.Domain.Models.Results.SuccessServiceResult<T>:G
+ (,;
+error2NetMaster.Domain.Models.Results.ErrorServiceResultB97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>

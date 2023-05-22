@@ -1,0 +1,53 @@
+
+HNetMaster.Presentation.Controllers.SystemController.GetUsersInfo(string)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs$) $(5"2*¸
+0&3 '((Ô
+Ñ
+&B &(P9
+%03NetMaster.Services.Interfaces.System.ISystemService"__id*ƒ€*~5
+3NetMaster.Presentation.Controllers.SystemController"E
+_systemService3NetMaster.Services.Interfaces.System.ISystemServiceþû
+&B &(p*
+%1$System.Threading.Tasks.Task<TResult>"MNetMaster.Services.Interfaces.System.ISystemService.GetUsersInfoAsync(string)*=;
+9
+%03NetMaster.Services.Interfaces.System.ISystemService*
+
+computerNamestring2GetUsersInfoAsync(string)]
+[
+&3 &(p?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+²
+' '(),
+%2&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+' '(*.
+,
+%2&Microsoft.AspNetCore.Mvc.IActionResult*.
+1(	 ((	"
+( ((	
+implicit return*–
+2$J $(J<
+:
+$) $(5
+%3"__entrypoint*
+
+computerNamestring…
+‚
+#	 #(/
+%4"
+__annotate*HFD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+computerNamestring<
+:
+$6 $(I
+computerNamestring"__annotation*
+
+%4*
+0:"
+$6 $(I
+computerNamestringB75
+3NetMaster.Presentation.Controllers.SystemController

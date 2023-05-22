@@ -1,0 +1,24 @@
+
+ƒNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)€
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BaseCommand\BaseService.cs% (/"0*¼
+0 (,Ù
+Ö
+ (!7
+%01NetMaster.Services.Interfaces.Base.ICommandRunner"__id*Š‡*„=
+;NetMaster.Services.Implementations.BaseCommands.BaseService"C
+_commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner…‚
+ (-;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>"rNetMaster.Services.Interfaces.Base.ICommandRunner.Run<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*;9
+7
+%01NetMaster.Services.Interfaces.Base.ICommandRunner*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>2@Run<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)"I
+ (.=
+;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:N
+3 (RB
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>B?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService

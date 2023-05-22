@@ -1,0 +1,102 @@
+
+ÜNetMaster.Services.Implementations.BaseCommands.ResultConverter.Convert(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BaseCommand\ResultConverter.cs	- 	(4"0*ô
+0 (/„
+‡
+ ('@
+%0:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.get*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>õ
+ò
+ (/
+
+%1bool""object.operator !=(object, object)*
+"
+object*DB
+@
+%0:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+""*
+1
+2*≥
+1 („
+‡
+: (N@
+%5:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>"JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.get*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>®
+•
+: (U
+%6string"ENetMaster.Domain.Models.Results.SuccessRepositoryResult<T>.Result.get*DB
+@
+%5:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>Ÿ
+÷
+m (;
+%75NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>àÖ
+	 (Ä>
+%88NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T>
+Ì
+ (3
+
+%9void"üNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*B@
+>
+%88NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+
+%6string*
+""*
+""*?=
+;
+%75NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+""ò
+ï
+	 (Ä>
+%38NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*B@
+>
+%88NetMaster.Domain.Models.Results.RepositoryResultModel<T>ò
+ï
+	 (Ä>
+%28NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*B@
+>
+%38NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+3*ù
+2 (]⁄
+◊
+K (]<
+%105NetMaster.Domain.Models.Results.ErrorRepositoryResult"ENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.get*FD
+B
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>àÖ
+ (^?
+%118NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T>Î
+Ë
+ (3
+%12void"üNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*CA
+?
+%118NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+""*
+""*
+""*@>
+<
+%105NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+""ò
+ï
+ (^>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*CA
+?
+%118NetMaster.Domain.Models.Results.RepositoryResultModel<T>ó
+î
+ (^>
+%28NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+3*[
+3	 (	"L
+ (_@
+>
+%28NetMaster.Domain.Models.Results.RepositoryResultModel<T>*.
+4	 (	"
+ (	
+implicit return:N
+	5 	(YB
+result8NetMaster.Domain.Models.Results.RepositoryResultModel<T>BCA
+?NetMaster.Services.Implementations.BaseCommands.ResultConverter

@@ -1,0 +1,4 @@
+ê
+?NetMaster.Repository.Implementation.System.ShutdownPcRepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject<NetMaster.Repository.Interfaces.System.IShutdownPcRepositoryÀ
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)ÉNetMaster.Repository.Implementation.System.ShutdownPcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)p
+ShutdownPcRepository()VNetMaster.Repository.Implementation.System.ShutdownPcRepository.ShutdownPcRepository()

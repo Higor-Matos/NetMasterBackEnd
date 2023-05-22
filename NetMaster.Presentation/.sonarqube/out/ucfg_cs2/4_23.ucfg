@@ -1,0 +1,111 @@
+
+eNetMaster.Services.Implementations.BaseCommands.BaseService.CreateServiceResult<T>(T, string, string)Ä
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BaseCommand\BaseService.cs( (;"0*z
+0 (c
+a
+ (
+
+%0bool""object.operator !=(object, object)*
+"
+object*
+	
+dataT*
+""*
+1
+2*Ü
+
+1  !(RV
+T
+!? !(N
+%4System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTimeÖÇ
+! !(S=
+%57NetMaster.Domain.Models.Results.SuccessServiceResult<T>"7NetMaster.Domain.Models.Results.SuccessServiceResult<T>Ç
+ˇ
+!! !(8
+
+%6void"hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)*A?
+=
+%57NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+	
+dataT*
+
+%4System.DateTime*
+
+ipstringÄ~
+  "(;
+%75NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>·
+ﬁ
+   (+
+
+%8void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*?=
+;
+%75NetMaster.Domain.Models.Results.ServiceResultModel<T>*A?
+=
+%57NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+""ë
+é
+  "(;
+%25NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*?=
+;
+%75NetMaster.Domain.Models.Results.ServiceResultModel<T>ë
+é
+  "(;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*?=
+;
+%25NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+3*É
+
+2# $(SV
+T
+$@ $(O
+%9System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTime{y
+$ $(T9
+%102NetMaster.Domain.Models.Results.ErrorServiceResult"2NetMaster.Domain.Models.Results.ErrorServiceResultä
+á
+$ $(1
+%11void"fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)*=;
+9
+%102NetMaster.Domain.Models.Results.ErrorServiceResult*
+
+errorMessagestring*
+
+%9System.DateTime*
+
+ipstringÅ
+# %(<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>ﬂ
+‹
+# #(+
+%13void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*@>
+<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+""*=;
+9
+%102NetMaster.Domain.Models.Results.ErrorServiceResultí
+è
+# %(;
+%35NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*@>
+<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>ë
+é
+# %(;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*?=
+;
+%35NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+3*X
+3&	 &(	"I
+ %(=
+;
+%15NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+4&	 &(	"
+& &(	
+implicit return:
+? (E	
+dataT:"
+G (Z
+errorMessagestring:
+\ (e
+ipstringB?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService

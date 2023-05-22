@@ -1,0 +1,33 @@
+
+NetMaster.Presentation.Extensions.ServiceCollectionExtensions.AddServicesInAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.cs) (>"0*ÿ
+0" (Ø
+Õ
+/ (D/
+%0)System.Collections.Generic.IEnumerable<T>"SNetMaster.Presentation.Extensions.ServiceCollectionExtensions.GetAssembliesToScan()*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions€
+~
+" (D7
+
+assemblies)System.Collections.Generic.IEnumerable<T>"__id*31
+/
+%0)System.Collections.Generic.IEnumerable<T>º
+·
+ (2
+
+%1void"ÏNetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable<System.Reflection.Assembly>)*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*;9
+7
+
+assemblies)System.Collections.Generic.IEnumerable<T>"U
+ (I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*.
+1	 (	"
+ (	
+implicit return:S
+? (_G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionBA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions

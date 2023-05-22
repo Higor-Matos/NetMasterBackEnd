@@ -1,0 +1,219 @@
+
+ˆNetMaster.Repository.Implementation.Powershell.PowershellRunNetworkRepository.RunCommandInSpace<T>(System.Management.Automation.Runspaces.WSManConnectionInfo, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)é
+ÉC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Powershell\PowershellRunNetworkRepository.cs
+; 
+(L"0*É
+0 (X‡
+›
+& (Y5
+%0/System.Management.Automation.Runspaces.Runspace"ÑSystem.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace(System.Management.Automation.Runspaces.RunspaceConnectionInfo)*<:"8
+6System.Management.Automation.Runspaces.RunspaceFactory*US
+Q
+wsManConnectionInfo:System.Management.Automation.Runspaces.WSManConnectionInfoã
+à
+ (Y;
+runSpace/System.Management.Automation.Runspaces.Runspace"__id*97
+5
+%0/System.Management.Automation.Runspaces.Runspace*
+1*
+13	 3(	*
+2
+3*¨
+2! (&ù
+ö
+. (A-
+%1'System.Management.Automation.PowerShell"0System.Management.Automation.PowerShell.Create()*-+")
+'System.Management.Automation.PowerShell|
+z
+! (A5
+
+powerShell'System.Management.Automation.PowerShell"__id*1/
+-
+%1'System.Management.Automation.PowerShellí
+è
+ (
+
+%2void"6System.Management.Automation.Runspaces.Runspace.Open()*?=
+;
+runSpace/System.Management.Automation.Runspaces.Runspaceˆ
+Û
+ (.5
+%3/System.Management.Automation.Runspaces.Runspace"4System.Management.Automation.PowerShell.Runspace.set*97
+5
+
+powerShell'System.Management.Automation.PowerShell*?=
+;
+runSpace/System.Management.Automation.Runspaces.Runspace…
+∆
+ (1-
+%4'System.Management.Automation.PowerShell"9System.Management.Automation.PowerShell.AddScript(string)*97
+5
+
+powerShell'System.Management.Automation.PowerShell*
+
+commandstringú
+ô
+ (&
+
+%5bool""object.operator !=(object, object)*
+"
+object*EC
+A
+
+parameters3System.Collections.Generic.Dictionary<TKey, TValue>*
+""*
+4
+5*
+4G (Q*
+6*
+63	 3(	*
+7
+5*¬
+7 (R¢
+ü
+4 (A
+%6string"=System.Collections.Generic.KeyValuePair<TKey, TValue>.Key.get*FD
+B
+	parameter5System.Collections.Generic.KeyValuePair<TKey, TValue>§
+°
+C (R
+%7object"?System.Collections.Generic.KeyValuePair<TKey, TValue>.Value.get*FD
+B
+	parameter5System.Collections.Generic.KeyValuePair<TKey, TValue>·
+ﬁ
+ (S-
+%8'System.Management.Automation.PowerShell"DSystem.Management.Automation.PowerShell.AddParameter(string, object)*97
+5
+
+powerShell'System.Management.Automation.PowerShell*
+
+%6string*
+
+%7object*
+6*≈
+5#+ )(kÉ
+Ä
+#A #(M(
+%9"System.Threading.Tasks.TaskFactory"'System.Threading.Tasks.Task.Factory.get*!"
+System.Threading.Tasks.Taskõ
+ò
+$ $(,
+%10System.IAsyncResult"5System.Management.Automation.PowerShell.BeginInvoke()*97
+5
+
+powerShell'System.Management.Automation.PowerShellâ
+Ü
+#A %()+
+%11$System.Threading.Tasks.Task<TResult>"uSystem.Threading.Tasks.TaskFactory.FromAsync<TResult>(System.IAsyncResult, System.Func<System.IAsyncResult, TResult>)*,*
+(
+%9"System.Threading.Tasks.TaskFactory*
+
+%10System.IAsyncResult*
+""_
+]
+#+ %()A
+commandResult0System.Management.Automation.PSDataCollection<T>"__id*
+""U
+S
+&2 &(E
+%12string"System.Environment.NewLine.get*"
+System.Environment»
+≈
+&& &(U
+%13string"Bstring.Join<T>(string?, System.Collections.Generic.IEnumerable<T>)*
+"
+string*
+
+%12string*EC
+A
+commandResult0System.Management.Automation.PSDataCollection<T>=
+;
+& &(U
+returnResultstring"__id*
+
+%13stringt
+r
+'% '(@
+%14T"!System.Func<T, TResult>.Invoke(T)*
+System.Func<T, TResult>*
+
+returnResultstring6
+4
+' '(@
+convertedResultT"__id*
+
+
+%14To
+m
+)T )(k
+%15bool""object.operator !=(object, object)*
+"
+object*
+
+convertedResultT*
+""àÖ
+) )(l?
+%168NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T> 
+«
+) )(3
+%17void"üNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*CA
+?
+%168NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+
+convertedResultT*
+
+%15bool*
+""*
+""*
+"""M
+) )(mA
+?
+%168NetMaster.Domain.Models.Results.RepositoryResultModel<T>*ƒ
+3- -(VÅ
+-; -(W<
+%185NetMaster.Domain.Models.Results.ErrorRepositoryResult"5NetMaster.Domain.Models.Results.ErrorRepositoryResultË
+Â
+-? -(T
+%19void"eNetMaster.Domain.Models.Results.ErrorRepositoryResult.ErrorRepositoryResult(System.Exception, string)*@>
+<
+%185NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+
+eSystem.Exception*
+""àÖ
+- -(X?
+%208NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T>Î
+Ë
+- -(3
+%21void"üNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*CA
+?
+%208NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+""*
+""*
+""*@>
+<
+%185NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+"""M
+- -(YA
+?
+%208NetMaster.Domain.Models.Results.RepositoryResultModel<T>*¨
+81 1( î
+ë
+1 1( 
+%22void"7System.Management.Automation.Runspaces.Runspace.Close()*?=
+;
+runSpace/System.Management.Automation.Runspaces.Runspace*
+9
+9*.
+93	 3(	"
+3 3(	
+implicit return:]
+ (3Q
+wsManConnectionInfo:System.Management.Automation.Runspaces.WSManConnectionInfo:
+ (
+commandstring:4
+ ()(
+convertOutputSystem.Func<T, TResult>:M
+ (9A
+
+parameters3System.Collections.Generic.Dictionary<TKey, TValue>BQ"O
+MNetMaster.Repository.Implementation.Powershell.PowershellRunNetworkRepository

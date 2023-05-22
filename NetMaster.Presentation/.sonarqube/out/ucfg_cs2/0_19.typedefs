@@ -1,0 +1,13 @@
+“
+
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>5NetMaster.Domain.Models.Results.RepositoryResultModelobjectŠ
+fRepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)ŸNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)Ö
+LRepositoryResultModel(NetMaster.Domain.Models.Results.RepositoryResultModel)…NetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(NetMaster.Domain.Models.Results.RepositoryResultModel)M
+Data.getANetMaster.Domain.Models.Results.RepositoryResultModel<T>.Data.getM
+Data.setANetMaster.Domain.Models.Results.RepositoryResultModel<T>.Data.setS
+Success.getDNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Success.getS
+Success.setDNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Success.setS
+Message.getDNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Message.getS
+Message.setDNetMaster.Domain.Models.Results.RepositoryResultModel<T>.Message.set_
+SuccessResult.getJNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.get_
+SuccessResult.setJNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.set

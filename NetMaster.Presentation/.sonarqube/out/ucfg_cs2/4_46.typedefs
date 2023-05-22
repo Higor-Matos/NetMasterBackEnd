@@ -1,0 +1,7 @@
+­
+6NetMaster.Services.Implementation.System.SystemService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject3NetMaster.Services.Interfaces.System.ISystemService‘
+êSystemService(NetMaster.Services.Interfaces.System.IChocolateyInfoService, NetMaster.Services.Interfaces.System.IUsersInfoService, NetMaster.Services.Interfaces.System.IOsVersionInfoService, NetMaster.Services.Interfaces.System.IInstalledProgramsInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)¡NetMaster.Services.Implementation.System.SystemService.SystemService(NetMaster.Services.Interfaces.System.IChocolateyInfoService, NetMaster.Services.Interfaces.System.IUsersInfoService, NetMaster.Services.Interfaces.System.IOsVersionInfoService, NetMaster.Services.Interfaces.System.IInstalledProgramsInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)w
+GetChocolateyInfoAsync(string)UNetMaster.Services.Implementation.System.SystemService.GetChocolateyInfoAsync(string)m
+GetUsersInfoAsync(string)PNetMaster.Services.Implementation.System.SystemService.GetUsersInfoAsync(string)u
+GetOsVersionInfoAsync(string)TNetMaster.Services.Implementation.System.SystemService.GetOsVersionInfoAsync(string)…
+%GetInstalledProgramsInfoAsync(string)\NetMaster.Services.Implementation.System.SystemService.GetInstalledProgramsInfoAsync(string)

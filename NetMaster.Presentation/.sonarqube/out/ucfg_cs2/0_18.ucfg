@@ -1,0 +1,22 @@
+
+CNetMaster.Domain.Models.Results.ServiceResultModel<T>.IsSuccess.getx
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs ("0*‚
+0! (6Ò
+Ï
+! (.=
+%07NetMaster.Domain.Models.Results.SuccessServiceResult<T>"GNetMaster.Domain.Models.Results.ServiceResultModel<T>.SuccessResult.get*;97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>˜
+•
+! (6
+
+%1bool""object.operator !=(object, object)*
+"
+object*A?
+=
+%07NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+""*
+1*.
+17 (7"
+6 (7
+implicit returnB97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>

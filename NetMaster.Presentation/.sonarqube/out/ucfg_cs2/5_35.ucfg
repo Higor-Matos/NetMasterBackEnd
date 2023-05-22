@@ -1,0 +1,18 @@
+
+šNetMaster.Presentation.Configuration.SwaggerConfigurationPresentation.AddSwaggerDocumentation(Microsoft.Extensions.DependencyInjection.IServiceCollection)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Configuration\SwaggerConfigurationPresentation.cs (2"0*ò
+0	 (Ý
+Ú
+	 (A
+%0;Microsoft.Extensions.DependencyInjection.IServiceCollection"ÝMicrosoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.AddSwaggerGen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions>)*TR"P
+NMicrosoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+""*
+1*.
+1	 (	"
+ (	
+implicit return:S
+3 (SG
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionBI"G
+ENetMaster.Presentation.Configuration.SwaggerConfigurationPresentation

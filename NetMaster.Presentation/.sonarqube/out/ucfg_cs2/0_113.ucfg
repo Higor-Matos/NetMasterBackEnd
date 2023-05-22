@@ -1,0 +1,27 @@
+
+bNetMaster.Domain.Models.Results.SuccessServiceResult.SuccessServiceResult(System.DateTime, string)x
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs (&"1*
+1	 (	*
+0*˜
+0 ('Æ
+Ã
+ (!
+%0System.DateTime"BNetMaster.Domain.Models.Results.SuccessServiceResult.Timestamp.set*:86
+4NetMaster.Domain.Models.Results.SuccessServiceResult* 
+
+	timestampSystem.DateTimeº
+·
+ ('
+%1string"ENetMaster.Domain.Models.Results.SuccessServiceResult.ComputerName.set*:86
+4NetMaster.Domain.Models.Results.SuccessServiceResult*
+
+computerNamestring*
+2*.
+2	 (	"
+ (	
+implicit return:(
+' (9
+	timestampSystem.DateTime:"
+; (N
+computerNamestringB86
+4NetMaster.Domain.Models.Results.SuccessServiceResult

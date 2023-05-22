@@ -1,0 +1,4 @@
+¡
+=NetMaster.Services.Implementations.BaseCommands.CommandRunnerobject1NetMaster.Services.Interfaces.Base.ICommandRunnerÂ
+@Run<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)~NetMaster.Services.Implementations.BaseCommands.CommandRunner.Run<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)`
+CommandRunner()MNetMaster.Services.Implementations.BaseCommands.CommandRunner.CommandRunner()

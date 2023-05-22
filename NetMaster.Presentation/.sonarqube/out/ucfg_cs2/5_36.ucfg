@@ -1,0 +1,29 @@
+
+NNetMaster.Presentation.Controllers.StreamingServerController.IsServerRunning(){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\StreamingServerController.cs) )($"0*›
+0+ +(9"
+ 
++. +(9
+%0"__id*
+""•
+’
++ +(:"
+%1System.Diagnostics.Process[]"6System.Diagnostics.Process.GetProcessesByName(string?)* "
+System.Diagnostics.Process*
+
+%0µ
+²
++ +(@
+
+%2bool"TSystem.Linq.Enumerable.Any<TSource>(System.Collections.Generic.IEnumerable<TSource>)*"
+System.Linq.Enumerable*&$
+"
+%1System.Diagnostics.Process[]"
++ +(A
+
+
+%2bool*.
+1,	 ,(	"
+, ,(	
+implicit returnB@>
+<NetMaster.Presentation.Controllers.StreamingServerController

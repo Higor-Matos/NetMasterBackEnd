@@ -1,0 +1,32 @@
+
+hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)x
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs$ $(#"1*
+1'	 '(	*
+0*¹
+0$W &(÷
+ô
+$W $(v
+
+%0void"bNetMaster.Domain.Models.Results.SuccessServiceResult.SuccessServiceResult(System.DateTime, string)*:86
+4NetMaster.Domain.Models.Results.SuccessServiceResult* 
+
+	timestampSystem.DateTime*
+
+computerNamestringª
+§
+& &(
+%1T"BNetMaster.Domain.Models.Results.SuccessServiceResult<T>.Result.set*=;9
+7NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+
+resultT*
+2*.
+2'	 '(	"
+' '(	
+implicit return:
+$$ $(,
+resultT:(
+$. $(@
+	timestampSystem.DateTime:"
+$B $(U
+computerNamestringB;9
+7NetMaster.Domain.Models.Results.SuccessServiceResult<T>

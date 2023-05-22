@@ -1,0 +1,4 @@
+Ã
+;NetMaster.Services.Implementations.Software.SoftwareServiceobject7NetMaster.Services.Interfaces.Software.ISoftwareServiceÂ
+€SoftwareService(System.Collections.Generic.Dictionary<string, NetMaster.Services.Interfaces.Software.ISoftwareInstallerService>)¼NetMaster.Services.Implementations.Software.SoftwareService.SoftwareService(System.Collections.Generic.Dictionary<string, NetMaster.Services.Interfaces.Software.ISoftwareInstallerService>)~
+InstallSoftware(string, string)[NetMaster.Services.Implementations.Software.SoftwareService.InstallSoftware(string, string)

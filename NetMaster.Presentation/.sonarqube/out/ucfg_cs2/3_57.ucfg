@@ -1,0 +1,70 @@
+
+hNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ConvertOutput<T>(string, string)á
+}C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Powershell\BasePowershellRepository.cs! !(!"0*Ã	
+0# ((«
+ƒ
+# #(@
+%0T"dSystem.Text.Json.JsonSerializer.Deserialize<TValue>(string, System.Text.Json.JsonSerializerOptions?)*%#"!
+System.Text.Json.JsonSerializer*
+
+
+jsonOutputstring*
+"",
+*
+# #(@
+resultT"__id*	
+
+%0Tâ
+Ü
+$ $((
+%1string"BNetMaster.Domain.Models.DataModels.BaseInfoDataModel.IpAddress.set*
+
+resultT*
+
+	ipAddressstringù
+ö
+%, %(q
+%2System.TimeZoneInfo"2System.TimeZoneInfo.FindSystemTimeZoneById(string)*"
+System.TimeZoneInfo*$" 
+E. South America Standard TimeZ
+X
+% %(q'
+brasiliaTimeZoneSystem.TimeZoneInfo"__id*
+
+%2System.TimeZoneInfoV
+T
+&D &(S
+%3System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTime’
+“
+&$ &(f
+%4System.DateTime"LSystem.TimeZoneInfo.ConvertTimeFromUtc(System.DateTime, System.TimeZoneInfo)*"
+System.TimeZoneInfo*
+
+%3System.DateTime*+)
+'
+brasiliaTimeZoneSystem.TimeZoneInfoN
+L
+& &(f
+brasiliaTimeSystem.DateTime"__id*
+
+%4System.DateTime°
+û
+' '(+
+%5System.Nullable<T>"BNetMaster.Domain.Models.DataModels.BaseInfoDataModel.Timestamp.set*
+
+resultT*#!
+
+brasiliaTimeSystem.DateTime"
+( ((
+
+resultT*.
+1)	 )(	"
+) )(	
+implicit return: 
+!% !(6
+
+jsonOutputstring:
+!8 !(H
+	ipAddressstringBKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository

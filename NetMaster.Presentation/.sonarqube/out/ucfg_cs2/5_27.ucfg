@@ -1,0 +1,53 @@
+
+MNetMaster.Presentation.Controllers.SystemController.GetChocolateyInfo(string)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs+) +(:"2*Â
+0-8 .((Ô
+Ñ
+-G -(U9
+%03NetMaster.Services.Interfaces.System.ISystemService"__id*ƒ€*~5
+3NetMaster.Presentation.Controllers.SystemController"E
+_systemService3NetMaster.Services.Interfaces.System.ISystemServiceˆ…
+-G -(z*
+%1$System.Threading.Tasks.Task<TResult>"RNetMaster.Services.Interfaces.System.ISystemService.GetChocolateyInfoAsync(string)*=;
+9
+%03NetMaster.Services.Interfaces.System.ISystemService*
+
+computerNamestring2GetChocolateyInfoAsync(string)]
+[
+-8 -(z?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+²
+. .(),
+%2&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+. .(*.
+,
+%2&Microsoft.AspNetCore.Mvc.IActionResult*.
+1/	 /(	"
+/ /(	
+implicit return*–
+2+O +(O<
+:
++) +(:
+%3"__entrypoint*
+
+computerNamestring…
+‚
+*	 *(4
+%4"
+__annotate*HFD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+computerNamestring<
+:
++; +(N
+computerNamestring"__annotation*
+
+%4*
+0:"
++; +(N
+computerNamestringB75
+3NetMaster.Presentation.Controllers.SystemController

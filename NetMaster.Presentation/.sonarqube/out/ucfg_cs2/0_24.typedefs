@@ -1,0 +1,9 @@
+Ê
+2NetMaster.Domain.Models.Results.ErrorServiceResultobjectù
+3ErrorServiceResult(string, System.DateTime, string)fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)W
+ErrorMessage.getCNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorMessage.getW
+ErrorMessage.setCNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorMessage.setQ
+Timestamp.get@NetMaster.Domain.Models.Results.ErrorServiceResult.Timestamp.getQ
+Timestamp.set@NetMaster.Domain.Models.Results.ErrorServiceResult.Timestamp.setW
+ComputerName.getCNetMaster.Domain.Models.Results.ErrorServiceResult.ComputerName.getW
+ComputerName.setCNetMaster.Domain.Models.Results.ErrorServiceResult.ComputerName.set

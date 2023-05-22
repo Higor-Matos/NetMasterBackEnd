@@ -1,0 +1,27 @@
+
+àNetMaster.Repository.Implementation.Software.InstallWinrarRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallWinrarRepository.cs9 (D"0*Ñ
+0 (MÅ
+
+, (3
+%0string"__id*_]*[F
+DNetMaster.Repository.Implementation.Software.InstallWinrarRepository"
+commandstring‹
+Ÿ
+ (N*
+%1$System.Threading.Tasks.Task<TResult>"ÊNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+%0string*
+""*
+"""
+ (O
+""*.
+1	 (	"
+ (	
+implicit return:K
+E (i?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBHF
+DNetMaster.Repository.Implementation.Software.InstallWinrarRepository

@@ -1,0 +1,5 @@
+Ù
+>NetMaster.Services.Implementations.System.SystemInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobjectµ
+øSystemInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<T>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)·NetMaster.Services.Implementations.System.SystemInfoService<T>.SystemInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<T>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)ƒ
+ SaveLocalSystemInfoAsync(string)_NetMaster.Services.Implementations.System.SystemInfoService<T>.SaveLocalSystemInfoAsync(string)“
+(GetSystemInfoByComputerNameAsync(string)gNetMaster.Services.Implementations.System.SystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)

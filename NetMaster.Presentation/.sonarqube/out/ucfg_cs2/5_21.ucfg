@@ -1,0 +1,28 @@
+
+ÅNetMaster.Presentation.Controllers.SoftwareController.SoftwareController(NetMaster.Services.Interfaces.Software.ISoftwareService)t
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SoftwareController.cs (!"3*°
+1	 (	å
+â
+
+%0void"BNetMaster.Presentation.Controllers.BaseController.BaseController()*753
+1NetMaster.Presentation.Controllers.BaseController*
+0*Å
+0 (.Ï
+È
+ (.Ü7
+5NetMaster.Presentation.Controllers.SoftwareController"K
+_softwareService7NetMaster.Services.Interfaces.Software.ISoftwareService"__id*NL
+J
+softwareService7NetMaster.Services.Interfaces.Software.ISoftwareService*
+2*.
+2	 (	"
+ (	
+implicit return*4
+3C (C 
+
+ (!
+%1"__entrypoint*
+1:V
+" (BJ
+softwareService7NetMaster.Services.Interfaces.Software.ISoftwareServiceB97
+5NetMaster.Presentation.Controllers.SoftwareController

@@ -1,0 +1,32 @@
+
+ÍNetMaster.Services.Implementation.Upload.UploadService.UploadService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository)}
+sC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Upload\UploadService.cs ("1*
+1	 (	*
+0*ª
+0 (8¢
+ü
+ (2
+
+%0void"ØNetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterÅ
+˛
+ (8ë8
+6NetMaster.Services.Implementation.Upload.UploadService"U
+_uploadFileRepository<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository"__id*XV
+T
+uploadFileRepository<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository*
+2*.
+2	 (	"
+ (	
+implicit return:N
+ (9B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+; ([F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter:a
+	] (áT
+uploadFileRepository<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepositoryB:8
+6NetMaster.Services.Implementation.Upload.UploadService

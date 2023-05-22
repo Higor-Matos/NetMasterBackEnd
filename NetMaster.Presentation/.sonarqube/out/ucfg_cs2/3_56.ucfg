@@ -1,0 +1,34 @@
+
+áNetMaster.Repository.Implementation.System.LocalOsVersionRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)É
+yC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\LocalOsVersionRepository.csI (T"0*£
+0 (~Ë
+Â
+	 (ê
+%0"__concat*C
+ (R75
+3Get-CimInstance -ClassName Win32_OperatingSystem | *Ç
+	 (êus
+qSelect-Object Caption, Version, @{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 10
+.
+	 (ê
+commandstring"__id*
+
+%0·
+ﬁ
+ (*
+%1$System.Threading.Tasks.Task<TResult>"ÊNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+commandstring*
+""*
+"""
+	 (Ä
+""*.
+1	 (	"
+ (	
+implicit return:K
+U (y?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBGE
+CNetMaster.Repository.Implementation.System.LocalOsVersionRepository

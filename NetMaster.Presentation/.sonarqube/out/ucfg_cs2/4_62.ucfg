@@ -1,0 +1,64 @@
+
+gNetMaster.Services.Implementations.System.SystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)Å
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemInfoService.cs*1 *(Q"0*£
+0, .(:Û
+
+,! ,(2A
+%0;NetMaster.Repository.Interfaces.System.ISystemRepository<T>"__id*öó*î@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>"P
+_systemRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>ôñ
+,! ,(W*
+%1$System.Threading.Tasks.Task<TResult>"[NetMaster.Repository.Interfaces.Base.IBaseMongoRepository<T>.GetByComputerNameAsync(string)*EC
+A
+%0;NetMaster.Repository.Interfaces.System.ISystemRepository<T>*
+
+computerNamestring2GetByComputerNameAsync(string)-
++
+, ,(W
+
+systemInfoT"__id*
+""V
+T
+-\ -(k
+%2System.DateTime"System.DateTime.UtcNow.get*"
+System.DateTimeÖÇ
+-4 -(z=
+%37NetMaster.Domain.Models.Results.SuccessServiceResult<T>"7NetMaster.Domain.Models.Results.SuccessServiceResult<T>í
+è
+-8 -(O
+
+%4void"hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)*A?
+=
+%37NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+
+
+systemInfoT*
+
+%2System.DateTime*
+
+computerNamestring†
+ù
+-$ -(zH
+successResult7NetMaster.Domain.Models.Results.SuccessServiceResult<T>"__id*A?
+=
+%37NetMaster.Domain.Models.Results.SuccessServiceResult<T>Ä~
+. .(;;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>Ï
+È
+. .(,
+
+%6void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*?=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*LJ
+H
+successResult7NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+"""I
+. .(<=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1/	 /(	"
+/ /(	
+implicit return:"
+*R *(e
+computerNamestringBB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>

@@ -1,0 +1,4 @@
+≈
+ENetMaster.Services.Implementations.Software.Office365InstallerService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobjectANetMaster.Services.Interfaces.Software.IOffice365InstallerService⁄
+«Office365InstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallOffice365Repository)çNetMaster.Services.Implementations.Software.Office365InstallerService.Office365InstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallOffice365Repository)ñ
+&InstallSoftwareCommand(string, string)lNetMaster.Services.Implementations.Software.Office365InstallerService.InstallSoftwareCommand(string, string)

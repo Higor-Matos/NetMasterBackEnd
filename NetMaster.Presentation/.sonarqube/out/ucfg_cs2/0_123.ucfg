@@ -1,0 +1,16 @@
+
+JNetMaster.Domain.Models.Results.RepositoryResultModel<T>.SuccessResult.set{
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs ("0*³
+0 (7ž
+›
+ (7=
+%07NetMaster.Domain.Models.Results.SuccessRepositoryResult"GNetMaster.Domain.Models.Results.RepositoryResultModel.SuccessResult.set*><:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>*GE
+C
+value:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+1*.
+18 (8"
+7 (8
+implicit return:EC
+value:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>B<:
+8NetMaster.Domain.Models.Results.RepositoryResultModel<T>

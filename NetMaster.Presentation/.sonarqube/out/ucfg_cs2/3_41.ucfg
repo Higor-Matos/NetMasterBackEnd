@@ -1,0 +1,105 @@
+
+bNetMaster.Repository.Implementation.Uploud.UploadFileRepository.UploadFile(string, byte[], string)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Upload\UploadFileRepository.cs	3 	(="0*
+0	 (	*
+1
+2*å
+1 (!’
+
+" (K
+%0string"&System.IO.Path.Combine(string, string)*"
+System.IO.Path*
+
+destinationFolderstring*
+
+fileNamestring8
+6
+ (K
+filePathstring"__id*
+
+%0stringï
+ì
+ (1
+
+%1void"]NetMaster.Repository.Implementation.Uploud.UploadFileRepository.WriteFileData(string, byte[])*ECA
+?NetMaster.Repository.Implementation.Uploud.UploadFileRepository*
+
+filePathstring*
+
+fileDatabyte[]nl
+ (2
+%2,NetMaster.Domain.Models.Results.UploadResult",NetMaster.Domain.Models.Results.UploadResultŽ
+‹
+ (*
+
+%3void";NetMaster.Domain.Models.Results.UploadResult.UploadResult()*64
+2
+%2,NetMaster.Domain.Models.Results.UploadResult¦
+£
+ (+
+%4string"9NetMaster.Domain.Models.Results.UploadResult.FilePath.set*64
+2
+%2,NetMaster.Domain.Models.Results.UploadResult*
+
+filePathstring°
+­
+ (?
+%5string"8NetMaster.Domain.Models.Results.UploadResult.Message.set*64
+2
+%2,NetMaster.Domain.Models.Results.UploadResult*!
+File uploaded successfully.‡„
+ (>
+%68NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T>ß
+Ü
+ (>
+
+%7void"ŸNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*B@
+>
+%68NetMaster.Domain.Models.Results.RepositoryResultModel<T>*64
+2
+%2,NetMaster.Domain.Models.Results.UploadResult*
+""*
+""*
+""*
+"""L
+ (@
+>
+%68NetMaster.Domain.Models.Results.RepositoryResultModel<T>*À
+2 (a€~
+F (b;
+%85NetMaster.Domain.Models.Results.ErrorRepositoryResult"5NetMaster.Domain.Models.Results.ErrorRepositoryResultæ
+ã
+J (_
+
+%9void"eNetMaster.Domain.Models.Results.ErrorRepositoryResult.ErrorRepositoryResult(System.Exception, string)*?=
+;
+%85NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+
+eSystem.Exception*
+""ˆ…
+ (c?
+%108NetMaster.Domain.Models.Results.RepositoryResultModel<T>"8NetMaster.Domain.Models.Results.RepositoryResultModel<T>ê
+ç
+ (>
+%11void"ŸNetMaster.Domain.Models.Results.RepositoryResultModel<T>.RepositoryResultModel(T, bool, string, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)*CA
+?
+%108NetMaster.Domain.Models.Results.RepositoryResultModel<T>*
+""*
+""*
+""*?=
+;
+%85NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+"""M
+ (dA
+?
+%108NetMaster.Domain.Models.Results.RepositoryResultModel<T>*.
+3	 (	"
+ (	
+implicit return:
+	> 	(M
+fileNamestring:
+	O 	(^
+fileDatabyte[]:'
+	` 	(x
+destinationFolderstringBCA
+?NetMaster.Repository.Implementation.Uploud.UploadFileRepository

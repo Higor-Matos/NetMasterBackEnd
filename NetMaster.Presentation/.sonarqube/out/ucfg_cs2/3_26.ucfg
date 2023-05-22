@@ -1,0 +1,14 @@
+
+[NetMaster.Repository.Implementation.System.RestartPcRepository.RestartPcRepository()!static~
+tC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\RestartPcRepository.cs ($"0*º
+0 (‰
+†
+
+' 
+(JU@
+>NetMaster.Repository.Implementation.System.RestartPcRepository"
+commandstring"__id*
+Restart-Computer -force"
+ (
+implicit returnBB"@
+>NetMaster.Repository.Implementation.System.RestartPcRepository

@@ -1,0 +1,143 @@
+
+¤NetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.cs: :(+"0* 
+0< <(<ˆ…
+< <(=
+
+%0bool"*System.Type.IsAssignableFrom(System.Type?)*
+""*
+
+typeSystem.Type2IsAssignableFrom(System.Type?)*
+1
+2*ù
+1? ?(4ä
+á
+? ?(5
+
+%1void"NetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterHostedService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type)*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+typeSystem.Type*
+3*
+2A A(-hf
+A A(-
+
+%2bool"System.Type.IsGenericType.get*
+
+	interfaceSystem.Type2IsGenericType.get*
+4
+5*
+4A1 A(x
+A1 A(V
+%3System.Type"&System.Type.GetGenericTypeDefinition()*
+
+	interfaceSystem.Type2GetGenericTypeDefinition()
+
+A1 A(x
+
+%4bool"3System.Type.operator ==(System.Type?, System.Type?)*"
+System.Type*
+
+%3System.Type*
+""*
+6
+5*ª
+6D D(F•
+’
+D D(G
+
+%5void"°NetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterBaseMongoRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type)*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+	interfaceSystem.Type*
+
+typeSystem.Type*
+3*¡
+5F F(D‰
+†
+F F(D
+
+%6bool"3System.Type.operator ==(System.Type?, System.Type?)*"
+System.Type*
+
+	interfaceSystem.Type*
+""*
+7
+8*Þ
+7I S(É
+Æ
+I S(A
+%7;Microsoft.Extensions.DependencyInjection.IServiceCollection"ÌMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func<System.IServiceProvider, TService>)*QO"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+""*
+3*ë
+8Y Y(7Ö
+Ó
+Y Y(8A
+%8;Microsoft.Extensions.DependencyInjection.IServiceCollection"¬Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type)*QO"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+	interfaceSystem.Type*
+
+typeSystem.Type*
+3*¦
+3\ \(TR
+P
+\, \(?
+%9string"System.Type.FullName.get*
+
+	interfaceSystem.TypeN
+L
+\G \(T
+%10string"System.Type.FullName.get*
+
+typeSystem.Type^
+\
+\ \(V
+%11string"__concat*
+\  \(+
+Registered *
+\+ \(@
+
+%9stringP
+N
+\ \(V
+%12string"__concat*
+
+%11string*
+\@ \(F
+
+ with U
+S
+\ \(V
+%13string"__concat*
+
+%12string*
+\F \(U
+
+%10stringe
+c
+\ \(W
+%14void"!System.Console.WriteLine(string?)*"
+System.Console*
+
+%13string*
+9*.
+9]	 ](	"
+] ](	
+implicit return:S
+:, :(GG
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection:
+:I :(R
+typeSystem.Type:$
+:T :(c
+	interfaceSystem.TypeBA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions

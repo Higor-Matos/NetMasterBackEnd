@@ -1,0 +1,42 @@
+
+ßNetMaster.Services.Implementations.Hardware.HardwareService.HardwareService(NetMaster.Services.Interfaces.Hardware.IRamInfoService, NetMaster.Services.Interfaces.Hardware.IStorageInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)Å
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\HardwareService.cs ("1*
+1	 (	*
+0*©
+0
+ (4¢
+ü
+
+ (0
+
+%0void"ØNetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterÓ
+Î
+ (,ä=
+;NetMaster.Services.Implementations.Hardware.HardwareService"I
+_ramInfoService6NetMaster.Services.Interfaces.Hardware.IRamInfoService"__id*LJ
+H
+ramInfoService6NetMaster.Services.Interfaces.Hardware.IRamInfoService˛
+˚
+ (4í=
+;NetMaster.Services.Implementations.Hardware.HardwareService"Q
+_storageInfoService:NetMaster.Services.Interfaces.Hardware.IStorageInfoService"__id*TR
+P
+storageInfoService:NetMaster.Services.Interfaces.Hardware.IStorageInfoService*
+2*.
+2	 (	"
+ (	
+implicit return:T
+ (*H
+ramInfoService6NetMaster.Services.Interfaces.Hardware.IRamInfoService:\
+ (2P
+storageInfoService:NetMaster.Services.Interfaces.Hardware.IStorageInfoService:N
+ ((B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+ (,F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterB?=
+;NetMaster.Services.Implementations.Hardware.HardwareService

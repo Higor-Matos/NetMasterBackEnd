@@ -1,0 +1,4 @@
+º
+?NetMaster.Services.Implementations.BaseCommands.ResultConverterobject3NetMaster.Services.Interfaces.Base.IResultConverterÑ
+FConvert(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)†NetMaster.Services.Implementations.BaseCommands.ResultConverter.Convert(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)f
+ResultConverter()QNetMaster.Services.Implementations.BaseCommands.ResultConverter.ResultConverter()

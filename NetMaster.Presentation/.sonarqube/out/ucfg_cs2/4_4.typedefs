@@ -1,0 +1,6 @@
+ã
+;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject/NetMaster.Services.Interfaces.Base.IBaseService§
+sBaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)¯NetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)Ï
+GRunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)ƒNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)Ù
+LConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)ˆNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)’
+)CreateServiceResult<T>(T, string, string)eNetMaster.Services.Implementations.BaseCommands.BaseService.CreateServiceResult<T>(T, string, string)

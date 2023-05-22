@@ -1,0 +1,14 @@
+
+qNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository.InstallGoogleChromeRepository()!static‹
+€C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallGoogleChromeRepository.cs (."0*Ô
+0 (£
+ 
+
+' 
+(XaL
+JNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository"
+commandstring"__id*+)'
+%choco install googlechrome -y --force"
+ (
+implicit returnBN"L
+JNetMaster.Repository.Implementation.Software.InstallGoogleChromeRepository

@@ -1,0 +1,19 @@
+
+‘NetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.NetMaster.Services.Interfaces.BackgroundServices.IComputerInfoBackgroundService.ExecuteAsync(System.Threading.CancellationToken)ö
+èC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BackgroundServices\ComputerInfoBackgroundService.cs@, @(8"0*‰
+0B B(/RP
+B B(/$
+%0System.NotImplementedException"System.NotImplementedException|
+z
+B B(-
+
+%1void"8System.NotImplementedException.NotImplementedException()*(&
+$
+%0System.NotImplementedException*
+1*.
+1C	 C(	"
+C C(	
+implicit return:?
+@9 @(X3
+stoppingToken"System.Threading.CancellationTokenBWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService

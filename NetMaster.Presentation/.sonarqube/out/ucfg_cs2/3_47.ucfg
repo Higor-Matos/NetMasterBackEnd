@@ -1,0 +1,26 @@
+
+‡NetMaster.Repository.Implementation.Hardware.LocalStorageRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)ƒ
+yC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Hardware\LocalStorageRepository.csG (R"0*è
+0 (|à
+Ý
+	 (Ì
+commandstring"__id*¶³°
+­Get-CimInstance -ClassName Win32_LogicalDisk | Select-Object -Property DeviceID,@{Name='Size_GB';Expression={[math]::Round(($_.Size / 1GB), 2)}},@{Name='FreeSpace_GB';Expression={[math]::Round(($_.FreeSpace / 1GB), 2)}},@{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1á
+Þ
+ (}*
+%0$System.Threading.Tasks.Task<TResult>"æNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+commandstring*
+""*
+"""
+ (~
+""*.
+1	 (	"
+ (	
+implicit return:K
+S (w?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBGE
+CNetMaster.Repository.Implementation.Hardware.LocalStorageRepository

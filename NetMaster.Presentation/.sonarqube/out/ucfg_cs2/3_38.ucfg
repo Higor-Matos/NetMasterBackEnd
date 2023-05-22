@@ -1,0 +1,36 @@
+
+`NetMaster.Repository.Implementation.Powershell.ConfigurationRepository.ConfigurationRepository()†
+|C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Powershell\ConfigurationRepository.cs	 	(&"1*
+1	 (	*
+0*Û	
+0 (/…‚
+ (6=
+%07Microsoft.Extensions.Configuration.ConfigurationBuilder"7Microsoft.Extensions.Configuration.ConfigurationBuilder¬
+©
+  (4
+
+%1void"NMicrosoft.Extensions.Configuration.ConfigurationBuilder.ConfigurationBuilder()*A?
+=
+%07Microsoft.Extensions.Configuration.ConfigurationBuilderý
+ú
+ (0>
+%28Microsoft.Extensions.Configuration.IConfigurationBuilder"ŒMicrosoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder, string)*DB"@
+>Microsoft.Extensions.Configuration.JsonConfigurationExtensions*A?
+=
+%07Microsoft.Extensions.Configuration.ConfigurationBuilder*
+appsettings.jsonÙÖ
+ (;
+%35Microsoft.Extensions.Configuration.IConfigurationRoot"@Microsoft.Extensions.Configuration.IConfigurationBuilder.Build()*B@
+>
+%28Microsoft.Extensions.Configuration.IConfigurationBuilder2Build()³
+°
+ (;
+%45Microsoft.Extensions.Configuration.IConfigurationRoot"XNetMaster.Repository.Implementation.Powershell.ConfigurationRepository.Configuration.set*LJH
+FNetMaster.Repository.Implementation.Powershell.ConfigurationRepository*?=
+;
+%35Microsoft.Extensions.Configuration.IConfigurationRoot*
+2*.
+2	 (	"
+ (	
+implicit returnBJH
+FNetMaster.Repository.Implementation.Powershell.ConfigurationRepository

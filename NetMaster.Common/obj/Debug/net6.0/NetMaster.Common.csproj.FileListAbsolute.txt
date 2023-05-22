@@ -1,0 +1,12 @@
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\bin\Debug\net6.0\NetMaster.Common.deps.json
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\bin\Debug\net6.0\NetMaster.Common.dll
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\bin\Debug\net6.0\NetMaster.Common.pdb
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.csproj.AssemblyReference.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.AssemblyInfoInputs.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.AssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.csproj.CoreCompileInputs.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.dll
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\refint\NetMaster.Common.dll
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\NetMaster.Common.pdb
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Common\obj\Debug\net6.0\ref\NetMaster.Common.dll

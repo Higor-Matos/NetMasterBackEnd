@@ -1,0 +1,28 @@
+
+yNetMaster.Presentation.Controllers.UploadController.UploadController(NetMaster.Services.Interfaces.Upload.IUploadService)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\UploadController.cs ("3*¡
+1	 (	Œ
+‰
+
+%0void"BNetMaster.Presentation.Controllers.BaseController.BaseController()*753
+1NetMaster.Presentation.Controllers.BaseController*
+0*ò
+0 (*Ý
+Ú
+ (*~5
+3NetMaster.Presentation.Controllers.UploadController"E
+_uploadService3NetMaster.Services.Interfaces.Upload.IUploadService"__id*HF
+D
+uploadService3NetMaster.Services.Interfaces.Upload.IUploadService*
+2*.
+2	 (	"
+ (	
+implicit return*4
+3= (= 
+
+ (
+%1"__entrypoint*
+1:P
+  (<D
+uploadService3NetMaster.Services.Interfaces.Upload.IUploadServiceB75
+3NetMaster.Presentation.Controllers.UploadController

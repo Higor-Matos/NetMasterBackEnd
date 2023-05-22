@@ -1,0 +1,24 @@
+
+UNetMaster.Services.Implementation.System.SystemService.GetChocolateyInfoAsync(string)}
+sC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemService.cs!A !(W"0*è
+0# #(Wð
+í
+# #()A
+%0;NetMaster.Services.Interfaces.System.IChocolateyInfoService"__id*—”*‘8
+6NetMaster.Services.Implementation.System.SystemService"U
+_chocolateyInfoService;NetMaster.Services.Interfaces.System.IChocolateyInfoService«¨
+# #(X*
+%1$System.Threading.Tasks.Task<TResult>"cNetMaster.Services.Interfaces.System.ISystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)*EC
+A
+%0;NetMaster.Services.Interfaces.System.IChocolateyInfoService*
+
+computerNamestring2(GetSystemInfoByComputerNameAsync(string)"8
+# #(Y,
+*
+%1$System.Threading.Tasks.Task<TResult>*.
+1$	 $(	"
+$ $(	
+implicit return:"
+!X !(k
+computerNamestringB:8
+6NetMaster.Services.Implementation.System.SystemService

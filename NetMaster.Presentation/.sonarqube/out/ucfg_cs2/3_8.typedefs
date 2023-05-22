@@ -1,0 +1,5 @@
+°
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject>NetMaster.Repository.Interfaces.Base.IBasePowershellRepository€
+BasePowershellRepository()bNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.BasePowershellRepository()Š
+žExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)æNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)Œ
+ ConvertOutput<T>(string, string)hNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ConvertOutput<T>(string, string)

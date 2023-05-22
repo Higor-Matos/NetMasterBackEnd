@@ -1,0 +1,35 @@
+
+fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)x
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs. .(!"1*
+13	 3(	*
+0*É
+00 2('¶
+³
+0 0('
+%0string"CNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorMessage.set*864
+2NetMaster.Domain.Models.Results.ErrorServiceResult*
+
+errorMessagestringÂ
+¿
+1 1(!
+%1System.DateTime"@NetMaster.Domain.Models.Results.ErrorServiceResult.Timestamp.set*864
+2NetMaster.Domain.Models.Results.ErrorServiceResult* 
+
+	timestampSystem.DateTime¶
+³
+2 2('
+%2string"CNetMaster.Domain.Models.Results.ErrorServiceResult.ComputerName.set*864
+2NetMaster.Domain.Models.Results.ErrorServiceResult*
+
+computerNamestring*
+2*.
+23	 3(	"
+3 3(	
+implicit return:"
+." .(5
+errorMessagestring:(
+.7 .(I
+	timestampSystem.DateTime:"
+.K .(^
+computerNamestringB64
+2NetMaster.Domain.Models.Results.ErrorServiceResult

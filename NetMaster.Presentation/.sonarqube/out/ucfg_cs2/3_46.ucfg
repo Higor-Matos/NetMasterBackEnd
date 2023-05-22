@@ -1,0 +1,30 @@
+
+QNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetAllAsync()
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs* (5"0*“
+0 (8’
+“
+ ()0
+%0*MongoDB.Driver.IMongoCollection<TDocument>"__id*çä*áE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>à
+Ö
+ (98
+%12MongoDB.Driver.IFindFluent<TDocument, TProjection>"√MongoDB.Driver.IMongoCollectionExtensions.Find<TDocument>(MongoDB.Driver.IMongoCollection<TDocument>, System.Linq.Expressions.Expression<System.Func<TDocument, bool>>, MongoDB.Driver.FindOptions)*/-"+
+)MongoDB.Driver.IMongoCollectionExtensions*42
+0
+%0*MongoDB.Driver.IMongoCollection<TDocument>*
+""*
+""À
+»
+ (G*
+%2$System.Threading.Tasks.Task<TResult>"îMongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync<TDocument>(MongoDB.Driver.IAsyncCursorSource<TDocument>, System.Threading.CancellationToken)*1/"-
++MongoDB.Driver.IAsyncCursorSourceExtensions*<:
+8
+%12MongoDB.Driver.IFindFluent<TDocument, TProjection>*
+"""
+ (H
+""*.
+1	 (	"
+ (	
+implicit returnBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

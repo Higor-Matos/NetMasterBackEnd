@@ -1,0 +1,7 @@
+³
+2NetMaster.Domain.Models.DataModels.NetworkComputerobjectY
+NetworkComputer()DNetMaster.Domain.Models.DataModels.NetworkComputer.NetworkComputer()G
+Name.get;NetMaster.Domain.Models.DataModels.NetworkComputer.Name.getG
+Name.set;NetMaster.Domain.Models.DataModels.NetworkComputer.Name.setC
+IP.get9NetMaster.Domain.Models.DataModels.NetworkComputer.IP.getC
+IP.set9NetMaster.Domain.Models.DataModels.NetworkComputer.IP.set

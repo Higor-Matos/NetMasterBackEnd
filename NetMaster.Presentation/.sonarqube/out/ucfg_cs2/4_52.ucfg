@@ -1,0 +1,52 @@
+
+jNetMaster.Services.Implementations.Software.FirefoxInstallerService.InstallSoftwareCommand(string, string)‰
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\FirefoxInstallerService.cs6 (L"0*„
+0* (5Ž
+‹
+< (UH
+%0BNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository"__id*®«*¨E
+CNetMaster.Services.Implementations.Software.FirefoxInstallerService"_
+_installFirefoxRepositoryBNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository„
+	b (ˆ<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÍ
+Ê
+	f („
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstring˜•
+	< (‰*
+%3$System.Threading.Tasks.Task<TResult>"†NetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*LJ
+H
+%0BNetMaster.Repository.Interfaces.Software.IInstallFirefoxRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (‰E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""æ
+ã
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"ˆNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>×
+Ô
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ƒNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBGE
+CNetMaster.Services.Implementations.Software.FirefoxInstallerService

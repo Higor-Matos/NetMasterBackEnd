@@ -1,0 +1,5 @@
+„
+?NetMaster.Repository.Implementation.Uploud.UploadFileRepositoryobject<NetMaster.Repository.Interfaces.Uploud.IUploadFileRepositoryˆ
+"UploadFile(string, byte[], string)bNetMaster.Repository.Implementation.Uploud.UploadFileRepository.UploadFile(string, byte[], string)~
+WriteFileData(string, byte[])]NetMaster.Repository.Implementation.Uploud.UploadFileRepository.WriteFileData(string, byte[])p
+UploadFileRepository()VNetMaster.Repository.Implementation.Uploud.UploadFileRepository.UploadFileRepository()

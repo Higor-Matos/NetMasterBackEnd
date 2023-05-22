@@ -1,0 +1,33 @@
+
+êNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.BaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs (""1*
+1	 (	*
+0*‚
+0 (Q≤
+Ø
+ (1#
+%0MongoDB.Driver.IMongoDatabase"<NetMaster.Infrastructure.Context.MongoDbContext.Database.get*@>
+<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContext¬ø
+ (R0
+%1*MongoDB.Driver.IMongoCollection<TDocument>"fMongoDB.Driver.IMongoDatabase.GetCollection<TDocument>(string, MongoDB.Driver.MongoCollectionSettings)*'%
+#
+%0MongoDB.Driver.IMongoDatabase*
+
+collectionNamestring*
+""2HGetCollection<TDocument>(string, MongoDB.Driver.MongoCollectionSettings)”
+–
+ (RáE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>"__id*42
+0
+%1*MongoDB.Driver.IMongoCollection<TDocument>*
+2*.
+2	 (	"
+ (	
+implicit return:H
+# (;<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContext:$
+= (R
+collectionNamestringBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

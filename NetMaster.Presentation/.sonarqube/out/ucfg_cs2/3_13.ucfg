@@ -1,0 +1,14 @@
+
+kNetMaster.Repository.Implementation.Software.InstallOffice365Repository.InstallOffice365Repository()!static‡
+}C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallOffice365Repository.cs (+"0*Ö
+0 (¥
+¢
+
+' 
+(]^I
+GNetMaster.Repository.Implementation.Software.InstallOffice365Repository"
+commandstring"__id*0.,
+*choco install office365business -y --force"
+ (
+implicit returnBK"I
+GNetMaster.Repository.Implementation.Software.InstallOffice365Repository

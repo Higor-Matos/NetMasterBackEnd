@@ -1,0 +1,23 @@
+
+WNetMaster.Services.Implementations.Hardware.HardwareService.GetStorageInfoAsync(string)Å
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Hardware\HardwareService.cs D  (W"0*…
+0" "(\
+Ì
+" "(,@
+%0:NetMaster.Services.Interfaces.Hardware.IStorageInfoService"__id*òï*í=
+;NetMaster.Services.Implementations.Hardware.HardwareService"Q
+_storageInfoService:NetMaster.Services.Interfaces.Hardware.IStorageInfoService≤Ø
+" "(]*
+%1$System.Threading.Tasks.Task<TResult>"iNetMaster.Services.Interfaces.Hardware.IHardwareInfoService<T>.GetHardwareInfoByComputerNameAsync(string)*DB
+@
+%0:NetMaster.Services.Interfaces.Hardware.IStorageInfoService*
+
+computerNamestring2*GetHardwareInfoByComputerNameAsync(string)"
+" "(^
+""*.
+1#	 #(	"
+# #(	
+implicit return:"
+ X  (k
+computerNamestringB?=
+;NetMaster.Services.Implementations.Hardware.HardwareService

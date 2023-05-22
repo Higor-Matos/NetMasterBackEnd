@@ -1,0 +1,19 @@
+
+iNetMaster.Services.Implementation.System.OsVersionInfoService.GetOsVersionInfoByComputerNameAsync(string)Ñ
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\OsVersionInfoService.cs@ (c"0*Œ
+0 (@Ñ
+Å
+ (A*
+%0$System.Threading.Tasks.Task<TResult>"gNetMaster.Services.Implementations.System.SystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*
+
+computerNamestring"8
+ (B,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:"
+d (w
+computerNamestringBA?
+=NetMaster.Services.Implementation.System.OsVersionInfoService

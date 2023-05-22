@@ -1,0 +1,60 @@
+
+[NetMaster.Services.Implementations.Software.SoftwareService.InstallSoftware(string, string)Å
+wC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\SoftwareService.cs ()"0*ì
+0 (l·
+ﬁ
+ ("9
+%03System.Collections.Generic.Dictionary<TKey, TValue>"__id*êç*ä=
+;NetMaster.Services.Implementations.Software.SoftwareService"I
+_installerServices3System.Collections.Generic.Dictionary<TKey, TValue>ó
+î
+ (m
+
+%1bool"GSystem.Collections.Generic.ICollection<T>.TryGetValue(TKey, out TValue)*=;
+9
+%03System.Collections.Generic.Dictionary<TKey, TValue>*
+
+softwareNamestring*XV
+T
+installerService@NetMaster.Services.Interfaces.Software.ISoftwareInstallerService*
+1
+2*Á
+1 (N“œ
+ (O*
+%2$System.Threading.Tasks.Task<TResult>"gNetMaster.Services.Interfaces.Software.ISoftwareInstallerService.InstallSoftwareCommand(string, string)*XV
+T
+installerService@NetMaster.Services.Interfaces.Software.ISoftwareInstallerService*
+
+ipstring*
+
+softwareNamestring2&InstallSoftwareCommand(string, string)*
+3*Û
+2 (t}
+{
+, (^
+%3string"__concat*1
+. (O%#
+!No installer found for software: *$
+O (]
+
+softwareNamestringFD
+ (u
+%4System.ArgumentException"System.ArgumentExceptionó
+î
+ (+
+
+%5void"<System.ArgumentException.ArgumentException(string?, string?)*" 
+
+%4System.ArgumentException*
+
+%3string*
+""*
+3*.
+3	 (	"
+ (	
+implicit return:
+* (3
+ipstring:"
+5 (H
+softwareNamestringB?=
+;NetMaster.Services.Implementations.Software.SoftwareService

@@ -1,0 +1,53 @@
+
+LNetMaster.Presentation.Controllers.SystemController.GetOsVersionInfo(string)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs2) 2(9"2*À
+047 5((Ô
+Ñ
+4F 4(T9
+%03NetMaster.Services.Interfaces.System.ISystemService"__id*ƒ€*~5
+3NetMaster.Presentation.Controllers.SystemController"E
+_systemService3NetMaster.Services.Interfaces.System.ISystemService†ƒ
+4F 4(x*
+%1$System.Threading.Tasks.Task<TResult>"QNetMaster.Services.Interfaces.System.ISystemService.GetOsVersionInfoAsync(string)*=;
+9
+%03NetMaster.Services.Interfaces.System.ISystemService*
+
+computerNamestring2GetOsVersionInfoAsync(string)]
+[
+47 4(x?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+²
+5 5(),
+%2&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+5 5(*.
+,
+%2&Microsoft.AspNetCore.Mvc.IActionResult*.
+16	 6(	"
+6 6(	
+implicit return*–
+22N 2(N<
+:
+2) 2(9
+%3"__entrypoint*
+
+computerNamestring…
+‚
+1	 1(3
+%4"
+__annotate*HFD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+computerNamestring<
+:
+2: 2(M
+computerNamestring"__annotation*
+
+%4*
+0:"
+2: 2(M
+computerNamestringB75
+3NetMaster.Presentation.Controllers.SystemController

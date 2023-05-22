@@ -1,0 +1,14 @@
+
+eNetMaster.Repository.Implementation.Software.InstallWinrarRepository.InstallWinrarRepository()!static„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallWinrarRepository.cs (("0*È
+0 (—
+”
+
+' 
+(R[F
+DNetMaster.Repository.Implementation.Software.InstallWinrarRepository"
+commandstring"__id*%#!
+choco install winrar -y --force"
+ (
+implicit returnBH"F
+DNetMaster.Repository.Implementation.Software.InstallWinrarRepository

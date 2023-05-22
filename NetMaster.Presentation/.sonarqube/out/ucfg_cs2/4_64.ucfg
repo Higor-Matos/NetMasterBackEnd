@@ -1,0 +1,90 @@
+
+ÄNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.GetRequiredServices(System.IServiceProvider)ö
+èC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BackgroundServices\ComputerInfoBackgroundService.csM
+ M("0*Ú
+0O ^( √
+¿
+O+ O(_9
+%03NetMaster.Services.Interfaces.System.ISystemService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProviderò
+ï
+O O(_D
+systemService3NetMaster.Services.Interfaces.System.ISystemService"__id*=;
+9
+%03NetMaster.Services.Interfaces.System.ISystemService∆
+√
+P- P(b<
+%16NetMaster.Services.Interfaces.Hardware.IRamInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProviderü
+ú
+P P(bH
+ramInfoService6NetMaster.Services.Interfaces.Hardware.IRamInfoService"__id*@>
+<
+%16NetMaster.Services.Interfaces.Hardware.IRamInfoService 
+«
+Q5 Q(n@
+%2:NetMaster.Services.Interfaces.Hardware.IStorageInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProvider´
+®
+Q  Q(nP
+storageInfoService:NetMaster.Services.Interfaces.Hardware.IStorageInfoService"__id*DB
+@
+%2:NetMaster.Services.Interfaces.Hardware.IStorageInfoServiceÀ
+»
+R; R(wA
+%3;NetMaster.Services.Interfaces.System.IChocolateyInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProvider∞
+≠
+R# R(wT
+chocolateyInfoService;NetMaster.Services.Interfaces.System.IChocolateyInfoService"__id*EC
+A
+%3;NetMaster.Services.Interfaces.System.IChocolateyInfoService”
+–
+	SI S(åH
+%4BNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProvider∆
+√
+	S* S(åb
+installedProgramsInfoServiceBNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService"__id*LJ
+H
+%4BNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService 
+«
+T9 T(t@
+%5:NetMaster.Services.Interfaces.System.IOsVersionInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProvider≠
+™
+T" T(tR
+osVersionInfoService:NetMaster.Services.Interfaces.System.IOsVersionInfoService"__id*DB
+@
+%5:NetMaster.Services.Interfaces.System.IOsVersionInfoService∆
+√
+U1 U(h<
+%66NetMaster.Services.Interfaces.System.IUsersInfoService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*.,
+*
+serviceProviderSystem.IServiceProvider°
+û
+U U(hJ
+usersInfoService6NetMaster.Services.Interfaces.System.IUsersInfoService"__id*@>
+<
+%66NetMaster.Services.Interfaces.System.IUsersInfoService"
+W _(
+""*.
+1`	 `(	"
+` `(	
+implicit return:6
+M M(>*
+serviceProviderSystem.IServiceProviderBWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService

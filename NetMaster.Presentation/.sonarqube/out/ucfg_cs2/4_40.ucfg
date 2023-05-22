@@ -1,0 +1,52 @@
+
+nNetMaster.Services.Implementations.Software.AdobeReaderInstallerService.InstallSoftwareCommand(string, string)Ž
+ƒC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\AdobeReaderInstallerService.cs6 (L"0*œ
+0* (5ž
+›
+< (YL
+%0FNetMaster.Repository.Interfaces.Software.IInstallAdobeReaderRepository"__id*º·*´I
+GNetMaster.Services.Implementations.Software.AdobeReaderInstallerService"g
+_installAdobeReaderRepositoryFNetMaster.Repository.Interfaces.Software.IInstallAdobeReaderRepository„
+	f (Œ<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÍ
+Ê
+	j (ˆ
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstring 
+	< (*
+%3$System.Threading.Tasks.Task<TResult>"ŠNetMaster.Repository.Interfaces.Software.IInstallAdobeReaderRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*PN
+L
+%0FNetMaster.Repository.Interfaces.Software.IInstallAdobeReaderRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""æ
+ã
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"ˆNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>×
+Ô
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ƒNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBKI
+GNetMaster.Services.Implementations.Software.AdobeReaderInstallerService

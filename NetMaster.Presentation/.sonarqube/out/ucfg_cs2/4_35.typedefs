@@ -1,0 +1,6 @@
+Ò
+
+>NetMaster.Services.Implementation.System.ChocolateyInfoService>NetMaster.Services.Implementations.System.SystemInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject;NetMaster.Services.Interfaces.System.IChocolateyInfoService¡
+îChocolateyInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)­NetMaster.Services.Implementation.System.ChocolateyInfoService.ChocolateyInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)‹
+$SaveLocalChocolateyInfoAsync(string)cNetMaster.Services.Implementation.System.ChocolateyInfoService.SaveLocalChocolateyInfoAsync(string)›
+,GetChocolateyInfoByComputerNameAsync(string)kNetMaster.Services.Implementation.System.ChocolateyInfoService.GetChocolateyInfoByComputerNameAsync(string)

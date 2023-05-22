@@ -1,0 +1,5 @@
+Û
+>NetMaster.Services.Implementations.Hardware.StorageInfoServiceBNetMaster.Services.Implementations.Hardware.HardwareInfoService<T>;NetMaster.Services.Implementations.BaseCommands.BaseServiceobject:NetMaster.Services.Interfaces.Hardware.IStorageInfoService³
+÷StorageInfoService(NetMaster.Repository.Interfaces.Hardware.IStorageRepository, NetMaster.Repository.Interfaces.System.ILocalStorageRepository, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)¶NetMaster.Services.Implementations.Hardware.StorageInfoService.StorageInfoService(NetMaster.Repository.Interfaces.Hardware.IStorageRepository, NetMaster.Repository.Interfaces.System.ILocalStorageRepository, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)…
+!SaveLocalStorageInfoAsync(string)`NetMaster.Services.Implementations.Hardware.StorageInfoService.SaveLocalStorageInfoAsync(string)•
+)GetStorageInfoByComputerNameAsync(string)hNetMaster.Services.Implementations.Hardware.StorageInfoService.GetStorageInfoByComputerNameAsync(string)

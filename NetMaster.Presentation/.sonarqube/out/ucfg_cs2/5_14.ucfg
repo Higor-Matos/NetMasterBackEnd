@@ -1,0 +1,36 @@
+
+µNetMaster.Presentation.Controllers.SystemController.SystemController(NetMaster.Services.Interfaces.System.ISystemService, NetMaster.Services.Interfaces.System.ISystemCommandService)r
+hC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\SystemController.cs ("3*¡
+1	 (	Œ
+‰
+
+%0void"BNetMaster.Presentation.Controllers.BaseController.BaseController()*753
+1NetMaster.Presentation.Controllers.BaseController*
+0*ï
+0 (8Ý
+Ú
+ (*~5
+3NetMaster.Presentation.Controllers.SystemController"E
+_systemService3NetMaster.Services.Interfaces.System.ISystemService"__id*HF
+D
+systemService3NetMaster.Services.Interfaces.System.ISystemServiceú
+÷
+ (8Œ5
+3NetMaster.Presentation.Controllers.SystemController"S
+_systemCommandService:NetMaster.Services.Interfaces.System.ISystemCommandService"__id*VT
+R
+systemCommandService:NetMaster.Services.Interfaces.System.ISystemCommandService*
+2*.
+2	 (	"
+ (	
+implicit return*4
+3i (i 
+
+ (
+%1"__entrypoint*
+1:P
+  (<D
+systemService3NetMaster.Services.Interfaces.System.ISystemService:^
+> (hR
+systemCommandService:NetMaster.Services.Interfaces.System.ISystemCommandServiceB75
+3NetMaster.Presentation.Controllers.SystemController

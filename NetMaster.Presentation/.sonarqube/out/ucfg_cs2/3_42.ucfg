@@ -1,0 +1,100 @@
+
+qNetMaster.Services.Implementations.Upload.FileValidationService.ValidateFile(Microsoft.AspNetCore.Http.IFormFile)Ä
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Upload\FileValidationService.cs* (6"0*û
+0 (Ü
+É
+ (
+
+%0bool""object.operator ==(object, object)*
+"
+object*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile*
+""*
+1
+2*û
+2  (0ÜÉ
+  (+
+
+%1long".Microsoft.AspNetCore.Http.IFormFile.Length.get*/-
++
+file#Microsoft.AspNetCore.Http.IFormFile2
+Length.get*
+1
+3*˜
+1 (vS
+Q
+Q (]
+%2System.DateTime"System.DateTime.Now.get*"
+System.DateTimeX
+V
+_ (v
+%3string""System.Environment.MachineName.get*"
+System.Environmentzx
+ (w8
+%42NetMaster.Domain.Models.Results.ErrorServiceResult"2NetMaster.Domain.Models.Results.ErrorServiceResultè
+å
+ (1
+
+%5void"fNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorServiceResult(string, System.DateTime, string)*<:
+8
+%42NetMaster.Domain.Models.Results.ErrorServiceResult*!
+File not provided or empty.*
+
+%2System.DateTime*
+
+%3stringÄ~
+ (;
+%65NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>‹
+Ÿ
+ (5
+
+%7void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*?=
+;
+%65NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+""*<:
+8
+%42NetMaster.Domain.Models.Results.ErrorServiceResult"I
+ (=
+;
+%65NetMaster.Domain.Models.Results.ServiceResultModel<T>*˛
+3 (eS
+Q
+@ (L
+%8System.DateTime"System.DateTime.Now.get*"
+System.DateTimeX
+V
+N (e
+%9string""System.Environment.MachineName.get*"
+System.EnvironmentÜÉ
+ (f>
+%107NetMaster.Domain.Models.Results.SuccessServiceResult<T>"7NetMaster.Domain.Models.Results.SuccessServiceResult<T>ˇ
+¸
+ (9
+%11void"hNetMaster.Domain.Models.Results.SuccessServiceResult<T>.SuccessServiceResult(T, System.DateTime, string)*B@
+>
+%107NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+""*
+
+%8System.DateTime*
+
+%9stringÅ
+ (<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>"5NetMaster.Domain.Models.Results.ServiceResultModel<T>‰
+·
+ (1
+%13void"∑NetMaster.Domain.Models.Results.ServiceResultModel<T>.ServiceResultModel(NetMaster.Domain.Models.Results.SuccessServiceResult<T>?, NetMaster.Domain.Models.Results.ErrorServiceResult?)*@>
+<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>*B@
+>
+%107NetMaster.Domain.Models.Results.SuccessServiceResult<T>*
+"""J
+ (>
+<
+%125NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+4	 (	"
+ (	
+implicit return:7
+7 (E+
+file#Microsoft.AspNetCore.Http.IFormFileBCA
+?NetMaster.Services.Implementations.Upload.FileValidationService

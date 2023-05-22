@@ -1,0 +1,4 @@
+Å
+;NetMaster.Services.Implementations.Upload.FileUploadServiceobject7NetMaster.Services.Interfaces.Upload.IFileUploadServiceﬂ
+OFileUploadService(NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository)ãNetMaster.Services.Implementations.Upload.FileUploadService.FileUploadService(NetMaster.Repository.Interfaces.Uploud.IUploadFileRepository)û
+/UploadFile(Microsoft.AspNetCore.Http.IFormFile)kNetMaster.Services.Implementations.Upload.FileUploadService.UploadFile(Microsoft.AspNetCore.Http.IFormFile)

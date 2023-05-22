@@ -1,0 +1,19 @@
+
+qNetMaster.Services.Implementation.System.InstalledProgramsInfoService.SaveLocalInstalledProgramsInfoAsync(string)ç
+ÇC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\InstalledProgramsInfoService.csH (k"0*º
+0 (.Ú
+Ô
+ (/*
+%0$System.Threading.Tasks.Task<TResult>"_NetMaster.Services.Implementations.System.SystemInfoService<T>.SaveLocalSystemInfoAsync(string)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*
+
+ipstring"8
+ (0,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:
+l (u
+ipstringBIG
+ENetMaster.Services.Implementation.System.InstalledProgramsInfoService

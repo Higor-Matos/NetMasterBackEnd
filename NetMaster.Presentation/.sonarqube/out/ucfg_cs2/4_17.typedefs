@@ -1,0 +1,4 @@
+Ý
+HNetMaster.Services.Implementations.Software.GoogleChromeInstallerService;NetMaster.Services.Implementations.BaseCommands.BaseServiceobjectDNetMaster.Services.Interfaces.Software.IGoogleChromeInstallerServiceé
+ÍGoogleChromeInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepository)–NetMaster.Services.Implementations.Software.GoogleChromeInstallerService.GoogleChromeInstallerService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter, NetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepository)™
+&InstallSoftwareCommand(string, string)oNetMaster.Services.Implementations.Software.GoogleChromeInstallerService.InstallSoftwareCommand(string, string)

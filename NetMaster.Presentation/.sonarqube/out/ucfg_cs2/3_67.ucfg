@@ -1,0 +1,84 @@
+
+mNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.GetMostRecentEntityByComputerName(string)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs6 6(?"0*–
+08  <(5ü
+ú
+8) 8(;7
+%01MongoDB.Driver.FilterDefinitionBuilder<TDocument>"-MongoDB.Driver.Builders<TDocument>.Filter.get*(&"$
+"MongoDB.Driver.Builders<TDocument>ß
+§
+8) 8(^0
+%1*MongoDB.Driver.FilterDefinition<TDocument>"wMongoDB.Driver.FilterDefinitionBuilder<TDocument>.Eq<TField>(MongoDB.Driver.FieldDefinition<TDocument, TField>, TField)*;9
+7
+%01MongoDB.Driver.FilterDefinitionBuilder<TDocument>*
+PSComputerName*
+
+computerNamestring~
+|
+8  8(^4
+filter*MongoDB.Driver.FilterDefinition<TDocument>"__id*42
+0
+%1*MongoDB.Driver.FilterDefinition<TDocument>õ
+ò
+9% 9(55
+%2/MongoDB.Driver.SortDefinitionBuilder<TDocument>"+MongoDB.Driver.Builders<TDocument>.Sort.get*(&"$
+"MongoDB.Driver.Builders<TDocument>Ç
+ˇ
+9% 9(R.
+%3(MongoDB.Driver.SortDefinition<TDocument>"~MongoDB.Driver.SortDefinitionBuilder<TDocument>.Descending(System.Linq.Expressions.Expression<System.Func<TDocument, object>>)*97
+5
+%2/MongoDB.Driver.SortDefinitionBuilder<TDocument>*
+""x
+v
+9 9(R0
+sort(MongoDB.Driver.SortDefinition<TDocument>"__id*20
+.
+%3(MongoDB.Driver.SortDefinition<TDocument>’
+“
+:+ :(;0
+%4*MongoDB.Driver.IMongoCollection<TDocument>"__id*çä*áE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>zx
+:N :(s8
+%52MongoDB.Driver.FindOptions<TDocument, TProjection>"2MongoDB.Driver.FindOptions<TDocument, TProjection>ô
+ñ
+:R :(c
+
+%6void"@MongoDB.Driver.FindOptions<TDocument, TProjection>.FindOptions()*<:
+8
+%52MongoDB.Driver.FindOptions<TDocument, TProjection>Ó
+Î
+:f :(q.
+%7(MongoDB.Driver.SortDefinition<TDocument>";MongoDB.Driver.FindOptions<TDocument, TProjection>.Sort.set*<:
+8
+%52MongoDB.Driver.FindOptions<TDocument, TProjection>*42
+0
+sort(MongoDB.Driver.SortDefinition<TDocument>÷”
+:+ :(t*
+%8$System.Threading.Tasks.Task<TResult>"≈MongoDB.Driver.IMongoCollection<TDocument>.FindAsync<TProjection>(MongoDB.Driver.FilterDefinition<TDocument>, MongoDB.Driver.FindOptions<TDocument, TProjection>, System.Threading.CancellationToken)*42
+0
+%4*MongoDB.Driver.IMongoCollection<TDocument>*86
+4
+filter*MongoDB.Driver.FilterDefinition<TDocument>*<:
+8
+%52MongoDB.Driver.FindOptions<TDocument, TProjection>*
+""2öFindAsync<TProjection>(MongoDB.Driver.FilterDefinition<TDocument>, MongoDB.Driver.FindOptions<TDocument, TProjection>, System.Threading.CancellationToken)N
+L
+: :(t0
+result&MongoDB.Driver.IAsyncCursor<TDocument>"__id*
+""π
+∂
+< <(5*
+%9$System.Threading.Tasks.Task<TResult>"êMongoDB.Driver.IAsyncCursorExtensions.FirstOrDefaultAsync<TDocument>(MongoDB.Driver.IAsyncCursor<TDocument>, System.Threading.CancellationToken)*+)"'
+%MongoDB.Driver.IAsyncCursorExtensions*42
+0
+result&MongoDB.Driver.IAsyncCursor<TDocument>*
+"""
+< <(6
+""*.
+1=	 =(	"
+= =(	
+implicit return:"
+6@ 6(S
+computerNamestringBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

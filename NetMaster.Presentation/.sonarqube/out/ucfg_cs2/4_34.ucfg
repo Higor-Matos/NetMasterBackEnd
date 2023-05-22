@@ -1,0 +1,27 @@
+
+ÎNetMaster.Services.Implementations.System.SystemCommandService.SystemCommandService(NetMaster.Repository.Interfaces.System.IShutdownPcRepository, NetMaster.Repository.Interfaces.System.IRestartPcRepository)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemCommandService.cs (#"1*
+1	 (	*
+0*¦
+0 (6‰
+†
+ (8™@
+>NetMaster.Services.Implementations.System.SystemCommandService"U
+_shutdownPcRepository<NetMaster.Repository.Interfaces.System.IShutdownPcRepository"__id*XV
+T
+shutdownPcRepository<NetMaster.Repository.Interfaces.System.IShutdownPcRepository…
+‚
+ (6—@
+>NetMaster.Services.Implementations.System.SystemCommandService"S
+_restartPcRepository;NetMaster.Repository.Interfaces.System.IRestartPcRepository"__id*VT
+R
+restartPcRepository;NetMaster.Repository.Interfaces.System.IRestartPcRepository*
+2*.
+2	 (	"
+ (	
+implicit return:`
+ (6T
+shutdownPcRepository<NetMaster.Repository.Interfaces.System.IShutdownPcRepository:^
+ (4R
+restartPcRepository;NetMaster.Repository.Interfaces.System.IRestartPcRepositoryBB@
+>NetMaster.Services.Implementations.System.SystemCommandService

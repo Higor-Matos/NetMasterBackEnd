@@ -1,0 +1,4 @@
+˜
+ANetMaster.Repository.Implementation.Software.InstallVlcRepositoryGNetMaster.Repository.Implementation.Powershell.BasePowershellRepositoryobject>NetMaster.Repository.Interfaces.Software.IInstallVlcRepositoryÍ
+CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)…NetMaster.Repository.Implementation.Software.InstallVlcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)r
+InstallVlcRepository()XNetMaster.Repository.Implementation.Software.InstallVlcRepository.InstallVlcRepository()

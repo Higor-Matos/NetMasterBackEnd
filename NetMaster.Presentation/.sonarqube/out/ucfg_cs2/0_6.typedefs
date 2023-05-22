@@ -1,0 +1,9 @@
+ú
+5NetMaster.Domain.Models.Results.RepositoryResultModelobject⁄
+èRepositoryResultModel(NetMaster.Domain.Models.Results.SuccessRepositoryResult?, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)≈NetMaster.Domain.Models.Results.RepositoryResultModel.RepositoryResultModel(NetMaster.Domain.Models.Results.SuccessRepositoryResult?, NetMaster.Domain.Models.Results.ErrorRepositoryResult?, string)F
+Ip.get<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.getF
+Ip.set<NetMaster.Domain.Models.Results.RepositoryResultModel.Ip.set\
+SuccessResult.getGNetMaster.Domain.Models.Results.RepositoryResultModel.SuccessResult.get\
+SuccessResult.setGNetMaster.Domain.Models.Results.RepositoryResultModel.SuccessResult.setX
+ErrorResult.getENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.getX
+ErrorResult.setENetMaster.Domain.Models.Results.RepositoryResultModel.ErrorResult.set

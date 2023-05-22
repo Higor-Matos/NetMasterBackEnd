@@ -1,0 +1,11 @@
+µ
+7NetMaster.Domain.Models.DataModels.StorageInfoDataModel4NetMaster.Domain.Models.DataModels.BaseInfoDataModelobjecth
+StorageInfoDataModel()NNetMaster.Domain.Models.DataModels.StorageInfoDataModel.StorageInfoDataModel()T
+DeviceID.getDNetMaster.Domain.Models.DataModels.StorageInfoDataModel.DeviceID.getT
+DeviceID.setDNetMaster.Domain.Models.DataModels.StorageInfoDataModel.DeviceID.setR
+Size_GB.getCNetMaster.Domain.Models.DataModels.StorageInfoDataModel.Size_GB.getR
+Size_GB.setCNetMaster.Domain.Models.DataModels.StorageInfoDataModel.Size_GB.set\
+FreeSpace_GB.getHNetMaster.Domain.Models.DataModels.StorageInfoDataModel.FreeSpace_GB.get\
+FreeSpace_GB.setHNetMaster.Domain.Models.DataModels.StorageInfoDataModel.FreeSpace_GB.set`
+PSComputerName.getJNetMaster.Domain.Models.DataModels.StorageInfoDataModel.PSComputerName.get`
+PSComputerName.setJNetMaster.Domain.Models.DataModels.StorageInfoDataModel.PSComputerName.set

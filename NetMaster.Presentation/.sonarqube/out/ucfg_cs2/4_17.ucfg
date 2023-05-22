@@ -1,0 +1,58 @@
+
+°NetMaster.Services.Implementation.System.SystemService.SystemService(NetMaster.Services.Interfaces.System.IChocolateyInfoService, NetMaster.Services.Interfaces.System.IUsersInfoService, NetMaster.Services.Interfaces.System.IOsVersionInfoService, NetMaster.Services.Interfaces.System.IInstalledProgramsInfoService, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)}
+sC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\SystemService.cs ("1*
+1	 (	*
+0*À
+0
+ (H¢
+ü
+
+ (0
+
+%0void"ØNetMaster.Services.Implementations.BaseCommands.BaseService.BaseService(NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterÅ
+˛
+ (:ë8
+6NetMaster.Services.Implementation.System.SystemService"U
+_chocolateyInfoService;NetMaster.Services.Interfaces.System.IChocolateyInfoService"__id*XV
+T
+chocolateyInfoService;NetMaster.Services.Interfaces.System.IChocolateyInfoServiceÌ
+Í
+ (0á8
+6NetMaster.Services.Implementation.System.SystemService"K
+_usersInfoService6NetMaster.Services.Interfaces.System.IUsersInfoService"__id*NL
+J
+usersInfoService6NetMaster.Services.Interfaces.System.IUsersInfoService˝
+˙
+ (8è8
+6NetMaster.Services.Implementation.System.SystemService"S
+_osVersionInfoService:NetMaster.Services.Interfaces.System.IOsVersionInfoService"__id*VT
+R
+osVersionInfoService:NetMaster.Services.Interfaces.System.IOsVersionInfoServiceù
+ö
+ (Hü8
+6NetMaster.Services.Implementation.System.SystemService"c
+_installedProgramsInfoServiceBNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService"__id*fd
+b
+installedProgramsInfoServiceBNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService*
+2*.
+2	 (	"
+ (	
+implicit return:`
+ (8T
+chocolateyInfoService;NetMaster.Services.Interfaces.System.IChocolateyInfoService:V
+ (.J
+usersInfoService6NetMaster.Services.Interfaces.System.IUsersInfoService:^
+ (6R
+osVersionInfoService:NetMaster.Services.Interfaces.System.IOsVersionInfoService:n
+ (Fb
+installedProgramsInfoServiceBNetMaster.Services.Interfaces.System.IInstalledProgramsInfoService:N
+ ((B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+ (,F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterB:8
+6NetMaster.Services.Implementation.System.SystemService

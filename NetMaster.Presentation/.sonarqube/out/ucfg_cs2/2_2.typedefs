@@ -1,0 +1,5 @@
+ù
+/NetMaster.Infrastructure.Context.MongoDbContextobject0NetMaster.Infrastructure.Context.IMongoDbContextp
+MongoDbContext(string, string)NNetMaster.Infrastructure.Context.MongoDbContext.MongoDbContext(string, string)L
+Database.get<NetMaster.Infrastructure.Context.MongoDbContext.Database.getL
+Database.set<NetMaster.Infrastructure.Context.MongoDbContext.Database.set

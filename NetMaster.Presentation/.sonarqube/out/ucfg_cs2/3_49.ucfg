@@ -1,0 +1,50 @@
+
+ƒNetMaster.Repository.Implementation.Hardware.LocalRamRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Hardware\LocalRamRepository.csC (N"0*ã
+0 (xå
+â
+	 (“
+%0"__concat*=
+ (L1/
+-Get-WmiObject -Class Win32_OperatingSystem | *…
+	 (“xv
+tSelect-Object -Property @{Name='FreePhysicalMemory_GB';Expression={[math]::Round($_.FreePhysicalMemory / 1MB, 2)}}, ª
+§
+	 (ƒ
+%1"__concat*
+	 (“
+
+%0*u
+	 (ƒhf
+d@{Name='TotalVisibleMemorySize_GB';Expression={[math]::Round($_.TotalVisibleMemorySize / 1MB, 2)}}, •
+’
+ (p
+%2"__concat*
+	 (ƒ
+
+%1*a
+ (pUS
+Q@{Name='PSComputerName';Expression={$env:COMPUTERNAME}} | ConvertTo-Json -Depth 1/
+-
+ (p
+commandstring"__id*
+
+%2á
+Þ
+ (y*
+%3$System.Threading.Tasks.Task<TResult>"æNetMaster.Repository.Implementation.Powershell.BasePowershellRepository.ExecCommand<T>(NetMaster.Domain.Models.RepositoryPowerShellParamModel, string, System.Func<string, T>, System.Collections.Generic.Dictionary<string, object>?)*MKI
+GNetMaster.Repository.Implementation.Powershell.BasePowershellRepository*CA
+?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+commandstring*
+""*
+"""
+ (z
+""*.
+1	 (	"
+ (	
+implicit return:K
+O (s?
+param6NetMaster.Domain.Models.RepositoryPowerShellParamModelBCA
+?NetMaster.Repository.Implementation.Hardware.LocalRamRepository

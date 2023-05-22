@@ -1,0 +1,19 @@
+
+aNetMaster.Services.Implementation.System.OsVersionInfoService.SaveLocalOsVersionInfoAsync(string)„
+zC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\OsVersionInfoService.cs@ (["0*¼
+0 (.ò
+ï
+ (/*
+%0$System.Threading.Tasks.Task<TResult>"_NetMaster.Services.Implementations.System.SystemInfoService<T>.SaveLocalSystemInfoAsync(string)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*
+
+ipstring"8
+ (0,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:
+\ (e
+ipstringBA?
+=NetMaster.Services.Implementation.System.OsVersionInfoService

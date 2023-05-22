@@ -1,0 +1,52 @@
+
+lNetMaster.Services.Implementations.Software.Office365InstallerService.InstallSoftwareCommand(string, string)å
+ÅC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\Office365InstallerService.cs6 (L"0*ê
+0* (5ñ
+ì
+< (WJ
+%0DNetMaster.Repository.Interfaces.Software.IInstallOffice365Repository"__id*¥±*ÆG
+ENetMaster.Services.Implementations.Software.Office365InstallerService"c
+_installOffice365RepositoryDNetMaster.Repository.Interfaces.Software.IInstallOffice365RepositoryÑÅ
+	d (ä<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÕ
+ 
+	h (Ü
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstringúô
+	< (ã*
+%3$System.Threading.Tasks.Task<TResult>"àNetMaster.Repository.Interfaces.Software.IInstallOffice365Repository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*NL
+J
+%0DNetMaster.Repository.Interfaces.Software.IInstallOffice365Repository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (ãE
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""Ê
+„
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"àNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>◊
+‘
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ÉNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBIG
+ENetMaster.Services.Implementations.Software.Office365InstallerService

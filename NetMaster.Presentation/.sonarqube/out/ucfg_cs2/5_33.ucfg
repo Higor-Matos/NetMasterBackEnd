@@ -1,0 +1,57 @@
+
+žNetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterServiceForType(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.cs- -(2"0*k
+0/( /(<W
+U
+/( /(<
+%0System.Type[]"System.Type.GetInterfaces()*
+
+typeSystem.Type*
+1*
+18	 8(	*
+2
+3*…
+21  3(+ç
+ä
+12 1(b&
+%1 NetMaster.Common.AutoDIAttribute"_System.Reflection.CustomAttributeExtensions.GetCustomAttribute<T>(System.Reflection.MemberInfo)*1/"-
++System.Reflection.CustomAttributeExtensions*
+
+	interfaceSystem.Types
+q
+1  1(b3
+autoDiAttribute NetMaster.Common.AutoDIAttribute"__id**(
+&
+%1 NetMaster.Common.AutoDIAttributeŽ
+‹
+3 3(+
+
+%2bool""object.operator !=(object, object)*
+"
+object*75
+3
+autoDiAttribute NetMaster.Common.AutoDIAttribute*
+""*
+4
+1*ž
+45 5(>‰
+†
+5 5(?
+
+%3void"¤NetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type)*CA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+typeSystem.Type*
+
+	interfaceSystem.Type*
+1*.
+38	 8(	"
+8 8(	
+implicit return:S
+-3 -(NG
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection:
+-P -(Y
+typeSystem.TypeBA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions

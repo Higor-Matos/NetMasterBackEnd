@@ -1,0 +1,34 @@
+
+­NetMaster.Services.Implementation.System.ChocolateyInfoService.ChocolateyInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<NetMaster.Domain.Models.DataModels.ChocolateyInfoDataModel>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)…
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\ChocolateyInfoService.cs ($"1*
+1	 (	*
+0*þ
+0
+ (`é
+æ
+
+ (a
+
+%0void"·NetMaster.Services.Implementations.System.SystemInfoService<T>.SystemInfoService(NetMaster.Repository.Interfaces.System.ISystemRepository<T>, NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>, NetMaster.Services.Interfaces.Base.ICommandRunner, NetMaster.Services.Interfaces.Base.IResultConverter)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*WU
+S
+chocolateyRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>*a_
+]
+localChocolateyRepository@NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>*FD
+B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner*JH
+F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverter*
+2*.
+2	 (	"
+ (	
+implicit return:_
+ (KS
+chocolateyRepository;NetMaster.Repository.Interfaces.System.ISystemRepository<T>:i
+ (U]
+localChocolateyRepository@NetMaster.Repository.Interfaces.System.ILocalSystemRepository<T>:N
+ ((B
+commandRunner1NetMaster.Services.Interfaces.Base.ICommandRunner:R
+ (,F
+resultConverter3NetMaster.Services.Interfaces.Base.IResultConverterBB@
+>NetMaster.Services.Implementation.System.ChocolateyInfoService

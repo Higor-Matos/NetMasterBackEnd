@@ -1,0 +1,4 @@
+∫
+5NetMaster.Presentation.Controllers.SoftwareController1NetMaster.Presentation.Controllers.BaseController'Microsoft.AspNetCore.Mvc.ControllerBaseobject—
+KSoftwareController(NetMaster.Services.Interfaces.Software.ISoftwareService)ÅNetMaster.Presentation.Controllers.SoftwareController.SoftwareController(NetMaster.Services.Interfaces.Software.ISoftwareService)»
+GInstallSoftware(NetMaster.Domain.Models.Request.SoftwareInstallRequest)}NetMaster.Presentation.Controllers.SoftwareController.InstallSoftware(NetMaster.Domain.Models.Request.SoftwareInstallRequest)

@@ -1,0 +1,24 @@
+
+°NetMaster.Presentation.Extensions.ServiceCollectionExtensions.RegisterBaseMongoRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type)|
+rC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Extensions\ServiceCollectionExtensions.csm m(7"0*ý
+0p v(è
+å
+p v(A
+%0;Microsoft.Extensions.DependencyInjection.IServiceCollection"ÍMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Func<System.IServiceProvider, object>)*QO"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*KI
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+	interfaceSystem.Type*
+""*
+1*.
+1w	 w(	"
+w w(	
+implicit return:S
+m8 m(SG
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection:$
+mU m(d
+	interfaceSystem.Type:
+mf m(o
+typeSystem.TypeBA"?
+=NetMaster.Presentation.Extensions.ServiceCollectionExtensions

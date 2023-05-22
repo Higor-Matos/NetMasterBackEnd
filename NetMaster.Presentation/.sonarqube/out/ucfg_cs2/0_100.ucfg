@@ -1,0 +1,23 @@
+
+UNetMaster.Domain.Models.Results.SuccessRepositoryResult<T>.SuccessRepositoryResult(T){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs4 4(&"1*¶
+17	 7(	¡
+ž
+
+%0void"QNetMaster.Domain.Models.Results.SuccessRepositoryResult.SuccessRepositoryResult()*=;9
+7NetMaster.Domain.Models.Results.SuccessRepositoryResult*
+0*Å
+06 6(°
+­
+6 6(
+%1T"ENetMaster.Domain.Models.Results.SuccessRepositoryResult<T>.Result.set*@><
+:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>*
+
+resultT*
+2*.
+27	 7(	"
+7 7(	
+implicit return:
+4' 4(/
+resultTB><
+:NetMaster.Domain.Models.Results.SuccessRepositoryResult<T>

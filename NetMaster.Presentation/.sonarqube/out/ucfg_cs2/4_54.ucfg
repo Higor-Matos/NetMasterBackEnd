@@ -1,0 +1,52 @@
+
+oNetMaster.Services.Implementations.Software.GoogleChromeInstallerService.InstallSoftwareCommand(string, string)è
+ÑC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\GoogleChromeInstallerService.cs6 (L"0*¢
+0* (5¢
+ü
+< (ZM
+%0GNetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepository"__id*Ω∫*∑J
+HNetMaster.Services.Implementations.Software.GoogleChromeInstallerService"i
+_installGoogleChromeRepositoryGNetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepositoryÑÅ
+	g (ç<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÕ
+ 
+	k (â
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstring¢ü
+	< (é*
+%3$System.Threading.Tasks.Task<TResult>"ãNetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*QO
+M
+%0GNetMaster.Repository.Interfaces.Software.IInstallGoogleChromeRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (éE
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""Ê
+„
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"àNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>◊
+‘
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ÉNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBLJ
+HNetMaster.Services.Implementations.Software.GoogleChromeInstallerService

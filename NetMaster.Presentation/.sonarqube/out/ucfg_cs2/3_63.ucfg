@@ -1,0 +1,48 @@
+
+RNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.UpdateAsync(T)
+uC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\MongoDB\BaseMongoRepository.cs$ $(%"0*ü
+0&  '(Aü
+ú
+&) &(;7
+%01MongoDB.Driver.FilterDefinitionBuilder<TDocument>"-MongoDB.Driver.Builders<TDocument>.Filter.get*(&"$
+"MongoDB.Driver.Builders<TDocument>h
+f
+&F &(O
+%1string";NetMaster.Domain.Models.DataModels.BaseInfoDataModel.Id.get*
+
+entityTí
+è
+&) &(P0
+%2*MongoDB.Driver.FilterDefinition<TDocument>"wMongoDB.Driver.FilterDefinitionBuilder<TDocument>.Eq<TField>(MongoDB.Driver.FieldDefinition<TDocument, TField>, TField)*;9
+7
+%01MongoDB.Driver.FilterDefinitionBuilder<TDocument>*	
+_id*
+
+%1string~
+|
+&  &(P4
+filter*MongoDB.Driver.FilterDefinition<TDocument>"__id*42
+0
+%2*MongoDB.Driver.FilterDefinition<TDocument>’
+“
+' '("0
+%3*MongoDB.Driver.IMongoCollection<TDocument>"__id*çä*áE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>">
+_mongoCollection*MongoDB.Driver.IMongoCollection<TDocument>ëé
+' '(B*
+%4$System.Threading.Tasks.Task<TResult>"¥MongoDB.Driver.IMongoCollection<TDocument>.ReplaceOneAsync(MongoDB.Driver.FilterDefinition<TDocument>, TDocument, MongoDB.Driver.ReplaceOptions, System.Threading.CancellationToken)*42
+0
+%3*MongoDB.Driver.IMongoCollection<TDocument>*86
+4
+filter*MongoDB.Driver.FilterDefinition<TDocument>*
+
+entityT*
+""*
+""2âReplaceOneAsync(MongoDB.Driver.FilterDefinition<TDocument>, TDocument, MongoDB.Driver.ReplaceOptions, System.Threading.CancellationToken)*
+1*.
+1(	 ((	"
+( ((	
+implicit return:
+$& $(.
+entityTBGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>

@@ -1,0 +1,19 @@
+
+aNetMaster.Services.Implementation.System.UsersInfoService.GetUsersInfoByComputerNameAsync(string)€
+vC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\System\UsersInfoService.cs< (["0*Î
+0 (@„
+
+ (A*
+%0$System.Threading.Tasks.Task<TResult>"gNetMaster.Services.Implementations.System.SystemInfoService<T>.GetSystemInfoByComputerNameAsync(string)*DB@
+>NetMaster.Services.Implementations.System.SystemInfoService<T>*
+
+computerNamestring"8
+ (B,
+*
+%0$System.Threading.Tasks.Task<TResult>*.
+1	 (	"
+ (	
+implicit return:"
+\ (o
+computerNamestringB=;
+9NetMaster.Services.Implementation.System.UsersInfoService

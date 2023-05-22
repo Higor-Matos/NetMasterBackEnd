@@ -1,0 +1,21 @@
+
+ÉNetMaster.Repository.Implementation.System.OsVersionRepository.OsVersionRepository(NetMaster.Infrastructure.Context.MongoDbContext)~
+tC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\System\OsVersionRepository.cs (""1*
+1	 (	*
+0*„
+0= (^Œ
+À
+= (_
+
+%0void"êNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>.BaseMongoRepository(NetMaster.Infrastructure.Context.MongoDbContext, string)*IGE
+CNetMaster.Repository.Implementations.MongoDB.BaseMongoRepository<T>*@>
+<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContext*
+OsVersionInfo*
+2*.
+2	 (	"
+ (	
+implicit return:H
+# (;<
+	dbContext/NetMaster.Infrastructure.Context.MongoDbContextBB@
+>NetMaster.Repository.Implementation.System.OsVersionRepository

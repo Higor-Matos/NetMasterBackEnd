@@ -1,0 +1,483 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador do Microsoft (R) Visual C#",
+        "version": "4.5.0.0",
+        "fileVersion": "4.5.2-3.23171.7 (d17f7415)",
+        "semanticVersion": "4.5.0",
+        "language": "pt-BR"
+      },
+      "results": [
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"IHardwareRepository<T>.GetMostRecentByComputerNameAsync(string)\" oculta o membro herdado \"IBaseMongoRepository<T>.GetMostRecentByComputerNameAsync(string)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/Hardware/IHardwareRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 40,
+                  "endLine": 13,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalChocolateyRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalSystemRepository<ChocolateyInfoDataModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalChocolateyRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 62,
+                  "endLine": 12,
+                  "endColumn": 73
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalInstalledProgramsRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalSystemRepository<InstalledProgramsResponseModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalInstalledProgramsRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 69,
+                  "endLine": 12,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalRamRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalHardwareRepository<RamInfoDataModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalRamRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 55,
+                  "endLine": 13,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalOsVersionRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalSystemRepository<OSVersionInfoDataModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalOsVersionRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 61,
+                  "endLine": 12,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalStorageRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalHardwareRepository<StorageInfoDataModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalStorageRepository.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 59,
+                  "endLine": 16,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ILocalUsersRepository.ExecCommand(RepositoryPowerShellParamModel)\" oculta o membro herdado \"ILocalSystemRepository<UsersInfoDataModel>.ExecCommand(RepositoryPowerShellParamModel)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ILocalUsersRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 57,
+                  "endLine": 12,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"ISystemRepository<T>.GetMostRecentByComputerNameAsync(string)\" oculta o membro herdado \"IBaseMongoRepository<T>.GetMostRecentByComputerNameAsync(string)\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Interfaces/System/ISystemRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 40,
+                  "endLine": 13,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Não é possível converter um literal nulo em um tipo de referência não anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Upload/FileValidationService.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 59,
+                  "endLine": 21,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Upload/FileUploadService.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 51,
+                  "endLine": 35,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Conversão de literal nula ou possível valor nulo em tipo não anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Powershell/BasePowershellRepository.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 24,
+                  "endLine": 35,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Powershell/BasePowershellRepository.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 13,
+                  "endLine": 36,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Powershell/PowershellRunNetworkRepository.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private method 'ConvertOutput'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/System/LocalChocolateyRepository.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 41,
+                  "endLine": 19,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'WriteFileData' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Upload/UploadFileRepository.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 22,
+                  "endLine": 32,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'ConvertOutput' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/Powershell/BasePowershellRepository.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'ConvertOutput' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/hdmni/source/repos/Higor-Matos/NetMaster/NetMaster.Repository/Implementations/System/LocalChocolateyRepository.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 41,
+                  "endLine": 19,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Mark members as static",
+          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS0108": {
+          "id": "CS0108",
+          "shortDescription": "O membro oculta o membro herdado; nova palavra-chave ausente",
+          "fullDescription": "Uma variável foi declarada com o mesmo nome que uma variável no tipo base. No entanto, a palavra-chave new não foi usada. Este aviso informa que você deve usar new. A variável foi declarada como se new tivesse sido usada na declaração.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0108)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8600": {
+          "id": "CS8600",
+          "shortDescription": "Conversão de literal nula ou possível valor nulo em tipo não anulável.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Desreferência de uma referência possivelmente nula.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8625": {
+          "id": "CS8625",
+          "shortDescription": "Não é possível converter um literal nulo em um tipo de referência não anulável.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8625)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1144": {
+          "id": "S1144",
+          "shortDescription": "Unused private types or members should be removed",
+          "fullDescription": "private or internal types or private members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1144",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

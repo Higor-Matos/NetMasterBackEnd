@@ -1,0 +1,52 @@
+
+fNetMaster.Services.Implementations.Software.VlcInstallerService.InstallSoftwareCommand(string, string)Ö
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\Software\VlcInstallerService.cs6 (L"0*Ï
+0* (5˛
+˚
+< (QD
+%0>NetMaster.Repository.Interfaces.Software.IInstallVlcRepository"__id*¢ü*úA
+?NetMaster.Services.Implementations.Software.VlcInstallerService"W
+_installVlcRepository>NetMaster.Repository.Interfaces.Software.IInstallVlcRepositoryÑÅ
+	^ (Ñ<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel"6NetMaster.Domain.Models.RepositoryPowerShellParamModelÕ
+ 
+	b (Ä
+
+%2void"]NetMaster.Domain.Models.RepositoryPowerShellParamModel.RepositoryPowerShellParamModel(string)*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel*
+
+ipstringêç
+	< (Ö*
+%3$System.Threading.Tasks.Task<TResult>"ÇNetMaster.Repository.Interfaces.Software.IInstallVlcRepository.ExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)*HF
+D
+%0>NetMaster.Repository.Interfaces.Software.IInstallVlcRepository*@>
+<
+%16NetMaster.Domain.Models.RepositoryPowerShellParamModel2CExecCommand(NetMaster.Domain.Models.RepositoryPowerShellParamModel)d
+b
+	* (ÖE
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>"__id*
+""Ê
+„
+ (6>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"àNetMaster.Services.Implementations.BaseCommands.BaseService.ConvertResult(NetMaster.Domain.Models.Results.RepositoryResultModel<string>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*IG
+E
+	resultRep8NetMaster.Domain.Models.Results.RepositoryResultModel<T>◊
+‘
+ (7;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>"ÉNetMaster.Services.Implementations.BaseCommands.BaseService.RunCommand<T>(NetMaster.Domain.Models.Results.RepositoryResultModel<T>)*A?=
+;NetMaster.Services.Implementations.BaseCommands.BaseService*B@
+>
+%48NetMaster.Domain.Models.Results.RepositoryResultModel<T>"I
+ (8=
+;
+%55NetMaster.Domain.Models.Results.ServiceResultModel<T>*.
+1	 (	"
+ (	
+implicit return:
+M (V
+ipstring:"
+X (k
+softwareNamestringBCA
+?NetMaster.Services.Implementations.Software.VlcInstallerService

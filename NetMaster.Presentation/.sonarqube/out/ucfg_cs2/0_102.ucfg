@@ -1,0 +1,27 @@
+
+eNetMaster.Domain.Models.Results.ErrorRepositoryResult.ErrorRepositoryResult(System.Exception, string){
+qC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\RepositoryResultModel.cs> >($"1*
+1B	 B(	*
+0*”
+0@ A(Ê
+Ç
+@ @(!
+%0System.Exception"CNetMaster.Domain.Models.Results.ErrorRepositoryResult.Exception.set*;97
+5NetMaster.Domain.Models.Results.ErrorRepositoryResult*!
+
+	exceptionSystem.Exception²
+¯
+A A(
+%1string"ANetMaster.Domain.Models.Results.ErrorRepositoryResult.Message.set*;97
+5NetMaster.Domain.Models.Results.ErrorRepositoryResult*
+
+messagestring*
+2*.
+2B	 B(	"
+B B(	
+implicit return:)
+>% >(8
+	exceptionSystem.Exception:
+>: >(M
+messagestringB97
+5NetMaster.Domain.Models.Results.ErrorRepositoryResult

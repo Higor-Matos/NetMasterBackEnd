@@ -1,0 +1,14 @@
+
+gNetMaster.Repository.Implementation.Software.InstallFirefoxRepository.InstallFirefoxRepository()!static…
+{C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Repository\Implementations\Software\InstallFirefoxRepository.cs ()"0*Ê
+0 (™
+–
+
+' 
+(S\G
+ENetMaster.Repository.Implementation.Software.InstallFirefoxRepository"
+commandstring"__id*&$"
+ choco install firefox -y --force"
+ (
+implicit returnBI"G
+ENetMaster.Repository.Implementation.Software.InstallFirefoxRepository

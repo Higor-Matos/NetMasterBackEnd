@@ -1,0 +1,53 @@
+
+HNetMaster.Presentation.Controllers.HardwareController.GetRamInfo(string)t
+jC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\Controllers\HardwareController.cs) (3"2*À
+0` ((·
+ﬁ
+o (=
+%07NetMaster.Services.Interfaces.Hardware.IHardwareService"__id*åâ*Ü7
+5NetMaster.Presentation.Controllers.HardwareController"K
+_hardwareService7NetMaster.Services.Interfaces.Hardware.IHardwareServiceÉÄ
+	o (ù*
+%1$System.Threading.Tasks.Task<TResult>"ONetMaster.Services.Interfaces.Hardware.IHardwareService.GetRamInfoAsync(string)*A?
+=
+%07NetMaster.Services.Interfaces.Hardware.IHardwareService*
+
+computerNamestring2GetRamInfoAsync(string)^
+\
+	` (ù?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>"__id*
+""µ
+≤
+ (),
+%2&Microsoft.AspNetCore.Mvc.IActionResult"zNetMaster.Presentation.Controllers.BaseController.ToActionResult<T>(NetMaster.Domain.Models.Results.ServiceResultModel<T>)*753
+1NetMaster.Presentation.Controllers.BaseController*CA
+?
+result5NetMaster.Domain.Models.Results.ServiceResultModel<T>":
+ (*.
+,
+%2&Microsoft.AspNetCore.Mvc.IActionResult*.
+1	 (	"
+ (	
+implicit return*ñ
+2H (H<
+:
+) (3
+%3"__entrypoint*
+
+computerNamestringÖ
+Ç
+	 (.
+%4"
+__annotate*HFD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+computerNamestring<
+:
+4 (G
+computerNamestring"__annotation*
+
+%4*
+0:"
+4 (G
+computerNamestringB97
+5NetMaster.Presentation.Controllers.HardwareController

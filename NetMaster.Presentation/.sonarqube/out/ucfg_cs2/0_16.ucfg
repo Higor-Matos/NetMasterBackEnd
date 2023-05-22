@@ -1,0 +1,21 @@
+
+?NetMaster.Domain.Models.Results.ServiceResultModel<T>.Error.getx
+nC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Domain.csproj\Models\Results\ServiceResultModel.cs ("0*ã
+0  (+Ë
+È
+  (+8
+%02NetMaster.Domain.Models.Results.ErrorServiceResult"ENetMaster.Domain.Models.Results.ServiceResultModel<T>.ErrorResult.get*;97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>*
+1
+2*³
+2, (9ž
+›
+- (9
+%1string"CNetMaster.Domain.Models.Results.ErrorServiceResult.ErrorMessage.get*<:
+8
+%02NetMaster.Domain.Models.Results.ErrorServiceResult*
+1*.
+1: (:"
+9 (:
+implicit returnB97
+5NetMaster.Domain.Models.Results.ServiceResultModel<T>

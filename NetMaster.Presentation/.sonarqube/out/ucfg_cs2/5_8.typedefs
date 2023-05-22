@@ -1,0 +1,8 @@
+Œ
+<NetMaster.Presentation.Controllers.StreamingServerController'Microsoft.AspNetCore.Mvc.ControllerBaseobject÷
+šStreamingServerController(Microsoft.Extensions.Options.IOptions<StreamingServerConfigPresentation>, Microsoft.Extensions.Hosting.IHostApplicationLifetime)×NetMaster.Presentation.Controllers.StreamingServerController.StreamingServerController(Microsoft.Extensions.Options.IOptions<StreamingServerConfigPresentation>, Microsoft.Extensions.Hosting.IHostApplicationLifetime)o
+ToggleStreamingServer()TNetMaster.Presentation.Controllers.StreamingServerController.ToggleStreamingServer()c
+IsServerRunning()NNetMaster.Presentation.Controllers.StreamingServerController.IsServerRunning()m
+StartStreamingServer()SNetMaster.Presentation.Controllers.StreamingServerController.StartStreamingServer()k
+StopStreamingServer()RNetMaster.Presentation.Controllers.StreamingServerController.StopStreamingServer()o
+OnApplicationStopping()TNetMaster.Presentation.Controllers.StreamingServerController.OnApplicationStopping()

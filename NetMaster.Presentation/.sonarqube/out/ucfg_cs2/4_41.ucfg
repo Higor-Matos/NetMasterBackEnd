@@ -1,0 +1,70 @@
+
+ÑNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.ExecuteAsync(System.Threading.CancellationToken)ö
+èC:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services.csproj\Implementations\BackgroundServices\ComputerInfoBackgroundService.cs& (2"0*™
+0 (9í
+è
+ (9
+
+%0bool">System.Threading.CancellationToken.IsCancellationRequested.get*75
+3
+stoppingToken"System.Threading.CancellationToken*
+1
+2*√
+1$ (Hø
+º
+, (<
+%1System.IServiceProvider"__id*äá*ÑU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService"+
+_serviceProviderSystem.IServiceProviderØ
+¨
+, (J<
+%26Microsoft.Extensions.DependencyInjection.IServiceScope"nMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.CreateScope(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*!
+
+%1System.IServiceProviderñ
+ì
+$ (J?
+scope6Microsoft.Extensions.DependencyInjection.IServiceScope"__id*@>
+<
+%26Microsoft.Extensions.DependencyInjection.IServiceScope“œ
+1 (F
+%3System.IServiceProvider"JMicrosoft.Extensions.DependencyInjection.IServiceScope.ServiceProvider.get*CA
+?
+scope6Microsoft.Extensions.DependencyInjection.IServiceScope2ServiceProvider.get∏
+µ
+1 (l;
+%45NetMaster.Services.Interfaces.Network.INetworkService"xMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<T>(System.IServiceProvider)*OM"K
+IMicrosoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions*!
+
+%3System.IServiceProviderù
+ö
+  (lG
+networkService5NetMaster.Services.Interfaces.Network.INetworkService"__id*?=
+;
+%45NetMaster.Services.Interfaces.Network.INetworkServiceÜ
+É
+ (F!
+%5System.Threading.Tasks.Task"´NetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService.CollectAndStoreComputerInfoAsync(NetMaster.Services.Interfaces.Network.INetworkService)*YWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService*KI
+G
+networkService5NetMaster.Services.Interfaces.Network.INetworkServiceg
+e
+! (9
+%6System.TimeSpan"#System.TimeSpan.FromMinutes(double)*"
+System.TimeSpan*2
+ˇ
+¸
+ (I!
+%7System.Threading.Tasks.Task"VSystem.Threading.Tasks.Task.Delay(System.TimeSpan, System.Threading.CancellationToken)*!"
+System.Threading.Tasks.Task*
+
+%6System.TimeSpan*75
+3
+stoppingToken"System.Threading.CancellationToken*
+0*.
+2	 (	"
+ (	
+implicit return:?
+3 (R3
+stoppingToken"System.Threading.CancellationTokenBWU
+SNetMaster.Services.Implementations.BackgroundServices.ComputerInfoBackgroundService
