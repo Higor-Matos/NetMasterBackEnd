@@ -1,5 +1,4 @@
-﻿// NetMaster.Services/Implementations/BackgroundServices/FileMonitorBackgroundService.cs
-
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Services.Interfaces.BackgroundServices;
@@ -9,13 +8,15 @@ namespace NetMaster.Services.Implementations.BackgroundServices
     public class FileMonitorBackgroundService : BackgroundService, IFileMonitorBackgroundService
     {
         private readonly IServiceProvider _serviceProvider;
+        private readonly IConfiguration _configuration;
         private readonly string _path;
         private readonly FileSystemWatcher _watcher;
 
-        public FileMonitorBackgroundService(IServiceProvider serviceProvider)
+        public FileMonitorBackgroundService(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             _serviceProvider = serviceProvider;
-            _path = "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Presentation\\Uploads\\";
+            _configuration = configuration;
+            _path = _configuration["UploadsDirectory"];
             _watcher = new FileSystemWatcher(_path);
         }
 
