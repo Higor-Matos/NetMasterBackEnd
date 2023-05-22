@@ -1,5 +1,4 @@
-﻿// NetMaster.Services/Implementations/Upload/UploadService.cs
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
@@ -8,7 +7,7 @@ using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Upload;
 
-namespace NetMaster.Services.Implementation.Upload
+namespace NetMaster.Services.Implementations.Upload
 {
     public class UploadService : BaseService, IUploadService
     {
@@ -22,14 +21,11 @@ namespace NetMaster.Services.Implementation.Upload
 
         public ServiceResultModel<object> ValidateFile(IFormFile file)
         {
-            if (file == null || file.Length == 0)
-            {
-                return new ServiceResultModel<object>(
+            return file == null || file.Length == 0
+                ? new ServiceResultModel<object>(
                     error: new ErrorServiceResult("File not provided or empty.", DateTime.Now, Environment.MachineName)
-                );
-            }
-
-            return new ServiceResultModel<object>(
+                )
+                : new ServiceResultModel<object>(
                 success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
             );
         }
@@ -46,22 +42,14 @@ namespace NetMaster.Services.Implementation.Upload
             byte[] fileData = ReadFileData(file);
 
             RepositoryResultModel<UploadResult> resultRep = _uploadFileRepository.UploadFile(file.FileName, fileData, destinationFolder);
-            if (resultRep.Success)
-            {
-                return new ServiceResultModel<UploadResult>(
+            return resultRep.Success && resultRep.Data != null
+                ? new ServiceResultModel<UploadResult>(
                     success: new SuccessServiceResult<UploadResult>(resultRep.Data, DateTime.Now, Environment.MachineName)
+                )
+                : new ServiceResultModel<UploadResult>(
+                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message, DateTime.Now, Environment.MachineName)
                 );
-            }
-            else
-            {
-                return new ServiceResultModel<UploadResult>(
-                    error: new ErrorServiceResult(resultRep.ErrorResult.Message, DateTime.Now, Environment.MachineName)
-                );
-            }
         }
-
-
-
 
         private byte[] ReadFileData(IFormFile file)
         {
