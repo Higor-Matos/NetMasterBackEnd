@@ -1,12 +1,10 @@
-﻿// NetMaster.Services/Implementations/Upload/FileUploadService.cs
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results;
 using NetMaster.Services.Interfaces.Upload;
 using NetMaster.Infrastructure.Utils;
-using System;
-using NetMaster.Repository.Interfaces.Uploud;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Repository.Interfaces.Uploud;
 
 namespace NetMaster.Services.Implementations.Upload
 {
@@ -34,7 +32,7 @@ namespace NetMaster.Services.Implementations.Upload
             else
             {
                 return new ServiceResultModel<string>(
-                    error: new ErrorServiceResult(resultRep.ErrorResult.Message, DateTime.Now, Environment.MachineName) // Aqui estava resultRep.Error.Message, trocamos para resultRep.ErrorResult.Message
+                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message, DateTime.Now, Environment.MachineName)
                 );
             }
         }

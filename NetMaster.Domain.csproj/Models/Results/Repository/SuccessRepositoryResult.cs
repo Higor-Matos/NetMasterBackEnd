@@ -1,16 +1,7 @@
-﻿// NetMaster.Domain.Models.Results/Results/SuccessRepositoryResult.cs
-
+﻿// NetMaster.Domain.Models.Results/Results/SuccessRepositoryResult.Generic.cs
 namespace NetMaster.Domain.Models.Results.Repository
 {
-    public class SuccessRepositoryResult
-    {
-    }
-}
-
-// NetMaster.Domain.Models.Results/Results/SuccessRepositoryResult.Generic.cs
-namespace NetMaster.Domain.Models.Results.Repository
-{
-    public class SuccessRepositoryResult<T> : SuccessRepositoryResult
+    public class SuccessRepositoryResult<T>
     {
         public SuccessRepositoryResult(T result)
         {

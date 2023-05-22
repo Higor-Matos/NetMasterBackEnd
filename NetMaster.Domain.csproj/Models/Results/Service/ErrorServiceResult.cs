@@ -11,8 +11,8 @@ namespace NetMaster.Domain.Models.Results.Service
             ComputerName = computerName;
         }
 
-        public string ErrorMessage { get; }
-        public DateTime Timestamp { get; }
-        public string ComputerName { get; }
+        public string ErrorMessage { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string ComputerName { get; set; }
     }
 }
