@@ -6,7 +6,7 @@ using NetMaster.Domain.Models.Results.Repository;
 namespace NetMaster.Repository.Interfaces.Software
 {
     [AutoDI]
-    public interface WinrarInstallationRepository
+    public interface IWinrarInstallationRepository
     {
         Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param);
     }

@@ -12,9 +12,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class WinrarInstallerService : BaseService, IWinrarInstallerService
     {
-        private readonly WinrarInstallationRepository _installWinrarRepository;
+        private readonly IWinrarInstallationRepository _installWinrarRepository;
 
-        public WinrarInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, WinrarInstallationRepository installWinrarRepository)
+        public WinrarInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IWinrarInstallationRepository installWinrarRepository)
             : base(commandRunner, resultConverter)
         {
             _installWinrarRepository = installWinrarRepository;

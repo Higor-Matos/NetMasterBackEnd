@@ -6,7 +6,7 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class WinrarInstallationRepository : BasePowershellRepository, Interfaces.Software.WinrarInstallationRepository
+    public class WinrarInstallationRepository : BasePowershellRepository, Interfaces.Software.IWinrarInstallationRepository
     {
         private static readonly string command = "choco install winrar -y --force";
 
