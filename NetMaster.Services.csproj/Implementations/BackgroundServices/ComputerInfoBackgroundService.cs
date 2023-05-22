@@ -1,21 +1,28 @@
-﻿// NetMaster.Services/Implementations/ComputerInfoBackgroundServices.cs
+﻿// NetMaster.Presentation.Services.ComputerInfoBackgroundService.cs
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetMaster.Services.Interfaces.Network;
+using NetMaster.Presentation.Services.Collectors;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Services.Interfaces.BackgroundServices;
-using NetMaster.Services.Interfaces.Hardware;
-using NetMaster.Services.Interfaces.Network;
-using NetMaster.Services.Interfaces.System;
+using NetMaster.Services.Interfaces.Base;
 
-namespace NetMaster.Services.Implementations.BackgroundServices
+namespace NetMaster.Presentation.Services
 {
     public class ComputerInfoBackgroundService : BackgroundService, IComputerInfoBackgroundService
     {
         private readonly IServiceProvider _serviceProvider;
+        private readonly ComputerInfoCollector _computerInfoCollector;
+        private readonly INetworkService _networkService;
 
-        public ComputerInfoBackgroundService(IServiceProvider serviceProvider)
+        public ComputerInfoBackgroundService(
+            IServiceProvider serviceProvider,
+            ComputerInfoCollector computerInfoCollector,
+            INetworkService networkService)
         {
             _serviceProvider = serviceProvider;
+            _computerInfoCollector = computerInfoCollector;
+            _networkService = networkService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -40,29 +47,7 @@ namespace NetMaster.Services.Implementations.BackgroundServices
 
                 if (ip != null)
                 {
-                    using IServiceScope scope = _serviceProvider.CreateScope();
-
-                    (
-                        ISystemService ISystemService,
-                        IRamInfoService RamInfoService,
-                        IStorageInfoService StorageInfoService,
-                        IChocolateyInfoService ChocolateyInfoService,
-                        IInstalledProgramsInfoService InstalledProgramsInfoService,
-                        IOsVersionInfoService OsVersionInfoService,
-                        IUsersInfoService UserInfoService
-                    ) services = GetRequiredServices(scope.ServiceProvider);
-
-                    List<Task> tasks = new()
-                    {
-                        services.RamInfoService.SaveLocalRamInfoAsync(ip),
-                        services.StorageInfoService.SaveLocalStorageInfoAsync(ip),
-                        services.UserInfoService.SaveLocalSystemInfoAsync(ip),
-                        services.OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
-                        services.InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
-                        services.ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
-                    };
-
-                    await Task.WhenAll(tasks);
+                    await _computerInfoCollector.CollectAndStoreComputerInfoAsync(ip);
                 }
             }
         }
@@ -73,40 +58,6 @@ namespace NetMaster.Services.Implementations.BackgroundServices
         }
 
         Task IComputerInfoBackgroundService.ExecuteAsync(CancellationToken stoppingToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        private (
-            ISystemService SystemService,
-            IRamInfoService RamInfoService,
-            IStorageInfoService StorageInfoService,
-            IChocolateyInfoService ChocolateyInfoService,
-            IInstalledProgramsInfoService InstalledProgramsInfoService,
-            IOsVersionInfoService OsVersionInfoService,
-            IUsersInfoService UserInfoService
-        ) GetRequiredServices(IServiceProvider serviceProvider)
-        {
-            ISystemService systemService = serviceProvider.GetRequiredService<ISystemService>();
-            IRamInfoService ramInfoService = serviceProvider.GetRequiredService<IRamInfoService>();
-            IStorageInfoService storageInfoService = serviceProvider.GetRequiredService<IStorageInfoService>();
-            IChocolateyInfoService chocolateyInfoService = serviceProvider.GetRequiredService<IChocolateyInfoService>();
-            IInstalledProgramsInfoService installedProgramsInfoService = serviceProvider.GetRequiredService<IInstalledProgramsInfoService>();
-            IOsVersionInfoService osVersionInfoService = serviceProvider.GetRequiredService<IOsVersionInfoService>();
-            IUsersInfoService usersInfoService = serviceProvider.GetRequiredService<IUsersInfoService>();
-
-            return (
-                systemService,
-                ramInfoService,
-                storageInfoService,
-                chocolateyInfoService,
-                installedProgramsInfoService,
-                osVersionInfoService,
-                usersInfoService
-            );
-        }
-
-        (ISystemService SystemService, IRamInfoService RamInfoService, IStorageInfoService StorageInfoService, IChocolateyInfoService ChocolateyInfoService, IInstalledProgramsInfoService InstalledProgramsInfoService, IOsVersionInfoService OsVersionInfoService, IUsersInfoService UserInfoService) IComputerInfoBackgroundService.GetRequiredServices(IServiceProvider serviceProvider)
         {
             throw new NotImplementedException();
         }

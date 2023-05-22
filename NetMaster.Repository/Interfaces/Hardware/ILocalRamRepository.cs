@@ -2,9 +2,8 @@
 using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Repository.Interfaces.Hardware;
 
-namespace NetMaster.Repository.Interfaces.System
+namespace NetMaster.Repository.Interfaces.Hardware
 {
     [AutoDI]
     public interface ILocalRamRepository : ILocalHardwareRepository<RamInfoDataModel>

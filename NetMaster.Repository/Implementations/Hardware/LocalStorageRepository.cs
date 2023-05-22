@@ -3,6 +3,7 @@ using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Implementations.Powershell;
+using NetMaster.Repository.Interfaces.Hardware;
 using NetMaster.Repository.Interfaces.System;
 
 namespace NetMaster.Repository.Implementation.Hardware
