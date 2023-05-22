@@ -10,8 +10,9 @@ namespace NetMaster.Presentation.Controllers
     public class StreamingServerController : ControllerBase
     {
         private readonly StreamingServerConfigPresentation _config;
-        private Process _streamingServerProcess;
+        private readonly Process _streamingServerProcess = new();
         private const string ProcessName = "ScreenStreamingServer";
+
         public StreamingServerController(IOptions<StreamingServerConfigPresentation> config, IHostApplicationLifetime appLifetime)
         {
             _config = config.Value;
@@ -39,9 +40,10 @@ namespace NetMaster.Presentation.Controllers
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
+
         private bool IsServerRunning()
         {
-            return Process.GetProcessesByName(ProcessName).Any();
+            return Process.GetProcessesByName(ProcessName).Length > 0;
         }
 
         private void StartStreamingServer()
@@ -54,14 +56,20 @@ namespace NetMaster.Presentation.Controllers
                 CreateNoWindow = _config.CreateNoWindow
             };
 
-            _streamingServerProcess = new Process { StartInfo = processStartInfo };
+            _streamingServerProcess.StartInfo = processStartInfo;
             _ = _streamingServerProcess.Start();
         }
+
         private void StopStreamingServer()
         {
-            Process? process = Process.GetProcessesByName(ProcessName).FirstOrDefault();
-            process?.Kill();
+            Process[] processes = Process.GetProcessesByName(ProcessName);
+            foreach (Process process in processes)
+            {
+                process.Kill();
+                process.WaitForExit();
+            }
         }
+
         private void OnApplicationStopping()
         {
             StopStreamingServer();

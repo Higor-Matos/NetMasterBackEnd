@@ -21,6 +21,11 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/ram/{computerName}")]
         public async Task<IActionResult> GetRamInfo(string computerName)
         {
+            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            if (nameCheckResult != null)
+            {
+                return nameCheckResult;
+            }
             ServiceResultModel<RamInfoDataModel> result = await _hardwareService.GetRamInfoAsync(computerName);
             return ToActionResult(result);
         }
@@ -28,6 +33,11 @@ namespace NetMaster.Presentation.Controllers
         [HttpGet("getInfo/storage/{computerName}")]
         public async Task<IActionResult> GetStorageInfo(string computerName)
         {
+            var nameCheckResult = CheckComputerNameIsNull(computerName);
+            if (nameCheckResult != null)
+            {
+                return nameCheckResult;
+            }
             ServiceResultModel<StorageInfoDataModel> result = await _hardwareService.GetStorageInfoAsync(computerName);
             return ToActionResult(result);
         }

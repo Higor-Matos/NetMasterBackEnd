@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// SoftwareController.cs
+using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.Request;
 using NetMaster.Services.Interfaces.Software;
 
@@ -18,14 +19,20 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("install")]
         public IActionResult InstallSoftware([FromBody] SoftwareInstallRequest request)
         {
-            if (request.Ip != null && request.SoftwareName != null)
+            IActionResult? ipCheckResult = CheckIpIsNull(request.Ip);
+            if (ipCheckResult != null)
+            {
+                return ipCheckResult;
+            }
+
+            if (request.SoftwareName != null)
             {
                 _ = _softwareService.InstallSoftware(request.Ip, request.SoftwareName);
                 return Ok();
             }
             else
             {
-                return BadRequest("IP address and software name are required.");
+                return BadRequest("Software name is required.");
             }
         }
     }

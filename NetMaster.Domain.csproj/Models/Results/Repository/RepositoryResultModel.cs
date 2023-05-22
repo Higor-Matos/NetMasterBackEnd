@@ -8,7 +8,7 @@
         public string Ip { get; set; }
 
         public SuccessRepositoryResult<T>? SuccessResult { get; }
-        public ErrorRepositoryResult? ErrorResult { get; set; } // Novo membro adicionado aqui
+        public ErrorRepositoryResult? ErrorResult { get; set; }
 
         public RepositoryResultModel(T? data = default, bool success = false, string message = "", ErrorRepositoryResult? error = null, string ip = "")
         {
@@ -16,11 +16,11 @@
             Success = success;
             Message = message;
             Ip = ip;
-            ErrorResult = error; // Defina o valor de ErrorResult
+            ErrorResult = error;
 
             if (success)
             {
-                SuccessResult = new SuccessRepositoryResult<T>(data);
+                SuccessResult = new SuccessRepositoryResult<T>(data!);
             }
         }
 
@@ -28,13 +28,13 @@
         {
             if (model.SuccessResult != null)
             {
-                SuccessResult = (SuccessRepositoryResult<T>?)model.SuccessResult;
+                SuccessResult = new SuccessRepositoryResult<T>(model.SuccessResult.Result);
             }
             Data = model.Data;
             Success = model.Success;
             Message = model.Message;
             Ip = model.Ip;
-            ErrorResult = model.ErrorResult; // Copie o valor de ErrorResult
+            ErrorResult = model.ErrorResult;
         }
     }
 }
