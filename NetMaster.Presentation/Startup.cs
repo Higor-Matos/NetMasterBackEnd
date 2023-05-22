@@ -16,10 +16,11 @@ builder.Services.AddSingleton<MongoDbContext>(provider =>
 {
     IConfiguration configuration = provider.GetRequiredService<IConfiguration>();
     MongoDbSettings? mongoDbSettings = configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>();
-    string connectionString = mongoDbSettings?.ConnectionString ?? throw new ArgumentNullException(nameof(mongoDbSettings.ConnectionString));
-    string databaseName = mongoDbSettings?.DatabaseName ?? throw new ArgumentNullException(nameof(mongoDbSettings.DatabaseName));
+    string connectionString = mongoDbSettings?.ConnectionString ?? throw new ArgumentNullException(nameof(mongoDbSettings), "ConnectionString is required.");
+    string databaseName = mongoDbSettings?.DatabaseName ?? throw new ArgumentNullException(nameof(mongoDbSettings), "DatabaseName is required.");
     return new MongoDbContext(connectionString, databaseName);
 });
+
 
 
 // Add services and repositories from assembly

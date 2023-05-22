@@ -1,4 +1,4 @@
-﻿//NetMaster.Repository/Interfaces/Software/IInstallOffice365Repository.cs
+﻿//NetMaster.Repository/Interfaces/Software/IInstallAdobeReaderRepository.cs
 using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
@@ -6,7 +6,7 @@ using NetMaster.Domain.Models.Results.Repository;
 namespace NetMaster.Repository.Interfaces.Software
 {
     [AutoDI]
-    public interface IInstallOffice365Repository
+    public interface WinrarInstallationRepository
     {
         Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param);
     }

@@ -3,9 +3,8 @@ using NetMaster.Common;
 using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results;
-using NetMaster.Repository.Interfaces.System;
 
-namespace NetMaster.Repository.Interfaces.Software
+namespace NetMaster.Repository.Interfaces.System
 {
     [AutoDI]
     public interface IInstalledProgramsRepository : ISystemRepository<InstalledProgramsResponseModel>

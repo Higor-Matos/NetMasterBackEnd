@@ -13,9 +13,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class FirefoxInstallerService : BaseService , IFirefoxInstallerService
     {
-        private readonly IInstallFirefoxRepository _installFirefoxRepository;
+        private readonly IFirefoxInstallationRepository _installFirefoxRepository;
 
-        public FirefoxInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IInstallFirefoxRepository installFirefoxRepository) : base(commandRunner, resultConverter)
+        public FirefoxInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IFirefoxInstallationRepository installFirefoxRepository) : base(commandRunner, resultConverter)
         {
             _installFirefoxRepository = installFirefoxRepository;
         }

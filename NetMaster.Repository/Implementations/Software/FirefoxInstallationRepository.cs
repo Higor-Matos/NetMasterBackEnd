@@ -6,7 +6,7 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class InstallFirefoxRepository : BasePowershellRepository, IInstallFirefoxRepository
+    public class FirefoxInstallationRepository : BasePowershellRepository, IFirefoxInstallationRepository
     {
         private static readonly string command = "choco install firefox -y --force";
 

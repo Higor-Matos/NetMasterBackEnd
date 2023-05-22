@@ -11,9 +11,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class AdobeReaderInstallerService : BaseService, IAdobeReaderInstallerService
     {
-        private readonly IInstallAdobeReaderRepository _installAdobeReaderRepository;
+        private readonly IAdobeReaderInstallationRepository _installAdobeReaderRepository;
 
-        public AdobeReaderInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IInstallAdobeReaderRepository installAdobeReaderRepository)
+        public AdobeReaderInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IAdobeReaderInstallationRepository installAdobeReaderRepository)
             : base(commandRunner, resultConverter)
         {
             _installAdobeReaderRepository = installAdobeReaderRepository;

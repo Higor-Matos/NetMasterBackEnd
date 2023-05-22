@@ -1,4 +1,4 @@
-﻿//NetMaster.Repository/Interfaces/Software/IInstallAdobeReaderRepository.cs
+﻿//NetMaster.Repository/Interfaces/Software/IInstallFirefoxRepository.cs
 using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
@@ -6,7 +6,7 @@ using NetMaster.Domain.Models.Results.Repository;
 namespace NetMaster.Repository.Interfaces.Software
 {
     [AutoDI]
-    public interface IInstallAdobeReaderRepository
+    public interface IFirefoxInstallationRepository
     {
         Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param);
     }

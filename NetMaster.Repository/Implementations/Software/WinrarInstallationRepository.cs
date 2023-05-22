@@ -6,9 +6,9 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class InstallAdobeReaderRepository : BasePowershellRepository, IInstallAdobeReaderRepository
+    public class WinrarInstallationRepository : BasePowershellRepository, Interfaces.Software.WinrarInstallationRepository
     {
-        private static readonly string command = "choco install adobereader -y --force";
+        private static readonly string command = "choco install winrar -y --force";
 
         public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {

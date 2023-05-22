@@ -13,9 +13,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class Office365InstallerService : BaseService, IOffice365InstallerService
     {
-        private readonly IInstallOffice365Repository _installOffice365Repository;
+        private readonly IOffice365InstallationRepository _installOffice365Repository;
 
-        public Office365InstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IInstallOffice365Repository installOffice365Repository)
+        public Office365InstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IOffice365InstallationRepository installOffice365Repository)
             : base(commandRunner, resultConverter)
         {
             _installOffice365Repository = installOffice365Repository;

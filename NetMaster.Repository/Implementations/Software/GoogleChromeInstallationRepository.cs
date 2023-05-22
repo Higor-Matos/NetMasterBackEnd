@@ -6,7 +6,7 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class InstallGoogleChromeRepository : BasePowershellRepository, IInstallGoogleChromeRepository
+    public class GoogleChromeInstallationRepository : BasePowershellRepository, IGoogleChromeInstallationRepository
     {
         private static readonly string command = "choco install googlechrome -y --force";
 

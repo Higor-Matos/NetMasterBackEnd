@@ -6,9 +6,9 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class InstallWinrarRepository : BasePowershellRepository, IInstallWinrarRepository
+    public class Office365InstallationRepository : BasePowershellRepository, IOffice365InstallationRepository
     {
-        private static readonly string command = "choco install winrar -y --force";
+        private static readonly string command = "choco install office365business -y --force";
 
         public async Task<RepositoryResultModel<string>> ExecCommand(RepositoryPowerShellParamModel param)
         {

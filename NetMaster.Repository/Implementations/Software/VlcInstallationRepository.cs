@@ -6,7 +6,7 @@ using NetMaster.Repository.Interfaces.Software;
 
 namespace NetMaster.Repository.Implementation.Software
 {
-    public class InstallVlcRepository : BasePowershellRepository, IInstallVlcRepository
+    public class VlcInstallationRepository : BasePowershellRepository, IVlcInstallationRepository
     {
         private static readonly string command = "choco install vlc -y --force";
 

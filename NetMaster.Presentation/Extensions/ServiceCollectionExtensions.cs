@@ -25,7 +25,6 @@ namespace NetMaster.Presentation.Extensions
 
             Assembly repositoryAssembly = Assembly.Load("NetMaster.Repository");
             assemblies = assemblies.Concat(new[] { repositoryAssembly });
-            assemblies ??= Enumerable.Empty<Assembly>();
 
             return assemblies;
         }
@@ -61,7 +60,7 @@ namespace NetMaster.Presentation.Extensions
             if (typeof(IHostedService).IsAssignableFrom(type))
             {
                 // Register hosted service
-                RegisterHostedService(services, type);
+                _ = services.AddSingleton(typeof(IHostedService), type);
             }
             else if (@interface.IsGenericType && @interface.GetGenericTypeDefinition() == typeof(IBaseMongoRepository<>))
             {
@@ -94,27 +93,17 @@ namespace NetMaster.Presentation.Extensions
             Console.WriteLine($"Registered {@interface.FullName} with {type.FullName}");
         }
 
-        private static void RegisterHostedService(IServiceCollection services, Type serviceType)
-        {
-            // Use a specific method to register hosted services
-            MethodInfo genericMethod = typeof(ServiceCollectionHostedServiceExtensions)
-                .GetMethods()
-                .Where(m => m.Name == nameof(ServiceCollectionHostedServiceExtensions.AddHostedService) && m.IsGenericMethod)
-                .First();
-
-            MethodInfo constructedMethod = genericMethod.MakeGenericMethod(serviceType);
-            _ = constructedMethod.Invoke(null, new object[] { services });
-        }
-
         private static void RegisterBaseMongoRepository(IServiceCollection services, Type @interface, Type type)
         {
             // Register the service with a factory that can provide the necessary parameters
             _ = services.AddScoped(@interface, provider =>
             {
                 MongoDbContext dbContext = provider.GetRequiredService<MongoDbContext>();
-                Type genericArg = @interface.GetGenericArguments()[0];
+                Type genericArg = @interface.GetGenericArguments().FirstOrDefault();
 
-                return Activator.CreateInstance(type, dbContext, genericArg.Name)!;
+                return genericArg != null
+                    ? Activator.CreateInstance(type, dbContext, genericArg.Name)
+                    : throw new InvalidOperationException($"Failed to create an instance of {type.FullName}.");
             });
         }
     }

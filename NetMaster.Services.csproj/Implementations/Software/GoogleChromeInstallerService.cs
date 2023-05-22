@@ -13,9 +13,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class GoogleChromeInstallerService : BaseService, IGoogleChromeInstallerService
     {
-        private readonly IInstallGoogleChromeRepository _installGoogleChromeRepository;
+        private readonly IGoogleChromeInstallationRepository _installGoogleChromeRepository;
 
-        public GoogleChromeInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IInstallGoogleChromeRepository installGoogleChromeRepository)
+        public GoogleChromeInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IGoogleChromeInstallationRepository installGoogleChromeRepository)
             : base(commandRunner, resultConverter)
         {
             _installGoogleChromeRepository = installGoogleChromeRepository;

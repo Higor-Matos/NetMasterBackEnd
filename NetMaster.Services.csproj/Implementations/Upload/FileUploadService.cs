@@ -16,23 +16,18 @@ namespace NetMaster.Services.Implementations.Upload
         public FileUploadService(ICommandRunner commandRunner, IResultConverter resultConverter, IUploadFileRepository uploadFileRepository)
             : base(commandRunner, resultConverter)
         {
-            _uploadFileRepository = uploadFileRepository;
+            _uploadFileRepository = uploadFileRepository ?? throw new ArgumentNullException(nameof(uploadFileRepository));
         }
 
         public ServiceResultModel<object> ValidateFile(IFormFile file)
         {
-            if (file == null || file.Length == 0)
-            {
-                return new ServiceResultModel<object>(
+            return file == null || file.Length == 0
+                ? new ServiceResultModel<object>(
                     error: new ErrorServiceResult("File not provided or empty.", DateTime.Now, Environment.MachineName)
-                );
-            }
-            else
-            {
-                return new ServiceResultModel<object>(
+                )
+                : new ServiceResultModel<object>(
                     success: new SuccessServiceResult<object>(null, DateTime.Now, Environment.MachineName)
                 );
-            }
         }
 
 
@@ -53,7 +48,7 @@ namespace NetMaster.Services.Implementations.Upload
                     success: new SuccessServiceResult<UploadResult>(resultRep.Data, DateTime.Now, Environment.MachineName)
                 )
                 : new ServiceResultModel<UploadResult>(
-                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message, DateTime.Now, Environment.MachineName)
+                    error: new ErrorServiceResult(resultRep.ErrorResult?.Message ?? string.Empty, DateTime.Now, Environment.MachineName)
                 );
         }
 

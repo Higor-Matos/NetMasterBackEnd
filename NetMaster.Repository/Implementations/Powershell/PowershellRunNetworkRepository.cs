@@ -1,11 +1,10 @@
-﻿//NetMaster.Repository/Local//Powershell/PowershellRunNetworkRepository.cs
-using NetMaster.Domain.Models.Results.Repository;
+﻿using NetMaster.Domain.Models.Results.Repository;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-namespace NetMaster.Repository.Implementation.Powershell
+namespace NetMaster.Repository.Implementations.Powershell
 {
-    public class PowershellRunNetworkRepository
+    public static class PowershellRunNetworkRepository
     {
         public static async Task<RepositoryResultModel<T>> RunCommandInSpace<T>(
             WSManConnectionInfo wsManConnectionInfo,

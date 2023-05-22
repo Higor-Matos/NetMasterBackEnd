@@ -12,9 +12,9 @@ namespace NetMaster.Services.Implementations.Software
 {
     public class VlcInstallerService : BaseService, IVlcInstallerService
     {
-        private readonly IInstallVlcRepository _installVlcRepository;
+        private readonly IVlcInstallationRepository _installVlcRepository;
 
-        public VlcInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IInstallVlcRepository installVlcRepository)
+        public VlcInstallerService(ICommandRunner commandRunner, IResultConverter resultConverter, IVlcInstallationRepository installVlcRepository)
         : base(commandRunner, resultConverter)
         {
             _installVlcRepository = installVlcRepository;

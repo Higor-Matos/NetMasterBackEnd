@@ -3,7 +3,7 @@ using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 
-namespace NetMaster.Repository.Interfaces.Base
+namespace NetMaster.Repository.Interfaces.Powershell
 {
     [AutoDI]
     public interface IBasePowershellRepository
