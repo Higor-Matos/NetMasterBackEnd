@@ -6,7 +6,6 @@
         {
             Ip = ip;
         }
-
         public string Ip { get; }
     }
 }
