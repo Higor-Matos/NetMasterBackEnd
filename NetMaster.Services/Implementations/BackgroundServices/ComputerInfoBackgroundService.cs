@@ -1,28 +1,22 @@
-﻿// NetMaster.Presentation.Services.ComputerInfoBackgroundService.cs
+﻿// NetMaster.Services/Implementations/ComputerInfoBackgroundServices.cs
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NetMaster.Services.Interfaces.Network;
-using NetMaster.Presentation.Services.Collectors;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Services.Interfaces.BackgroundServices;
 using NetMaster.Services.Interfaces.Base;
+using NetMaster.Services.Interfaces.Hardware;
+using NetMaster.Services.Interfaces.Network;
+using NetMaster.Services.Interfaces.System;
 
-namespace NetMaster.Presentation.Services
+namespace NetMaster.Services.Implementations.BackgroundServices
 {
     public class ComputerInfoBackgroundService : BackgroundService, IComputerInfoBackgroundService
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly ComputerInfoCollector _computerInfoCollector;
-        private readonly INetworkService _networkService;
 
-        public ComputerInfoBackgroundService(
-            IServiceProvider serviceProvider,
-            ComputerInfoCollector computerInfoCollector,
-            INetworkService networkService)
+        public ComputerInfoBackgroundService(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            _computerInfoCollector = computerInfoCollector;
-            _networkService = networkService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -33,33 +27,71 @@ namespace NetMaster.Presentation.Services
                 INetworkService networkService = scope.ServiceProvider.GetRequiredService<INetworkService>();
 
                 await CollectAndStoreComputerInfoAsync(networkService);
-                await Task.Delay(TimeSpan.FromMinutes(10), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
             }
         }
 
-        private async Task CollectAndStoreComputerInfoAsync(INetworkService networkService)
+        public async Task CollectAndStoreComputerInfoAsync(INetworkService networkService)
         {
-            NetworkComputer[]? computers = networkService.ListNetworkComputerCommand();
+            NetworkComputer[] computers = networkService.ListNetworkComputerCommand();
 
-            foreach (NetworkComputer? computer in computers)
+            foreach (NetworkComputer computer in computers)
             {
-                string? ip = computer?.IP;
+                string ip = computer.IP;
 
-                if (ip != null)
+                using IServiceScope scope = _serviceProvider.CreateScope();
+
+                (
+                    ISystemService ISystemService,
+                    IRamInfoService RamInfoService,
+                    IStorageInfoService StorageInfoService,
+                    IChocolateyInfoService ChocolateyInfoService,
+                    IInstalledProgramsInfoService InstalledProgramsInfoService,
+                    IOsVersionInfoService OsVersionInfoService,
+                    IUsersInfoService UserInfoService
+                ) services = GetRequiredServices(scope.ServiceProvider);
+
+                List<Task> tasks = new()
                 {
-                    await _computerInfoCollector.CollectAndStoreComputerInfoAsync(ip);
-                }
+                    services.RamInfoService.SaveLocalRamInfoAsync(ip),
+                    services.StorageInfoService.SaveLocalStorageInfoAsync(ip),
+                    services.UserInfoService.SaveLocalSystemInfoAsync(ip),
+                    services.OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
+                    services.InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
+                    services.ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
+                };
+
+                await Task.WhenAll(tasks);
             }
         }
 
-        Task IComputerInfoBackgroundService.CollectAndStoreComputerInfoAsync()
+        public (
+            ISystemService SystemService,
+            IRamInfoService RamInfoService,
+            IStorageInfoService StorageInfoService,
+            IChocolateyInfoService ChocolateyInfoService,
+            IInstalledProgramsInfoService InstalledProgramsInfoService,
+            IOsVersionInfoService OsVersionInfoService,
+            IUsersInfoService UserInfoService
+        ) GetRequiredServices(IServiceProvider serviceProvider)
         {
-            throw new NotImplementedException();
-        }
+            ISystemService systemService = serviceProvider.GetRequiredService<ISystemService>();
+            IRamInfoService ramInfoService = serviceProvider.GetRequiredService<IRamInfoService>();
+            IStorageInfoService storageInfoService = serviceProvider.GetRequiredService<IStorageInfoService>();
+            IChocolateyInfoService chocolateyInfoService = serviceProvider.GetRequiredService<IChocolateyInfoService>();
+            IInstalledProgramsInfoService installedProgramsInfoService = serviceProvider.GetRequiredService<IInstalledProgramsInfoService>();
+            IOsVersionInfoService osVersionInfoService = serviceProvider.GetRequiredService<IOsVersionInfoService>();
+            IUsersInfoService usersInfoService = serviceProvider.GetRequiredService<IUsersInfoService>();
 
-        Task IComputerInfoBackgroundService.ExecuteAsync(CancellationToken stoppingToken)
-        {
-            throw new NotImplementedException();
+            return (
+                systemService,
+                ramInfoService,
+                storageInfoService,
+                chocolateyInfoService,
+                installedProgramsInfoService,
+                osVersionInfoService,
+                usersInfoService
+            );
         }
     }
 }

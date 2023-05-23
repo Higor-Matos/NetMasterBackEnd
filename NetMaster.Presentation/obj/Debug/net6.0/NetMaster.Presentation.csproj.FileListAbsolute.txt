@@ -1,13 +1,3 @@
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.csproj.AssemblyReference.cache
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfoInputs.cache
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfo.cs
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.dll
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\refint\NetMaster.Presentation.dll
-C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.pdb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\appsettings.json
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\NetMaster.Presentation.exe
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\NetMaster.Presentation.deps.json
@@ -275,6 +265,13 @@ C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Deb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\NetMaster.Services.pdb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\NetMaster.Domain.pdb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\bin\Debug\net6.0\NetMaster.Infrastructure.pdb
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.csproj.AssemblyReference.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfoInputs.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.AssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\staticwebassets\msbuild.NetMaster.Presentation.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\staticwebassets\msbuild.build.NetMaster.Presentation.props
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.NetMaster.Presentation.props
@@ -284,5 +281,8 @@ C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Deb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\scopedcss\bundle\NetMaster.Presentation.styles.css
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.csproj.CopyComplete
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.dll
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\refint\NetMaster.Presentation.dll
+C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.pdb
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\NetMaster.Presentation.genruntimeconfig.cache
 C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Presentation\obj\Debug\net6.0\ref\NetMaster.Presentation.dll

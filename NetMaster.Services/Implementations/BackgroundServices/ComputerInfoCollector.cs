@@ -1,12 +1,13 @@
 ﻿// NetMaster.Presentation.Services.Collectors.ComputerInfoCollector.cs
 using Microsoft.Extensions.DependencyInjection;
+using NetMaster.Services.Interfaces.BackgroundServices;
 using NetMaster.Services.Interfaces.Hardware;
 using NetMaster.Services.Interfaces.Network;
 using NetMaster.Services.Interfaces.System;
 
 namespace NetMaster.Presentation.Services.Collectors
 {
-    public class ComputerInfoCollector
+    public class ComputerInfoCollector : IComputerInfoCollector
     {
         private readonly IServiceProvider _serviceProvider;
 
