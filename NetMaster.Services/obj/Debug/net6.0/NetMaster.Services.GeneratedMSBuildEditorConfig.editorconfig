@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NetMaster.Services
-build_property.ProjectDir = C:\Users\hdmni\source\repos\Higor-Matos\NetMaster\NetMaster.Services\
+build_property.ProjectDir = C:\Users\hdmni\source\repos\Higor-Matos\NetMasterBackEnd\NetMaster.Services\

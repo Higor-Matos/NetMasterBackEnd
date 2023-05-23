@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2VDX2p1X/xvbg1mF9j9+5UHrH/Dc/pei19LKTLGMZuoiRMXF6id4MNV6pIizRMD6Osez/Hyv2W7EXMNu4ZaTcw==",
+  "dgSpecHash": "1Nm8L4m+MSaWxCgRfuBerizIrqIyXaet156IbCgNyNenx8vVk3DR0q2Q+UeE1DUEOpE8vTaJVYG2xsomD9fXgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hdmni\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\hdmni\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

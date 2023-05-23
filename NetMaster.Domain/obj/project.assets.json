@@ -1038,11 +1038,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Domain\\NetMaster.Domain.csproj",
       "projectName": "NetMaster.Domain",
-      "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\NetMaster.Domain.csproj",
+      "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Domain\\NetMaster.Domain.csproj",
       "packagesPath": "C:\\Users\\hdmni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Domain\\obj\\",
+      "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hdmni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1059,8 +1059,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
-              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj"
+            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj": {
+              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj"
             }
           }
         }

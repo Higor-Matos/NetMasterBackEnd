@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {}
+    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
+    "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj",
+        "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj",
         "projectName": "NetMaster.Common",
-        "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj",
+        "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj",
         "packagesPath": "C:\\Users\\hdmni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\obj\\",
+        "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hdmni\\AppData\\Roaming\\NuGet\\NuGet.Config",

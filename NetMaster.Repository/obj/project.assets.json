@@ -8123,11 +8123,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Repository\\NetMaster.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Repository\\NetMaster.Repository.csproj",
       "projectName": "NetMaster.Repository",
-      "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Repository\\NetMaster.Repository.csproj",
+      "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Repository\\NetMaster.Repository.csproj",
       "packagesPath": "C:\\Users\\hdmni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Repository\\obj\\",
+      "outputPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hdmni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8144,11 +8144,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj": {
-              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Common\\NetMaster.Common.csproj"
+            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj": {
+              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Common\\NetMaster.Common.csproj"
             },
-            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMaster\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj"
+            "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\hdmni\\source\\repos\\Higor-Matos\\NetMasterBackEnd\\NetMaster.Infrastructure\\NetMaster.Infrastructure.csproj"
             }
           }
         }
