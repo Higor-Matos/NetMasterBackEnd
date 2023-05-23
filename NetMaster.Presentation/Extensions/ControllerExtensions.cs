@@ -9,16 +9,11 @@ namespace NetMaster.Presentation.Extensions
         public static IActionResult CreateActionResultFromServiceResult<T>(this ControllerBase controller, ServiceResultModel<T> value)
             where T : class
         {
-            if (value.SuccessResult != null)
-            {
-                return controller.Ok(value.SuccessResult.Result);
-            }
-            else
-            {
-                return value.ErrorResult != null
+            return value.SuccessResult != null
+                ? controller.Ok(value.SuccessResult.Result)
+                : value.ErrorResult != null
                     ? controller.BadRequest(value.ErrorResult.ErrorMessage)
                     : controller.StatusCode(StatusCodes.Status500InternalServerError);
-            }
         }
 
     }

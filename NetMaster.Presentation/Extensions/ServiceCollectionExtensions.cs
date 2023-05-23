@@ -46,7 +46,7 @@ namespace NetMaster.Presentation.Extensions
         {
             foreach (Type @interface in type.GetInterfaces())
             {
-                var autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
+                AutoDIAttribute? autoDiAttribute = @interface.GetCustomAttribute<AutoDIAttribute>();
 
                 if (autoDiAttribute is not null)
                 {
@@ -102,7 +102,7 @@ namespace NetMaster.Presentation.Extensions
 
                 if (genericArg != null)
                 {
-                    var instance = Activator.CreateInstance(type, dbContext, genericArg.Name);
+                    object? instance = Activator.CreateInstance(type, dbContext, genericArg.Name);
                     if (instance is not null)
                     {
                         return instance;

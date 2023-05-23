@@ -46,5 +46,8 @@ namespace NetMaster.Presentation.Controllers
         {
             return string.IsNullOrEmpty(computerName) ? BadRequest("Computer name is required.") : (IActionResult?)null;
         }
+
+
+
     }
 }

@@ -2,7 +2,6 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.System;
-using System.Threading.Tasks;
 
 namespace NetMaster.Presentation.Controllers
 {
