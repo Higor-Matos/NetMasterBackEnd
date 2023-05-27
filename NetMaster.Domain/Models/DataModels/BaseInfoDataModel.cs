@@ -1,8 +1,5 @@
-﻿using System;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-
-
 
 namespace NetMaster.Domain.Models.DataModels
 {
