@@ -1,11 +1,10 @@
 ﻿// NetMaster.Repository/Implementation/System/LocalInstalledProgramsRepository.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Implementations.Powershell;
 using NetMaster.Repository.Interfaces.System;
 
-namespace NetMaster.Repository.Implementation.System
+namespace NetMaster.Repository.Implementations.System
 {
     public class LocalInstalledProgramsRepository : BasePowershellRepository, ILocalInstalledProgramsRepository
     {
@@ -28,9 +27,9 @@ namespace NetMaster.Repository.Implementation.System
                 }
                 $filtered = $list | Where-Object { $_.DisplayName }
                 $result = @{
-                    'Programs' = $filtered;
-                    'PSComputerName' = $pcname;
                     'IpAddress' = (Test-Connection -ComputerName $pcname -Count 1).IPv4Address.IPAddressToString;
+                    'PSComputerName' = $pcname;
+                    'Programs' = $filtered;
                 };
                 $jsonResult = $result | ConvertTo-Json
                 Write-Output $jsonResult
