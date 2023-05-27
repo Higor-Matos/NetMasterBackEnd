@@ -4,11 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <CodeAnalysisRuleSet>..\..\NetMaster.Presentation\.sonarlint\higor-matos_netmasterbackendcsharp.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>NetMaster.Infrastructure-2.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\NetMaster.Presentation\.sonarlint\higor-matos_netmasterbackend\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+    <AdditionalFiles Include="..\NetMaster.Presentation\.sonarlint\higor-matos_netmasterbackend\CSharp\SonarLint.xml" Link="SonarLint.xml" />
   </ItemGroup>
 
   <ItemGroup>
