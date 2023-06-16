@@ -1,10 +1,9 @@
 ﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Implementations.Powershell;
 using NetMaster.Repository.Interfaces.Software;
 
-namespace NetMaster.Repository.Implementation.Software
+namespace NetMaster.Repository.Implementations.Software
 {
     public class VlcInstallationRepository : BasePowershellRepository, IVlcInstallationRepository
     {

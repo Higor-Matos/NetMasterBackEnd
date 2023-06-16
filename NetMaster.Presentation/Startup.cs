@@ -1,5 +1,5 @@
 //NetMaster.Presentation/Startup.cs
-using NetMaster.Domain.Configuration;
+using NetMaster.Domain.Configurations;
 using NetMaster.Infrastructure.Context;
 using NetMaster.Presentation.Configuration;
 using NetMaster.Presentation.Extensions;

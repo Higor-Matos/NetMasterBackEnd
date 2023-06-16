@@ -1,6 +1,4 @@
-﻿using NetMaster.Domain.Models;
-using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Results;
+﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.System;
@@ -36,20 +34,15 @@ namespace NetMaster.Services.Implementations.System
 
         private ServiceResultModel<string> ConvertResult(RepositoryResultModel<string> repositoryResult)
         {
-            if (repositoryResult.SuccessResult != null)
-            {
-                return new ServiceResultModel<string>(
+            return repositoryResult.SuccessResult != null
+                ? new ServiceResultModel<string>(
                     success: new SuccessServiceResult<string>(repositoryResult.SuccessResult.Result, DateTime.UtcNow, repositoryResult.Ip)
-                );
-            }
-            else
-            {
-                return repositoryResult.ErrorResult != null
+                )
+                : repositoryResult.ErrorResult != null
                     ? new ServiceResultModel<string>(
                                     error: new ErrorServiceResult(repositoryResult.ErrorResult.Message, DateTime.UtcNow, repositoryResult.Ip)
                                 )
                     : throw new InvalidOperationException("Invalid repository result. Must have either SuccessResult or ErrorResult.");
-            }
         }
     }
 }

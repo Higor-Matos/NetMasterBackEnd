@@ -1,6 +1,6 @@
 ﻿using NetMaster.Common;
 using NetMaster.Infrastructure.Context;
-using NetMaster.Repository.Interfaces.Base;
+using NetMaster.Repository.Interfaces.MongoDB;
 using NetMaster.Services.Interfaces.Software;
 using System.Reflection;
 

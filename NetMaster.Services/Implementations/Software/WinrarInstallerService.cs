@@ -1,10 +1,9 @@
 ﻿// NetMaster.Services/Implementations/Software/WinrarInstallerService.cs
-using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.Software;
-using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Implementations.Base;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Software;
 

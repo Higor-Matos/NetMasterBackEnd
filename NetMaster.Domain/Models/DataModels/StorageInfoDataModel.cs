@@ -9,6 +9,6 @@
 
     public class StorageInfoDataModel : BaseInfoDataModel
     {
-        public List<DiskInfoDataModel> Disks { get; set; }
+        public List<DiskInfoDataModel>? Disks { get; set; }
     }
 }

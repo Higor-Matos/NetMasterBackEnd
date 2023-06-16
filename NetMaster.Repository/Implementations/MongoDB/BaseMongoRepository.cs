@@ -3,9 +3,7 @@ using MongoDB.Driver;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Infrastructure.Context;
-using NetMaster.Repository.Interfaces.Base;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using NetMaster.Repository.Interfaces.MongoDB;
 
 namespace NetMaster.Repository.Implementations.MongoDB
 {
@@ -36,7 +34,7 @@ namespace NetMaster.Repository.Implementations.MongoDB
         public async Task UpdateAsync(T entity)
         {
             FilterDefinition<T> filter = Builders<T>.Filter.Eq("_id", entity.Id);
-            await _mongoCollection.ReplaceOneAsync(filter, entity);
+            _ = await _mongoCollection.ReplaceOneAsync(filter, entity);
         }
 
         public async Task<RepositoryResultModel<T>> GetMostRecentByComputerNameAsync(string computerName)

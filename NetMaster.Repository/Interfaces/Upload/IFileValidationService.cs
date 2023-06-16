@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using NetMaster.Common;
 using NetMaster.Domain.Models.Results.Service;
 
-namespace NetMaster.Services.Interfaces.Upload
+namespace NetMaster.Repository.Interfaces.Upload
 {
     [AutoDI]
     public interface IFileValidationService

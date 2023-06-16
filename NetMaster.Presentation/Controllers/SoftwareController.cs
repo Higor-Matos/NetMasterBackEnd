@@ -18,16 +18,6 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("install")]
         public IActionResult InstallSoftware([FromBody] SoftwareInstallRequest request)
         {
-            if (request.Ip == null)
-            {
-                return BadRequest("IP address is required.");
-            }
-
-            IActionResult? ipCheckResult = CheckIpIsNull(request.Ip);
-            if (ipCheckResult != null)
-            {
-                return ipCheckResult;
-            }
 
             if (request.SoftwareName != null)
             {

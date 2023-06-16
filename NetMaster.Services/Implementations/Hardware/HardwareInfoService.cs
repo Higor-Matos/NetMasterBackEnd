@@ -1,13 +1,10 @@
 ﻿// NetMaster.Services/Implementations/Hardware/HardwareInfoService.cs
-using NetMaster.Domain.Models;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.Hardware;
-using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Implementations.Base;
 using NetMaster.Services.Interfaces.Base;
-using NetMaster.Services.Interfaces.Hardware;
-using System.Threading.Tasks;
 
 namespace NetMaster.Services.Implementations.Hardware
 {

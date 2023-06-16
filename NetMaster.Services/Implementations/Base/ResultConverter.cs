@@ -2,7 +2,7 @@
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Services.Interfaces.Base;
 
-namespace NetMaster.Services.Implementations.BaseCommands
+namespace NetMaster.Services.Implementations.Base
 {
     public class ResultConverter : IResultConverter
     {

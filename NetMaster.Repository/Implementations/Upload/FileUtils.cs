@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NetMaster.Repository.Implementations.Uploud
+namespace NetMaster.Repository.Implementations.Upload
 {
     public static class FileUtils
     {

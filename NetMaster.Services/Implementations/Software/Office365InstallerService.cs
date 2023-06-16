@@ -1,13 +1,11 @@
 ﻿// NetMaster.Services/Implementations/Software/Office365InstallerService.cs
-using NetMaster.Domain.Models;
-using NetMaster.Repository.Implementation.Software;
-using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Domain.Models.DataModels;
+using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Domain.Models.Results.Service;
+using NetMaster.Repository.Interfaces.Software;
+using NetMaster.Services.Implementations.Base;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Software;
-using NetMaster.Repository.Interfaces.Software;
-using NetMaster.Domain.Models.Results.Service;
-using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Domain.Models.DataModels;
 
 namespace NetMaster.Services.Implementations.Software
 {

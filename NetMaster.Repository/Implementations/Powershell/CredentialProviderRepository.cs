@@ -1,7 +1,7 @@
 ﻿using System.Management.Automation;
 using System.Security;
 
-namespace NetMaster.Repository.Implementation.Powershell
+namespace NetMaster.Repository.Implementations.Powershell
 {
     public class CredentialProviderRepository
     {

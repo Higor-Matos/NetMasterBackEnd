@@ -1,12 +1,11 @@
 ﻿// NetMaster.Services/Implementation/System/SystemService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Service;
-using NetMaster.Services.Implementations.BaseCommands;
+using NetMaster.Services.Implementations.Base;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.System;
-using System.Threading.Tasks;
 
-namespace NetMaster.Services.Implementation.System
+namespace NetMaster.Services.Implementations.System
 {
     public class SystemService : BaseService, ISystemService
     {

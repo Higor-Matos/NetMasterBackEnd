@@ -1,6 +1,5 @@
 ﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Interfaces.Powershell;
 using Newtonsoft.Json;
 using System.Management.Automation;

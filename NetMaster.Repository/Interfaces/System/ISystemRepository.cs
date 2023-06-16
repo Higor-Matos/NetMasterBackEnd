@@ -1,7 +1,7 @@
 ﻿using NetMaster.Common;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
-using NetMaster.Repository.Interfaces.Base;
+using NetMaster.Repository.Interfaces.MongoDB;
 
 namespace NetMaster.Repository.Interfaces.System
 {

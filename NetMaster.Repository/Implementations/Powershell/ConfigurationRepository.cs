@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace NetMaster.Repository.Implementation.Powershell
+namespace NetMaster.Repository.Implementations.Powershell
 {
     public class ConfigurationRepository
     {

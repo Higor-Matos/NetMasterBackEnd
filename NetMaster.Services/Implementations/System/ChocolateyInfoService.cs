@@ -2,12 +2,10 @@
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Repository.Interfaces.System;
-using NetMaster.Services.Implementations.System;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.System;
-using System.Threading.Tasks;
 
-namespace NetMaster.Services.Implementation.System
+namespace NetMaster.Services.Implementations.System
 {
     public class ChocolateyInfoService : SystemInfoService<ChocolateyInfoDataModel>, IChocolateyInfoService
     {

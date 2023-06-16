@@ -2,9 +2,7 @@
 using NetMaster.Domain.Models.Results;
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
-using NetMaster.Infrastructure.Utils;
-using NetMaster.Repository.Interfaces.Uploud;
-using NetMaster.Services.Interfaces.Upload;
+using NetMaster.Repository.Interfaces.Upload;
 
 namespace NetMaster.Repository.Implementations.Upload
 {

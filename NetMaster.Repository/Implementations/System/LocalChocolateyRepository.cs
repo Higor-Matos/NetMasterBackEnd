@@ -2,7 +2,6 @@
 using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Repository.Implementations.Powershell;
 using NetMaster.Repository.Interfaces.System;
-using Newtonsoft.Json;
 
 namespace NetMaster.Repository.Implementations.System
 {

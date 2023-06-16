@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="SonarQube - NetMasterBackEnd Sonar way" ToolsVersion="17.0">
-  <Include Path="..\..\netmaster.presentation\.sonarlint\higor-matos_netmasterbackendcsharp.ruleset" Action="Default" />
   <Include Path="..\netmaster.presentation\.sonarlint\higor-matos_netmasterbackendcsharp.ruleset" Action="Default" />
+  <Include Path="netmaster.infrastructure-2.ruleset" Action="Default" />
 </RuleSet>
