@@ -1,4 +1,4 @@
-﻿namespace NetMaster.Domain.Configurations
+﻿namespace NetMaster.Domain.Configuration
 {
     public class MongoDbSettings
     {

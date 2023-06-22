@@ -1,7 +1,7 @@
 ﻿// NetMaster.Infrastructure.Context/MongoDbContext.cs
 using MongoDB.Driver;
 
-namespace NetMaster.Infrastructure.Interface
+namespace NetMaster.Infrastructure.Context
 {
     public interface IMongoDbContext
     {

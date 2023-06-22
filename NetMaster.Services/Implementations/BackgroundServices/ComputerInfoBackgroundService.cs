@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Services.Interfaces.BackgroundServices;
+using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Hardware;
 using NetMaster.Services.Interfaces.Network;
 using NetMaster.Services.Interfaces.System;

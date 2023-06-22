@@ -3,7 +3,7 @@ using NetMaster.Domain.Models.Results.Repository;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.Base;
 
-namespace NetMaster.Services.Implementations.Base
+namespace NetMaster.Services.Implementations.BaseCommands
 {
     public class CommandRunner : ICommandRunner
     {

@@ -8,6 +8,6 @@
 
     public class InstalledProgramsResponseModel : BaseInfoDataModel
     {
-        public List<InstalledProgramInfoDataModel>? Programs { get; set; }
+        public List<InstalledProgramInfoDataModel> Programs { get; set; }
     }
 }

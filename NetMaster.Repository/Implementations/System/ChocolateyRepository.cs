@@ -4,7 +4,7 @@ using NetMaster.Infrastructure.Context;
 using NetMaster.Repository.Implementations.MongoDB;
 using NetMaster.Repository.Interfaces.System;
 
-namespace NetMaster.Repository.Implementations.System
+namespace NetMaster.Repository.Implementation.System
 {
     public class ChocolateyRepository : BaseMongoRepository<ChocolateyInfoDataModel>, IChocolateyRepository
     {

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetMaster.Domain.Models.DataModels;
-using NetMaster.Domain.Models.Request;
 using NetMaster.Domain.Models.Results.Service;
 using NetMaster.Services.Interfaces.System;
 
@@ -22,6 +21,11 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("shutdownPc")]
         public async Task<IActionResult> ShutdownPc([FromBody] IpRequest request)
         {
+            IActionResult ipCheckResult = CheckIpIsNull(request.Ip);
+            if (ipCheckResult != null)
+            {
+                return ipCheckResult;
+            }
 
             ServiceResultModel<string> result = await _systemCommandService.ShutdownPcCommand(request.Ip!);
             return ToActionResult(result);
@@ -30,6 +34,11 @@ namespace NetMaster.Presentation.Controllers
         [HttpPost("restartPc")]
         public async Task<IActionResult> RestartPc([FromBody] IpRequest request)
         {
+            IActionResult ipCheckResult = CheckIpIsNull(request.Ip);
+            if (ipCheckResult != null)
+            {
+                return ipCheckResult;
+            }
 
             ServiceResultModel<string> result = await _systemCommandService.RestartPcCommand(request.Ip!);
             return ToActionResult(result);

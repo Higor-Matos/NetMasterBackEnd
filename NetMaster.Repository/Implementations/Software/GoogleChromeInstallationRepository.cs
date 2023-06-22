@@ -1,9 +1,10 @@
 ﻿using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Repository;
+using NetMaster.Repository.Implementation.Powershell;
 using NetMaster.Repository.Implementations.Powershell;
 using NetMaster.Repository.Interfaces.Software;
 
-namespace NetMaster.Repository.Implementations.Software
+namespace NetMaster.Repository.Implementation.Software
 {
     public class GoogleChromeInstallationRepository : BasePowershellRepository, IGoogleChromeInstallationRepository
     {

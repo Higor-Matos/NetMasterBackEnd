@@ -2,9 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using NetMaster.Services.Interfaces.BackgroundServices;
 using NetMaster.Services.Interfaces.Hardware;
+using NetMaster.Services.Interfaces.Network;
 using NetMaster.Services.Interfaces.System;
 
-namespace NetMaster.Services.Implementations.BackgroundServices
+namespace NetMaster.Presentation.Services.Collectors
 {
     public class ComputerInfoCollector : IComputerInfoCollector
     {
@@ -26,16 +27,16 @@ namespace NetMaster.Services.Implementations.BackgroundServices
                 IInstalledProgramsInfoService InstalledProgramsInfoService,
                 IOsVersionInfoService OsVersionInfoService,
                 IUsersInfoService UserInfoService
-            ) = GetRequiredServices(scope.ServiceProvider);
+            ) services = GetRequiredServices(scope.ServiceProvider);
 
             List<Task> tasks = new()
             {
-                RamInfoService.SaveLocalRamInfoAsync(ip),
-                StorageInfoService.SaveLocalStorageInfoAsync(ip),
-                UserInfoService.SaveLocalSystemInfoAsync(ip),
-                OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
-                InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
-                ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
+                services.RamInfoService.SaveLocalRamInfoAsync(ip),
+                services.StorageInfoService.SaveLocalStorageInfoAsync(ip),
+                services.UserInfoService.SaveLocalSystemInfoAsync(ip),
+                services.OsVersionInfoService.SaveLocalSystemInfoAsync(ip),
+                services.InstalledProgramsInfoService.SaveLocalSystemInfoAsync(ip),
+                services.ChocolateyInfoService.SaveLocalSystemInfoAsync(ip)
             };
 
             await Task.WhenAll(tasks);

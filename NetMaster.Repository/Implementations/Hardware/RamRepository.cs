@@ -4,7 +4,7 @@ using NetMaster.Infrastructure.Context;
 using NetMaster.Repository.Implementations.MongoDB;
 using NetMaster.Repository.Interfaces.Hardware;
 
-namespace NetMaster.Repository.Implementations.Hardware
+namespace NetMaster.Repository.Implementation.Hardware
 {
     public class RamRepository : BaseMongoRepository<RamInfoDataModel>, IRamRepository
     {

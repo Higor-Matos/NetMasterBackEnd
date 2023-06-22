@@ -14,9 +14,14 @@ namespace NetMaster.Services.Implementations.Software
 
         public async Task InstallSoftware(string ip, string softwareName)
         {
-            _ = _installerServices.TryGetValue(softwareName, out ISoftwareInstallerService? installerService)
-                ? await installerService.InstallSoftwareCommand(ip, softwareName)
-                : throw new ArgumentException($"No installer found for software: {softwareName}", nameof(softwareName));
+            if (_installerServices.TryGetValue(softwareName, out ISoftwareInstallerService? installerService))
+            {
+                await installerService.InstallSoftwareCommand(ip, softwareName);
+            }
+            else
+            {
+                throw new ArgumentException($"No installer found for software: {softwareName}", nameof(softwareName));
+            }
         }
     }
 }

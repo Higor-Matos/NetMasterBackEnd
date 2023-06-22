@@ -2,7 +2,7 @@
 // NetMaster.Services/Implementations/Hardware//HardwareService.cs
 using NetMaster.Domain.Models.DataModels;
 using NetMaster.Domain.Models.Results.Service;
-using NetMaster.Services.Implementations.Base;
+using NetMaster.Services.Implementations.BaseCommands;
 using NetMaster.Services.Interfaces.Base;
 using NetMaster.Services.Interfaces.Hardware;
 

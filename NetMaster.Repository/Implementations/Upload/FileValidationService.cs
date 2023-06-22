@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NetMaster.Domain.Models.Results.Service;
-using NetMaster.Repository.Interfaces.Upload;
+using NetMaster.Services.Interfaces.Upload;
 
 namespace NetMaster.Repository.Implementations.Upload
 {
