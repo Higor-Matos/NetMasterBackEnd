@@ -92,6 +92,8 @@ Confira uma entrevista sobre este projeto no YouTube: [Entrevista - Expotech](ht
 
 ## Imagem do Projeto
 
-![Imagem 2](imgs/work.jpeg)
-![Imagem 1](imgs/swagger.png)
-![Imagem 3](imgs/wallpaper.png)
+<p align="center">
+  ![Imagem 2](imgs/work.jpeg)
+  ![Imagem 1](imgs/swagger.png)
+  ![Imagem 3](imgs/wallpaper.png)
+</p>
