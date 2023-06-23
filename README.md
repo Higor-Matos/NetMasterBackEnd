@@ -37,7 +37,7 @@ git clone https://github.com/seu-usuario/netmaster.git
 cd netmaster/NetMaster.Presentation
 ```
 
-4. Compile a solução do projeto:
+3. Compile a solução do projeto:
 
 ```bash
 dotnet build NetMaster.sln
