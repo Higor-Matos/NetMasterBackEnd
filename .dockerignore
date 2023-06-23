@@ -1,0 +1,27 @@
+# .dockerignore
+**/bin/
+**/obj/
+**/*.suo
+**/*.user
+**/*.userprefs
+**/*.dll
+**/*.exe
+**/*.pdb
+**/*.cache
+**/.vs/
+**/.vscode/
+*.log
+*.sql
+*.sqlite
+.git/
+.gitignore
+Dockerfile
+docker-compose*
+README.md
+LICENSE
+.vscode/
+
+# Arquivos específicos do MongoDB
+data/
+log/
+journal/

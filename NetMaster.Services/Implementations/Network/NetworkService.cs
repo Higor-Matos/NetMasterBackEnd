@@ -11,8 +11,8 @@ namespace NetMaster.Services.Implementations.Network
             NetworkComputer[] computersAndIPs = new NetworkComputer[]
             {
                 //new NetworkComputer { Name = "Higor-PC", IP = "192.168.0.3" },
-                new NetworkComputer { Name = "FRAME-PC", IP = "192.168.100.15" },
-                new NetworkComputer { Name = "RAMO-PC", IP = "192.168.100.16" },
+                new NetworkComputer { Name = "MagnaTI-10848-FRAMEWORK", IP = "192.168.100.15" },
+                //new NetworkComputer { Name = "RAMO-PC", IP = "192.168.100.16" },
             };
 
             return computersAndIPs;

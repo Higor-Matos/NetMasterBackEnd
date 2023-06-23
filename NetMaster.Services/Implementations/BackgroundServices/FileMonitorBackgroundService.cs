@@ -2,21 +2,26 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetMaster.Services.Interfaces.BackgroundServices;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace NetMaster.Services.Implementations.BackgroundServices
 {
     public class FileMonitorBackgroundService : BackgroundService, IFileMonitorBackgroundService
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly IConfiguration _configuration;
         private readonly string _path;
         private readonly FileSystemWatcher _watcher;
 
         public FileMonitorBackgroundService(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             _serviceProvider = serviceProvider;
-            _configuration = configuration;
-            _path = _configuration["UploadsDirectory"];
+            _path = configuration.GetValue<string>("UploadsDirectory");
+            if (!Directory.Exists(_path))
+            {
+                Directory.CreateDirectory(_path);
+            }
             _watcher = new FileSystemWatcher(_path);
         }
 

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  netmasterbackend-mongo-1:
+    image: mongo
+    container_name: netmasterbackend-mongo-1
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  mongodb_data:

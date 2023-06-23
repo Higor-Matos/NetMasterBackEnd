@@ -1,0 +1,23 @@
+version: '3'
+services:
+  netmasterbackend-mongo-1:
+    image: mongo
+    container_name: netmasterbackend-mongo-1
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - 27017:27017
+
+  netmasterfrontend:
+    build:
+      context: https://github.com/Higor-Matos/NetMasterFrontEnd.git
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 5173:5173
+    command: npm run dev
+
+volumes:
+  mongodb_data:
