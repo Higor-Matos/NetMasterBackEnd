@@ -1,6 +1,9 @@
 # NetMaster - Gerenciador de Rede
 
-![NetMaster Logo](https://example.com/netmaster-logo.png)
+<p align="center">
+  <img src="imgs/logo.png" alt="Imagem logo">
+</p>
+
 
 NetMaster é uma poderosa aplicação de gerenciamento de rede que permite executar ações em vários computadores simultaneamente. Com recursos avançados, como desligar, instalar programas, reiniciar e compartilhar arquivos, o NetMaster simplifica o gerenciamento de redes e facilita a administração de computadores em larga escala.
 
@@ -89,4 +92,6 @@ Confira uma entrevista sobre este projeto no YouTube: [Entrevista - Expotech](ht
 
 ## Imagem do Projeto
 
+![Imagem 2](imgs/work.png)
 ![Imagem 1](imgs/swagger.png)
+![Imagem 3](imgs/wallpaper.png)
